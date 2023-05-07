@@ -1,0 +1,410 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [],
+  "registeredUser": [
+    {
+      "username": "Gautam",
+      "email": "gautamkrishnasamy2001@gmail.com",
+      "mobile": "9865451374",
+      "date": "2023-03-08",
+      "password1": "Gautam@1",
+      "cpassword1": "Gautam@1",
+      "gender": "Male",
+      "id": 1
+    }
+  ],
+  "productdata": [
+    {
+      "id": 1,
+      "title": "Dettol",
+      "description": "Dettol antiseptic Liquid",
+      "Quantity": "500(ml)  (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of 1 Quantity 1 L Container Type  Bottle Fragrance Fresh Alcohol  (Denatured) eq. to Absolute Alcohol 13.1% v/v  Used For-Antiseptic & Disinfectant Product Information- For protection against 100 illness causing germs and bacteria, use Dettol Multi Use Hygiene liquid.  • Kills germs and bacteria.• Protects against infection. • Can be added to bathing water or used as shaving liquid. • Serves as a cleaning agent for hard surfaces and laundry."
+    },
+    {
+      "id": 2,
+      "title": "Cetaphil",
+      "description": "Cetaphil Gentle Skin Cleanser",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.1",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of: 1  Quantity: 125 ml Product Type: Skin Cleanser Packaging Type: Plastic Bottle Skin Type: Dry to Normal and Sensitive skin Ideal For-Men & Women Mfg. Lic. No.: M-736  Product Information: Cetaphil Gentle Skin Cleanser is a clinically tested creamy cleansing formula, fortified with Hydrating Glycerin, Vitamin B3 and Pro-Vitamin B5. This cleanser gently removes dirt, makeup and impurities, while preserving the skin's natural moisture barrier. It is ideal for face and body.  Cetaphil Gentle Skin Cleanser defends against 5 signs of skin sensitivity: • Weakened skin moisture barrier • Dryness • Irritation • Roughness • Tightness Ingredients: Aqua, Glycerin, Cetearyl Alcohol, Panthenol, Niacinamide, Pantolactone, Xanthan Gum, Sodium Cocoyl Isethionate, Sodium Benzoate and Citric Acid. Key Benefits: • Removes dirt, makeup and impurities from the skin • Hydrates and replenish the skin's moisture Usage Direction: • Cetaphil Gentle Skin Cleanser is recommended for external use only as advised by the physician. • Direction for use without water: Apply Cetaphil Gentle Skin Cleanser to the skin and massage gently. Remove excess with a soft cloth, leaving a thin transparent film on the skin. • Before application always go through the leaflet or label instructions that come up with the product. Safety Information: If allergic to any ingredients of Cetaphil Gentle Skin Cleanser, let the physician know straight away. • The physician should be well informed when concomitant application of this one with another product.  Storage Condition: • Store below 30°C. • Keep out of reach of children."
+    },
+    {
+      "id": 3,
+      "title": "Shampoo",
+      "description": "Himalaya Baby shampoo",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Himalaya Gentle Baby Shampoo infused with the goodness of Chickpea, Fenugreek and Green Gram which cleanses baby's skin, gently. Gentle no-tears formula does not cause irritation to baby's eyes. • Protein-rich formula ensures strong & healthy hair • Free from Parabens, Animal Fats & Synthetic Colors • Enriched with Olive Oil & Almond Oil, Vitamin E INGREDIENTS: Chickpea, Fenugreek, Green Gram, Hibiscus, Khus Grass. HOW TO USE:- Take a small quantity of shampoo into your hands. Then massage into your baby's wet hair and rinse. IDEAL FOR:- Baby Quantity: 100 ml Pack Of:-1Container Type:- Bottle"
+    },
+    {
+      "id": 4,
+      "title": "Gel",
+      "description": "Volini PainKiller gel",
+      "Quantity": "50g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 5,
+      "title": "Testing kit",
+      "description": "One touch Ultra Kit",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "The OneTouch ultra test strips are used with the One Touch ultra easy blood glucose monitoring system for the quantitative measurement of glucose (sugar) in fresh capillary whole blood samples drawn from the fingertips. The OneTouch ultra easy blood glucose test strips are intended to be used by a single patient and should not be shared. Features: • Requires only a tiny blood sample. • Automatically draws blood into test strip. Usage Direction:  • OneTouch Ultra Test Strips are intended to be used with OneTouch Ultra glucometer only. • Read package insert before using this product. Safety Information: For single use only.  • Do not use if expiration date has passed. Storage Conditions: • Store at temperatures under 30°C (80°F). Do not refrigerate.  Keep out of children"
+    },
+    {
+      "id": 6,
+      "title": "Oximeter",
+      "description": "Zebronics Pulse oximeter",
+      "Quantity": "1unit",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack of: 1 No of Contents in Sales Package: 1 Container Type: Box Model: ZEB-FP0500 Colour: White & blue Main features: • Heart rate measurement • Blood-oxygen measurement • Auto shutdown • Low battery indication • LCD display   • Compact design • High coverage finger pad Energy efficient  • One-key control  Warranty-  Duration-1 years from the date of delivery   Covered In Warranty Manufacturing Defects, Damages, Faults & Malfunctions. Not Covered in Warranty - Forced Damage, Accidental damage. • Service Type - Customer needs to call the seller Specifications: • Display type: LCD display • Screen size: 14 x 28 mm      • SpO2 measurement range: 0-99% • Sp02 resolution: 1%   • Sp02 accuracy: 70%-99%, ±2%, 0-69%, no definition. • Pulse rate measuring range: 25-250BPM   • Pulse rate resolution: 1 BPM  Pulse rate accuracy: ±1 BPM/±1% BPM (whichever the larger value)  • Input power: 2 x 1.5V AAA batteries Housing material: ABS Operating temperature: 5°C-40°C • Product dimension: 32 x 58 x 34 mm (W x D x H) • Package dimension: 86 x 70 x 40 mm (W x D x H)  • Net weight: 26.5g (w/o batteries) Package contents: • ZEB-FPO500:1 unit • User manual: 1 unit  Colour may little vary from the picture. Use as directed by the physician."
+    },
+    {
+      "id": 7,
+      "title": "Supplyments",
+      "description": "Proteinx Chocolate powder",
+      "Quantity": "500g  (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Product Description  Pack Of - 1  Quantity - 250 g  Flavour-Chocolate  Container Type - Tin  Ideal For Adults  Food Preference - Vegetarian  FSSAI Lic. No. - 10013064000267  Product Information - Protinex is fortified with the right amounts of carbohydrates, minerals, vitamins, and zero trans- fats. Protinex digests easily and is absorbed rapidly by the body. Regular consumption of Protinex helps build your stamina and promotes immunity.   Ingredients - Iron, Vitamins A, C, B2, B12, folic acid, copper, zinc, magnesium which are significant for blood cell formation.  Storage Instruction - Store in cool, dry and hygienic place.  Nutritional Information Per 100 g  Energy-374 Kcal  Protein-34 g  Carbohydrate-54.2 g  Sugar-29 g  Fat-2.3 gFat 2.3 g  Vitamin A-1143 mcg  Vitamin D-6.6 mcg Vitamin E-13 mg  Vitamin K -0.4 mg Vitamin C-60 mg Vitamin B1-2.3 mg Vitamin B2-3.4 mg Vitamin B6-1.1 mg Vitamin B12-0.35 mcg Niacinamide-36 mg Pantothenic Acid - 2.3 mg Folic Acid - 119 mcg"
+    },
+    {
+      "id": 8,
+      "title": "Supplyments",
+      "description": "Horlicks Classic malt powder",
+      "Quantity": "250g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of 1  Quantity - 500 g Flavour - Original Container Type - Mono Carton  Ideal For:- All  Food Preference - Vegetarian  FSSAI Lic. No. - 10012063000134 Product Information:-  Horlicks Classic Malt contains a wide range of vitamins and minerals essential for wellbeing. It can be served hot or cold and is one of the leading Health Food Drink in India.  No artificial flavours, colours or preservatives  • Suitable for vegetarians • Unique combination of wheat, malted barley & milk  Ingredients - Malted Barley (Extracted Solids) (39%), Wheat Flour (25%), Milk Solids (14%), Sugar, Wheat Gluten, Minerals, Emulsifier (INS 471), Salt, Soy Protein Isolate, Acidity Regulators (INS 501 (ii), 500(i)), Vitamins.  Storage Instruction - Store in cool, dry and hygienic place. Nutritional Information Per 100 g  Calories-376.9kcal  Total Fat-2.0g  Total Carbohydrates -79.0g  Calories-376.9kcal  Total Fat 2.0g  Total Carbohydrates -79.0g  Sugar (Sucrose) -13.5g  Protein - 11.0g  Sodium 400mg  Chloride-565mg  Vitamin B1 (Thiamin) - 1.3mg Vitamin B2 (Riboflavin) - 3.0mg  Vitamin B3 (Niacin) - 17.0mg"
+    },
+    {
+      "id": 9,
+      "title": "Tablets",
+      "description": "Iron Tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 10,
+      "title": "Tablets",
+      "description": "Swisse Iron tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of -1 Number of Tablets in a Sales Package-30N  Container Type - Small Jar  Product Type - Health Supplement  Ideal For - Men & Women Food Preference - Vegetarian.  Fssai Lic Number - 10019043002879 Product Information-  Swisse Ultiboost Iron has been formulated based on scientific evidence to provide iron supplementation when dietary iron is low. It is a health supplement and a premium quality formula to help maintain healthy blood and assist in the management of dietary iron deficiency.  Benefits • It helps in treating and preventing iron deficiency  Iron supports the production of red blood cells  • Helps the body absorb iron while also helps to maintain a healthy immune system  Ingredients-  Bulking Agent (Microcrystalline Cellulose), Ferrous bisglycinate; Bulking Agent (Calcium hydrogen phosphate dihydrate); Disintegrant (Croscarmelose sodium); Calcium ascorbate dihydrate; Stabilizer (Crospovidone), Anti caking Agent (Silicon Dioxide), Coaling Agent Polyvinyl alcohol Glidant (Magnesium Stearate, Solvent (Polyethylene glycol) Natural Colours (INS 171 & INS 172 (i) (ii) (iii) Anti caking Agent (Talc) Pyridoxine hydrochloride; Emulsifier 9Polycitrate-  Nutritional Information (Approx. Values) Serving Size - 1 tablet  Iron (from ferrus bisglycinate 70.3mg)-19mg  Vitamin C (ascorbic acid from calcium ascorbate dihydrate 36.31mg) - 30mg  Vitamin B6 (Pyridoxine from Pyridoxine hydrochloride 2.31mg) -1.9mg  Vitamin B12 (Cyanocobalamin) -0.001mg  Per serving Energy value - 0.29kcal, protein - Og, Carbohydrate- 0.06g, Total Sugars - Og, Added Sugars - Og, Total Fat -0.01g, Cholesterol-0.0mg, Sodium 0.09mg  Recommended Usage - One tablet daily with sufficient water during or immediately after a meal. Or as recommended by a healthcare professional. Not to exceed the recommended daily usage.  Storage Information - Keep it store or place in a cool dry dark and hygiene place. Keep it away from direct heat or sunlight."
+    },
+    {
+      "id": 11,
+      "title": "Tablets",
+      "description": "Naturebay pro Vitamin tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 12,
+      "title": "Herbal",
+      "description": "Kapiva Triphala Herbal Juice",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of-1 Quantity: 1 L  Container Type- Mono Carton  Product type- Herbal Juices  Food Preference - Vegetarian  MFG Lic No-810 AYU E  Product Information-Triphala Juice, tri meaning 'three' and phala meaning 'fruits' is made from three native Indian dried fruits Amla, Bahera, and Haritaki. It was believed that if a vaidya knew how to use Triphala properly, he could heal any disease. Today, Kapiva aims to provide you with all the original benefits of Triphala by using pure, raw herbs (instead of extracts) and not adding any artificial colors or flavors. Kapiva Triphala Juice helps you fight constipation and improve digestion.  Benefits- Kapiva Triphala Juice is an excellent choice for  solving constipation and irregular bowels. The 3 ingredients - Amla, Bahera, Harad are known as natural laxatives that are tridoshic in nature, and help in balancing all the doshas in the body.  Ingredients:- Amla juice 33.20%, Harad Juice 33.20%, Bahera juice 33.20%, Citric Acid (Ph Stabiliser) 0.1%, Permitted Class II Preservatives less than 0.3%  How To Use-  • Shake the boottle before use  • dilute 30 ml of triphala juice with 30 ml of water • Consume at night before meal Benefits- Kapiva Triphala Juice is an excellent choice for solving constipation and irregular bowels. The 3 ingredients - Amla, Bahera, Harad are known as natural laxatives that are tridoshic in nature, and help in balancing all the doshas in the body.  Ingredients:- Amla juice 33.20%, Harad Juice 33.20%, Bahera  juice 33.20%, Citric Acid (Ph Stabiliser) 0.1%, Permitted Class II Preservatives less than 0.3%  How To Use- Shake the boottle before use  • dilute 30 ml of triphala juice with 30 ml of water • Consume at night before meal  Storage Instruction:- Store the Drink in a dry air tight container in a cool dry place after opening the pack"
+    },
+    {
+      "id": 13,
+      "title": "Oil",
+      "description": "Naturebay Omega 3 Fish oil",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack of -1 Number of Capsules in a Sales Package-60N  Container Type-Jar Product Type-Health Supplement  Ideal For Adults  Food Preference - Non-Vegetarian Fssai Lic Number - 10017013001245  Product Information -  Nutrabay Wellness Omega 3 Fish Oil Capsule contains two of the most important Omega-3 fatty acids EPA and DHA in high concentration. It is developed with an anti-reflux formula that ensures better absorption of fatty acids and no fishy aftertaste. It helps support heart, joints, mood & skin health.  Key Benefits: • It helps to increase good cholesterol (HDL) content in the body  • It reduces blood pressure and Triglycerides levels in the body  • It helps reduce joint pain and stiffness while also improving flexibility and mobility  • It helps support the levels of serotonin in the body, which is often termed the feel-good' hormone • It helps reduce inflammation in the body and acts as an antioxidant  Other Ingredients - Gelatin (INS 428), Glycerin (INS 422), Sorbitol (INS 420), Preservatives (INS 217, 219 & 320) & purified water.  Nutrition Facts  Serving Size- 1 Capsule  Energy 7.68kcal  Protein -0.2g  Carbohydrate-0.01g  Fat 0.86g  Omega-3 Fatty Acid - 1000mg EPA (Eicosapentaenoic Acid) - 180mg  DHA (Docosahexaenoic Acid) - 120mg  Recommended Usage - Consume 1 serving per day or as advised by the dietician.  Storage Information - Store in a cool dry and hygienic place."
+    },
+    {
+      "id": 14,
+      "title": "Tablets",
+      "description": "Carboamide Forte Nova Tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 15,
+      "title": "Tablets ",
+      "description": "Coecoral D3 500mg Tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack of: 1 Quantity: 15 N Tablets Container Type: Mono Carton Product Type: Health Supplement Food Preference: Non-Veg FSSAI License No: 12617006000199, 10015022003578 Product Information: Coecoral D3 500 mg Tablet is advised as health supplement to treat and prevent the low blood calcium levels and associated conditions such as bone loss, weak bones, decreased activity of the parathyroid gland, certain muscle disease, etc. It also enhances the intestinal calcium absorption and improves bone health of an individual. Each serving per film coated tablet contains (Approx): Calcium Carbonate (from Coral Grains) Equivalent to Elemental Calcium 500 mg. Cholecalciferol (Vitamin D3) 400 IU. Other Ingredients: Maize Starch, Lactose binding agent (INS 1201), Anticaking agent (INS 470(iii) & 553(iii), Preservative (INS 218), HPMC (INS 464) Nutritional Value Per Tablet: (Approx.): Protein: 0.5 g, Fat: 0.03 g, Carbohydrate: 0.79 g, Energy: 3.6 Kcal, Sugar: 0.00 g It contains permitted synthetic food color (INS 171) Appropriate overages of vitamin added to compensate loss on storage. Key Benefits: • Helps to treat and prevent low blood calcium level. • Enhances the intestinal calcium absorption. • Improves certain bone conditions caused by low calcium level such as bone loss, weak bone, certain muscle disease etc. • Supports overall bone health. Usage Direction: Coecoral D3 500 mg Tablet is recommended to consume orally in a dose and direction as advised by the health care professional. • Before consumption, always check the leaflet or label instruction comes with the product. Safety Information: • If allergic to any ingredients of Coecoral D3 500 mg Tablet, let the doctors know straight away. • Do not exceed the stated recommended daily serving. • The doctor should be well informed when concomitant consumption of this one with another medicine. • Seek precaution during pregnancy and lactation. Storage Condition: • Store at a temperature below 30 °C.Protect from light and moisture. • Keep out of reach of children."
+    },
+    {
+      "id": 16,
+      "title": "Tablets",
+      "description": "Ezorb D3 tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack of: 1 Quantity: 15 N Tablets Product Type: Dietary Supplement Food Preference: Veg Fssai License No: 12114361000106 Product Information: Ezorb D3 Tablet is advised as dietary supplement for maintaining joint health and enhancing bone development. Each serving of one film coated tablet (approx. 1.5 gm) contains: Calcium Aspartate: 1120 mg, Magnesium Hydroxide: 180 mg, Vitamin D (as stabilized): 25 mcg and Excipients q.s. Other Ingredients: Maize Starch, Sodium starch glycolate, Anticaking Agent [460(1), 551, 553(iii)], Bodying agent (1201), Stabilizer (463, 464), Colour (171) Nutritional Information: (Approximate value per serving tablet): Energy: 4.22 Kcal, Carbohydrates: 0.56 gm, Protein: 0.47 gm, Fat: 0.012 gm, Saturated Fatty Acids: Nil, Poly Unsaturated Fatty Acids: Nil, Monounsaturated Fatty Acids: Nil, Trans Fatty Acids: Nil, Cholesterol: Nil Contains Permitted Synthetic Food Colour. Appropriate overages of Vitamin D3 added to compensate the loss on storage. Key Benefits: Maintains joint health Enhances bone development. Usage Direction:  Ezorb D3 Tablet is recommended to consume orally in a dose and direction as prescribed by the health care professional. • Before consumption, always go through the leaflet or label instruction comes up with the product. Safety Information: • If allergic to any ingredients of Ezorb D3 Tablet, let the doctors know straight away. • The doctor should be well informed when concomitant consumption of this one with another medicine. • Seek Precaution during pregnancy and lactation. Storage Condition: • As per health care professional. • Keep out of reach of children."
+    },
+    {
+      "id": 17,
+      "title": "Tablets",
+      "description": "Himlaya Confido",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of -1 Number Of Contents In A Sales Package - 60N Tablets Container Type - Bottle Product Type-Capsules Ideal for - Men Mfg Lic number-L-AUS-127 Product Information - It is an Ayurvedic formulation that is commonly used to manage sexual dysfunction in men by improving sperm count and hormonal levels. Apart from this, it may also help to provide strength and stamina to the body and improve the blood circulation to the reproductive organ by widening the blood vessels present in the penile area. Ingredients - Cowhage or Velvet Bean, Small Caltrops. Directions for Use - Please consult your physician to prescribe the dosage that best suits your condition. Storage Information - Store in a cool and dry place. Keep away from direct sunlight. Do not refrigerate."
+    },
+    {
+      "id": 18,
+      "title": "Tablets",
+      "description": "Sugar free gold",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of:-1 Quantity-100 g Container Type Jar Ideal For :- Adult Use For > Fitness seekers, weight conscious & diabetics Food Preferenc: Vegetarian Fssai Licence No:-10012035000021 Sugar-Free Gold Low Calorie Sweetener is a healthier alternative to sugar. It is made from Aspartame, a protein derivative. It is a nutritious, safe and an ideal low-calorie sugar substitute, giving the sweetness and taste of sugar but with negligible calories to worry about. Sugar-Free Gold helps to cut down on excess calories of sugar to keep one fit. Sugar Free Gold is your healthier alternative to sugar. It is made from Aspartame, a protein derivative. It is a nutritious, safe and an ideal low calorie sugar substitute, giving you the sweetness and taste of sugar but with negligible calories to worry about! Sugar Free Gold helps you to cut down on excess calories of sugar to keep you fit. While an hour of walk may help you to lose 350 calories (aprox.), by making Sugar Free a part of your fitness plan you can avoid 500 calories a day. Burning calories is difficult; avoiding them is easy with Sugar Free Gold. 1 measured spoon (of 0.5 gms, provided inside the pack) is equivalent in sweetness to 1 teaspoon of Sugar Sugar Free Gold is a healthy alternative to sugar. • Made with Aspartame, a protein derivative, Sugar Free Gold is a low-calorie substitute with the sweetness and taste of sugar. It is an ideal substitute as one spoon, in sweetness, is equivalent to a teaspoon of sugar. Made with Aspartame, a protein derivative, Sugar Free Gold is a low-calorie substitute with the sweetness and taste of sugar. It is an ideal substitute as one spoon, in sweetness, is equivalent to a teaspoon of sugar. • It can help you avoid almost 500 calories a day, as avoiding calories is easier than burning them. • Sugar Free Gold is a boon for health-conscious people and diabetics. Key Benefits: Helps to provide sweetness without the calories Making Sugar-Free a part of the fitness plan may help to avoid unwanted calories Sugar Free Gold, is made from Aspartame - a protein derivative, which is 200 times sweeter than sugar It is useful for health conscious people & diabetics It is ideal for adding to beverages Nutritional Information per Serving (1 spoon of 0.5g):- Energy-1.94 kcal Fat-0.0 g Carbohydrate-0.47 g Sugars - 0.47g Sucrose - 0.0 g Protein - 0.02 g Ingredients:- Bulking Agent - Dextrose, Maltodextrin, Sweetner - Aspartame. How to use :- 1 pellet is equivalent in sweetness to 1 teaspoon of Sugar. Storage Instruction:- Store in cool, dry & hygienic place. EAN-8901120143917"
+    },
+    {
+      "id": 19,
+      "title": "Tablets",
+      "description": "Amrutanjan pain balm",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of - 1 Quantity -50 ml Container Type - Jar Ideal For Adults Product Information - Amrutanjan Double Power Strong Balm: Headaches and back pain tend to disrupt simple activities during the day making the person groggy and irritable. Such strong headaches & back pain call for an even stronger balm that puts it to rest the moment it is applied. Amrutanjan Strong Pain Balm is made to eliminate such severe headaches and back pains with its infusion of wintergreen oil and menthol is the perfect solution to your splitting pain. The balm accompanied with a massage gives you incredible relief within minutes. So no matter how demanding our job is you can always rely on Amrutanjan Strong that removes your headache or back pain. Key Ingredients: Pudina (Mentha arvensis-Aerial part, Satva),Gandhapura patra taila (Gaultheria fragrantissima-Lf., Ol.), Ointment base q.s. Directions for Use: Inhale, Apply on Forehead, temples, neck and gently massage. Rub on the throat and chest for cold relief."
+    },
+    {
+      "id": 20,
+      "title": "Gel",
+      "description": "Ahaglow Face Wash",
+      "Quantity": "200g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "628",
+      "offerPercentage": "11% OFF",
+      "details": "Pack of -1 Quantity - 100 g Container type - Tube Paraben free - Yes About Ahaglow Skin Rejuvenating Face Wash Gel 100 g: Ahaglow is a dermatologically tested, non-comedogenic, paraben-free skin rejuvenating face wash gel that purifies & refreshes the skin.. Each Ahaglow Skin Rejuvenating Face Wash Gel contains: Purified Water, Acrylate Copolymer, Sodium Laureth Sulfate, Aloe Vera, Polysorbate 80, Sodium Cocoyl Apple Amino Acids, Decyl Glucoside, Coloured millicapsules, Glycolic Acid, Phenoxyethanol, Fragrance, Vitamin E Acetate and Potassium Hydroxide. Ahaglow Skin Rejuvenating Face Wash Gel cleans deeps down to the skin cleaning pores, removing all the impurities like dust, soot, breakdown, sweat and even makeup previously applied to the skin. It refreshes the skin, enhances the complexion, maintain skin pH, and leaves the skin smooth and soft. Benefits of Ahaglow Skin Rejuvenating Face Wash Gel 100 g: Ahaglow Skin Rejuvenating Face Wash Gel is recommended for various purposes such as: • Rejuvenates the skin by encouraging the shedding of old and dead skin cells • Reduces the number of superficial wrinkles • Improves skin tone and texture Unblocks and cleanses the pores Usage direction of Ahaglow Skin Rejuvenating Face Wash Gel 100 g: • Ahaglow Skin Rejuvenating Face Wash Gel is for external use only. • Squeeze out required quantity of Ahaglow advanced gel on palm & crush millicapsules. Work up lather and massage gently on your wet face and neck with an upward circular motion. Rinse off with clear water and pat your face dry. • Please check the package leaflet or label instruction before application. • Replace the cap tightly closed after each use. Precaution & Related information of Ahaglow Skin Rejuvenating Face Wash Gel 100 g: • If allergic to any component of Ahaglow Skin Rejuvenating Face Wash Gel, inform the physician immediately. • If find any other complication, please consult with physician immediately. • Consult with the physician during pregnancy & lactation. • Avoid contact with eyes, mouth and other mucous membrane to avoid irritation. • This product may increase skin's sensitivity to the sun and particularly the possibility of sunburn. • Keep out of reach of children."
+    },
+    {
+      "id": 21,
+      "title": "Gel",
+      "description": "Digestine Gel",
+      "Quantity": "450ml  (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "174",
+      "offerPercentage": "20% OFF",
+      "details": "Pack Of: 1 Quantity: 450 ml Product Type: Antacid Antigas Gel Packaging Type: Bottle Flavour: Orange Mfg. Lic. No: 281 Product Information: Digene Orange flavour gel is a potent antacid used to provide quick and effective relief from acidity and gas by neutralizing the acid released into the stomach. It also helps to improve symptoms associated with acidities such as heartburn, bloated stomach, and uneasiness. It is free from sugar. Each 10 ml (2 teaspoonfuls approx.) Digene gel contains: Magnesium Hydroxide (added as paste) 185 mg, Simethicone 50 mg, Sodium Carboxymethylcellulose 100 mg, Dried Aluminium Hydroxide Gel (added as paste) 830 mg in a flavoured sugar base. Color: Carmoisine • Magnesium Hydroxide: Quick relief from acidity • Aluminium Hydroxide: Long-lasting relief from acidity • Simethicone: Relieves from symptoms of gas such as painful pressure, fullness, and bloating Key Benefits: • Provides quick and effective relief from acidity and gas • Improves symptoms associated with acidities such as heartburn, bloated stomach, and uneasiness Usage Direction: • Digene Orange flavour gel is intended to consume orally in a dose and direction as advised by the physician. • Shake the bottle before use. • Before consumption, always go through the leaflet or label instructions that come with the product. Safety Information: • If allergic to any ingredients of Digene Orange flavour gel, let the physician know straight away. • The physician should become aware of the concomitant consumption of this one with another medicine or supplement. • Do not exceed the recommended dosage. • Seek precaution during pregnancy & lactation. Storage Condition: • Store in a cool, dry place away from direct sunlight. • Keep out of reach of children."
+    },
+    {
+      "id": 22,
+      "title": "Tablets",
+      "description": "Crocin 650 mg",
+      "Quantity": "15 Tablets (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "29",
+      "offerPercentage": "16% OFF",
+      "details": "What is Crocin 650 Tablet used for? Crocin 650 is a well-known and widely used medicine for fever and pain relief. It frequently used to treat low and moderate pain conditions such as headaches, toothaches, migraines, menstrual cramps, and sprains. It is a safe drug and can be used to treat conditions where people must take painkillers for a longer time, such as musculoskeletal pain. How should I take Crocin 650 Tablet? Crocin 650 tablets should be taken orally and swallowed with water. Do not crush, cut, or chew the tablet. Swallow it whole. Do not take more than 4000 mg or more than 6 tablets under 24 hours. Do not repeat a dose before 4 hours. Though it is available as a non-prescription medicine, it is best to consult a doctor if you do not feel better within 3 days. How does Crocin 650 Tablet work? Crocin 650 contains paracetamol and belongs to the group of analgesics (painkillers) and antipyretic (fever reducing) medicines. It eases pain and fever by blocking the discharge of specific chemical messengers. It starts working within an hour and the effects last for 4-6 hours. I missed a dose. What should I do? If you miss a dose, take the next dose when you remember. If it's almost time to take your next dose, skip and continue to take the next dose. Do not take 2 doses to make up for the missed dose. I have taken too much. What should I do? Crocin 650 is safe in most cases and is unlikely to cause any harm if you do not take more than 6 tablets or 4000 mg in 24 hrs. Do not repeat a tablet before 4 hours. If you have taken more than your prescribed dose you may experience side effects including severe liver injury. In such cases, call your doctor or rush to a nearby hospital immediately. What are the substances that should be avoided with Crocin 650 Tablet? Crocin 650 should not be taken with other medicines containing paracetamol as it increases the risk of overdosing and resulting liver damage. It is safe to take with most other medicines including antibiotics and other painkillers which do not contain paracetamol. Do not take Crocin 650 tablet if you are taking medicines to treat epilepsy, tuberculosis or blood thinners such as warfarin. It can be safely used by pregnant and breastfeeding women. When should I consult my doctor after starting Crocin 650 Tablet? After taking Crocin 650-650 your symptoms should improve and you should start feeling better. Your doctor may call you for a follow-up visit to ensure that your condition has improved. If you do not notice any improvement with Crocin 650, or if you experience severe side effects, consult your doctor right away."
+    },
+    {
+      "id": 23,
+      "title": "bandage",
+      "description": "Roll Bandage",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "16",
+      "offerPercentage": "40% OFF",
+      "details": "Surgical rolled bandages are used for different types of cuts, Injuries, wounds etc. Strong and convenient, these medical rolled bandages are used when moderate compression is required. • Used for different types of cuts, injuries, wounds Individually wrapped in paper •Skin friendly and hygienic • Material: 100% Cotton • Width of 4 inches"
+    },
+    {
+      "id": 24,
+      "title": "Tablets",
+      "description": "Paracetamol 500",
+      "Quantity": "15 Tablets (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "22",
+      "offerPercentage": "14% OFF",
+      "details": "About P 500 mg Tablet: P 500 mg Tablet belongs to the group of mild analgesics (pain killer) and antipyretic (fever-reducing) medicine indicated to ease mild to moderate pain and reduce fever. Each uncoated P 500 mg Tablet contains Paracetamol 500 mg. Paracetamol exerts analgesic and antipyretic effects by peripheral blockage of pain impulse generation and inhibition of the hypothalamic heat-regulating centre, respectively. It also exhibits weak anti-inflammatory activity by the inhibition of prostaglandin synthesis. Use of P 500 mg Tablet: P 500 mg Tablet is used to ease mild to moderate pain and reduce fever. It is also used for the treatment of conditions including headache, migraine, backache, toothache, menstrual pain, musculoskeletal pain, and common colds. Usage Direction of P 500 mg Tablet  P 500 mg Tablet is intended for oral use only, in a dose and direction as advised by the physician. •P 500 mg Tablet is taken whole with the help of water. • Do not crush, chew or break the tablet. • Do not skip or stop the medicine without the physician's advice. • Do not consume more than the recommended dose. • Before consumption, always go through the leaflet or label instructions that come with the product. Precaution & Related information of P 500 mg Tablet: • If hypersensitive or allergic to P 500 mg Tablet, inform the physician immediately. P 500 mg Tablet should not be used with other Paracetamol-containing products. • The Physician should be well informed when concomitant consumption of this tablet with any other medicines or supplements. • Taking more than daily dose may cause serious liver damage or allergic reactions (e.g. swelling of the face, mouth and throat, difficulty in breathing, itching or rash). . Consult with the physician during pregnancy & lactation. Keep out of reach of children. Storage condition of P 500 mg Tablet: • Store at a temperature not exceeding 30°C. Protect from light and moisture."
+    },
+    {
+      "id": 25,
+      "title": "Tablets",
+      "description": "Himalaya Triphala",
+      "Quantity": "30 Tablets (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "174",
+      "offerPercentage": "13% OFF",
+      "details": "Pack Of:- 1 Number Of Contents In A Sales Package - 60 N Tablets Container Type: Jar Ideal For :- Adult Use For Constipation Food Preferenc:- Vegetarian Mfg Licence No:- AUS -782 Product Information:- Himalaya Triphala Tablet is a perfectly balanced mix of Triphala [Amla fruit (Phyllanthus emblica), Bibhitaki fruit(Terminalia bellerica), Haritaki fruit (Terminalia chebula)]. Amla fruit are used to treat high cholesterol, while Bibhitaki fruit is used for treating various chest pains and Haritaki fruit helps with the body's digestive system. It is a remarkable anti-oxidant and naturally detoxifies the body, cleans the colon and even improves eyesight. These Triphala Supplements revitalize the body and increases stamina, strength and also aids in weight loss. It is also used in: Chronic constipation, Indigestion and Delayed emptying of stomach Constipation associated with piles and other medical illness Convalescence (as a health supplement) Ingredients: Each 5 ml contains 166 mg of Triphala(the combination of Amalaki(Phyllanthus emblica), Bibhitaki(Terminalia bellerica), Haritaki(Terminalia chebula)] Good to Know: 100% vegetarian. Free from sugar, artificial colors, artif How to use:- 1 tablet twice a day or as directed by the physician. Storage Instruction:- Store in cool, dry & hygienic place."
+    },
+    {
+      "id": 26,
+      "title": "bandage",
+      "description": "Flamingo Bandage",
+      "Quantity": "1 piece (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "159",
+      "offerPercentage": "36% OFF",
+      "details": "Product Info Country of origin: India Manufactured by: Ascent Meditech Limited (Dnh) Manufacturer Address: Unit-2, Plot No.8, Daman Ganga, Ind. Est. Athal, Dadra & Nagar Haveli (Ut) 396235, India Packed by: Ascent Meditech Limited (Dnh) Packer's Address: Unit-2, Plot No.8, Daman Ganga, Ind. Est. Athal, Dadra & Nagar Haveli (Ut) 396235, India Marketed by: Ascent Meditech Limited Marketed by Address: A-1101, Cello Triumph, lb Patel Road, Off, Western Express Highway, Goregaon, Mumbai, Maharashtra 400063"
+    },
+    {
+      "id": 27,
+      "title": "Gel",
+      "description": "Chicco Disinfectant gel",
+      "Quantity": "500ml (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "182",
+      "offerPercentage": "14% OFF",
+      "details": "Pack of -1 Quantity 1000 ml Container Type - Spray Bottle Product Type - Multi-Purpose Disinfectant Used For - It is used as a multipurpose disinfectant cleaner. Product Information - Chicco Disinfectant Multi-Purpose is a highly sanitizing disinfecting liquid, effective against bacteria & fungi, for the microbial decontamination of everything that comes in contact with the infant, both metal & plastic, such as feeding bottles, teats, soothers toys, tableware, gum, massagers, etc. Highly sanitizing disinfecting liquid, effective against bacteria & fungi, for the microbial decontamination of fruits & vegetables. Warning - Keep out of reach of children. Not meant for use on the human body. Directions for Use - Fruits & Vegetables: Dilute at 5% concentration (fill the provided measuring cap up to the dose 2 for each liter of water). Contact Time: 30 minutes, then rinse abundantly with drinking water. Feeding Bottles, teats, soothers, toys & tableware used in neonatal age: Dilute at 2% concentration (fill the provided measuring cap up to dose 1 for each liter of water). Contact time: 60 minutes, leave the previously washed objects immersed for no less than 60 minutes. Remove the objects after having washed your hands. Rinse abundantly with drinking water. Storage Conditions - Store at room temperature."
+    },
+    {
+      "id": 28,
+      "title": "Oil",
+      "description": "Dr Ortho oil",
+      "Quantity": "100ml (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "260",
+      "offerPercentage": "11% OFF",
+      "details": "Pack Of 1 Quantity-100 ml (Free 20% Extra) Net Quantity - 120 ml Container Type-Bottle Product Type - Pain Reliever Used For - It helps to get relief from pain Ideal For Adults Application Area- Back, Ankle, Shoulder, Fore arm, Elbow, Foot, Chest, Knee, Leg, Muscle, Neck, Joints Product Information- Dr. Ortho oil is an ayurvedic herbal pain relieving oil which is prepared from the extracts of eight different herbs. Each herb has distinctive properties to combat pain in several regions of the body including muscles, legs, neck, shoulders, joints and back. It is useful in providing relief from joint pain, it also acts a muscle pain relief oil, and an ayurvedic oil for shoulder pain. Key Ingredients: • Flaxseed Oil • Camphor oil • Peppermint Oil • Til Oil How to use- • Method of application, 5ml to 10 ml or more depending upon the part affected, to be gently massage twice a day or as directed by the physician • Not to be used on open wounds or burns"
+    },
+    {
+      "id": 29,
+      "title": "chewgum",
+      "description": "Nicotex 2mg chewgum",
+      "Quantity": "25 pc (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "208",
+      "offerPercentage": "15% OFF",
+      "details": "About Nicotex 2 mg Mint Plus Flavour Sugar Free Chewing Gum: Nicotex 2 mg Mint Plus Flavour Sugar Free Chewing Gum is a nicotine gum that helps a smoker to quit smoking in 12 weeks, using the principle of Nicotine Replacement Therapy (NRT). It gradually reduces nicotine intake and helps in letting go of the smoking habit for good. This sugar-free gum has mint plus flavour which gives a great taste. Each gum Contains: Nicotine Polacrilex equivalent to Nicotine: 2 mg Colour: Titanium Dioxide Use of Nicotex 2 mg Mint Plus Flavour Sugar Free Chewing Gum: • Helps control the urge to smoke and manage withdrawal symptoms •Helps to quit smoking in 12 weeks Usage Direction of Nicotex 2 mg Mint Plus Flavour Sugar Free Chewing Gum: • Nicotex 2 mg Mint Plus Flavour Sugar Free Chewing Gum is intended for oral use only, in a dose and direction as advised. • Do not skip or stop the medicine without the healthcare professional's advice • Do not consume more than the recommended quantity • Refer to sample dosage schedule as mentioned in the accompanying leaflet. Precaution & safety Related Information of Nicotex 2 mg Mint Plus Flavour Sugar Free Chewing Gum: • If allergic to any ingredients of Nicotex 2 mg Mint Plus Flavour Sugar Free Chewing Gum, let the healthcare professional know straight away. • If found any other complications, inform the healthcare professional immediately. • The healthcare professional should be well informed when the concomitant consumption of this one with another medicine or supplement. • Consult with the during pregnancy and lactation. • Keep out of reach of children. Storage Condition of Nicotex 2 mg Mint Plus Flavour Sugar Free Chewing Gum: • Store in a cool, dry place. Protect from direct heat and sunlight."
+    },
+    {
+      "id": 30,
+      "title": "Tablets",
+      "description": "Paracetamol 500",
+      "Quantity": "15 Tablets (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "22",
+      "offerPercentage": "14% OFF",
+      "details": "About P 500 mg Tablet: P 500 mg Tablet belongs to the group of mild analgesics (pain killer) and antipyretic (fever-reducing) medicine indicated to ease mild to moderate pain and reduce fever. Each uncoated P 500 mg Tablet contains Paracetamol 500 mg. Paracetamol exerts analgesic and antipyretic effects by peripheral blockage of pain impulse generation and inhibition of the hypothalamic heat-regulating centre, respectively. It also exhibits weak anti-inflammatory activity by the inhibition of prostaglandin synthesis. Use of P 500 mg Tablet: P 500 mg Tablet is used to ease mild to moderate pain and reduce fever. It is also used for the treatment of conditions including headache, migraine, backache, toothache, menstrual pain, musculoskeletal pain, and common colds. Usage Direction of P 500 mg Tablet  P 500 mg Tablet is intended for oral use only, in a dose and direction as advised by the physician. •P 500 mg Tablet is taken whole with the help of water. • Do not crush, chew or break the tablet. • Do not skip or stop the medicine without the physician's advice. • Do not consume more than the recommended dose. • Before consumption, always go through the leaflet or label instructions that come with the product. Precaution & Related information of P 500 mg Tablet: • If hypersensitive or allergic to P 500 mg Tablet, inform the physician immediately. P 500 mg Tablet should not be used with other Paracetamol-containing products. • The Physician should be well informed when concomitant consumption of this tablet with any other medicines or supplements. • Taking more than daily dose may cause serious liver damage or allergic reactions (e.g. swelling of the face, mouth and throat, difficulty in breathing, itching or rash). . Consult with the physician during pregnancy & lactation. Keep out of reach of children. Storage condition of P 500 mg Tablet: • Store at a temperature not exceeding 30°C. Protect from light and moisture."
+    }
+  ],
+  "productdescription": [
+    {
+      "id": 1,
+      "details": "Pack Of 1 Quantity 1 L Container Type  Bottle Fragrance Fresh Alcohol  (Denatured) eq. to Absolute Alcohol 13.1% v/v  Used For-Antiseptic & Disinfectant Product Information- For protection against 100 illness causing germs and bacteria, use Dettol Multi Use Hygiene liquid.  • Kills germs and bacteria.• Protects against infection. • Can be added to bathing water or used as shaving liquid. • Serves as a cleaning agent for hard surfaces and laundry."
+    },
+    {
+      "id": 2,
+      "details": "Pack Of: 1  Quantity: 125 ml Product Type: Skin Cleanser Packaging Type: Plastic Bottle Skin Type: Dry to Normal and Sensitive skin Ideal For-Men & Women Mfg. Lic. No.: M-736  Product Information: Cetaphil Gentle Skin Cleanser is a clinically tested creamy cleansing formula, fortified with Hydrating Glycerin, Vitamin B3 and Pro-Vitamin B5. This cleanser gently removes dirt, makeup and impurities, while preserving the skin's natural moisture barrier. It is ideal for face and body.  Cetaphil Gentle Skin Cleanser defends against 5 signs of skin sensitivity: • Weakened skin moisture barrier • Dryness • Irritation • Roughness • Tightness Ingredients: Aqua, Glycerin, Cetearyl Alcohol, Panthenol, Niacinamide, Pantolactone, Xanthan Gum, Sodium Cocoyl Isethionate, Sodium Benzoate and Citric Acid. Key Benefits: • Removes dirt, makeup and impurities from the skin • Hydrates and replenish the skin's moisture Usage Direction: • Cetaphil Gentle Skin Cleanser is recommended for external use only as advised by the physician. • Direction for use without water: Apply Cetaphil Gentle Skin Cleanser to the skin and massage gently. Remove excess with a soft cloth, leaving a thin transparent film on the skin. • Before application always go through the leaflet or label instructions that come up with the product. Safety Information: If allergic to any ingredients of Cetaphil Gentle Skin Cleanser, let the physician know straight away. • The physician should be well informed when concomitant application of this one with another product.  Storage Condition: • Store below 30°C. • Keep out of reach of children."
+    }
+  ],
+
+  "aProduct":[
+  {  "name" :[ "aa", "ab", "ac"]
+  }
+  ],
+  "bProduct":[
+    {
+      "name":["bb","bc","bd"]
+    }
+  ],
+
+  "cart-data":[
+
+  ],
+"imgcollection":[
+  {
+    "image":"../../assets/images/product-slider1",
+    "thumbimage":"../../assets/images/product-slider1",
+    "alt":"img1",
+    "title":"image1"
+  },
+  {
+    "image":"../../assets/images/product-slider2",
+    "thumbimage":"../../assets/images/product-slider2",
+    "alt":"img2",
+    "title":"image2"
+  },
+  {
+    "image":"../../assets/images/product-slider3",
+    "thumbimage":"../../assets/images/product-slider3",
+    "alt":"img3",
+    "title":"image3"
+  },  {
+    "image":"../../assets/images/product-slider4",
+    "thumbimage":"../../assets/images/product-slider4",
+    "alt":"img4",
+    "title":"image4"
+  }
+],
+
+  "profile": {
+    "name": "typicode"
+  }
+}

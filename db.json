@@ -1,0 +1,347 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [ ],
+  "registeredUser": [
+    {
+      "username": " gautam",
+      "mobile": " 986545137",
+      "mail": "gautamkrishnasamy2001@gmail.com",
+      "password": "gautam@007",
+      "confirm_pass": "gautam@007",
+      "id": 1
+    }
+  ],
+  "productdata": [
+    {
+      "id": 1,
+      "title": "Dettol",
+      "description": "Dettol antiseptic Liquid",
+      "Quantity": "500(ml)  (Approx)",
+      "rating": "4.3",
+     
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 2,
+      "title": "Cetaphil",
+      "description": "Cetaphil Gentle Skin Cleanser",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.1",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+
+    {
+      "id": 3,
+      "title": "Shampoo",
+      "description": "Himalaya Baby shampoo",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 4,
+      "title": "Gel",
+      "description": "Volini PainKiller gel",
+      "Quantity": "50g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 5,
+      "title": "Testing kit",
+      "description": "One touch Ultra Kit",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 6,
+      "title": "Oximeter",
+      "description": "Zebronics Pulse oximeter",
+      "Quantity": "1unit",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 7,
+      "title": "Supplyments",
+      "description": "Proteinx Chocolate powder",
+      "Quantity": "500g  (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 8,
+      "title": "Supplyments",
+      "description": "Horlicks Classic malt powder",
+      "Quantity": "250g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 9,
+      "title": "Tablets",
+      "description": "Iron Tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 10,
+      "title": "Tablets",
+      "description": "Swisse Iron tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 11,
+      "title": "Tablets",
+      "description": "Naturebay pro Vitamin tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 12,
+      "title": "Herbal",
+      "description": "Kapiva Triphala Herbal Juice",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 13,
+      "title": "Oil",
+      "description": "Naturebay Omega 3 Fish oil",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 14,
+      "title": "Tablets",
+      "description": "Carboamide Forte Nova Tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 15,
+      "title": "Tablets ",
+      "description": "Coecoral D3 500mg Tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 16,
+      "title": "Tablets",
+      "description": "Ezorb D3 tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 17,
+      "title": "Tablets",
+      "description": "Himlaya Confido",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 18,
+      "title": "Tablets",
+      "description": "Sugar free gold",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 19,
+      "title": "Tablets",
+      "description": "Amrutanjan pain balm",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 20,
+      "title": "Gel",
+      "description": "Ahaglow Face Wash",
+      "Quantity": "200g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "628",
+      "offerPercentage": "11% OFF"
+    },
+    {
+      "id": 21,
+      "title": "Gel",
+      "description": "Digestine Gel",
+      "Quantity": "450ml  (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "174",
+      "offerPercentage": "20% OFF"
+    },
+    {
+      "id": 22,
+      "title": "Tablets",
+      "description": "Crocin 650 mg",
+      "Quantity": "15 Tablets (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "29",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 23,
+      "title": "bandage",
+      "description": "Roll Bandage",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "16",
+      "offerPercentage": "40% OFF"
+    },
+    {
+      "id":24,
+      "title": "Tablets",
+      "description": "Paracetamol 500",
+      "Quantity": "15 Tablets (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "22",
+      "offerPercentage": "14% OFF"
+    },
+    {
+      "id": 25,
+      "title": "Tablets",
+      "description": "Himalaya Triphala",
+      "Quantity": "30 Tablets (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "174",
+      "offerPercentage": "13% OFF"
+    },
+    {
+      "id": 26,
+      "title": "bandage",
+      "description": "Flamingo Bandage",
+      "Quantity": "1 piece (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "159",
+      "offerPercentage": "36% OFF"
+    },
+    {
+      "id":27,
+      "title": "Gel",
+      "description": "Chicco Disinfectant gel",
+      "Quantity": "500ml (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "182",
+      "offerPercentage": "14% OFF"
+    },
+    {
+      "id": 28,
+      "title": "Oil",
+      "description": "Dr Ortho oil",
+      "Quantity": "100ml (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "260",
+      "offerPercentage": "11% OFF"
+    },
+    {
+      "id": 29,
+      "title": "chewgum",
+      "description": "Nicotex 2mg chewgum",
+      "Quantity": "25 pc (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "208",
+      "offerPercentage": "15% OFF"
+    },
+    {
+      "id":30,
+      "title": "Tablets",
+      "description": "Paracetamol 500",
+      "Quantity": "15 Tablets (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "22",
+      "offerPercentage": "14% OFF"
+    }
+  ],
+  "productdescription":[ 
+    {
+      "id":1,
+      "details": "Pack Of 1 Quantity 1 L Container Type  Bottle Fragrance Fresh Alcohol  (Denatured) eq. to Absolute Alcohol 13.1% v/v  Used For-Antiseptic & Disinfectant Product Information- For protection against 100 illness causing germs and bacteria, use Dettol Multi Use Hygiene liquid.  • Kills germs and bacteria.• Protects against infection. • Can be added to bathing water or used as shaving liquid. • Serves as a cleaning agent for hard surfaces and laundry."
+    },
+    {
+      "id":2,
+      "details":"Pack Of: 1  Quantity: 125 ml Product Type: Skin Cleanser Packaging Type: Plastic Bottle Skin Type: Dry to Normal and Sensitive skin Ideal For-Men & Women Mfg. Lic. No.: M-736  Product Information: Cetaphil Gentle Skin Cleanser is a clinically tested creamy cleansing formula, fortified with Hydrating Glycerin, Vitamin B3 and Pro-Vitamin B5. This cleanser gently removes dirt, makeup and impurities, while preserving the skin's natural moisture barrier. It is ideal for face and body.  Cetaphil Gentle Skin Cleanser defends against 5 signs of skin sensitivity: • Weakened skin moisture barrier • Dryness • Irritation • Roughness • Tightness Ingredients: Aqua, Glycerin, Cetearyl Alcohol, Panthenol, Niacinamide, Pantolactone, Xanthan Gum, Sodium Cocoyl Isethionate, Sodium Benzoate and Citric Acid. Key Benefits: • Removes dirt, makeup and impurities from the skin • Hydrates and replenish the skin's moisture Usage Direction: • Cetaphil Gentle Skin Cleanser is recommended for external use only as advised by the physician. • Direction for use without water: Apply Cetaphil Gentle Skin Cleanser to the skin and massage gently. Remove excess with a soft cloth, leaving a thin transparent film on the skin. • Before application always go through the leaflet or label instructions that come up with the product. Safety Information: If allergic to any ingredients of Cetaphil Gentle Skin Cleanser, let the physician know straight away. • The physician should be well informed when concomitant application of this one with another product.  Storage Condition: • Store below 30°C. • Keep out of reach of children."
+    }
+  ],
+  "cart":[
+
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

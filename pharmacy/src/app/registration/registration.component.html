@@ -1,0 +1,95 @@
+<body>
+  <div class="container">
+    <div class="title"> Registration</div>
+    <form id="form" [formGroup]="formRegister"  (ngSubmit)="submitForm()">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" name="username" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName" class="input"
+            formControlName="fullname1" />
+        </div>
+
+        <div class="information-error" *ngIf="formRegister.controls['fullname1'].dirty">
+          <p class="error" *ngIf="formRegister.controls['fullname1'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; FirstName is not Empty</p>
+          <p class="error" *ngIf="formRegister.controls['fullname1'].errors?.['pattern']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Enter the correct FirstName</p>
+        </div>
+
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" name="emailid" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$" placeholder="Email-id"
+            class="input" formControlName="email1" />
+        </div>
+        <div class="information-error" *ngIf="formRegister.controls['email1'].dirty">
+          <p class="error" *ngIf="formRegister.controls['email1'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Email-id is not Empty</p>
+          <p class="error" *ngIf="formRegister.controls['email1'].errors?.['pattern']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Enter the correct email-id</p>
+        </div>
+
+        <div class="input-box">
+          <span class="details">Phone number</span>
+          <input type="tel" name="mobileno" pattern="^[ 6-9]{1}[0-9]{9}$" placeholder="Mobileno"
+            class="input" formControlName="mobile1" />
+        </div>
+        <div class="information-error" *ngIf="formRegister.controls['mobile1'].dirty">
+          <p class="error" *ngIf="formRegister.controls['mobile1'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Phone number is not empty</p>
+          <p class="error" *ngIf="formRegister.controls['mobile1'].errors?.['pattern']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Enter the correct number</p>
+        </div>
+        <div class="input-box">
+          <span class="details">Dateof birth</span>
+          <input type="date" placeholder="Enter your DOB"  formControlName="date" >
+        </div>
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input type="password" placeholder="Enter your password" id="pass1" name="pass"
+            pattern="^[A-Z]{1}[a-z]+[@][1-9]{1,7}$" name="Password" class="input" required
+            formControlName="password1" />
+        </div>
+        <div class="information-error1" *ngIf="formRegister.controls['password1'].dirty">
+          <p class="error" *ngIf="formRegister.controls['password1'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp;Password is not Empty</p>
+          <p class="error" *ngIf="formRegister.controls['password1'].errors?.['pattern']"><i
+              title="password have min 7 digits, uppercase, lowercase, number and special character"
+              class="fas fa-exclamation-circle"></i>&numsp; Follow password Constraints</p>
+        </div>
+
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input type="password" placeholder="Retype your password" id="pass2" pattern="^[A-Z]{1}[a-z]+[@][1-9]{3,7}$"
+            name="Password" class="input" required cpasswords formControlName="cpassword1">
+        </div>
+        <div class="information-error1" *ngIf="formRegister.controls['cpassword1'].dirty">
+          <p class="error" *ngIf="formRegister.controls['cpassword1'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; conform Password is not Empty</p>
+          <p class="error" *ngIf="formRegister.controls['cpassword1'].errors?.['cpasswordvalid']"><i
+              title="password have min 7 digits, uppercase, lowercase, number and special character"
+              class="fas fa-exclamation-circle"></i>&numsp; Follow Conform password Constraints</p>
+        </div>
+
+        <div class="gender-box">
+          <span class="gender-type">Gender</span>
+          <div class="types">
+            <input type="radio" id="male" name="gender" value="Male"  formControlName="gender">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female"  formControlName="gender" >
+            <label for="female">Female</label><br>
+            <input type="radio" id="others" name="gender" value="others"  formControlName="gender" >
+            <label for="others">Others</label>
+          </div>
+        </div>
+        <div class="button">
+          <button>Register</button>
+        </div>
+        <div class="login">
+          <h4>Already have an account <span><a >LOGIN</a></span></h4>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- <script src="./JS/validateform.js"></script> -->
+</body>

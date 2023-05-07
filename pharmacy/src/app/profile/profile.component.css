@@ -1,0 +1,157 @@
+
+body{
+  background-color: #33a510;
+  overflow-x: hidden;
+  padding-left: 32rem;
+}
+
+header{
+ position:fixed;
+  left:0;
+  padding: 0;
+ /* Z-index:1000; */
+ height:100%;
+ width:32rem;
+ background: #33a510;
+ display:flex;
+ align-items:center;
+ justify-content: center;
+ flex-flow:column;
+ text-align:center;
+
+}
+
+section{
+  min-height: 100vh;
+  padding:1rem;
+}
+header .user img{
+  height:12rem;
+  width:12rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border: .7rem solid yellow;
+}
+
+header .user .name{
+  font-size: 2rem;
+  color: #fff;
+}
+
+header .user .post{
+  font-size: 1.5rem;
+  color: #eee;
+}
+
+header .profile_sidebar{
+  width:100%
+}
+
+header .profile_sidebar ul{
+  list-style: none;
+  padding:0.5rem;
+}
+
+header .profile_sidebar ul li a{
+  display:block;
+  padding: 8px;
+  margin: 0.2rem 0;
+  background: #333333;
+  color:#fff;
+  font-size: 25px;
+  border-radius: 5rem;
+  text-decoration: none;
+}
+
+header .profile_sidebar ul li a:hover{
+  background: yellow;
+}
+
+#menu{
+  position:fixed;
+  top:2rem; right:2rem;
+  background: #333;
+  color: #fff;
+  cursor:pointer;
+  font-size: 2.5rem;
+  padding:1rem 1.5rem;
+  z-index: 1000;
+  display:none;
+}
+
+.dashboard{
+  display:flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 15rem;
+}
+
+.dashboard h3{
+  font-size: 2.5rem;
+  color:#fff
+}
+
+.dashboard h1{
+  font-size: 5rem;
+  color:#fff
+}
+
+.dashboard p{
+   font-size: 2rem;
+   color:#fff;
+   padding:1rem 0;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-container input {
+  padding: 10px;
+  margin: 5px;
+}
+/* ********media qureies************** */
+
+@media (max-width:1200px){
+  html{
+    font-size: 55% ;
+  }
+}
+
+@media (max-width:991px){
+  header{
+    left:-120px;
+  }
+
+  #menu{
+    display: block;
+  }
+}
+
+
+.addres{
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.gridAddress{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+
+}
+
+
+.addres::backdrop{
+  background-color: black;
+  opacity: 0.8;
+}

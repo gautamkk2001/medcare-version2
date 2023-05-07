@@ -1,0 +1,40 @@
+<body>
+  <div class="pro-container">
+      <!-- <div class="img">
+          <img src="../../assets/gif/Web-IVC.gif">
+      </div> -->
+      <!-- <button (click)="loginmodal()">login</button> -->
+  <dialog class="Loginmodal">
+  <div class="container">
+
+      <div class="header">
+        <a routerLink="">< Back</a>
+          <h1>Login</h1>
+      </div>
+      <div class="main">
+          <form name="form" onsubmit="return validated()" action="product.html">
+              <span>
+                  <i class="fa-solid fa-envelope"></i>
+                  <input id="user_email" type="text" placeholder="Enter your Email" onkeyup="checking()" required>
+              </span><br>
+              <span>
+                  <i class="fa-solid fa-lock"></i>
+                  <input id="password" type="password" placeholder="Enter your Password" onkeyup="checkpass()" required>
+              </span><br>
+              <button type="submit">Login</button>
+          </form>
+          <div class="change-password">
+              <h3><a routerLink="/forgot">Forgot password</a></h3>
+          </div>
+          <div class="register">
+              <h3>I don't have account <a routerLink="/registration">Register</a></h3>
+          </div>
+      </div>
+  </div>
+</dialog>
+</div>
+  <script src="./JS/validate.js"></script>
+</body>
+
+
+<!-- <router-outlet></router-outlet> -->

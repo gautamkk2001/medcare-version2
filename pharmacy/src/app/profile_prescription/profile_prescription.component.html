@@ -1,0 +1,17 @@
+<section>
+<h2>Upload your <i class="fas fa-prescription    "></i></h2>
+<form action="#" method="post" enctype="multipart/form-data">
+  <label for="patient-name">Name</label>
+  <input type="text" name="patient-name">
+  <label for="file">Select a file:</label>
+  <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
+  <button type="submit" (click)="rxUpload()">Upload</button>
+</form>
+<div class="box">
+  <div class="patient-pres">
+    <img src="../../assets/images/patient.jpg">
+  </div>
+  <h3>Gautam</h3>
+  <button class="rx-button">View</button>
+</div>
+</section>

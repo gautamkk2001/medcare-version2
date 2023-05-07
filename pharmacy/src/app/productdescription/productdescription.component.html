@@ -1,0 +1,37 @@
+<!-- <routeroutlet></routeroutlet>  -->
+<app-navbar></app-navbar>
+
+<!-- .........................................................................................product Details....................................................................................................................... -->
+<div id="prodetails" class="section-p1">
+<div class="Single-pro-img">
+  <img src="../../assets/images/{{finaldescription.description}}.jpg" width="100%" id="main-img" alt="">
+  <div class="s-img-grp">
+    <div class="small-imgs" >
+      <img src="../../assets/images/{{finaldescription.description}}1.jpg" width="100%" id="small1" alt="" appGallery>
+    </div>
+    <div class="small-imgs">
+      <img src="../../assets/images/{{finaldescription.description}}2.jpg" width="100%" id="small2" alt="" appGallery/>
+    </div>
+    <div class="small-imgs">
+      <img src="../../assets/images/{{finaldescription.description}}3.jpg" width="100%" id="small3" alt="" appGallery/>
+    </div>
+    <div class="small-imgs">
+      <img src="../../assets/images/{{finaldescription.description}}.jpg" width="100%" id="small4" alt="" appGallery/>
+    </div>
+  </div>
+</div>
+
+<div class="details-pro">
+
+  <h5><a routerLink="/product"> Home / products</a></h5>
+  <h3> {{finaldescription.description}}</h3>
+  <h2> {{finaldescription.originalAmount|currency:'INR'}}</h2>
+  <h3>Unit</h3>
+  <input type="number" value="1">
+  <button>Add to cart</button>
+  <h4>Product details</h4>
+  <span>{{finaldescription.details|json}}</span>
+</div>
+</div>
+
+<app-footer></app-footer>

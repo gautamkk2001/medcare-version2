@@ -1,0 +1,82 @@
+
+<!-- <section class="dashboard" id="dashboard">
+  <h3>Hi There !</h3>
+  <h1>I'm <span>Gautam</span></h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reprehenderit at cumque facere sequi dolor neque officia laborum cum perspiciatis corrupti autem quo excepturi ut, quidem tempore asperiores fugiat animi?</p>
+   <a href="#about"><button class="btn">About me</button></a>
+   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A consectetur ullam maxime doloribus eligendi, at velit enim aliquid temporibus voluptas voluptates ut dolores, odit vel facilis. Ab sed quod neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta harum, odit eum explicabo eligendi odio animi, illo adipisci perferendis magnam quod eius, tempore natus provident dignissimos cum voluptatum repellat vitae.</p>
+</section> -->
+
+<section>
+  <div class="container">
+    <div class="title"> Update </div>
+    <form id="form">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" name="username" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName" value="Gautam" class="input"
+            formControlName="fullname1" />
+        </div>
+
+
+
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" name="emailid" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$"  value="gautamkrishnasamy2001@gmail.com"
+            class="input" formControlName="email1" />
+        </div>
+
+
+        <div class="input-box">
+          <span class="details">Phone number</span>
+          <input type="tel" name="mobileno" pattern="^[ 6-9]{1}[0-9]{9}$" placeholder="Mobileno"
+            class="input" formControlName="mobile1" />
+        </div>
+
+        <div class="input-box">
+          <span class="details">Dateof birth</span>
+          <input type="date" placeholder="Enter your DOB"  formControlName="date" >
+        </div>
+        <div class="input-box">
+          <span class="details">New Password</span>
+          <input type="password" placeholder="Enter your password" id="pass1" name="pass"
+            pattern="^[A-Z]{1}[a-z]+[@][1-9]{1,7}$" name="Password" class="input" required
+            formControlName="password1" />
+        </div>
+
+
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input type="password" placeholder="Retype your password" id="pass2" pattern="^[A-Z]{1}[a-z]+[@][1-9]{3,7}$"
+            name="Password" class="input" required cpasswords formControlName="cpassword1">
+        </div>
+
+
+        <div class="gender-box">
+          <span class="gender-type">Gender</span>
+          <div class="types">
+            <div class="gen">
+            <input type="radio" id="male" name="gender" value="Male"  formControlName="gender">
+            <label for="male">Male</label><br>
+          </div>
+            <div class="gen">
+            <input type="radio" id="female" name="gender" value="Female"  formControlName="gender" >
+            <label for="female">Female</label><br>
+          </div>
+            <div class="gen">
+            <input type="radio" id="others" name="gender" value="others"  formControlName="gender" >
+            <label for="others">Others</label>
+          </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="button">
+        <button>Modify</button>
+      </div>
+    </form>
+  </div>
+
+
+</section>

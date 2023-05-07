@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    height: 100vh;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #74b162, #86a53d);
+}
+.container{
+    max-width: 700px;
+    width:100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+}
+.container .title{
+    font-size: 30px;
+    font-weight: 500;
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box input{
+     height: 45px;
+     width: 100%;
+     outline: none;
+     border-radius: 5px;
+    border: 1px solid #5b7396;  
+     padding-left: 15px;
+     font-size: 18px;
+     border-bottom-width: 2px; 
+     transition: all 0.3s ease-in-out;
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.types{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+/* .types label:hover{
+    background-color: #1e91de;
+    padding: 5px 20px;
+    border-radius: 2px;
+} */
+form .button{
+    height:45px;
+    margin: 30px 0;
+}
+form .button button{
+     height: 100%;
+     width: 100%;
+     outline: none;
+     font-weight: 500;
+     outline: none;
+     font-size: 20px;
+     letter-spacing: 1px;
+     border-radius: 8px;
+     background: #34d77b;
+     border-color: #34d77b;
+}
+.login h3 a{
+          text-decoration: none;
+          color:  #1e91de;
+}
+.login h3{
+    text-align: center;
+}
+
+
+#uname-error, #num-error, #pass1-error, #pass2-error {
+    color:red;
+    font-size: 16px;
+}
