@@ -24,6 +24,26 @@
       "cpassword1": "Gautam@1",
       "gender": "Male",
       "id": 1
+    },
+    {
+      "username": "Krishna",
+      "email": "krishna12@gmail.com",
+      "mobile": "8675728052",
+      "date": "1999-07-14",
+      "password1": "Krishna@45",
+      "cpassword1": "Krishna@45",
+      "gender": "Male",
+      "id": 2
+    },
+    {
+      "username": "arul",
+      "email": "arul27@gmail.com",
+      "mobile": "6384567966",
+      "date": "2001-12-27",
+      "password1": "Arul@1227",
+      "cpassword1": "Arul@1227",
+      "gender": "Male",
+      "id": 3
     }
   ],
   "productdata": [
@@ -364,46 +384,67 @@
       "details": "Pack Of: 1  Quantity: 125 ml Product Type: Skin Cleanser Packaging Type: Plastic Bottle Skin Type: Dry to Normal and Sensitive skin Ideal For-Men & Women Mfg. Lic. No.: M-736  Product Information: Cetaphil Gentle Skin Cleanser is a clinically tested creamy cleansing formula, fortified with Hydrating Glycerin, Vitamin B3 and Pro-Vitamin B5. This cleanser gently removes dirt, makeup and impurities, while preserving the skin's natural moisture barrier. It is ideal for face and body.  Cetaphil Gentle Skin Cleanser defends against 5 signs of skin sensitivity: • Weakened skin moisture barrier • Dryness • Irritation • Roughness • Tightness Ingredients: Aqua, Glycerin, Cetearyl Alcohol, Panthenol, Niacinamide, Pantolactone, Xanthan Gum, Sodium Cocoyl Isethionate, Sodium Benzoate and Citric Acid. Key Benefits: • Removes dirt, makeup and impurities from the skin • Hydrates and replenish the skin's moisture Usage Direction: • Cetaphil Gentle Skin Cleanser is recommended for external use only as advised by the physician. • Direction for use without water: Apply Cetaphil Gentle Skin Cleanser to the skin and massage gently. Remove excess with a soft cloth, leaving a thin transparent film on the skin. • Before application always go through the leaflet or label instructions that come up with the product. Safety Information: If allergic to any ingredients of Cetaphil Gentle Skin Cleanser, let the physician know straight away. • The physician should be well informed when concomitant application of this one with another product.  Storage Condition: • Store below 30°C. • Keep out of reach of children."
     }
   ],
-
-  "aProduct":[
-  {  "name" :[ "aa", "ab", "ac"]
-  }
-  ],
-  "bProduct":[
+  "aProduct": [
     {
-      "name":["bb","bc","bd"]
+      "name": [
+        "aa",
+        "ab",
+        "ac"
+      ]
     }
   ],
-
-  "cart-data":[
-
+  "bProduct": [
+    {
+      "name": [
+        "bb",
+        "bc",
+        "bd"
+      ]
+    }
   ],
-"imgcollection":[
-  {
-    "image":"../../assets/images/product-slider1",
-    "thumbimage":"../../assets/images/product-slider1",
-    "alt":"img1",
-    "title":"image1"
-  },
-  {
-    "image":"../../assets/images/product-slider2",
-    "thumbimage":"../../assets/images/product-slider2",
-    "alt":"img2",
-    "title":"image2"
-  },
-  {
-    "image":"../../assets/images/product-slider3",
-    "thumbimage":"../../assets/images/product-slider3",
-    "alt":"img3",
-    "title":"image3"
-  },  {
-    "image":"../../assets/images/product-slider4",
-    "thumbimage":"../../assets/images/product-slider4",
-    "alt":"img4",
-    "title":"image4"
-  }
-],
-
+  "cart-data": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "imgcollection": [
+    {
+      "image": "../../assets/images/product-slider1",
+      "thumbimage": "../../assets/images/product-slider1",
+      "alt": "img1",
+      "title": "image1"
+    },
+    {
+      "image": "../../assets/images/product-slider2",
+      "thumbimage": "../../assets/images/product-slider2",
+      "alt": "img2",
+      "title": "image2"
+    },
+    {
+      "image": "../../assets/images/product-slider3",
+      "thumbimage": "../../assets/images/product-slider3",
+      "alt": "img3",
+      "title": "image3"
+    },
+    {
+      "image": "../../assets/images/product-slider4",
+      "thumbimage": "../../assets/images/product-slider4",
+      "alt": "img4",
+      "title": "image4"
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

@@ -74,7 +74,7 @@ displayname:any=""
      this.isLoggedIn=false;
 
   }
-// *************************************************** Modal  ****************************
+// *************************************************** Modal  **************************************]
 
   loginmodal(){
     const loginpanel:any= document.querySelector(".Loginmodal");

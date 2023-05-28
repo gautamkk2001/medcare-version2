@@ -33,10 +33,10 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
 
   ngOnInit() {
   }
-body:any=""
-  // addedCart(){
-  //   this.data.addToCart().subscribe(data=>{
-  //   })
-  //   alert("added");
-  // }
+cartdata:any=this.finaldescription;
+  addedCart(){
+    this.data.addToCart(this.cartdata).subscribe(data=>{
+    })
+    alert("added");
+  }
 }

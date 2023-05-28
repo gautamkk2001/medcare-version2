@@ -8,7 +8,7 @@
       <li><input type="search" placeholder="Search here" id="searchbox"></li>
       <li><a routerLink="/accountdetail">Profile</a></li>
       <li><a routerLink="/cart" routerLinkActive="active"><i class="fa-solid fa-bag-shopping"></i></a></li>
-      <li><a (click)="loginmodal()" *ngIf="isLoggedIn==false">Log <i class="fa-solid fa-right-to-bracket"></i></a></li>
+      <li><a (click)="loginmodal()" *ngIf="isLoggedIn==false">Login</a></li>
       <li><a (click)="logout()" *ngIf="isLoggedIn==true">{{displayname}} <i class="fa-solid fa-right-to-bracket"></i></a></li>
       <a href="#" id="close"><i class="far fa-times"></i></a>
     </ul>
@@ -29,7 +29,7 @@
         <a (click)="close()">
           < Back</a>
             <h1>Login</h1>
-            <img src="../../assets/images/product-slider2.jpg">
+
       </div>
       <div class="main">
         <form name="form">

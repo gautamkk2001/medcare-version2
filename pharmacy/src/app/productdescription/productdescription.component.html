@@ -28,7 +28,7 @@
   <h2> {{finaldescription.originalAmount|currency:'INR'}}</h2>
   <h3>Unit</h3>
   <input type="number" value="1">
-  <button>Add to cart</button>
+  <button (click)="addedCart()">Add to cart</button>
   <h4>Product details</h4>
   <span>{{finaldescription.details|json}}</span>
 </div>

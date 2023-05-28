@@ -156,6 +156,7 @@ padding:10px;
 .register h3 a{
 text-decoration: none;
 color: white;
+cursor: pointer;
 }
 
 /* .change-password {
@@ -291,7 +292,8 @@ form .button button{
 }
 .login h4 a{
       text-decoration: none;
-        color:  #1e91de;
+      color:  #1e91de;
+      cursor: pointer;
 }
 .login h4{
     text-align: center;
