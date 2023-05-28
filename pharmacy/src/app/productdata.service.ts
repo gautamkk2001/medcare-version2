@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProductdataService {
 
   strotedData:any="";
-
+  loggedInUser:any;
 constructor(private http:HttpClient) { }
 
 getproducts(){
@@ -21,11 +21,16 @@ addUserInformation(body:any){
 registereduser(){
   return this.http.get("http://localhost:3000/registeredUser")
 }
+adminUser(){
+  return this.http.get("http://localhost:3000/adminData")
+}
 getdrugsname(){
   return this.http.get("http://localhost:3000/druglist")
 }
 addToCart(body:any){
   return  this.http.post("http://localhost:3000/cart-data",body);
 }
-
+cartDataValues(){
+  return this.http.get("http://localhost:3000/cart-data")
+}
 }

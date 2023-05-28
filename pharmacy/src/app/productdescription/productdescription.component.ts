@@ -14,16 +14,16 @@ searchdescription:any="";
 finaldescription:any="";
 detailsofproduct:any="";
 constructor(private data:ProductdataService, private route:ActivatedRoute) {
-  this.data.getproducts().subscribe(
-
-    data=> {this.prodescription =data
+  this.data.getproducts().subscribe(data=> {this.prodescription =data
     this.route.params.subscribe(paramdata=>
       {
         this.searchdescription=paramdata['check'];
         for(let pro of this.prodescription){
+
           if(pro.description==this.searchdescription){
             this.finaldescription=pro;
             this.detailsofproduct=pro;
+
             break;
           }
         }
@@ -34,8 +34,8 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
   ngOnInit() {
   }
 cartdata:any=this.finaldescription;
-  addedCart(){
-    this.data.addToCart(this.cartdata).subscribe(data=>{
+  addedCart(value:any){
+    this.data.addToCart(value).subscribe(data=>{
     })
     alert("added");
   }

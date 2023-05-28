@@ -14,71 +14,31 @@
           </tr>
       </thead>
 
-      <tbody>
+      <tbody *ngFor="let cart of cartData" [formGroup]="input">
           <tr>
               <td> <a href="#"><i class="fas far fa-trash-alt"></i></a></td>
-              <td><img  class="img"src="./images/product5.jpg" alt=""></td>
+              <td><img  class="img"src="../../assets/images/{{cart.description}}.jpg" alt=""></td>
               <td>
-                   <h5>
-                      horlicks 1kg
-                   </h5>
+                   <h5>{{cart.description}}</h5>
               </td>
               <td>
-                  <h5>Rs: 180</h5>
+                  <h5>Rs: {{cart.originalAmount}}</h5>
               </td>
-              <td><input class="in" value="1"type="number"></td>
+              <td><input class="in" value="1" type="number" name="quantity"  formControlName="quantity" (change)="changeQuantity(cart)"></td >
               <td>
-                  <h5>Rs: 180</h5>
+                  <h5>Rs: {{change}}</h5>
               </td>
           </tr>
-
-          <tr>
-              <td> <a href="#"><i class="fas far fa-trash-alt"></i></a></td>
-              <td><img  class="img"src="./images/dettol-b.jpg" alt=""></td>
-              <td>
-                   <h5>
-                      horlicks 1kg
-                   </h5>
-              </td>
-              <td>
-                  <h5>Rs: 180</h5>
-              </td>
-              <td><input class="in" value="1"type="number"></td>
-
-              <td>
-                  <h5>Rs: 180</h5>
-              </td>
-          </tr>
-
-          <tr>
-              <td> <a href="#"><i class="fas far fa-trash-alt"></i></a></td>
-              <td><img  class="img" src="./images/Prod3.jpg" alt=""></td>
-              <td>
-                   <h5>
-                      horlicks 1kg
-                   </h5>
-              </td>
-              <td>
-                  <h5>Rs: 180</h5>
-              </td>
-              <td><input class="in" value="1"type="number"></td>
-
-              <td>
-                  <h5>Rs: 180</h5>
-              </td>
-          </tr>
-
       </tbody>
   </table>
 </section>
-
 <section id="cart-bottom" class="container">
   <div class="row">
       <div class="coupon">
           <div class="cont-1">
               <h5>COUPON</h5>
               <p>Ener your coupon here</p>
-              <input type="text" placeholder="couon code">
+              <input type="text" placeholder="coupon code">
               <button> APPLY COUPON</button>
           </div>
       </div>
@@ -88,15 +48,15 @@
               <h5>CART TOTAL</h5>
               <div class="flex">
                   <h4>Subtotal</h4>
-                  <h4>Rs: 215.00</h4>
+                  <h4>{{totalPrice}}</h4>
               </div>
               <div class="flex">
                   <h4>Shipping</h4>
-                  <h4>Rs: 15.00</h4>
+                  <h4>Rs: 50.00</h4>
               </div>
               <div class="flex">
                   <h4>Total</h4>
-                  <h3>Rs: 400.00
+                  <h3>Rs: 590.00
                   </h3>
               </div>
               <div><button >Proceed</button>

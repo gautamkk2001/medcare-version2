@@ -15,8 +15,7 @@ import { Profile_mywishlistComponent } from './profile_mywishlist/profile_mywish
 import { Profile_prescriptionComponent } from './profile_prescription/profile_prescription.component';
 import { Profile_addressComponent } from './profile_address/profile_address.component';
 import { AdminPageComponent } from './adminPage/adminPage.component';
-
-
+import { Profile_offersComponent } from './profile_offers/profile_offers.component';
 
 const routes: Routes = [
   {
@@ -82,6 +81,10 @@ const routes: Routes = [
   {
     path:"cart",
     component:CartpageComponent
+  },
+  {
+    path:"offer",
+    component:Profile_offersComponent
   },
   {
    path:"description",

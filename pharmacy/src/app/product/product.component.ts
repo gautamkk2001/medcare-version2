@@ -22,20 +22,20 @@ export class ProductComponent implements OnInit {
   pro_amount: any = '';
   value:any=this.data.strotedData;
   finalData:any=""
-  a() {
-    this.data.strotedData = "aProduct";
-    
-  }
-  b() {
-    this.data.strotedData = "bProduct";
-  }
-  c() {
-    this.data.strotedData = 3;
-  }
+  logInUser:any=""
+
   ngOnInit() {
     this.http.get<any>("http://localhost:3000/"+'/'+this.value).subscribe(data=>{
     this.finalData=data;
-    })
+    });
+    const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.logInUser = JSON.parse(sessionUser);
+    } else if (this.data.loggedInUser !== null) {
+      this.logInUser = this.data.loggedInUser;
+    } else {
+      alert('You are Loggedout. Login to continue');
+    }
   }
 
 

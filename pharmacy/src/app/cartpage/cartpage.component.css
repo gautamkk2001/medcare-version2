@@ -43,15 +43,26 @@
 .row{
   display: flex;
 }
+
 .cont-1{
   margin:10px;
   padding:20px;
   /* padding-left: 850px; */
+  height: 200px;
+  /* background-color: blue; */
 }
 .cont-1 h5 {
   background-color: #fd8c66;
   color: #fff;
   padding: 5px;
+  font-size: 22px;
+}
+.cont-1 p{
+  font-size: 18px;
+  color:#fff;
+}
+.cont-1 input{
+  height: 15px;
 }
 .cont-1 button{
   background-color: black;

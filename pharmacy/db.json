@@ -44,6 +44,157 @@
       "cpassword1": "Arul@1227",
       "gender": "Male",
       "id": 3
+    },
+    {
+      "username": "Anandh",
+      "email": "anandh07102002@gmail.com",
+      "mobile": "9025903729",
+      "date": "2002-10-07",
+      "password1": "Anandh@2121",
+      "cpassword1": "Anandh@2121",
+      "gender": "Male",
+      "id": 4
+    },
+    {
+      "username": "Arvinthan",
+      "email": "arvinthan45@gmail.com",
+      "mobile": "6382666723",
+      "date": "2001-11-05",
+      "password1": "Arvinthan@4545",
+      "cpassword1": "Arvinthan@4545",
+      "gender": "Male",
+      "id": 5
+    },
+    {
+      "username": "Ashok",
+      "email": "ashok20020330@gmail.com",
+      "mobile": "6383476731",
+      "date": "2002-03-30",
+      "password1": "Ashok@2002",
+      "cpassword1": "Ashok@2002",
+      "gender": "Male",
+      "id": 6
+    },
+    {
+      "username": "Dhanush Kumar",
+      "email": "skgdhanushkumar17@gmail.com",
+      "mobile": "6382757488",
+      "date": "2002-05-11",
+      "password1": "Dhanush!200",
+      "cpassword1": "Dhanush!200",
+      "gender": "Male",
+      "id": 7
+    },
+    {
+      "username": "Gokulrajan",
+      "email": "gokulrajan1203@gmail.com",
+      "mobile": "9543303799",
+      "date": "2002-03-12",
+      "password1": "Gokul&1203",
+      "cpassword1": "Gokul&1203",
+      "gender": "Male",
+      "id": 8
+    },
+    {
+      "username": "Gowtham",
+      "email": "ksgowtham2002@gmail.com",
+      "mobile": "8825961959",
+      "date": "2002-10-08",
+      "password1": "Ksgow#2002",
+      "cpassword1": "Ksgow#2002",
+      "gender": "Male",
+      "id": 9
+    },
+    {
+      "username": "kalaimanivel",
+      "email": "velmanikalai12345@gmail.com",
+      "mobile": "7339388249",
+      "date": "2002-04-26",
+      "password1": "Kalai@1998",
+      "cpassword1": "Kalai@1998",
+      "gender": "Male",
+      "id": 10
+    },
+    {
+      "username": "Logesh",
+      "email": "logeshrgp@gmail.com",
+      "mobile": "6379962766",
+      "date": "2000-08-26",
+      "password1": "Logesh!2000",
+      "cpassword1": "Logesh!2000",
+      "gender": "Male",
+      "id": 11
+    },
+    {
+      "username": "Praveen",
+      "email": "praveenabd17@gmail.com",
+      "mobile": "6382410470",
+      "date": "2001-08-14",
+      "password1": "Praveen@2001",
+      "cpassword1": "Praveen@2001",
+      "gender": "Male",
+      "id": 12
+    },
+    {
+      "username": "Karthikeyan",
+      "email": "velkarthi2002@gmail.com",
+      "mobile": "9025787399",
+      "date": "2002-02-21",
+      "password1": "Karthikeyan!22",
+      "cpassword1": "Karthikeyan!22",
+      "gender": "Male",
+      "id": 13
+    },
+    {
+      "username": "Dinesh",
+      "email": "dk5014242@gmail.com",
+      "mobile": "9791876335",
+      "date": "2002-03-21",
+      "password1": "Dinesh@242",
+      "cpassword1": "Dinesh@242",
+      "gender": "Male",
+      "id": 14
+    },
+    {
+      "username": "Hemavarshini",
+      "email": "hemavarshinijp@gmail.com",
+      "mobile": "9344623278",
+      "date": "2001-12-04",
+      "password1": "Hema@2001",
+      "cpassword1": "Hema@2001",
+      "gender": "Male",
+      "id": 15
+    },
+    {
+      "username": "Kishore",
+      "email": "kishoramulraj@gmail.com",
+      "mobile": "9360090558",
+      "date": "2001-06-22",
+      "password1": "Kishore@22",
+      "cpassword1": "Kishore@22",
+      "gender": "Male",
+      "id": 16
+    },
+    {
+      "username": "Bharani",
+      "email": "bharanieswaranvalli2002@gmail.com",
+      "mobile": "9952347637",
+      "date": "2002-06-15",
+      "password1": "Bharani$69",
+      "cpassword1": "Bharani$69",
+      "gender": "Male",
+      "id": 17
+    }
+  ],
+  "adminData": [
+    {
+      "username": "Krishna",
+      "email": "adminkrishna@gmail.com",
+      "mobile": "9585389295",
+      "date": "1996-04-10",
+      "password1": "Krishna@admin1",
+      "cpassword1": "Krishna@admin1",
+      "gender": "Male"
     }
   ],
   "productdata": [
@@ -372,7 +523,41 @@
       "originalAmount": "22",
       "offerPercentage": "14% OFF",
       "details": "About P 500 mg Tablet: P 500 mg Tablet belongs to the group of mild analgesics (pain killer) and antipyretic (fever-reducing) medicine indicated to ease mild to moderate pain and reduce fever. Each uncoated P 500 mg Tablet contains Paracetamol 500 mg. Paracetamol exerts analgesic and antipyretic effects by peripheral blockage of pain impulse generation and inhibition of the hypothalamic heat-regulating centre, respectively. It also exhibits weak anti-inflammatory activity by the inhibition of prostaglandin synthesis. Use of P 500 mg Tablet: P 500 mg Tablet is used to ease mild to moderate pain and reduce fever. It is also used for the treatment of conditions including headache, migraine, backache, toothache, menstrual pain, musculoskeletal pain, and common colds. Usage Direction of P 500 mg Tablet  P 500 mg Tablet is intended for oral use only, in a dose and direction as advised by the physician. •P 500 mg Tablet is taken whole with the help of water. • Do not crush, chew or break the tablet. • Do not skip or stop the medicine without the physician's advice. • Do not consume more than the recommended dose. • Before consumption, always go through the leaflet or label instructions that come with the product. Precaution & Related information of P 500 mg Tablet: • If hypersensitive or allergic to P 500 mg Tablet, inform the physician immediately. P 500 mg Tablet should not be used with other Paracetamol-containing products. • The Physician should be well informed when concomitant consumption of this tablet with any other medicines or supplements. • Taking more than daily dose may cause serious liver damage or allergic reactions (e.g. swelling of the face, mouth and throat, difficulty in breathing, itching or rash). . Consult with the physician during pregnancy & lactation. Keep out of reach of children. Storage condition of P 500 mg Tablet: • Store at a temperature not exceeding 30°C. Protect from light and moisture."
+    },
+    {
+      "id": 31,
+      "title": "Healthdrinks",
+      "description": "Boost chocolate",
+      "Quantity": "500g",
+      "rating": "4.7",
+      "reviewCount": "(405)",
+      "originalAmount": "230",
+      "offerPercentage": "8% OFF",
+      "details": "Pack Of - 1 Quantity - 500 g Flavour - Chocolate Container Type – Jar Ideal For:- Children Food Preference – Vegetarian FSSAI Lic. No. - 10012063000134 Product Information - Boost is the secret of winning energy! It is India's one of the most leading malt-based Health Food Drink in a chocolate flavour and scientifically proven to increase stamina by 3 times than others with Envita Nutrients or those micronutrients that have a role in energy metabolism and physical performance or endurance. Ingredients - Malted barley, sugar, wheat flour, milk solids, minerals, wheat gluten, natural colors, acidity regulators, glucose, salt,cocoa powder, vitamins, soy protein isolate, nature identical flavouring substances. Storage Instruction - Store in cool, dry and hygienic place"
+    },
+    {
+      "id": 32,
+      "title": "Tablets",
+      "description": "Shelcal 500mg",
+      "Quantity": "15 Tablets (Approx)",
+      "rating": "3.3",
+      "reviewCount": "(65)",
+      "originalAmount": "116",
+      "offerPercentage": "11% OFF",
+      "details": "What is Shelcal 500 Tablet used for? Shelcal 500 is a calcium and vitamin D3 tablet. It promotes bone health and reduces the risk of fractures in people with low calcium and vitamin D levels. It is used to treat bone diseases such as osteomalacia and osteoporosis, in which the bones become weak and brittle. How should I take Shelcal 500 Tablet? Take Shelcal 500 tablet through your mouth (orally) and swallow it whole with a full glass of water or milk. Do not cut, chew or crush the tablet or it may not provide the desired results. There is no best time to take a Shelcal 500 tablet. Take it at the same time everyday preferably with or after a meal. Take the dose as mentioned by your doctor in the prescription. Do not take more than the prescribed dose or you may experience severe side effects. How does Shelcal 500 Tablet work? Shelcal 500 works by increasing calcium and vitamin D levels in the body and strengthening the bones. It corrects calcium and Vitamin D deficiency in the body and reduces the risk of fractures especially in older men and postmenopausal women suffering from bone diseases like osteoporosis. I missed a dose. What should I do? If you forget to take a dose, take it as soon as you remember. If your next dose is due soon, skip the missed dose and continue with the next dose at the same time. Do not take two doses to compensate for the missed dose. I have taken too much. What should I do? If you have taken more than your prescribed dose you may experience severe side effects. Call your doctor immediately. What are the benefits of Shelcal 500 tablet? Calcium makes up a major part of the bones and is necessary for maintaining bone strength and normal functioning of muscles and nerves. Calcium cannot be produced by the body and must be obtained from the foods you eat. Vitamin D helps the body absorb calcium in the gut. In addition to sunlight exposure, vitamin D is also produced in the body as a result of the foods we eat. With age, calcium and vitamin D deficiencies become more common, resulting in weak and fragile bones prone to fractures. Shelcal 500 helps maintain the body’s calcium and vitamin D levels, thus promoting bone health. It is used to treat bone diseases such as osteomalacia, a condition in which bones become soft, weak and brittle. It can also be used in combination with other medicines to treat osteoporosis in the elderly and in postmenopausal women. When should I consult my doctor after starting Shelcal 500 Tablet? Your doctor will prescribe Shelcal 500 for a set period of time, after which your symptoms should improve and you should start feeling better. After completing the course, your doctor may ask you for a follow-up visit to ensure that your condition has improved. If you do not notice any improvement after the course has finished, or if you experience severe side effects, consult your doctor right away."
+    },
+    {
+      "id": 33,
+      "title": "Gel",
+      "description": " La Shield Sunscreen Gel",
+      "Quantity": "50g",
+      "rating": "4.1",
+      "reviewCount": "(215)",
+      "originalAmount": "231",
+      "offerPercentage": "17% OFF",
+      "details": "Pack Of – 1 Quantity – 50 g Container Type – Tube Skin Type – All Product Type- Sunscreens SPF Rating - 50 PA+++ Applied For - Protects your skin from tanning and sun marks such as dark spots due to sun and sunburn. Ideal For - Men & women Product Information - Protect your skin from the harsh sun rays with La Shield Sunscreen Gel SPF 40. Fortified with 50 PA+++, it offers superior broad spectrum protection against both ultraviolet A (UVA) and ultraviolet B (UVB) rays. It doesn't cause irritation to the skin and is free from preservatives, colour additives and alcohol. Consisting of an oil-free, non-greasy formulation, this sunscreen spreads easily on the skin giving a matt effect. This sunscreen is non-comedogenic (does not clog pores), water-resistant and dermatologist tested making it suitable for all skin types."
     }
+
   ],
   "productdescription": [
     {
@@ -404,19 +589,59 @@
   ],
   "cart-data": [
     {
-      "id": 1
+      "id": 16,
+      "title": "Tablets",
+      "description": "Ezorb D3 tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack of: 1 Quantity: 15 N Tablets Product Type: Dietary Supplement Food Preference: Veg Fssai License No: 12114361000106 Product Information: Ezorb D3 Tablet is advised as dietary supplement for maintaining joint health and enhancing bone development. Each serving of one film coated tablet (approx. 1.5 gm) contains: Calcium Aspartate: 1120 mg, Magnesium Hydroxide: 180 mg, Vitamin D (as stabilized): 25 mcg and Excipients q.s. Other Ingredients: Maize Starch, Sodium starch glycolate, Anticaking Agent [460(1), 551, 553(iii)], Bodying agent (1201), Stabilizer (463, 464), Colour (171) Nutritional Information: (Approximate value per serving tablet): Energy: 4.22 Kcal, Carbohydrates: 0.56 gm, Protein: 0.47 gm, Fat: 0.012 gm, Saturated Fatty Acids: Nil, Poly Unsaturated Fatty Acids: Nil, Monounsaturated Fatty Acids: Nil, Trans Fatty Acids: Nil, Cholesterol: Nil Contains Permitted Synthetic Food Colour. Appropriate overages of Vitamin D3 added to compensate the loss on storage. Key Benefits: Maintains joint health Enhances bone development. Usage Direction:  Ezorb D3 Tablet is recommended to consume orally in a dose and direction as prescribed by the health care professional. • Before consumption, always go through the leaflet or label instruction comes up with the product. Safety Information: • If allergic to any ingredients of Ezorb D3 Tablet, let the doctors know straight away. • The doctor should be well informed when concomitant consumption of this one with another medicine. • Seek Precaution during pregnancy and lactation. Storage Condition: • As per health care professional. • Keep out of reach of children."
     },
     {
-      "id": 2
+      "id": 10,
+      "title": "Tablets",
+      "description": "Swisse Iron tablets",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of -1 Number of Tablets in a Sales Package-30N  Container Type - Small Jar  Product Type - Health Supplement  Ideal For - Men & Women Food Preference - Vegetarian.  Fssai Lic Number - 10019043002879 Product Information-  Swisse Ultiboost Iron has been formulated based on scientific evidence to provide iron supplementation when dietary iron is low. It is a health supplement and a premium quality formula to help maintain healthy blood and assist in the management of dietary iron deficiency.  Benefits • It helps in treating and preventing iron deficiency  Iron supports the production of red blood cells  • Helps the body absorb iron while also helps to maintain a healthy immune system  Ingredients-  Bulking Agent (Microcrystalline Cellulose), Ferrous bisglycinate; Bulking Agent (Calcium hydrogen phosphate dihydrate); Disintegrant (Croscarmelose sodium); Calcium ascorbate dihydrate; Stabilizer (Crospovidone), Anti caking Agent (Silicon Dioxide), Coaling Agent Polyvinyl alcohol Glidant (Magnesium Stearate, Solvent (Polyethylene glycol) Natural Colours (INS 171 & INS 172 (i) (ii) (iii) Anti caking Agent (Talc) Pyridoxine hydrochloride; Emulsifier 9Polycitrate-  Nutritional Information (Approx. Values) Serving Size - 1 tablet  Iron (from ferrus bisglycinate 70.3mg)-19mg  Vitamin C (ascorbic acid from calcium ascorbate dihydrate 36.31mg) - 30mg  Vitamin B6 (Pyridoxine from Pyridoxine hydrochloride 2.31mg) -1.9mg  Vitamin B12 (Cyanocobalamin) -0.001mg  Per serving Energy value - 0.29kcal, protein - Og, Carbohydrate- 0.06g, Total Sugars - Og, Added Sugars - Og, Total Fat -0.01g, Cholesterol-0.0mg, Sodium 0.09mg  Recommended Usage - One tablet daily with sufficient water during or immediately after a meal. Or as recommended by a healthcare professional. Not to exceed the recommended daily usage.  Storage Information - Keep it store or place in a cool dry dark and hygiene place. Keep it away from direct heat or sunlight."
     },
     {
-      "id": 3
+      "id": 19,
+      "title": "Tablets",
+      "description": "Amrutanjan pain balm",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of - 1 Quantity -50 ml Container Type - Jar Ideal For Adults Product Information - Amrutanjan Double Power Strong Balm: Headaches and back pain tend to disrupt simple activities during the day making the person groggy and irritable. Such strong headaches & back pain call for an even stronger balm that puts it to rest the moment it is applied. Amrutanjan Strong Pain Balm is made to eliminate such severe headaches and back pains with its infusion of wintergreen oil and menthol is the perfect solution to your splitting pain. The balm accompanied with a massage gives you incredible relief within minutes. So no matter how demanding our job is you can always rely on Amrutanjan Strong that removes your headache or back pain. Key Ingredients: Pudina (Mentha arvensis-Aerial part, Satva),Gandhapura patra taila (Gaultheria fragrantissima-Lf., Ol.), Ointment base q.s. Directions for Use: Inhale, Apply on Forehead, temples, neck and gently massage. Rub on the throat and chest for cold relief."
     },
     {
-      "id": 4
+      "id": 8,
+      "title": "Supplyments",
+      "description": "Horlicks Classic malt powder",
+      "Quantity": "250g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of 1  Quantity - 500 g Flavour - Original Container Type - Mono Carton  Ideal For:- All  Food Preference - Vegetarian  FSSAI Lic. No. - 10012063000134 Product Information:-  Horlicks Classic Malt contains a wide range of vitamins and minerals essential for wellbeing. It can be served hot or cold and is one of the leading Health Food Drink in India.  No artificial flavours, colours or preservatives  • Suitable for vegetarians • Unique combination of wheat, malted barley & milk  Ingredients - Malted Barley (Extracted Solids) (39%), Wheat Flour (25%), Milk Solids (14%), Sugar, Wheat Gluten, Minerals, Emulsifier (INS 471), Salt, Soy Protein Isolate, Acidity Regulators (INS 501 (ii), 500(i)), Vitamins.  Storage Instruction - Store in cool, dry and hygienic place. Nutritional Information Per 100 g  Calories-376.9kcal  Total Fat-2.0g  Total Carbohydrates -79.0g  Calories-376.9kcal  Total Fat 2.0g  Total Carbohydrates -79.0g  Sugar (Sucrose) -13.5g  Protein - 11.0g  Sodium 400mg  Chloride-565mg  Vitamin B1 (Thiamin) - 1.3mg Vitamin B2 (Riboflavin) - 3.0mg  Vitamin B3 (Niacin) - 17.0mg"
     },
     {
-      "id": 5
+      "id": 22,
+      "title": "Tablets",
+      "description": "Crocin 650 mg",
+      "Quantity": "15 Tablets (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "29",
+      "offerPercentage": "16% OFF",
+      "details": "What is Crocin 650 Tablet used for? Crocin 650 is a well-known and widely used medicine for fever and pain relief. It frequently used to treat low and moderate pain conditions such as headaches, toothaches, migraines, menstrual cramps, and sprains. It is a safe drug and can be used to treat conditions where people must take painkillers for a longer time, such as musculoskeletal pain. How should I take Crocin 650 Tablet? Crocin 650 tablets should be taken orally and swallowed with water. Do not crush, cut, or chew the tablet. Swallow it whole. Do not take more than 4000 mg or more than 6 tablets under 24 hours. Do not repeat a dose before 4 hours. Though it is available as a non-prescription medicine, it is best to consult a doctor if you do not feel better within 3 days. How does Crocin 650 Tablet work? Crocin 650 contains paracetamol and belongs to the group of analgesics (painkillers) and antipyretic (fever reducing) medicines. It eases pain and fever by blocking the discharge of specific chemical messengers. It starts working within an hour and the effects last for 4-6 hours. I missed a dose. What should I do? If you miss a dose, take the next dose when you remember. If it's almost time to take your next dose, skip and continue to take the next dose. Do not take 2 doses to make up for the missed dose. I have taken too much. What should I do? Crocin 650 is safe in most cases and is unlikely to cause any harm if you do not take more than 6 tablets or 4000 mg in 24 hrs. Do not repeat a tablet before 4 hours. If you have taken more than your prescribed dose you may experience side effects including severe liver injury. In such cases, call your doctor or rush to a nearby hospital immediately. What are the substances that should be avoided with Crocin 650 Tablet? Crocin 650 should not be taken with other medicines containing paracetamol as it increases the risk of overdosing and resulting liver damage. It is safe to take with most other medicines including antibiotics and other painkillers which do not contain paracetamol. Do not take Crocin 650 tablet if you are taking medicines to treat epilepsy, tuberculosis or blood thinners such as warfarin. It can be safely used by pregnant and breastfeeding women. When should I consult my doctor after starting Crocin 650 Tablet? After taking Crocin 650-650 your symptoms should improve and you should start feeling better. Your doctor may call you for a follow-up visit to ensure that your condition has improved. If you do not notice any improvement with Crocin 650, or if you experience severe side effects, consult your doctor right away."
     }
   ],
   "imgcollection": [

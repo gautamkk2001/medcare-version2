@@ -165,7 +165,7 @@ footer .copy {
 /* .......................................................product............................. */
 
 #page-header {
-   background-image: url("../../assets/images/Home_Bannersguguui.jpg");
+   background-image: url("../../assets/images/20230516.png");
   width: 100%;
   height: 50vh;
   display: flex;
@@ -173,8 +173,8 @@ footer .copy {
   justify-content: center;
   flex-direction: column;
   background-repeat: no-repeat;
-  background-position: center;
-   background-size: cover;
+  /* background-position: center; */
+   background-size:cover;
 }
 
 #page-header h2 {

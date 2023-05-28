@@ -28,7 +28,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { AdminPageComponent } from './adminPage/adminPage.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HomepageComponent,
       ProductComponent,

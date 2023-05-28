@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { cpasswordvalid } from '../cpasswordvalid';
 import { ProductdataService } from '../productdata.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +11,14 @@ import { ProductdataService } from '../productdata.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  constructor(  private fb:FormBuilder,private user:ProductdataService,private route:Router)
+  constructor(  private fb:FormBuilder,private user:ProductdataService,private route:Router, private http:HttpClient)
    {
     this.user.registereduser().subscribe( (user) =>{
       this.usersdata=user;
   } )
+    this.user.adminUser().subscribe( (user)=>{
+     this.adminData=user;
+    })
    }
 
   //  ************************************************** Register Form Validation **************************
@@ -47,33 +51,78 @@ export class NavbarComponent implements OnInit {
 
 // **********************************************  login Validation ********************************************
 
+loginForm=this.fb.group({
+  userId:[,[Validators.required] ],
+  password:[,[Validators.required]]
+})
+
  loginMail:any="";
  loginPassword:any="";
  usersdata:any="";
-isLoggedIn:boolean=false;
-displayname:any=""
-  login(usermail:any,userpassword:any){
-    for(let users of this.usersdata){
-      console.log(users.email);
-      if(usermail.value==users.email&&userpassword.value==users.password1){
-       this.isLoggedIn=true;
-       this.displayname=users.username;
-        alert("login sucessfull");
-        const loginpanel:any= document.querySelector(".Loginmodal");
-        loginpanel.close();
-        break;
-      }
-      else{
-        alert("check login credintials");
-      }
-    }
+ adminData:any="";
+ isLoggedIn:boolean=false;
+ displayname:any="";
+
+
+  errors:any=false;
+
+  login(){
+   this.admins();
+   this.users();
+   if(this.errors){
+    alert("Invalid");
+     this.refresh();
+   }
+  }
+  users(){
+    this.http.get<any>("http://localhost:3000/registeredUser").subscribe(data=>{
+      const users=data.find((b:any)=>{
+          return b.email===this.loginForm.value.userId && b.cpassword1===this.loginForm.value.password
+        });
+
+        if(users){
+          alert("Login Successfully");
+          this.isLoggedIn=true;
+          // this.loginForm.reset();
+            this.user.loggedInUser = users;
+            sessionStorage.setItem('loggedInUser', JSON.stringify(users));
+            this.route.navigate(['product'])
+            // this.get();
+            const loginpanel:any= document.querySelector(".Loginmodal");
+            loginpanel.close();
+        }
+        else{
+          this.errors=true
+        }
+      })
 
   }
+  admins(){
+    this.http.get<any>("http://localhost:3000/adminData").subscribe(res=>{
+      const admins=res.find((a:any)=>{
+        return a.email===this.loginForm.value.userId && a.password1===this.loginForm.value.password
+      });
+      if(admins){
+        alert("Login Successfully");
+          this.user.loggedInUser = admins;
+          sessionStorage.setItem('loggedInUser', JSON.stringify(admins));
+          this.route.navigate(['admin' ])
+      }
+      else{
+        this.errors=true
+      }
+    })
+  }
 
+  refresh():void{
+      window.location.reload();
+  }
   logout(){
      this.isLoggedIn=false;
 
   }
+
+
 // *************************************************** Modal  **************************************]
 
   loginmodal(){
@@ -94,7 +143,12 @@ displayname:any=""
     loginpanel.close();
     registerpanel.showModal();
   }
+  logInUser:any="";
+  //  get(){
 
+
+  // }
   ngOnInit() {
+
   }
 }

@@ -1,6 +1,6 @@
 <section id="header">
   <!-- <a href="#"><i class="fa-sharp fa-solid fa-heart-pulse"></i><img src="./images/logo.png" class="logo" alt=""></a> -->
-  <h2><i class="fa-sharp fa-solid fa-heart-pulse"></i>Medcare</h2>
+  <h2><a routerlink="product"><i class="fa-sharp fa-solid fa-heart-pulse"></i>Medcare</a></h2>
   <div>
     <ul id="navbar">
       <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
@@ -8,8 +8,9 @@
       <li><input type="search" placeholder="Search here" id="searchbox"></li>
       <li><a routerLink="/accountdetail">Profile</a></li>
       <li><a routerLink="/cart" routerLinkActive="active"><i class="fa-solid fa-bag-shopping"></i></a></li>
-      <li><a (click)="loginmodal()" *ngIf="isLoggedIn==false">Login</a></li>
-      <li><a (click)="logout()" *ngIf="isLoggedIn==true">{{displayname}} <i class="fa-solid fa-right-to-bracket"></i></a></li>
+      <li><a (click)="loginmodal()" *ngIf="isLoggedIn==false">Login </a></li>
+      <li><a (click)="logout()" *ngIf="isLoggedIn==true">Logout<i class="fa-solid fa-right-to-bracket"></i></a></li>
+      <!-- {{logInUser.username}}  -->
       <a href="#" id="close"><i class="far fa-times"></i></a>
     </ul>
   </div>
@@ -32,18 +33,41 @@
 
       </div>
       <div class="main">
-        <form name="form">
+        <form name="form"   [formGroup]="loginForm" (ngSubmit)="login()">
+
           <span>
             <i class="fa-solid fa-envelope"></i>
-            <input id="user_email" type="text" placeholder="Enter your Email" name="usernamillogin"
-              [(ngModel)]="loginMail" #loginusers="ngModel" required>
+            <input id="user_email" type="text" placeholder="Enter your Email" name="usernamillogin" formControlName="userId"
+            pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
+            pattern2="^[AI][0-9]{4}$"
+             />
+             <div class="errors" *ngIf="loginForm.controls['userId'].dirty">
+              <p *ngIf="loginForm.controls['userId'].errors?.['required']">
+                Enter the field
+              </p>
+              <p *ngIf="loginForm.controls['userId'].errors?.['pattern'] || loginForm.controls['userId'].errors?.['pattern2'] ">
+                Enter valid Email id
+              </p>
+            </div>
           </span><br>
           <span>
             <i class="fa-solid fa-lock"></i>
             <input id="password" type="password" placeholder="Enter your Password" name="userloginpass"
-              [(ngModel)]="loginPassword" #loginpass="ngModel" required>
+            formControlName="password"
+            pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
+
+          <div class="errors" *ngIf="loginForm.controls['password'].dirty">
+            <p *ngIf="loginForm.controls['password'].errors?.['required']">
+              Enter the field
+            </p>
+            <p *ngIf="loginForm.controls['password'].errors?.['pattern']">
+              Enter valid password
+            </p>
+          </div>
+
           </span><br>
-          <button type="submit" (click)="login(loginusers, loginpass)">Login</button>
+          <button type="submit">Login</button>
+          <!-- (click)="login(loginusers, loginpass)" -->
         </form>
         <div class="change-password">
           <h3><a routerLink="/forgot">Forgot password</a></h3>
@@ -65,7 +89,8 @@
   <div class="gridregister">
     <div class="register_container">
       <div class="title"> Registration</div>
-      <form id="form" [formGroup]="formRegister"  (ngSubmit)="submitForm()">
+      <form id="form"  [formGroup]="formRegister" (ngSubmit)="submitForm()">
+
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
@@ -110,7 +135,7 @@
           <div class="input-box">
             <span class="details">Password</span>
             <input type="password" placeholder="Enter your password" id="pass1" name="pass"
-              pattern="^[A-Z]{1}[a-z]+[@][1-9]{1,7}$" name="Password" class="input" required
+              pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" name="Password" class="input" required
               formControlName="password1" />
           </div>
           <div class="information-error1" *ngIf="formRegister.controls['password1'].dirty">
