@@ -92,4 +92,51 @@
   </div>
 
   <!-- <script src="./JS/validateform.js"></script> -->
+  <div class="container-form">
+    <div class="title"> Registration</div>
+    <form id="form" >
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" name="username" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName" class="input"/>
+        </div>
+
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" name="emailid" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$" placeholder="Email-id"
+            class="input"  />
+        </div>
+
+        <div class="input-box">
+          <span class="details">Phone number</span>
+          <input type="tel" name="mobileno" pattern="^[ 6-9]{1}[0-9]{9}$" placeholder="Mobileno" class="input" />
+        </div>
+
+        <div class="input-box">
+          <span class="details">Dateof birth</span>
+          <input type="date" placeholder="Enter your DOB" >
+        </div>
+
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input type="password" placeholder="Enter your password" id="pass1" name="pass"
+            pattern="^[A-Z]{1}[a-z]+[@][1-9]{1,7}$" name="Password" class="input" required/>
+        </div>
+
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input type="password" placeholder="Retype your password" id="pass2" pattern="^[A-Z]{1}[a-z]+[@][1-9]{3,7}$"
+            name="Password" class="input" required >
+        </div>
+
+        <div class="button">
+          <button>Register</button>
+        </div>
+
+        <div class="login">
+          <h4>Already have an account <span><a >LOGIN</a></span></h4>
+        </div>
+      </div>
+    </form>
+  </div>
 </body>

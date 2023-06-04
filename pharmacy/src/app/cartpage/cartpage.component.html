@@ -16,7 +16,7 @@
 
       <tbody *ngFor="let cart of cartData" [formGroup]="input">
           <tr>
-              <td> <a href="#"><i class="fas far fa-trash-alt"></i></a></td>
+              <td> <a href="#" (click)="delete(cart.id)"><i class="fas far fa-trash-alt"></i></a></td>
               <td><img  class="img"src="../../assets/images/{{cart.description}}.jpg" alt=""></td>
               <td>
                    <h5>{{cart.description}}</h5>
@@ -59,9 +59,21 @@
                   <h3>Rs: 590.00
                   </h3>
               </div>
-              <div><button >Proceed</button>
+              <div><button (click)="popupp()" >Proceed</button>
               </div>
           </div>
           </div>
   </div>
 </section>
+
+
+<dialog class="popup">
+    <div class="placed">
+      <div class="infom">
+        <div class="in">
+         <h2><i class="far fa-times"></i></h2>
+         <p>Order placed</p>
+        </div>
+        </div>
+    </div>
+</dialog>

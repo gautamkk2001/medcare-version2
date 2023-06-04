@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { cpasswordvalid } from '../cpasswordvalid';
 import { ProductdataService } from '../productdata.service';
 import { HttpClient } from '@angular/common/http';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  constructor(  private fb:FormBuilder,private user:ProductdataService,private route:Router, private http:HttpClient)
+  constructor(  private fb:FormBuilder,private user:ProductdataService,private route:Router, private http:HttpClient, private log:LoginService)
    {
     this.user.registereduser().subscribe( (user) =>{
       this.usersdata=user;
@@ -83,6 +84,7 @@ loginForm=this.fb.group({
         if(users){
           alert("Login Successfully");
           this.isLoggedIn=true;
+          this.log.islogged=true;
           // this.loginForm.reset();
             this.user.loggedInUser = users;
             sessionStorage.setItem('loggedInUser', JSON.stringify(users));

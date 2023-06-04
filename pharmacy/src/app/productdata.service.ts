@@ -33,4 +33,8 @@ addToCart(body:any){
 cartDataValues(){
   return this.http.get("http://localhost:3000/cart-data")
 }
+
+deleteCartValues(id:any){
+  return this.http.delete("http://localhost:3000/cart-data"+"/"+id)
+}
 }

@@ -16,6 +16,7 @@ import { Profile_prescriptionComponent } from './profile_prescription/profile_pr
 import { Profile_addressComponent } from './profile_address/profile_address.component';
 import { AdminPageComponent } from './adminPage/adminPage.component';
 import { Profile_offersComponent } from './profile_offers/profile_offers.component';
+import { GuardloginGuard } from './guardlogin.guard';
 
 const routes: Routes = [
   {
@@ -31,7 +32,7 @@ const routes: Routes = [
     component:ProductComponent
   },
   {
-    path:"login",
+    path:"log",
     component:LoginComponent
   },
   {
@@ -80,7 +81,8 @@ const routes: Routes = [
   },
   {
     path:"cart",
-    component:CartpageComponent
+    component:CartpageComponent,
+    canActivate:[GuardloginGuard]
   },
   {
     path:"offer",

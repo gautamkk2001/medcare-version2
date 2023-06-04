@@ -6,26 +6,26 @@ body{
   background-repeat: no-repeat ;
   opacity: 0.5;
   margin-top: 10%;  */
+  background-color: #470079;
 }
-/* 
-.pro-container {
-  display: flex;
-} */
 
-/* .img {
+ .pro-container {
+  display: flex;
+}
+
+ .img {
   margin-top: 50px;
   height: 100vh;
   width:100;
-  opacity: 0.8;
   position: relative;
-} */
+}
 .container {
      width: 380px;
      height: 550px;
      margin-top: 7%;
      margin-left: 90px;
      border-radius: 25px;
-     background-color:  #3da5a3;
+     background-color:  #0063ff;
 }
 
 .header{
@@ -63,7 +63,7 @@ margin-left: -300px;
 
 .main button {
   padding-left: 0;
-  background-color: #163476;
+  background-color: #ff3131;
   letter-spacing: 1px;
   font-weight: bold;
   color: rgb(239, 240, 241);
@@ -71,7 +71,7 @@ margin-left: -300px;
 
 .main button:hover{
   box-shadow: 1px 1px 1px 3px rgb(235, 233, 233);
-  background-color: #0640a3;
+  background-color: #ff3131;
 }
 
 .main input:hover{

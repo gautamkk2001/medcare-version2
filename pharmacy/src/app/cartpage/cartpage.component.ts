@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductdataService } from '../productdata.service';
 import { FormBuilder } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cartpage',
@@ -11,7 +12,7 @@ export class CartpageComponent implements OnInit {
   cartData:any=" ";
   totalPrice:any="0";
   qua:any=""
-  constructor(private data:ProductdataService, private fb: FormBuilder) {
+  constructor(private data:ProductdataService, private fb: FormBuilder, private http:HttpClient) {
     this.data.cartDataValues().subscribe((data)=>{
         this.cartData=data;
         for(let pro of this.cartData){
@@ -33,6 +34,23 @@ export class CartpageComponent implements OnInit {
 
         alert(this.val);
    }
+
+
+  //  delete
+  delete(id:any){
+    this.data.deleteCartValues(id).subscribe(data=>{
+      alert("Successfully deleted");
+      window.location.reload();
+    })
+  }
+
+
+// popup
+popupp(){
+  const orderpanel:any= document.querySelector(".popup");
+  orderpanel.showModal();
+}
+
   ngOnInit() {
   }
 
