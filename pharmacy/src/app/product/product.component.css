@@ -232,9 +232,9 @@ footer .copy {
 }
 
 #product1 .pro img {
-  width: 50%;
-  height: 50%;
-  border-radius: 20px;
+  width: 40%;
+  height: 40%;
+  border-radius: 5px;
 }
 
 #product1 .pro .des {

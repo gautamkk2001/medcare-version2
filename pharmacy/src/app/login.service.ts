@@ -8,7 +8,7 @@ export class LoginService {
 
 constructor() { }
 
- islogged:boolean=true;
+ islogged:boolean=false;
  userLoggedIn():boolean{
   return this.islogged;
  }

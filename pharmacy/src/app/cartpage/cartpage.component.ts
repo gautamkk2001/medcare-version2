@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 export class CartpageComponent implements OnInit {
   cartData:any=" ";
   totalPrice:any="0";
+  shipping:any="50";
+  lastprice:any="0";
   qua:any=""
   constructor(private data:ProductdataService, private fb: FormBuilder, private http:HttpClient) {
     this.data.cartDataValues().subscribe((data)=>{
@@ -18,6 +20,8 @@ export class CartpageComponent implements OnInit {
         for(let pro of this.cartData){
           this.totalPrice= parseInt (this.totalPrice)+parseInt(pro.originalAmount);
         }
+    this.lastprice=parseInt(this.totalPrice)+parseInt(this.shipping);
+
     })
    }
    change !:number;

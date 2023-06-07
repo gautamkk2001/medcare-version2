@@ -12,7 +12,7 @@ header{
  /* Z-index:1000; */
  height:100%;
  width:32rem;
- background: #57e4c4;
+ background: #87c231;
  display:flex;
  align-items:center;
  justify-content: center;
@@ -31,7 +31,7 @@ header .user img{
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.5rem;
-  border: .7rem solid yellow;
+  /* border: .7rem solid yellow; */
 }
 
 header .user .name{
@@ -65,7 +65,7 @@ header .profile_sidebar ul li a{
 }
 
 header .profile_sidebar ul li a:hover{
-  background: yellow;
+  background: #222629;
 }
 
 #menu{
