@@ -8,8 +8,8 @@
       <li><input type="search" placeholder="Search here" id="searchbox"></li>
       <li><a routerLink="/accountdetail">Profile</a></li>
       <li><a routerLink="/cart" routerLinkActive="active"><i class="fa-solid fa-bag-shopping"></i></a></li>
-      <li><a (click)="loginmodal()" *ngIf="isLoggedIn==false">Login </a></li>
-      <li><a (click)="logout()" *ngIf="isLoggedIn==true">Logout<i class="fa-solid fa-right-to-bracket"></i></a></li>
+      <li><a (click)="loginmodal()" *ngIf="logInUser==false">Login </a></li>
+      <li><a (click)="logout()" *ngIf="logInUser==true">Logout<i class="fa-solid fa-right-to-bracket"></i></a></li>
       <!-- {{logInUser.username}}  -->
       <a href="#" id="close"><i class="far fa-times"></i></a>
     </ul>

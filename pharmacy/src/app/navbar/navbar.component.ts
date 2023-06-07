@@ -121,7 +121,7 @@ loginForm=this.fb.group({
   }
   logout(){
      this.isLoggedIn=false;
-
+     window.location.reload();
   }
 
 
@@ -151,6 +151,6 @@ loginForm=this.fb.group({
 
   // }
   ngOnInit() {
-
+   this.logInUser=this.log.islogged
   }
 }
