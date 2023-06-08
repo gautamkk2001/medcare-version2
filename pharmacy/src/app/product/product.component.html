@@ -178,136 +178,16 @@
   <p>Essentials at very low price</p>
   <div class="pro-container ">
     <div class="grid three-columns">
-      <div class="pro">
-        <a href="prodetails.html"><img src="../../assets/images/Dettol antiseptic Liquid.jpg" alt=""></a>
+      <div *ngFor="let fea of featureddata"  class="pro">
+        <a routerLink="/product/{{fea.description}}"><img src="../../assets/images/{{fea.description}}.jpg" alt=""></a>
         <div class="des">
-          <span>Dettol</span>
-          <h5>Dettol antiseptic Liquid</h5>
-          <div class="star">
-            4.5<i class="fas fa-star"></i>
-          </div>
-          <h4>$80</h4>
+          <a routerLink="**"><span>{{fea.title}} </span></a><br>
+          <h5>{{fea.description}}</h5><br>
+          <div class="star">{{fea.rating}}<i class="fas fa-star"></i></div><br>
+          <h4>Price{{fea.originalAmount|currency:'INR'}} </h4>
+          <h4 class="percent">{{fea.offerPercentage}}</h4>
         </div>
-        <a href="#"><i class="fal fas fa-shopping-cart cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <a href="prodetails.html"><img src="../../assets/images/Cetaphil Gentle Skin Cleanser.jpg" alt=""></a>
-        <div class="des">
-          <span>Cetaphil</span>
-          <h5>Cetaphil Gentle Skin Cleanser</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <h4>$80</h4>
-        </div>
-        <a href="#"><i class="fal fas fa-shopping-cart cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <a href="prodetails.html"><img src="../../assets/images/Himalaya Baby shampoo.jpg" alt=""></a>
-        <div class="des">
-          <span>Shampoo</span>
-          <h5>Himalaya Baby shampoo</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <h4>$80</h4>
-        </div>
-        <a href="#"><i class="fal fas fa-shopping-cart cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <a href="prodetails.html"><img src="../../assets/images/Volini PainKiller gel.jpg" alt=""></a>
-        <div class="des">
-          <span>Gel</span>
-          <h5>Volini PainKiller gel</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <h4>$80</h4>
-        </div>
-        <a href="#"><i class="fal fas fa-shopping-cart cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <a href="prodetails.html"><img src="../../assets/images/One touch Ultra Kit.jpg" alt=""></a>
-        <div class="des">
-          <span>Testing kit</span>
-          <h5>One touch Ultra Kit</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <h4>$80</h4>
-        </div>
-        <a href="#"><i class="fal fas fa-shopping-cart cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <a href="prodetails.html"><img src="../../assets/images/Zebronics Pulse oximeter.jpg" alt=""></a>
-        <div class="des">
-          <span>Oximeter</span>
-          <h5>Zebronics Pulse oximeter</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <h4>$80</h4>
-        </div>
-        <a href="#"><i class="fal fas fa-shopping-cart cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <a href="prodetails.html"><img src="../../assets/images/Proteinx Chocolate powder.jpg" alt=""></a>
-        <div class="des">
-          <span>Supplyments</span>
-          <h5>Proteinx Chocolate powder</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <h4>$80</h4>
-        </div>
-        <a href="#"><i class="fal fas fa-shopping-cart cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <a href="prodetails.html"><img src="../../assets/images/Horlicks Classic malt powder.jpg" alt=""></a>
-        <div class="des">
-          <span>Supplyments</span>
-          <h5>Horlicks Classic malt powder</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <h4>$80</h4>
-        </div>
-        <a href="#"><i class="fal fas fa-shopping-cart cart"></i></a>
+        <div class="icon"><button>Add to cart</button> </div>
       </div>
     </div>
   </div>
@@ -448,22 +328,20 @@
     </div>
   </div>
 
-  <div class="col">
+   <div class="col">
     <h3> About</h3>
-    <a href="#">About us</a>
-    <a href="#"> Delivery Partner</a>
-    <a href="#">Privacy policy</a>
-    <a href="#">Terms and conditions</a>
-    <a href="#">Contact us</a>
+    <a href="/home">Home</a>
+    <a href="/product">Product</a>
+    <a href="/contact">Contact us</a>
+    <a href="#">Logout</a>
   </div>
 
   <div class="col">
     <h3> My Account</h3>
-    <a href="#">Sign In</a>
-    <a href="#"> View cart</a>
-    <a href="#">Orders</a>
-    <a href="#">Track my order</a>
-    <a href="#">Help</a>
+    <a routerLink="/accountdetail">Acc Info</a>
+    <a routerLink="/accountdetail"> View cart</a>
+    <a routerLink="/accountdetail">Address</a>
+    <a routerLink="/accountdetail">My Prescription</a>
   </div>
 
   <div class="col-payment">

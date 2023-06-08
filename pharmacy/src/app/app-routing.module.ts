@@ -17,6 +17,7 @@ import { Profile_addressComponent } from './profile_address/profile_address.comp
 import { AdminPageComponent } from './adminPage/adminPage.component';
 import { Profile_offersComponent } from './profile_offers/profile_offers.component';
 import { GuardloginGuard } from './guardlogin.guard';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   {
@@ -104,6 +105,10 @@ const routes: Routes = [
   {
     path:"admin",
     component:AdminPageComponent
+  },
+  {
+   path:"payment",
+   component:PaymentComponent
   }
 ];
 

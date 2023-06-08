@@ -74,6 +74,7 @@ loginForm=this.fb.group({
     alert("Invalid");
      this.refresh();
    }
+
   }
   users(){
     this.http.get<any>("http://localhost:3000/registeredUser").subscribe(data=>{
@@ -92,6 +93,8 @@ loginForm=this.fb.group({
             // this.get();
             const loginpanel:any= document.querySelector(".Loginmodal");
             loginpanel.close();
+            let box=document.getElementById('kk');
+            box?.click()
         }
         else{
           this.errors=true

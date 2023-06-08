@@ -37,6 +37,6 @@ cartdata:any=this.finaldescription;
   addedCart(value:any){
     this.data.addToCart(value).subscribe(data=>{
     })
-    alert("added");
+    // alert("added");
   }
 }

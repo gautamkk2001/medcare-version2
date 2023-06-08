@@ -11,9 +11,11 @@ export class ProductComponent implements OnInit {
   // ************************************************************* Fetching all product *************************************
 
   prodata: any = '';
+  featureddata:any="";
   drugdata: any = '';
   constructor(private data: ProductdataService, private http: HttpClient) {
     this.data.getproducts().subscribe((data) => (this.prodata = data));
+    this.data.getfeatured().subscribe((data) =>(this.featureddata = data));
     this.data.getdrugsname().subscribe((data) => (this.drugdata = data));
   }
 

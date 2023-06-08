@@ -12,7 +12,7 @@ export class GuardloginGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
   if(!this.service.userLoggedIn()){
-   alert("You are not logged in to view the page");
+   alert("You are not loggedin; Login to continue");
    this.route.navigate(["log"],{queryParams:{retUrl:route.url}});
   return false;
   }

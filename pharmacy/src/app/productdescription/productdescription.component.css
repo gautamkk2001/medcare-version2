@@ -471,8 +471,9 @@ footer .copy {
   cursor: pointer;
 }
 
-#prodetails .details-pro span {
+#prodetails .details-pro span p{
   line-height: 25px;
+  text-align: justify;
 }
 
 /* ..................................................................................................media............................................. */

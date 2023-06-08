@@ -118,6 +118,8 @@ footer .col {
   align-items: flex-start;
   margin-bottom: 20px;
   margin-left: 60px;
+  margin-right: 30px;
+
 }
 
 footer #pay-logo {
@@ -225,6 +227,7 @@ footer .copy {
 .three-columns {
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
+  background-color: #ffffff;
 }
 
 #product1 .pro:hover {
@@ -363,6 +366,10 @@ footer .copy {
 .ban:hover {
   color: #fff;
   background-color: rgb(189, 37, 37);
+}
+
+.section-f1{
+  background-color: rgb(62, 183, 62);
 }
 
 /* ,........................................slider box container.......................... */

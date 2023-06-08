@@ -7,10 +7,14 @@ export class ProductdataService {
 
   strotedData:any="";
   loggedInUser:any;
+  paymentTotal:any;
 constructor(private http:HttpClient) { }
 
 getproducts(){
   return this.http.get("http://localhost:3000/productdata")
+}
+getfeatured(){
+  return this.http.get("http://localhost:3000/featured")
 }
 getProductdescription(){
   return this.http.get("http://localhost:3000/productdescription")

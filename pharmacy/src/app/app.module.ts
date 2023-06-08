@@ -26,9 +26,10 @@ import { FooterComponent } from './footer/footer.component';
 import { GalleryDirective } from './gallery.directive';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { AdminPageComponent } from './adminPage/adminPage.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HomepageComponent,
       ProductComponent,
@@ -48,7 +49,8 @@ import { AdminPageComponent } from './adminPage/adminPage.component';
       Profile_addressComponent,
       FooterComponent,
       GalleryDirective,
-      AdminPageComponent
+      AdminPageComponent,
+      PaymentComponent
    ],
   imports: [
     BrowserModule,

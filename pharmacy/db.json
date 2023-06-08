@@ -197,6 +197,51 @@
       "gender": "Male"
     }
   ],
+  "featured": [
+    {
+      "id": 1,
+      "title": "Dettol",
+      "description": "Dettol antiseptic Liquid",
+      "Quantity": "500(ml)  (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "79",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of 1 Quantity 1 L Container Type  Bottle Fragrance Fresh Alcohol  (Denatured) eq. to Absolute Alcohol 13.1% v/v  Used For-Antiseptic & Disinfectant Product Information- For protection against 100 illness causing germs and bacteria, use Dettol Multi Use Hygiene liquid.  • Kills germs and bacteria.• Protects against infection. • Can be added to bathing water or used as shaving liquid. • Serves as a cleaning agent for hard surfaces and laundry."
+    },
+    {
+      "id": 4,
+      "title": "Gel",
+      "description": "Volini PainKiller gel",
+      "Quantity": "50g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "85",
+      "offerPercentage": "16% OFF"
+    },
+    {
+      "id": 8,
+      "title": "Supplyments",
+      "description": "Horlicks Classic malt powder",
+      "Quantity": "250g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of 1  Quantity - 500 g Flavour - Original Container Type - Mono Carton  Ideal For:- All  Food Preference - Vegetarian  FSSAI Lic. No. - 10012063000134 Product Information:-  Horlicks Classic Malt contains a wide range of vitamins and minerals essential for wellbeing. It can be served hot or cold and is one of the leading Health Food Drink in India.  No artificial flavours, colours or preservatives  • Suitable for vegetarians • Unique combination of wheat, malted barley & milk  Ingredients - Malted Barley (Extracted Solids) (39%), Wheat Flour (25%), Milk Solids (14%), Sugar, Wheat Gluten, Minerals, Emulsifier (INS 471), Salt, Soy Protein Isolate, Acidity Regulators (INS 501 (ii), 500(i)), Vitamins.  Storage Instruction - Store in cool, dry and hygienic place. Nutritional Information Per 100 g  Calories-376.9kcal  Total Fat-2.0g  Total Carbohydrates -79.0g  Calories-376.9kcal  Total Fat 2.0g  Total Carbohydrates -79.0g  Sugar (Sucrose) -13.5g  Protein - 11.0g  Sodium 400mg  Chloride-565mg  Vitamin B1 (Thiamin) - 1.3mg Vitamin B2 (Riboflavin) - 3.0mg  Vitamin B3 (Niacin) - 17.0mg"
+    },
+    {
+      "id": 19,
+      "title": "Tablets",
+      "description": "Amrutanjan pain balm",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "45",
+      "offerPercentage": "16% OFF",
+      "details": "Pack Of - 1 Quantity -50 ml Container Type - Jar Ideal For Adults Product Information - Amrutanjan Double Power Strong Balm: Headaches and back pain tend to disrupt simple activities during the day making the person groggy and irritable. Such strong headaches & back pain call for an even stronger balm that puts it to rest the moment it is applied. Amrutanjan Strong Pain Balm is made to eliminate such severe headaches and back pains with its infusion of wintergreen oil and menthol is the perfect solution to your splitting pain. The balm accompanied with a massage gives you incredible relief within minutes. So no matter how demanding our job is you can always rely on Amrutanjan Strong that removes your headache or back pain. Key Ingredients: Pudina (Mentha arvensis-Aerial part, Satva),Gandhapura patra taila (Gaultheria fragrantissima-Lf., Ol.), Ointment base q.s. Directions for Use: Inhale, Apply on Forehead, temples, neck and gently massage. Rub on the throat and chest for cold relief."
+    }
+  ],
   "productdata": [
     {
       "id": 1,
@@ -635,15 +680,26 @@
       "details": "Pack Of - 1 Quantity - 500 g Flavour - Chocolate Container Type – Jar Ideal For:- Children Food Preference – Vegetarian FSSAI Lic. No. - 10012063000134 Product Information - Boost is the secret of winning energy! It is India's one of the most leading malt-based Health Food Drink in a chocolate flavour and scientifically proven to increase stamina by 3 times than others with Envita Nutrients or those micronutrients that have a role in energy metabolism and physical performance or endurance. Ingredients - Malted barley, sugar, wheat flour, milk solids, minerals, wheat gluten, natural colors, acidity regulators, glucose, salt,cocoa powder, vitamins, soy protein isolate, nature identical flavouring substances. Storage Instruction - Store in cool, dry and hygienic place"
     },
     {
-      "id": 7,
-      "title": "Supplyments",
-      "description": "Proteinx Chocolate powder",
-      "Quantity": "500g  (Approx)",
+      "id": 18,
+      "title": "Tablets",
+      "description": "Sugar free gold",
+      "Quantity": "500g - 700g (Approx)",
       "rating": "4.3",
       "reviewCount": "(105)",
       "originalAmount": "169",
       "offerPercentage": "16% OFF",
-      "details": "Product Description  Pack Of - 1  Quantity - 250 g  Flavour-Chocolate  Container Type - Tin  Ideal For Adults  Food Preference - Vegetarian  FSSAI Lic. No. - 10013064000267  Product Information - Protinex is fortified with the right amounts of carbohydrates, minerals, vitamins, and zero trans- fats. Protinex digests easily and is absorbed rapidly by the body. Regular consumption of Protinex helps build your stamina and promotes immunity.   Ingredients - Iron, Vitamins A, C, B2, B12, folic acid, copper, zinc, magnesium which are significant for blood cell formation.  Storage Instruction - Store in cool, dry and hygienic place.  Nutritional Information Per 100 g  Energy-374 Kcal  Protein-34 g  Carbohydrate-54.2 g  Sugar-29 g  Fat-2.3 gFat 2.3 g  Vitamin A-1143 mcg  Vitamin D-6.6 mcg Vitamin E-13 mg  Vitamin K -0.4 mg Vitamin C-60 mg Vitamin B1-2.3 mg Vitamin B2-3.4 mg Vitamin B6-1.1 mg Vitamin B12-0.35 mcg Niacinamide-36 mg Pantothenic Acid - 2.3 mg Folic Acid - 119 mcg"
+      "details": "Pack Of:-1 Quantity-100 g Container Type Jar Ideal For :- Adult Use For > Fitness seekers, weight conscious & diabetics Food Preferenc: Vegetarian Fssai Licence No:-10012035000021 Sugar-Free Gold Low Calorie Sweetener is a healthier alternative to sugar. It is made from Aspartame, a protein derivative. It is a nutritious, safe and an ideal low-calorie sugar substitute, giving the sweetness and taste of sugar but with negligible calories to worry about. Sugar-Free Gold helps to cut down on excess calories of sugar to keep one fit. Sugar Free Gold is your healthier alternative to sugar. It is made from Aspartame, a protein derivative. It is a nutritious, safe and an ideal low calorie sugar substitute, giving you the sweetness and taste of sugar but with negligible calories to worry about! Sugar Free Gold helps you to cut down on excess calories of sugar to keep you fit. While an hour of walk may help you to lose 350 calories (aprox.), by making Sugar Free a part of your fitness plan you can avoid 500 calories a day. Burning calories is difficult; avoiding them is easy with Sugar Free Gold. 1 measured spoon (of 0.5 gms, provided inside the pack) is equivalent in sweetness to 1 teaspoon of Sugar Sugar Free Gold is a healthy alternative to sugar. • Made with Aspartame, a protein derivative, Sugar Free Gold is a low-calorie substitute with the sweetness and taste of sugar. It is an ideal substitute as one spoon, in sweetness, is equivalent to a teaspoon of sugar. Made with Aspartame, a protein derivative, Sugar Free Gold is a low-calorie substitute with the sweetness and taste of sugar. It is an ideal substitute as one spoon, in sweetness, is equivalent to a teaspoon of sugar. • It can help you avoid almost 500 calories a day, as avoiding calories is easier than burning them. • Sugar Free Gold is a boon for health-conscious people and diabetics. Key Benefits: Helps to provide sweetness without the calories Making Sugar-Free a part of the fitness plan may help to avoid unwanted calories Sugar Free Gold, is made from Aspartame - a protein derivative, which is 200 times sweeter than sugar It is useful for health conscious people & diabetics It is ideal for adding to beverages Nutritional Information per Serving (1 spoon of 0.5g):- Energy-1.94 kcal Fat-0.0 g Carbohydrate-0.47 g Sugars - 0.47g Sucrose - 0.0 g Protein - 0.02 g Ingredients:- Bulking Agent - Dextrose, Maltodextrin, Sweetner - Aspartame. How to use :- 1 pellet is equivalent in sweetness to 1 teaspoon of Sugar. Storage Instruction:- Store in cool, dry & hygienic place. EAN-8901120143917"
+    },
+    {
+      "id": 13,
+      "title": "Oil",
+      "description": "Naturebay Omega 3 Fish oil",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "reviewCount": "(105)",
+      "originalAmount": "169",
+      "offerPercentage": "16% OFF",
+      "details": "Pack of -1 Number of Capsules in a Sales Package-60N  Container Type-Jar Product Type-Health Supplement  Ideal For Adults  Food Preference - Non-Vegetarian Fssai Lic Number - 10017013001245  Product Information -  Nutrabay Wellness Omega 3 Fish Oil Capsule contains two of the most important Omega-3 fatty acids EPA and DHA in high concentration. It is developed with an anti-reflux formula that ensures better absorption of fatty acids and no fishy aftertaste. It helps support heart, joints, mood & skin health.  Key Benefits: • It helps to increase good cholesterol (HDL) content in the body  • It reduces blood pressure and Triglycerides levels in the body  • It helps reduce joint pain and stiffness while also improving flexibility and mobility  • It helps support the levels of serotonin in the body, which is often termed the feel-good' hormone • It helps reduce inflammation in the body and acts as an antioxidant  Other Ingredients - Gelatin (INS 428), Glycerin (INS 422), Sorbitol (INS 420), Preservatives (INS 217, 219 & 320) & purified water.  Nutrition Facts  Serving Size- 1 Capsule  Energy 7.68kcal  Protein -0.2g  Carbohydrate-0.01g  Fat 0.86g  Omega-3 Fatty Acid - 1000mg EPA (Eicosapentaenoic Acid) - 180mg  DHA (Docosahexaenoic Acid) - 120mg  Recommended Usage - Consume 1 serving per day or as advised by the dietician.  Storage Information - Store in a cool dry and hygienic place."
     }
   ],
   "imgcollection": [

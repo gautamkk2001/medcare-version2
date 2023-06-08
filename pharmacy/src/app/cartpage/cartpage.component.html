@@ -14,7 +14,8 @@
           </tr>
       </thead>
 
-      <tbody *ngFor="let cart of cartData" [formGroup]="input">
+      <tbody *ngFor="let cart of cartData">
+        <!-- [formGroup]="input" -->
           <tr>
               <td> <a href="#" (click)="delete(cart.id)"><i class="fas far fa-trash-alt"></i></a></td>
               <td><img  class="img"src="../../assets/images/{{cart.description}}.jpg" alt=""></td>
@@ -24,9 +25,9 @@
               <td>
                   <h5>Rs: {{cart.originalAmount}}</h5>
               </td>
-              <td><input class="in" value="1" type="number" name="quantity"  formControlName="quantity" (change)="changeQuantity(cart)"></td >
+              <td><input class="in" value="1" type="number" name="quantity"  ></td >
               <td>
-                  <h5>Rs: {{change}}</h5>
+                  <h5>Rs:  {{cart.originalAmount}}</h5>
               </td>
           </tr>
       </tbody>
@@ -59,7 +60,7 @@
                   <h3>Rs: {{lastprice}}
                   </h3>
               </div>
-              <div><button (click)="popupp()" >Proceed</button>
+              <div><a routerLink="/payment" >Proceed</a>
               </div>
           </div>
           </div>
