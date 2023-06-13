@@ -1,6 +1,6 @@
 
 body{
-  background-color: #33a510;
+  background-color: #f0f3ef;
   overflow-x: hidden;
   padding-left: 32rem;
 }
@@ -111,6 +111,19 @@ header .profile_sidebar ul li a:hover{
 .form-container input {
   padding: 10px;
   margin: 5px;
+}
+
+.msg h2{
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+  font-size: 35px;
+}
+
+.welcome-img img{
+  width:600px;
+  height:450px;
+  margin-left: 200px;
 }
 /* ********media qureies************** */
 

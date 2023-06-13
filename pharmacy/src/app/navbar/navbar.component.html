@@ -1,14 +1,25 @@
+
+<!--
+  Title : MedCare - Pharmacy
+  Author: Gautam
+  Created at : Febrary 2023
+  Updated at : 13/06/2023
+  Comments  :  -
+  Reviewed by : Gautam
+  Reviewed at  : 13/06/2023 -->
+
+
 <section id="header">
-  <!-- <a href="#"><i class="fa-sharp fa-solid fa-heart-pulse"></i><img src="./images/logo.png" class="logo" alt=""></a> -->
+
   <h2><a routerlink="product"><i class="fa-sharp fa-solid fa-heart-pulse"></i>Medcare</a></h2>
   <div>
     <ul id="navbar">
-      <li><a routerLink="/home" routerLinkActive="active" id="kk">Home</a></li>
-      <li><a routerLink="/product" routerLinkActive="active">Products</a></li>
-      <li><input type="search" placeholder="Search here" id="searchbox"></li>
-      <li><a routerLink="/accountdetail">Profile</a></li>
-      <li><a routerLink="/cart" routerLinkActive="active"><i class="fa-solid fa-bag-shopping"></i></a></li>
-      <li><a (click)="loginmodal()" *ngIf="logInUser==false">Login </a></li>
+      <li><a routerLink="/home" routerLinkActive="active" >Home</a></li>
+      <li><a routerLink="/product" routerLinkActive="active" >Products</a></li>
+      <li><input type="search" placeholder="&nbsp;Search here" id="searchbox"></li>
+      <li><a routerLink="/accountdetail" id="kk">Profile</a></li>
+      <li><a routerLink="/cart" routerLinkActive="active" >&nbsp;Cart</a></li>
+      <li><a (click)="loginmodal()" routerlink="" *ngIf="logInUser==false">Login </a></li>
       <li><a (click)="logout()" *ngIf="logInUser==true">Logout<i class="fa-solid fa-right-to-bracket"></i></a></li>
       <!-- {{logInUser.username}}  -->
       <a href="#" id="close"><i class="far fa-times"></i></a>
@@ -39,13 +50,12 @@
             <i class="fa-solid fa-envelope"></i>
             <input id="user_email" type="text" placeholder="Enter your Email" name="usernamillogin" formControlName="userId"
             pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
-            pattern2="^[AI][0-9]{4}$"
              />
              <div class="errors" *ngIf="loginForm.controls['userId'].dirty">
               <p *ngIf="loginForm.controls['userId'].errors?.['required']">
                 Enter the field
               </p>
-              <p *ngIf="loginForm.controls['userId'].errors?.['pattern'] || loginForm.controls['userId'].errors?.['pattern2'] ">
+              <p *ngIf="loginForm.controls['userId'].errors?.['pattern'] ">
                 Enter valid Email id
               </p>
             </div>
@@ -73,7 +83,7 @@
           <h3><a routerLink="/forgot">Forgot password</a></h3>
         </div>
         <div class="register">
-          <h3>I don't have account <a (click)="registermodal()">Register</a></h3>
+          <h3>Create an account <a (click)="registermodal()">Register</a></h3>
         </div>
       </div>
     </div>
@@ -93,8 +103,8 @@
 
         <div class="user-details">
           <div class="input-box">
-            <span class="details">Full Name</span>
-            <input type="text" name="fullname" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName" class="input"
+            <span class="details">Name</span>
+            <input type="text" name="fullname" pattern="^[A-Z]{1}[a-z]{2,16}$" placeholder="FirstName" class="input"
               formControlName="username" />
           </div>
 
@@ -102,12 +112,12 @@
             <p class="error" *ngIf="formRegister.controls['username'].errors?.['required']"><i
                 class="fas fa-exclamation-circle"></i>&numsp; Name should not be Empty</p>
             <p class="error" *ngIf="formRegister.controls['username'].errors?.['pattern']"><i
-                class="fas fa-exclamation-circle"></i>&numsp; Enter the correct Fullname</p>
+                class="fas fa-exclamation-circle"></i>&numsp; Enter the correct Fullname - only Alphabets</p>
           </div>
 
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" name="emailid" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$" placeholder="Email-id"
+            <input type="text" name="emailid" pattern="^[a-z0-9]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$" placeholder="Email-id"
               class="input" formControlName="email" />
           </div>
           <div class="information-error" *ngIf="formRegister.controls['email'].dirty">
