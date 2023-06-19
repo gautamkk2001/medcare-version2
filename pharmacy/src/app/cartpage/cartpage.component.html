@@ -35,7 +35,7 @@
               <td>
                   <h5>Rs: {{cart.originalAmount}}</h5>
               </td>
-              <td><input class="in" value="1" type="number" name="quantity"  ></td >
+              <td><button class="minus" (click)="quantity('decrement')">-</button><input class="in" value="{{changed}}" type="number" name="quantity"><button class="plus" (click)="quantity('increment')">+</button></td >
               <td>
                   <h5>Rs:  {{cart.originalAmount}}</h5>
               </td>

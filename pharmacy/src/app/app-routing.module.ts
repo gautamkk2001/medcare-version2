@@ -18,6 +18,9 @@ import { AdminPageComponent } from './adminPage/adminPage.component';
 import { Profile_offersComponent } from './profile_offers/profile_offers.component';
 import { GuardloginGuard } from './guardlogin.guard';
 import { PaymentComponent } from './payment/payment.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogArticleComponent } from './blog-article/blog-article.component';
+import { PricePipe } from './Price.pipe';
 
 const routes: Routes = [
   {
@@ -109,12 +112,21 @@ const routes: Routes = [
   {
    path:"payment",
    component:PaymentComponent
+  },
+  {
+    path:"blog",
+    component:BlogComponent
+  },
+  {
+    path:'blog/:article',
+    component:BlogArticleComponent
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+
 
 
 })

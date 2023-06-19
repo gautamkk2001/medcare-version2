@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+ <section class="blog-list" >
+
+   <div class="blog-item" *ngFor="let pro of article">
+      <div><img src="../../assets/images/{{pro.name}}.jpg"></div>
+       <div class="title"><h2> {{pro.title}}</h2> <span>Recent news about the 126-year-old yoga guru who is healthy and kicking despite his age has left people in awe. His alleged secret to longevity? Cutting out the white stuff - sugar, salt, and oil - from his diet.
+        Eating sugar has long been linked to adverse health effects like teeth cavities, accelerated aging, obesity, and lifestyle diseases such as diabetes and blood pressure. Not all sugars are bad for you. Natural sugars found in fruits, milk, and vegetables are safe; the issue begins with "added sugars," which manufacturers add to packaged products to improve the taste or shelf life.
+       </span>
+      <div class="read-more"><button  routerLink="/blog/{{pro.title}}">Read more</button></div>
+      </div>
+   </div>
+
+ </section>
+
+<app-footer></app-footer>

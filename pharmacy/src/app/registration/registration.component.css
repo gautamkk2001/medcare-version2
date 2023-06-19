@@ -43,8 +43,8 @@ form .user-details .input-box{
    font-size: 18px;
    border-bottom-width: 2px;
    transition: all 0.3s ease-in-out;
-
 }
+
 .user-details .input-box .details{
   display: block;
   font-weight: 500;

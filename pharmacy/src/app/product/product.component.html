@@ -7,7 +7,7 @@
   Comments  :  -
   Reviewed by : Gautam
   Reviewed at  : 13/06/2023 -->
-  
+
 
 <!-- .................................................................................................navigation bar.......................................................................................... -->
 <app-navbar></app-navbar>
@@ -21,7 +21,7 @@
 <!-- {{logInUser.username|json}} -->
 
 <!-- dropdown -->
-<!-- <div class="wrapper">
+<div class="wrapper">
   <nav>
     <ul class="">
       <li class="dropdown1"><a>Medicine</a>
@@ -181,10 +181,10 @@
           </ul>
         </ul>
       </li>
-      <li><a>Health corner</a></li>
+      <li><a routerLink="/blog">Health corner</a></li>
     </ul>
   </nav>
-</div> -->
+</div>
 
 <!-- ................................................................................................ Featured products ......................................................................................................... -->
 <section id="product1" class="section-p1">
@@ -214,61 +214,20 @@
   <button class="ban">Explore Now</button>
 </section>
 
-<!-- ----------------------------------------------------Category section------------------------ -->
-<div class="filter-box">
-  <div class="fil-data">
-    <img src="../../assets/images/caterogy-2.png">
-  </div>
-  <div class="fil-data">
-    <img src="../../assets/images/caterogy-3.png">
-  </div>
-  <div class="fil-data">
-    <img src="../../assets/images/caterogy-4.png">
-  </div>
-  <div class="fil-data">
-    <img src="../../assets/images/caterogy1.png">
-  </div>
-  <div class="fil-data">
-    <img src="../../assets/images/caterogy-5.png">
+<!-- ----------------------------offer popup--------------------------- -->
+ <dialog class="offer-popup">
+  <div class="gridOffer">
+  <div class="flash">
+      <i class="fa-solid fa-xmark" (click)="closeOffer()"></i>
+      <img src="../../assets/images/homepage-banner1.jpg">
+      <h2>Big Saving days Ends in</h2>
+      <h4> {{demo}} </h4>
+      <button class="explore"> Explore</button>
   </div>
 </div>
+</dialog>
 
-<!-- <div class="a-zsection">
-  <div class="a-z">
-    <div class="letters">
-      <a href="" (click)="a()">A</a><a href="" (click)="b()">B</a><a href="" (click)="c()">C</a><a href="">D</a><a href="">E</a><a href="">F</a><a href="">G</a><a
-        href="">H</a><a href="">I</a><a href="">J</a><a href="">K</a><a href="">L</a><a href="">M</a><a href="">N</a><a
-        href="">O</a><a href="">P</a><a href="">Q</a><a href="">R</a><a href="">S</a><a href="">T</a><a href="">U</a><a
-        href="">V</a><a href="">W</a>X<a href="">X</a><a href="">Y</a><a href="">Z</a>
-    </div>
-  </div>
 
-  <div class="products-alphabet">
-    <div class="druglist" *ngFor="let drug of  finalData">
-      <ul  >
-        <li ><a>{{drug.name}}</a></li>
-      </ul> -->
-
-      <!-- <ul  >
-        <h3>A</h3>
-        <li ><a>{{drug.tproducts}}</a></li>
-      </ul>
-
-      <ul  >
-        <h3>A</h3>
-        <li ><a>{{drug.uproducts}}</a></li>
-      </ul>
-      <ul  >
-        <h3>A</h3>
-        <li ><a>{{drug.vproducts}}</a></li>
-      </ul>
-      <ul  >
-        <h3>A</h3>
-        <li ><a>{{drug.wproducts}}</a></li>
-      </ul> -->
-
-  <!-- </div>
-</div> -->
 <!-- .....................................................................................................Slide banner.............................................................................................................. -->
 <section id="slide">
   <div class="slide-container">
@@ -296,6 +255,40 @@
   </div>
 </section>
 
+<!-- ----------------------------------------------------Category section------------------------------------------------------------>
+<div class="filter-box">
+  <div class="fil-data">
+    <button (click)="filter('')"><img src="../../assets/images/caterogy-2.png"></button>
+  </div>
+  <div class="fil-data">
+    <button (click)="filter('diabetes')"><img src="../../assets/images/caterogy-3.png"></button>
+  </div>
+  <div class="fil-data">
+    <button (click)="filter('bone')"><img src="../../assets/images/caterogy-4.png"></button>
+  </div>
+  <div class="fil-data">
+    <button (click)="filter('gastro')"><img src="../../assets/images/caterogy1.png"></button>
+  </div>
+  <div class="fil-data">
+    <button (click)="filter('Skin&care')"><img src="../../assets/images/caterogy-5.png"></button>
+  </div>
+</div>
+
+<!-- -----------------------------------------------------------BMI------------------------------------------------------------------ -->
+<div class="bmi">
+  <div class="banner-bmi"><img src="../../assets/images/body-mass-index-bmi2.avif"></div>
+   <div class="index">
+    <h2>BMI Calculator</h2>
+    <label for="height">Height</label>
+    <input type="number" name="height"  [(ngModel)]="height" placeholder="Height in CM"><br>
+    <label for="weight">Weight</label>
+    <input type="number" name="weight" [(ngModel)]="weight" placeholder="Weight in KG"><br>
+    <button (click)="bmi()">Calculate</button>
+    <h2>{{result}}</h2>
+   </div>
+
+</div>
+
 
 <!-- --------------------------------------------------------All products--------------------------------------------------------------- -->
 <section id="product1" class="section-p1">
@@ -305,13 +298,14 @@
     <div class="pro-container">
       <div class="grid three-columns">
         <!-- 1 -->
-        <div *ngFor="let pro of prodata" class="pro">
+        <div *ngFor="let pro of filtercategory" class="pro">
           <a routerLink="/product/{{pro.description}}"><img src="../../assets/images/{{pro.description}}.jpg"></a>
           <div class="des">
             <a routerLink="**"><span>{{pro.title}} </span></a><br>
             <h5>{{pro.description}} </h5><br>
             <div class="star">{{pro.rating}}<i class="fas fa-star"></i></div><br>
-            <h4 class="price"> Price{{pro.originalAmount|currency:'INR'}} </h4>
+            <h4 class="price" *ngIf="loop==true"> Price{{pro.originalAmount |Price | currency:'INR'}} </h4>
+            <h4 class="price" *ngIf="loop==false"> Price{{pro.originalAmount | currency:'INR'}} </h4>
             <h4 class="percent">{{pro.offerPercentage}}</h4>
           </div>
 

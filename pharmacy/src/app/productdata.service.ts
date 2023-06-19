@@ -18,6 +18,9 @@ export class ProductdataService {
   strotedData:any="";
   loggedInUser:any;
   paymentTotal:any;
+
+  fullStory:any=""
+  salePrice:boolean=false;
 constructor(private http:HttpClient) { }
 
 getproducts(){
@@ -50,5 +53,9 @@ cartDataValues(){
 
 deleteCartValues(id:any){
   return this.http.delete("http://localhost:3000/cart-data"+"/"+id)
+}
+
+blogData(){
+  return this.http.get("http://localhost:3000/blog-data")
 }
 }

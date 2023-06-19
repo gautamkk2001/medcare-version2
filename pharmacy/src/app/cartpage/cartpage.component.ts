@@ -44,6 +44,18 @@ export class CartpageComponent implements OnInit {
   //  }
 
 
+// quqntity changing
+changed=1;
+quantity(data:any){
+  if(data=='increment'){
+    this.changed += 1;
+  }
+  else if(data=='decrement'){
+    this.changed -= 1;
+  }
+}
+
+
   //  delete
   delete(id:any){
     this.data.deleteCartValues(id).subscribe(data=>{

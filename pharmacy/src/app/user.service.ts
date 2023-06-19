@@ -24,4 +24,5 @@ addUserInformation(body:any){
 order(orderData:any){
   return this.client.post(`${this.orderUrl}`, orderData)
 }
+
 }

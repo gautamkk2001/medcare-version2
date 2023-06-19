@@ -27,9 +27,12 @@ import { GalleryDirective } from './gallery.directive';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { AdminPageComponent } from './adminPage/adminPage.component';
 import { PaymentComponent } from './payment/payment.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogArticleComponent } from './blog-article/blog-article.component';
+import { PricePipe } from './Price.pipe';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HomepageComponent,
       ProductComponent,
@@ -50,7 +53,10 @@ import { PaymentComponent } from './payment/payment.component';
       FooterComponent,
       GalleryDirective,
       AdminPageComponent,
-      PaymentComponent
+      PaymentComponent,
+      BlogComponent,
+      BlogArticleComponent,
+      PricePipe
    ],
   imports: [
     BrowserModule,
