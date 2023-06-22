@@ -47,6 +47,12 @@ getdrugsname(){
 addToCart(body:any){
   return  this.http.post("http://localhost:3000/cart-data",body);
 }
+addtoWishlist(body:any){
+  return  this.http.post("http://localhost:3000/wishlistData",body);
+}
+wishlistvalues(){
+  return this.http.get("http://localhost:3000/wishlistData")
+}
 cartDataValues(){
   return this.http.get("http://localhost:3000/cart-data")
 }

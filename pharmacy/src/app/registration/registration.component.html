@@ -9,7 +9,10 @@
   Reviewed at  : 13/06/2023 -->
 
 <body>
-  <div class="container">
+  <div class="reg-img">
+    <img src="../../assets/images/5500661.jpg">
+  </div>
+  <div class="register_container">
     <div class="title"> Registration</div>
     <form id="form" [formGroup]="formRegister"   (ngSubmit)="submitForm()">
       <div class="user-details">
@@ -95,7 +98,7 @@
           <button>Register</button>
         </div>
         <div class="login">
-          <h4>Already have an account <span><a >LOGIN</a></span></h4>
+          <h4>Already have an account <span><a routerLink="/main" >LOGIN</a></span></h4>
         </div>
       </div>
     </form>

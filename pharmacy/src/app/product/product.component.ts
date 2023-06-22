@@ -26,6 +26,7 @@ filtercategory:any;
     this.data.getfeatured().subscribe((data) =>(this.featureddata = data));
     this.data.getdrugsname().subscribe((data) => (this.drugdata = data));
     this.data.salePrice=true;
+    this.filtercategory=this.prodata;
   }
 
   pro_title: any = '';
@@ -52,8 +53,8 @@ filtercategory:any;
     offer_modal.showModal();
   }
 
-
- countdown = new Date("Jun 16, 2023 17:28:00").getTime();
+// flash offer popup
+ countdown = new Date("Jun 21, 2023 17:28:00").getTime();
  demo:any;
  x= setInterval( () =>{
   var now = new Date().getTime();
@@ -88,6 +89,7 @@ filtercategory:any;
   });
  }
 
+//  bmi
  height:any;
  weight:any;
  heightM:any;

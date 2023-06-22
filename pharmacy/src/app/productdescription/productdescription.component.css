@@ -471,6 +471,16 @@ footer .copy {
   cursor: pointer;
 }
 
+#prodetails .details-pro .wishlist{
+  background-color: yellow;
+  color: black;
+  height: 45px;
+  margin-left: 20px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
 #prodetails .details-pro span p{
   line-height: 25px;
   text-align: justify;

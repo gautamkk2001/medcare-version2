@@ -1,29 +1,37 @@
 
-
-
 body{
   display:flex;
+  gap: 50px;
   height: 100vh;
-  padding: 20px;
+  width:100vw;
   justify-content: flex-end;
   align-items: center;
-  background: linear-gradient(135deg, #74b162, #86a53d);
-  background: url(../../assets/gif/Web-IVC.gif);
-  background-repeat: no-repeat;
+  /* background: linear-gradient(135deg, #74b162, #86a53d); */
+  background: #fff;
+  /* background: url(../../assets/images/homepage-banner1.jpg); */
+  /* background-repeat: no-repeat; */
 }
-.container{
-  max-width: 700px;
-  width:100%;
+
+.reg-img img{
+  width:500px;
+  height:500px;
+  margin: 0;
+}
+
+.register_container{
+  max-width: 1000px;
+  width:900px;
   background: #fff;
   padding: 25px;
   border-radius: 8px;
-  margin-right: 25px;
+  margin-right: 10px;
+
 }
-.container .title{
+.register_container .title{
   font-size: 30px;
   font-weight: 500;
 }
-.container form .user-details{
+.register_container form .user-details{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -40,11 +48,24 @@ form .user-details .input-box{
    border-radius: 5px;
   border: 1px solid #5b7396;
    padding-left: 15px;
+   margin-bottom: 5px;
    font-size: 18px;
    border-bottom-width: 2px;
    transition: all 0.3s ease-in-out;
 }
 
+.user-details .gender-box {
+  height: auto;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  /* border: 1px solid #5b7396; */
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 18px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease-in-out;
+}
 .user-details .input-box .details{
   display: block;
   font-weight: 500;
@@ -54,7 +75,8 @@ form .user-details .input-box{
 .types{
   display: flex;
   justify-content: space-evenly;
-  padding: 10px;
+  padding: 15px;
+
 }
 /* .types label:hover{
   background-color: #1e91de;
@@ -63,7 +85,8 @@ form .user-details .input-box{
 } */
 form .button{
   height:45px;
-  margin: 30px 0;
+  width:100%;
+  margin: 10px 0;
 }
 form .button button{
    height: 100%;
@@ -77,12 +100,13 @@ form .button button{
    background: #34d77b;
    border-color: #34d77b;
 }
-.login h3 a{
-        text-decoration: none;
-        color:  #1e91de;
+.login h4 a{
+      text-decoration: none;
+      color:  #1e91de;
+      cursor: pointer;
 }
-.login h3{
-  text-align: center;
+.login h4{
+    text-align: center;
 }
 
 
@@ -161,7 +185,6 @@ form .button button{
   border: none;
   outline: none;
 }
-
 .gap{
   position: relative;
 }
@@ -169,9 +192,15 @@ form .button button{
   color: red;
   position: absolute;
   margin-top: 75px;
-  margin-left: -500px;
+  margin-left: -450px;
 }
 
-input.ng-invalid{border-left:5px solid red;}
+.error p{
+  color:white;
+  position: absolute;
+   margin-left: 36px;
+}
 
-    input.ng-valid{border-left:5px solid green; }
+input.ng-invalid{border:3px solid red;}
+
+    input.ng-valid{border:3px solid green; }

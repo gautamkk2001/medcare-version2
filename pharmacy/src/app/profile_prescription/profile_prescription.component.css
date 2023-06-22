@@ -63,3 +63,51 @@ button[type="submit"] {
   text-align: center;
 }
 
+
+/* order */
+.ordersection{
+ display:flex;
+}
+
+.orders{
+  width:550px;
+  height:280px;
+  background-color: rgb(33, 104, 228);
+  margin-left: 10px;
+}
+
+.orders .orderImgs{
+  display: block;
+  padding: 10px;
+  height:100px;
+  margin-bottom: 10px;
+
+}
+
+.orders .orderImgs img{
+ width:100px;
+ height: 100px;
+ padding: 10px;
+}
+
+.orders h2{
+  padding:10px;
+  font-size: 25px;
+}
+
+.orders span{
+ padding-left: 10px;
+ font-size: 20px;
+}
+
+.orders button{
+  background-color: rgb(227, 140, 108);
+  color: black;
+  height: 45px;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

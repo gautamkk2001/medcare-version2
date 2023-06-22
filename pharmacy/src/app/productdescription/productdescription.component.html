@@ -39,6 +39,7 @@
   <h3>Unit</h3>
   <input type="number" value="1">
   <a routerLink="/cart"><button (click)="addedCart(finaldescription)">Add to cart</button></a>
+   <button class="wishlist" (click)="wishlist(finaldescription)">Wishlist</button>
   <h4>Product details</h4>
   <span><p>{{finaldescription.details|json}}</p></span>
 </div>

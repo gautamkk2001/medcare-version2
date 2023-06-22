@@ -14,14 +14,15 @@
   <h2><a routerlink="product"><i class="fa-sharp fa-solid fa-heart-pulse"></i>Medcare</a></h2>
   <div>
     <ul id="navbar">
-      <li><a routerLink="/home" routerLinkActive="active" >Home</a></li>
+      <li><a routerLink="/home" routerLinkActive="active"  id="kk">Home</a></li>
       <li><a routerLink="/product" routerLinkActive="active" >Products</a></li>
       <li><input type="search" placeholder="&nbsp;Search here" id="searchbox"></li>
-      <li><a routerLink="/accountdetail" id="kk">Profile</a></li>
-      <li><a routerLink="/cart" routerLinkActive="active" >&nbsp;Cart</a></li>
-      <li><a (click)="loginmodal()" routerlink="" *ngIf="logInUser==false">Login </a></li>
-      <li><a (click)="logout()" *ngIf="logInUser==true">Logout<i class="fa-solid fa-right-to-bracket"></i></a></li>
-      <!-- {{logInUser.username}}  -->
+      <li><a routerLink="/accountdetail">Profile</a></li>
+      <li><a routerLink="/cart" routerLinkActive="active" >Cart</a></li>
+      <li><a routerLink="/main" routerLinkActive="active" *ngIf="!loginstatus" >Login</a></li>
+      <!-- <li><a routerlink="/main"*ngIf="logInUser==false" (click)="loginmodal()">Login </a></li> -->
+      <li><a (click)="logout()" *ngIf="loginstatus">Logout<i class="fa-solid fa-right-to-bracket"></i></a></li>
+
       <a href="#" id="close"><i class="far fa-times"></i></a>
     </ul>
   </div>

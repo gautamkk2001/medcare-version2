@@ -24,7 +24,7 @@
           </tr>
       </thead>
 
-      <tbody *ngFor="let cart of cartData">
+      <tbody *ngFor="let cart of cartproducts">
         <!-- [formGroup]="input" -->
           <tr>
               <td> <a href="#" (click)="delete(cart.id)"><i class="fas far fa-trash-alt"></i></a></td>
@@ -50,7 +50,7 @@
               <h5>COUPON</h5>
               <p>Ener your coupon here</p>
               <input type="text" placeholder="coupon code">
-              <button> APPLY COUPON</button>
+              <button (click)="apply()"> APPLY COUPON</button>
           </div>
       </div>
 

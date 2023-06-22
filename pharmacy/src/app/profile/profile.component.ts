@@ -8,6 +8,7 @@ import { ProductdataService } from '../productdata.service';
 })
 export class ProfileComponent implements OnInit {
   logInUser:any=""
+  dat:any=sessionStorage.getItem('userId');
   constructor(private data:ProductdataService) { }
 
   ngOnInit() {
@@ -19,7 +20,7 @@ export class ProfileComponent implements OnInit {
   // }
 
   // session storage
-  const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+  const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
   if (sessionUser) {
     this.logInUser = JSON.parse(sessionUser);
   } else if (this.data.loggedInUser !== null) {

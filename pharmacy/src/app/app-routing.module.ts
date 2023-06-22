@@ -21,6 +21,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogArticleComponent } from './blog-article/blog-article.component';
 import { PricePipe } from './Price.pipe';
+import { LoginMainComponent } from './login-main/login-main.component';
 
 const routes: Routes = [
   {
@@ -86,7 +87,7 @@ const routes: Routes = [
   {
     path:"cart",
     component:CartpageComponent,
-    canActivate:[GuardloginGuard]
+    // canActivate:[GuardloginGuard]
   },
   {
     path:"offer",
@@ -120,6 +121,10 @@ const routes: Routes = [
   {
     path:'blog/:article',
     component:BlogArticleComponent
+  },
+  {
+    path:'main',
+    component:LoginMainComponent
   }
 ];
 

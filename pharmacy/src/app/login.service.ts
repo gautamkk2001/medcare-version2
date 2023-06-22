@@ -8,8 +8,9 @@
   Reviewed by : Gautam
   Reviewed at  : 13/06/2023 */
 
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { Observable, map, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -27,4 +28,5 @@ constructor() { }
   this.islogged=true;
   return of(this.islogged);
 }
+
 }

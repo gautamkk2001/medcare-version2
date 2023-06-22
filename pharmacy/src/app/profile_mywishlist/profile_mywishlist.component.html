@@ -8,4 +8,22 @@
   Reviewed by : Gautam
   Reviewed at  : 13/06/2023 -->
 
-<h1>No items</h1>
+<section id="product1" class="section-p1">
+  <h2>Wishlist</h2>
+
+  <div class="pro-container ">
+    <div class="grid three-columns">
+      <div *ngFor="let fea of wishlistdata"  class="pro">
+        <a routerLink="/product/{{fea.description}}"><img src="../../assets/images/{{fea.description}}.jpg" alt=""></a>
+        <div class="des">
+          <a routerLink="**"><span>{{fea.title}} </span></a><br>
+          <h5>{{fea.description}}</h5><br>
+          <div class="star">{{fea.rating}}<i class="fas fa-star"></i></div><br>
+          <h4>Price{{fea.originalAmount|currency:'INR'}} </h4>
+          <h4 class="percent">{{fea.offerPercentage}}</h4>
+        </div>
+        <div class="icon"><button>Remove</button> </div>
+      </div>
+    </div>
+  </div>
+</section>

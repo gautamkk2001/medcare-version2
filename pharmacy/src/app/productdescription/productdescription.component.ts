@@ -30,13 +30,34 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
       })
     });
 }
-
+ logInUser:any="";
   ngOnInit() {
+    const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.logInUser = JSON.parse(sessionUser);
+    }
   }
 cartdata:any=this.finaldescription;
   addedCart(value:any){
-    this.data.addToCart(value).subscribe(data=>{
+    var body={
+    "title":value.title,
+    "description": value.description,
+    "Quantity": value.Quantity,
+    "rating": value.rating,
+    "originalAmount": value.originalAmount,
+    "email":this.logInUser.email,
+    "username":this.logInUser.username
+    }
+    this.data.addToCart(body).subscribe(data=>{
     })
     // alert("added");
+  }
+
+  wishlist(wish:any){
+    this.data.addtoWishlist(wish).subscribe(data=>{
+
+    })
+    alert("added");
+
   }
 }

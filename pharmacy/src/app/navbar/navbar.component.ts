@@ -12,6 +12,8 @@ import { LoginService } from '../login.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  loginstatus=false;
   constructor(  private fb:FormBuilder,private user:ProductdataService,private route:Router, private http:HttpClient, private log:LoginService)
    {
     this.user.registereduser().subscribe( (user) =>{
@@ -20,6 +22,7 @@ export class NavbarComponent implements OnInit {
     this.user.adminUser().subscribe( (user)=>{
      this.adminData=user;
     })
+    this.loginstatus=Boolean(sessionStorage.getItem('userName'))
    }
 
   //  ************************************************** Register Form Validation **************************
@@ -64,7 +67,7 @@ loginForm=this.fb.group({
  isLoggedIn:boolean=false;
  displayname:any="";
 
-
+storage:any;
   errors:any=false;
 
   login(){
@@ -86,10 +89,13 @@ loginForm=this.fb.group({
           alert("Login Successfully");
 
           this.isLoggedIn=true;
-          this.log.islogged=true;
+          // this.log.islogged=true;
           // this.loginForm.reset();
             this.user.loggedInUser = users;
             sessionStorage.setItem('loggedInUser', JSON.stringify(users));
+          sessionStorage.setItem('userMail', this.usersdata.email);
+          sessionStorage.setItem('userName', this.usersdata.username);
+          sessionStorage.setItem('userId', this.usersdata.id);
             this.route.navigate(['product'])
             // this.get();
             const loginpanel:any= document.querySelector(".Loginmodal");
@@ -124,8 +130,10 @@ loginForm=this.fb.group({
       window.location.reload();
   }
   logout(){
-     this.isLoggedIn=false;
-     window.location.reload();
+    this.loginstatus=false;
+    sessionStorage.clear();
+
+    this.route.navigate(['home']);
   }
 
 
@@ -155,6 +163,6 @@ loginForm=this.fb.group({
 
   // }
   ngOnInit() {
-   this.logInUser=this.log.islogged
+  //  this.logInUser=this.log.islogged
   }
 }

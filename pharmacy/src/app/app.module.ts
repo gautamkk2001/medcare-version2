@@ -30,9 +30,10 @@ import { PaymentComponent } from './payment/payment.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogArticleComponent } from './blog-article/blog-article.component';
 import { PricePipe } from './Price.pipe';
+import { LoginMainComponent } from './login-main/login-main.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HomepageComponent,
       ProductComponent,
@@ -56,7 +57,8 @@ import { PricePipe } from './Price.pipe';
       PaymentComponent,
       BlogComponent,
       BlogArticleComponent,
-      PricePipe
+      PricePipe,
+      LoginMainComponent
    ],
   imports: [
     BrowserModule,
