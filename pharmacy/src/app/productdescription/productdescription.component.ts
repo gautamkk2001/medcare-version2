@@ -3,6 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductdataService } from '../productdata.service';
 import { GalleryDirective } from '../gallery.directive';
 
+
+interface Star {
+  value: number;
+  isActive: boolean;
+}
+
 @Component({
   selector: 'app-productdescription',
   templateUrl: './productdescription.component.html',
@@ -13,6 +19,7 @@ prodescription:any;
 searchdescription:any="";
 finaldescription:any="";
 detailsofproduct:any="";
+offer:boolean;
 constructor(private data:ProductdataService, private route:ActivatedRoute) {
   this.data.getproducts().subscribe(data=> {this.prodescription =data
     this.route.params.subscribe(paramdata=>
@@ -29,6 +36,7 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
         }
       })
     });
+    this.offer=this.data.offer;
 }
  logInUser:any="";
   ngOnInit() {
@@ -38,6 +46,8 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
     }
   }
 cartdata:any=this.finaldescription;
+
+  // Adding to Cart
   addedCart(value:any){
     var body={
     "title":value.title,
@@ -50,14 +60,49 @@ cartdata:any=this.finaldescription;
     }
     this.data.addToCart(body).subscribe(data=>{
     })
-    // alert("added");
   }
 
+  // Adding to Wishlist
   wishlist(wish:any){
-    this.data.addtoWishlist(wish).subscribe(data=>{
-
+    var body={
+      "title":wish.title,
+      "description": wish.description,
+      "Quantity": wish.Quantity,
+      "rating": wish.rating,
+      "originalAmount": wish.originalAmount,
+      "email":this.logInUser.email,
+      "username":this.logInUser.username
+      }
+    this.data.addtoWishlist(body).subscribe(data=>{
     })
     alert("added");
-
   }
+
+// review
+stars: Star[] = [
+  { value: 1, isActive: false },
+  { value: 2, isActive: false },
+  { value: 3, isActive: false },
+  { value: 4, isActive: false },
+  { value: 5, isActive: false }
+];
+
+feedbackText: string = '';
+
+rate(value: number): void {
+  this.stars.forEach(star => {
+    star.isActive = star.value <= value;
+  });
+}
+
+submitFeedback(): void {
+  // Perform your logic here, e.g., sending the rating and feedback to a server
+  console.log('Rating:', this.getRating());
+  console.log('Feedback:', this.feedbackText);
+}
+
+getRating(): number {
+  return this.stars.filter(star => star.isActive).length;
+}
+
 }

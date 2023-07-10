@@ -33,11 +33,13 @@
                    <h5>{{cart.description}}</h5>
               </td>
               <td>
-                  <h5>Rs: {{cart.originalAmount}}</h5>
+                  <h5 *ngIf="offer==true">Rs: {{cart.originalAmount |Price}}</h5>
+                  <h5 *ngIf="offer==false">Rs: {{cart.originalAmount }}</h5>
               </td>
-              <td><button class="minus" (click)="quantity('decrement')">-</button><input class="in" value="{{changed}}" type="number" name="quantity"><button class="plus" (click)="quantity('increment')">+</button></td >
+              <td><button class="minus" (click)="increaseQuantity(cart)">+</button>{{cart.cartQuantity}}<button class="plus" (click)="decreaseQuantity(cart)">+</button></td >
               <td>
-                  <h5>Rs:  {{cart.originalAmount}}</h5>
+               <h5 *ngIf="offer==true">Rs:  {{cart.originalAmount | Price}}</h5>
+               <h5 *ngIf="offer==false">Rs:  {{cart.originalAmount }}</h5>
               </td>
           </tr>
       </tbody>

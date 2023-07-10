@@ -8,11 +8,23 @@ import { ProductdataService } from '../productdata.service';
 })
 export class Profile_mywishlistComponent implements OnInit {
   wishlistdata:any;
+  logInUser:any;
+
   constructor(private data:ProductdataService) {
-    this.data.wishlistvalues().subscribe(value=>{this.wishlistdata=value})
+
   }
 
   ngOnInit() {
+
+    const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.logInUser = JSON.parse(sessionUser);
+    }
+
+    this.data.searchingWishlist(this.logInUser).subscribe(value=>{
+      this.wishlistdata=value
+      });
+
   }
 
 }

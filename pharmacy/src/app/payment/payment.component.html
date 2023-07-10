@@ -8,20 +8,57 @@
   Reviewed by : Gautam
   Reviewed at  : 13/06/2023 -->
 
-  
+
 <div class="paymentSection">
+
+  <div class="right-container">
+    <div class="card">
+      <div class="first">
+        <div class="card-head">
+          <div><img src="../../assets/images/nfc.png"></div>
+          <div>
+          <h2>Visa</h2></div>
+      </div>
+          <div class="card-digits">
+              <h2>{{cardNumber}}</h2>
+          </div>
+
+          <div class="chip">
+            <img src="../../assets/images/creditcard-chip.png">
+          </div>
+
+          <div class="card-infos">
+              <div class="exp">
+                   <label>Valid thiru</label>
+                    <p> {{expDate}}</p>
+              </div>
+
+              <div class="cvv">
+                <label>CVV</label>
+                <p>{{cvv}}</p>
+              </div>
+          </div>
+
+          <div class="card-holder">
+            <label>Holder</label>
+            <h4>Gautam</h4>
+          </div>
+
+      </div>
+    </div>
+  </div>
   <div class="payments">
       <div class="paymentBox">
           <div class="paymentHeader">
               <h2> Payment </h2>
           </div>
           <div>
-              <form [formGroup]="payment"  class="cardInfo">
+              <form [formGroup]="payment"  class="cardInfo" (ngSubmit)="update()">
                   <div class="payment-two-columns">
                       <div class="form_fields">
                           <label for="accountNumber"> Card Number </label>
                           <input type="tel" maxlength="16" name="accountNumber" formControlName="accountNumber" minlength="16"
-                              maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required>
+                              maxlength="16" placeholder="XXXX XXXX XXXX XXXX" [(ngModel)]="cardNumber" required>
 
                           <div class="errorMessage"
                               *ngIf="payment.controls['accountNumber'].invalid && (payment.controls['accountNumber'].touched||payment.controls['accountNumber'].dirty)">
@@ -46,7 +83,7 @@
                       </div>
                       <div class="form_fields">
                           <label for="expiry"> Expiry Date </label>
-                          <input type="month" name="expiry"  formControlName="expiry" placeholder="MM/YYYY" required>
+                          <input type="month" name="expiry"  formControlName="expiry" placeholder="MM/YYYY" required [(ngModel)]="expDate" required>
                           <div class="errorMessage"
                               *ngIf="payment.controls['expiry'].invalid && (payment.controls['expiry'].touched||payment.controls['expiry'].dirty)">
                               <p *ngIf="payment.controls['expiry'].errors?.['required']">This is a required
@@ -56,7 +93,7 @@
                       <div class="form_fields">
                           <label for="cvv"> CVV </label>
                           <input type="tel" name="cvv" formControlName="cvv" placeholder="XXX" minlength="3"
-                              maxlength="3" required>
+                              maxlength="3" required [(ngModel)]="cvv">
 
                           <div class="errorMessage"
                               *ngIf="payment.controls['cvv'].invalid && (payment.controls['cvv'].touched||payment.controls['cvv'].dirty)">
@@ -76,11 +113,11 @@
                       <div class="button-back">
                           <button routerLink="/cart" id="proceedPayment" class="btn"><i
                                   class="fa-solid fa-arrow-left"></i>
-                              Back</button>
+                             < Back</button>
                       </div>
 
                       <div class="button-pay">
-                          <button (click)="show()" id="payNowBtn" class="btn"> Pay
+                          <button  id="payNowBtn" class="btn"> Pay
                               {{paymentAmount|currency:'INR'}} </button>
                       </div>
                   </div>
@@ -88,6 +125,9 @@
           </div>
       </div>
   </div>
+
+
+
 </div>
 
 <!-- Payment Success Popup  -->
@@ -104,4 +144,5 @@
       </div>
   </div>
 </dialog>
+
 

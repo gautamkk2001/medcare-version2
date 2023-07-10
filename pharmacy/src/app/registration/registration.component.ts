@@ -3,6 +3,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { cpasswordvalid } from '../cpasswordvalid';
 import { UserService } from '../user.service';
+import { ProductdataService } from '../productdata.service';
+
 
 @Component({
   selector: 'app-registration',
@@ -12,7 +14,7 @@ import { UserService } from '../user.service';
 export class RegistrationComponent implements OnInit {
 
   constructor(
-    private fb:FormBuilder,private user:UserService,private route:Router
+    private fb:FormBuilder,private user:UserService,private route:Router,private data:ProductdataService
   ) { }
   formRegister=this.fb.group({
     fullname1:[,Validators.required],
@@ -42,5 +44,14 @@ export class RegistrationComponent implements OnInit {
 }
   ngOnInit() {
   }
+
+  // sendEmail(): void {
+  //   const to = 'gautamkrishnasamy2001@example.com';
+  //   const subject = 'Test Email';
+  //   const message = 'Hello, this is a test email!';
+
+  //   this.data.sendEmail(to, subject, message);
+  // }
+
 
 }

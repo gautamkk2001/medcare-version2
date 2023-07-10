@@ -11,33 +11,32 @@
 
 <section>
   <div class="container">
-    <div class="title"> Update </div>
+    <div class="title"> Update  </div>
     <form id="form">
       <div class="user-details">
         <div class="input-box">
           <span class="details">Full Name</span>
-          <input type="text" name="username" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName" value="Gautam" class="input"
+          <input type="text" name="username" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName" value={{logInUser.username}} class="input"
             formControlName="fullname1" />
         </div>
 
 
-
         <div class="input-box">
           <span class="details">Email</span>
-          <input type="text" name="emailid" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$"  value="gautamkrishnasamy2001@gmail.com"
+          <input type="text" name="emailid" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$"  value= {{logInUser.email}}
             class="input" formControlName="email1" />
         </div>
 
 
         <div class="input-box">
           <span class="details">Phone number</span>
-          <input type="tel" name="mobileno" pattern="^[ 6-9]{1}[0-9]{9}$" placeholder="Mobileno"
+          <input type="tel" name="mobileno" pattern="^[ 6-9]{1}[0-9]{9}$" placeholder="Mobileno" value={{logInUser.mobile}}
             class="input" formControlName="mobile1" />
         </div>
 
         <div class="input-box">
           <span class="details">Dateof birth</span>
-          <input type="date" placeholder="Enter your DOB"  formControlName="date" >
+          <input type="date" placeholder="Enter your DOB"  formControlName="date" value={{logInUser.date}}>
         </div>
         <div class="input-box">
           <span class="details">New Password</span>

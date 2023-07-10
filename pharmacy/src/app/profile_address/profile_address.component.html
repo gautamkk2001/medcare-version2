@@ -10,22 +10,26 @@
 
 
 <section>
-<div class="saved">
-  <div class="saved-address">
-    <h3>Gautam</h3><small>Home</small>
-    <h4>9865451374</h4>
-    <p>90/94,Muthaiyan valasu, Tholusalan kattu thottam, Sivagiri Erode District, TamilNadu-638109</p>
+<div class="saved" >
+  <div class="saved-address" *ngFor="let savedAdd of savedAddress">
+    <div  *ngIf="savedAdd.fullname1==logInUser.username">
+    <small>Default</small>
+    <h3>{{savedAdd.fullname1}}</h3><small>Home</small>
+    <h4>{{savedAdd.mobile1}}</h4>
+    <p>{{savedAdd.address1}}&nbsp;&nbsp;{{savedAdd.district1}}&nbsp;&nbsp;{{savedAdd.state1}}&nbsp;&nbsp;{{savedAdd.pincode1}}</p>
+  </div>
   </div>
 
-  <div class="saved-address">
+  <!-- <div class="saved-address">
     <h3>Abishek</h3><small>Office</small>
     <h4>9080555646</h4>
     <p>10/84, Perumampalyam, Vellotamparappu(po),  Erode District, TamilNadu-638154</p>
-  </div>
+  </div> -->
 </div>
+
 <div class="container">
   <div class="title"> Add address </div>
-  <form id="form">
+  <form id="form" [formGroup]="formaddress"   (ngSubmit)="submitForm()">
     <div class="user-details">
       <div class="input-box">
         <span class="details">Full Name</span>
@@ -33,37 +37,76 @@
           formControlName="fullname1" />
       </div>
 
-
+      <div class="information-error" *ngIf="formaddress.controls['fullname1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['fullname1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Full Name should is not Empty</p>
+        <p class="error" *ngIf="formaddress.controls['fullname1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct Full name</p>
+      </div>
 
       <div class="input-box">
         <span class="details">Phone Number</span>
-        <input type="text" name="emailid" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$"  value="gautamkrishnasamy2001@gmail.com"
-          class="input" formControlName="email1" />
+        <input type="text" name="emailid" pattern="^[ 6-9]{1}[0-9]{9}$"  value="gautamkrishnasamy2001@gmail.com"
+          class="input" formControlName="mobile1" />
       </div>
 
+      <div class="information-error" *ngIf="formaddress.controls['mobile1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['mobile1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Mobile no should not be  Empty</p>
+        <p class="error" *ngIf="formaddress.controls['mobile1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct Mobile no</p>
+      </div>
 
       <div class="input-box">
         <span class="details">Address</span>
-        <input type="textbox" name="mobileno" pattern="^[ 6-9]{1}[0-9]{9}$" placeholder="Roadname , Area, Colony"
-          class="input" formControlName="mobile1" />
+        <input type="textbox" name="mobileno" pattern="^[A-Z a-z]{8,25}$" placeholder="Roadname , Area, Colony"
+          class="input" formControlName="address1" />
+      </div>
+
+      <div class="information-error" *ngIf="formaddress.controls['address1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['address1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Address Should not Empty</p>
+        <p class="error" *ngIf="formaddress.controls['address1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct Address</p>
       </div>
 
       <div class="input-box">
         <span class="details">District</span>
-        <input type="text" placeholder=" Ex:Chennai"  formControlName="date" >
-      </div>
-      <div class="input-box">
-        <span class="details">State</span>
-        <input type="password" placeholder="TN" id="pass1" name="pass"
-          pattern="^[A-Z]{1}[a-z]+[@][1-9]{1,7}$" name="Password" class="input" required
-          formControlName="password1" />
+        <input type="text" placeholder=" Ex:Chennai"  formControlName="district1" >
       </div>
 
+      <div class="information-error" *ngIf="formaddress.controls['district1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['district1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; District should not be Empty</p>
+        <p class="error" *ngIf="formaddress.controls['district1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct District</p>
+      </div>
+
+      <div class="input-box">
+        <span class="details">State</span>
+        <input type="text" placeholder="TN" id="pass1" name="pass"
+          pattern="^[A-Za-z]{5,20}$" name="Password" class="input" required
+          formControlName="state1" />
+      </div>
+
+       <div class="information-error" *ngIf="formaddress.controls['state1'].dirty">
+          <p class="error" *ngIf="formaddress.controls['state1'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; State should not Empty</p>
+          <p class="error" *ngIf="formaddress.controls['state1'].errors?.['pattern']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Enter the correct State</p>
+        </div>
 
       <div class="input-box">
         <span class="details">Pincode</span>
-        <input type="text" placeholder="postal Index Number" id="pass2" pattern="^[A-Z]{1}[a-z]+[@][1-9]{3,7}$"
-          name="Password" class="input" required cpasswords formControlName="cpassword1">
+        <input type="text" placeholder="postal Index Number" id="pass2" pattern="^[0-9]{6}$"
+          name="Password" class="input" required cpasswords formControlName="pincode1">
+      </div>
+
+      <div class="information-error" *ngIf="formaddress.controls['pincode1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['pincode1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Pincode should not be Empty</p>
+        <p class="error" *ngIf="formaddress.controls['pincode1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct PIN code</p>
       </div>
 
 

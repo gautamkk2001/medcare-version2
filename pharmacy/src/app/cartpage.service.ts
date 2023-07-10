@@ -5,6 +5,8 @@ import { Observable, map } from 'rxjs';
 @Injectable()
 export class CartpageService {
 
+  orderPayment:boolean=false;
+
   url:any="http://localhost:3000/cart-data";
   constructor(private http:HttpClient) { }
   searchTiming(name: any, email:any): Observable <any>{
@@ -18,4 +20,7 @@ export class CartpageService {
     );
   }
 
+  orderPlaced:any=[
+    
+  ]
 }

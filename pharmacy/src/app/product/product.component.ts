@@ -15,18 +15,19 @@ export class ProductComponent implements OnInit {
   featureddata:any="";
   drugdata: any = '';
   modal:any;
+
   // loop varable for offer popup
-  loop:boolean=true;
+
+  loop:boolean;
 
 // filtering
 filtercategory:any;
 
   constructor(private data: ProductdataService, private http: HttpClient) {
-    this.data.getproducts().subscribe((data) => (this.prodata = data));
     this.data.getfeatured().subscribe((data) =>(this.featureddata = data));
     this.data.getdrugsname().subscribe((data) => (this.drugdata = data));
     this.data.salePrice=true;
-    this.filtercategory=this.prodata;
+    this.loop=this.data.offer;
   }
 
   pro_title: any = '';
@@ -51,10 +52,15 @@ filtercategory:any;
 
     const offer_modal:any = document.querySelector(".offer-popup");
     offer_modal.showModal();
+
+    this.data.getproducts().subscribe((data) => {this.prodata = data
+     this.filtercategory=data;
+    });
+
   }
 
 // flash offer popup
- countdown = new Date("Jun 21, 2023 17:28:00").getTime();
+ countdown = new Date("Jul 12, 2023 17:28:00").getTime();
  demo:any;
  x= setInterval( () =>{
   var now = new Date().getTime();
@@ -68,6 +74,7 @@ filtercategory:any;
     clearInterval(this.x);
     this.demo = "Expired";
     this.loop=false;
+    this.data.offer=false;
   }
  },1000)
 
@@ -79,6 +86,7 @@ filtercategory:any;
   const offer_modal:any = document.querySelector(".offer-popup");
   offer_modal.close();
  }
+
 
  filter(fil_category:String){
   this.filtercategory = this.prodata.filter((a:any)=>{
@@ -96,6 +104,50 @@ filtercategory:any;
  result:any;
  bmi(){
   this.heightM=this.height/100;
-  this.result=this.weight/(this.heightM*this.heightM);
+  this.result=Math.floor(this.weight/(this.heightM*this.heightM));
  }
+
+ imgCollection: Array<object> =[
+  {
+    image: '../../assets/images/slide-1.png',
+    thumbImage: '../../assets/images/slide-1.png',
+
+
+  },
+
+  {
+    image:  '../../assets/images/slide-3.png',
+    thumbImage:  '../../assets/images/slide-3.png',
+
+  },
+  {
+    image: '../../assets/images/slide-2.png',
+    thumbImage:  '../../assets/images/slide-2.png',
+
+  },
+  {
+    image: '../../assets/images/slide-5.png',
+    thumbImage:  '../../assets/images/slide-5.png',
+  },
+  {
+    image: '../../assets/images/slide-7.png',
+    thumbImage:  '../../assets/images/slide-7.png',
+  },
+  {
+    image: '../../assets/images/slide-8.jpg',
+    thumbImage:  '../../assets/images/slide-8.jpg',
+  },
+  {
+    image: '../../assets/images/slide-10.png',
+    thumbImage:  '../../assets/images/slide-10.png',
+  },
+
+  {
+    image:  '../../assets/images/slide-4.png',
+    thumbImage:  '../../assets/images/slider-6.png',
+
+  }
+
+];
+
 }

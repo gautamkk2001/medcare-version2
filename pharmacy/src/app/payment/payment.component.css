@@ -153,3 +153,70 @@ form option{
   color: var(--white);
   font-weight: 900;
 }
+
+
+/* credit card design */
+.card{
+  width:390px;
+  height: auto;
+  background-image: linear-gradient(to right top, #60cbeb, #8ed9a4, #c0e17e);
+ }
+
+
+ .card .first img{
+ width:45px;
+ height: 30px;
+ margin:15px 15px 0 15px;
+ }
+
+ .card-infos{
+   display:flex;
+ }
+
+ .cvv{
+  margin-left: 70%;
+ }
+
+ /* .chip{
+  display: flex;
+  position: flex-end;
+ } */
+
+ .right-container .card .first .card-digits h2{
+  padding-left: 15px;
+  font-size: 22px;
+  text-align: center;
+ }
+
+ .right-container .card .first .card-holder{
+   margin-left: 5px;
+   padding: 10px;
+ }
+
+
+ .right-container .card .first .card-infos{
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 5px;
+ }
+
+ .right-container .card .first .card-infos .exp p, .right-container .card .first .card-infos .cvv p{
+  margin:0;
+ }
+
+ .right-container .card .first .chip img{
+   width:70px;
+   height:50px;
+   margin: 0 0 0%;
+ }
+
+.card-head{
+  display:flex;
+  margin-bottom: 25px;
+}
+
+.card-head h2{
+  width:45px;
+ height: 30px;
+ margin:15px 15px 0 220px;
+}

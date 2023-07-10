@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductdataService } from '../productdata.service';
 
+interface Star {
+  value: number;
+  isActive: boolean;
+}
+
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -39,5 +45,33 @@ constructor(){}
       title:"image4"
     }
   ]
+
+
+  // rating
+  stars: Star[] = [
+    { value: 1, isActive: false },
+    { value: 2, isActive: false },
+    { value: 3, isActive: false },
+    { value: 4, isActive: false },
+    { value: 5, isActive: false }
+  ];
+
+  feedbackText: string = '';
+
+  rate(value: number): void {
+    this.stars.forEach(star => {
+      star.isActive = star.value <= value;
+    });
+  }
+
+  submitFeedback(): void {
+    // Perform your logic here, e.g., sending the rating and feedback to a server
+    console.log('Rating:', this.getRating());
+    console.log('Feedback:', this.feedbackText);
+  }
+
+  getRating(): number {
+    return this.stars.filter(star => star.isActive).length;
+  }
 
 }

@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  background: rgb(34, 38, 41);
+  background: #272c4a;
   position: sticky;
 }
 
@@ -14,7 +14,7 @@
 
 #header h2 {
   padding-right: 350px;
-  color:rgb(135, 194, 50);
+  color:#0da3d6;
   font-weight: 800;
 }
 
@@ -24,6 +24,9 @@
   justify-content: center;
 }
 
+.mar{
+  display:flex;
+}
 #navbar #searchbox {
   height: 35px;
   margin-top: 10px;
@@ -39,7 +42,7 @@
 
 #navbar li a {
   text-decoration: none;
-  color: rgb(135, 194, 50);
+  color: #0da3d6;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 800;
   font-size: 21px;

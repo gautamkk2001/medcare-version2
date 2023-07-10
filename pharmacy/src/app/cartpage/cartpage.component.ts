@@ -18,7 +18,7 @@ export class CartpageComponent implements OnInit {
   // shipping:any="50";
   // lastprice:any;
   qua: any = '';
-
+//  offer:any;
   constructor(
     private data: ProductdataService,
     private fb: FormBuilder,
@@ -36,21 +36,34 @@ export class CartpageComponent implements OnInit {
 
   }
 
+  offer = this.data.offer;
+
+
   // quqntity changing
-  changed = 1;
-  quantity(data: any) {
-    if (data == 'increment') {
-      this.changed += 1;
-    } else if (data == 'decrement') {
-      this.changed -= 1;
+  increaseQuantity(item:any): void{
+    if(item.Quantity < 3){
+       item.Quantity++;
+       this.data.updateCartItem(item).subscribe(()=>{
+
+       });
     }
   }
+
+  decreaseQuantity(item:any): void{
+    if(item.cartQuantity < 3){
+       item.cartQuantity--;
+       this.data.updateCartItem(item).subscribe(()=>{
+
+       });
+    }
+  }
+
 
   //  delete
   delete(id: any) {
     this.data.deleteCartValues(id).subscribe((data) => {
-      alert('Successfully deleted');
-      window.location.reload();
+    alert('Successfully deleted');
+      // window.location.reload();
     });
   }
 
@@ -66,6 +79,7 @@ export class CartpageComponent implements OnInit {
     let test = sessionStorage.getItem(JSON.parse('userId'));
     alert(test);
   }
+
   logInUser: any = '';
   cartproducts: any = '';
   url: any = 'http://localhost:3000/cart-data';
@@ -78,25 +92,55 @@ export class CartpageComponent implements OnInit {
     if (sessionUser) {
       this.logInUser = JSON.parse(sessionUser);
     }
-    this.searchTiming(this.logInUser).subscribe((data) => {
+    this.data.searchingCart(this.logInUser).subscribe((data) => {
       this.cartproducts = data;
+
+      // to add the price of products
+      for (let pro of this.cartproducts) {
+        this.totalPrice =
+          parseInt(this.totalPrice) + parseInt(pro.originalAmount);
+      }
+      this.lastprice = parseInt(this.totalPrice) + parseInt(this.shipping);
+      this.data.paymentTotal = this.lastprice;
     });
-    for (let pro of this.cartproducts) {
-      this.totalPrice =
-        parseInt(this.totalPrice) + parseInt(pro.originalAmount);
-    }
-    this.lastprice = parseInt(this.totalPrice) + parseInt(this.shipping);
-    this.data.paymentTotal = this.lastprice;
+
   }
 
-  searchTiming(info: any): Observable<any> {
-    return this.http.get<any>(this.url).pipe(
-      map((data) => {
-        return data.filter(
-          (item: any) =>
-            item.username === info.username && item.email === info.email
-        );
-      })
-    );
-  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// searchTiming(info: any): Observable<any> {
+//   return this.http.get<any>(this.url).pipe(
+//     map((data) => {
+//       return data.filter(
+//         (item: any) =>
+//           item.username === info.username && item.email === info.email
+//       );
+//     })
+//   );
+// }

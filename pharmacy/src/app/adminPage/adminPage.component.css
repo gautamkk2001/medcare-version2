@@ -52,7 +52,7 @@ body{
 #main {
   transition: margin-left .5s;
   padding: 16px;
-  margin-left: 300px;
+  margin-left: 120px;
 }
 .head{
 	padding:20px;
@@ -176,3 +176,147 @@ td, th {
   color: #ddd;
   border-bottom: 1px solid #81818140;
 }
+
+.edit-products, .add-products{
+  max-width: 1000px;
+  width:900px;
+  background: #f2f7fa;
+  padding: 25px;
+  border-radius: 8px;
+  margin-right: 0px;
+  justify-content: center;
+}
+
+.add-products{
+  max-width: 1000px;
+  width:900px;
+  background: #f2f7fa;
+  padding: 25px;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+.edit-products .editing{
+  font-size: 30px;
+  font-weight: 500;
+  display:flex;
+}
+
+.add-products .editing{
+  font-size: 30px;
+  font-weight: 500;
+  display:flex;
+}
+
+.edit-products .editing .close{
+  margin-left: 92%;
+}
+
+.add-products .editing .close{
+  margin-left: 80%;
+}
+
+.edit-products .editing .close:hover{
+  background-color: rgb(67, 235, 174);
+  padding:0px 7px 0px 7px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.add-products .editing .close:hover{
+  background-color: rgb(67, 235, 174);
+  padding:0px 7px 0px 7px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.edit-products form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.add-products form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.user-details .input-box input{
+   height: 45px;
+   width: 100%;
+   outline: none;
+   border-radius: 5px;
+  border: 1px solid #5b7396;
+   padding-left: 15px;
+   margin-bottom: 5px;
+   font-size: 18px;
+   border-bottom-width: 2px;
+   transition: all 0.3s ease-in-out;
+}
+
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+form .button{
+  height:45px;
+  width:100%;
+  margin: 10px 0;
+}
+
+form .button button{
+   height: 100%;
+   width: 100%;
+   outline: none;
+   font-weight: 500;
+   outline: none;
+   font-size: 20px;
+   letter-spacing: 1px;
+   border-radius: 8px;
+   background: #34d77b;
+   border-color: #34d77b;
+}
+
+.editDialog {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background:none;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.addDialog {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background:none;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.editDialog::backdrop, .addDialog::backdrop{
+  background-color: black;
+  opacity: 0.9;
+}
+
+.adminButton{
+ border:none;
+ outline:none;
+ color:#6b9324;
+ margin:2px;
+ margin-left: 8px;
+ padding:5px;
+}
+

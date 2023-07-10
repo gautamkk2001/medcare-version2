@@ -10,7 +10,7 @@
 
 
 <body>
-  <div id="mySidenav" class="sidenav">
+  <!-- <div id="mySidenav" class="sidenav">
     <p class="logo"><span>M</span>edcare</p>
     <a href="#" class="icon-a"
       ><i class="fa fa-dashboard icons"></i>Dashboard</a
@@ -22,14 +22,15 @@
     >
     <a href="#" class="icon-a"><i class="fa fa-user icons"></i> Reviews</a>
     <a href="#" class="icon-a"><i class="fa fa-list-alt icons"></i> Logout</a>
-  </div>
+  </div> -->
+
   <div id="main">
     <div class="head">
       <div class="container-6">
         <span
           style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)"
           class="nav"
-          >&#9776; Dashboard</span
+          >&#9776; Medcare Dashboard</span
         >
         <span
           style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)"
@@ -57,19 +58,19 @@
     </div>
     <div class="container-3">
       <div class="box">
-        <p>20<br /><span>Products</span></p>
+        <p>83<br /><span>Products</span></p>
         <i class="fa fa-list box-icon"></i>
       </div>
     </div>
     <div class="container-3">
       <div class="box">
-        <p>99<br /><span>Orders</span></p>
+        <p>3<br /><span>Orders</span></p>
         <i class="fa fa-shopping-bag box-icon"></i>
       </div>
     </div>
     <div class="container-3">
       <div class="box">
-        <p>78<br /><span>Reviews</span></p>
+        <p>8<br /><span>Reviews</span></p>
         <i class="fa fa-tasks box-icon"></i>
       </div>
     </div>
@@ -78,9 +79,12 @@
     <div class="container-8">
       <div class="box-8">
         <div class="content-box">
-          <p>Customers </p>
+          <details>
+          <summary>
+          <p>Customers </p></summary>
           <br />
           <table>
+
             <tr>
               <th>Name</th>
               <th>Contact</th>
@@ -90,23 +94,11 @@
               <td>{{user.username}}</td>
               <td>{{user.mobile}}</td>
               <td>{{user.email}}</td>
+              <td> <button (onclick)="truncateUser(user.username)">Delete</button></td>
             </tr>
-            <tr>
-              <td>Mani</td>
-              <td>9865234785</td>
-              <td>manikandan632@gmail.com</td>
-            </tr>
-            <tr>
-              <td>Sedhu</td>
-              <td>7852364891</td>
-              <td>ragavsedhu23@gmail.com</td>
-            </tr>
-            <tr>
-              <td>Arul</td>
-              <td>6374257996</td>
-              <td>arul2712001@gmail.com</td>
-            </tr>
+
           </table>
+        </details>
         </div>
       </div>
     </div>
@@ -114,31 +106,144 @@
     <div class="container-4">
       <div class="box-4">
         <div class="content-box">
-          <p>Top Selling Brands</p>
+          <details>
+          <summary><p>Top Selling Brands</p></summary>
           <ul>
             <li>Himalaya</li>
             <li>Cetaphil</li>
             <li>Dabur</li>
             <li>MSK</li>
           </ul>
+          <p>New Product</p>
+          <button class="adminButton"  (click)="callAdd()">ADD Products</button>
+        </details>
         </div>
+
       </div>
     </div>
+
     <div class="clearfix"></div>
 
     <div class="container-products">
       <div class="box-8">
         <div class="content-box"  >
-          <p>Products</p>
-          <table *ngFor="let pro of products">
-            <tr>
-              <th>{{pro.description}}</th></tr>
-          </table>
+          <details>
+          <summary><p>Products</p></summary>
 
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Images</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let pro of products">
+                <td>{{pro.title}}</td>
+                <td>{{pro.description}}</td>
+                <td>{{pro.originalAmount}}</td>
+                <td>{{pro.rating}}</td>
+                <td><img src="../../assets/images/{{pro.description}}.jpg" style="width: 40px; height: 45px;"></td>
+                <td>
+                  <button  type="button"  class="adminButton"  (click)="callEdit(pro)">Edit</button>
+                  <button  type="button"  class="adminButton" (click)="callDelete(pro.id)">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+          </table>
+        </details>
 </div>
 </div>
     </div>
     <div class="clearfix"></div>
 
   </div>
+
+  <dialog class="editDialog">
+    <div class="edit-products">
+      <div class="editing">
+        <div>Edit</div>
+        <div class="close" (click)="closeEdit()">x</div>
+      </div>
+        <form [formGroup]="editproducts" (ngSubmit)="  updateProduct()">
+          <div class="user-details">
+               <div class="input-box">
+                  <label>Title</label>
+                  <input type="text" required formControlName="title">
+                </div>
+               <div class="input-box">
+                  <label>Description</label>
+                  <input type="text" required formControlName="description">
+                </div>
+               <div class="input-box">
+                  <label>Details</label>
+                  <input type="text" required formControlName="details">
+                </div>
+               <div class="input-box">
+                  <label>Price</label>
+                  <input type="text" required formControlName="price">
+                  </div>
+               <div class="input-box">
+                  <label>Rating</label>
+                  <input type="text" required formControlName="rating">
+               </div>
+               <div class="input-box">
+                  <label> Category</label>
+                  <input type="text" required formControlName=" category">
+                </div>
+
+                <div class="button">
+                  <button (click)="updateProduct()">Edit</button>
+                </div>
+          </div>
+        </form>
+    </div>
+  </dialog>
+
+  <dialog class="addDialog">
+    <div class="add-products">
+      <div class="editing">
+        <div>AddProduct</div>
+        <div class="close" (click)="closeAdd()">x</div>
+      </div>
+        <form [formGroup]="addproducts" (ngSubmit)="productAdded()">
+          <div class="user-details">
+               <div class="input-box">
+                  <label>Title</label>
+                  <input type="text"  formControlName="title" >
+                </div>
+               <div class="input-box">
+                  <label>Name</label>
+                  <input type="text"  formControlName="description" >
+                </div>
+               <div class="input-box">
+                  <label>Details</label>
+                  <input type="text"  formControlName="details" >
+                </div>
+               <div class="input-box">
+                  <label>Price</label>
+                  <input type="text"  formControlName="price" >
+                  </div>
+               <div class="input-box">
+                  <label>Rating</label>
+                  <input type="text"  formControlName="rating" >
+               </div>
+               <div class="input-box">
+                  <label> Category</label>
+                  <input type="text"   formControlName=" category" >
+                </div>
+
+                <div class="button">
+                  <button>Add</button>
+                </div>
+          </div>
+        </form>
+    </div>
+  </dialog>
+
 </body>

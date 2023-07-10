@@ -21,10 +21,11 @@ export class GuardloginGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
+
   if(!this.service.userLoggedIn()){
    alert("You are not loggedin; Login to continue");
-   this.route.navigate(["log"],{queryParams:{retUrl:route.url}});
-  return false;
+   this.route.navigate(["main"],{queryParams:{retUrl:route.url}});
+   return false;
   }
     return true;
   }

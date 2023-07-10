@@ -50,7 +50,7 @@ export class LoginMainComponent implements OnInit {
            alert("Login Successfully");
 
            this.isLoggedIn=true;
-          //  this.service.islogged=true;
+           this.service.islogged=true;
            // this.loginForm.reset();
              this.user.loggedInUser = users;
             //  sessionStorage.setItem('loggedInUser', JSON.stringify(users));

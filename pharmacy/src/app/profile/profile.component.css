@@ -12,7 +12,7 @@ header{
  /* Z-index:1000; */
  height:100%;
  width:32rem;
- background: #87c231;
+ background: #edf0e9;
  display:flex;
  align-items:center;
  justify-content: center;
@@ -36,12 +36,12 @@ header .user img{
 
 header .user .name{
   font-size: 2rem;
-  color: #fff;
+  color: #64a4e4;
 }
 
 header .user .post{
   font-size: 1.5rem;
-  color: #eee;
+  color: #64a4e4;
 }
 
 header .profile_sidebar{

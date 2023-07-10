@@ -63,6 +63,7 @@ form .user-details .input-box{
    height: 45px;
    width: 90%;
    outline: none;
+   margin-bottom: 5px;
    border-radius: 5px;
   border: 1px solid #5b7396;
    padding-left: 15px;
@@ -114,3 +115,24 @@ form .add-button button{
    padding: 10px;
     margin-left: 380px
 }
+
+.gap{
+  position: relative;
+}
+.error{
+  color: red;
+  position: absolute;
+  margin-top: 75px;
+  margin-left: -450px;
+}
+
+.error p{
+  color:white;
+  position: absolute;
+  margin-left: 36px;
+  margin-bottom: 10px;
+}
+
+input.ng-invalid{border:3px solid red;}
+
+    input.ng-valid{border:3px solid green; }

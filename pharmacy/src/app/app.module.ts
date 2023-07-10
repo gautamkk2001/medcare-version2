@@ -31,6 +31,8 @@ import { BlogComponent } from './blog/blog.component';
 import { BlogArticleComponent } from './blog-article/blog-article.component';
 import { PricePipe } from './Price.pipe';
 import { LoginMainComponent } from './login-main/login-main.component';
+import { AdminModuleComponent } from './adminModule/adminModule.component';
+
 
 @NgModule({
   declarations: [	
@@ -58,7 +60,8 @@ import { LoginMainComponent } from './login-main/login-main.component';
       BlogComponent,
       BlogArticleComponent,
       PricePipe,
-      LoginMainComponent
+      LoginMainComponent,
+      AdminModuleComponent
    ],
   imports: [
     BrowserModule,

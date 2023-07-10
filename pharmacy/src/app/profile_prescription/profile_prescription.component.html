@@ -10,14 +10,18 @@
 
 
 <section>
-<h2>Upload your <i class="fas fa-prescription    "></i></h2>
+
+  <!-- prescription -->
+<!-- <h2>Upload your <i class="fas fa-prescription    "></i></h2>
 <form action="#" method="post" enctype="multipart/form-data">
   <label for="patient-name">Name</label>
   <input type="text" name="patient-name">
   <label for="file">Select a file:</label>
   <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
   <button type="submit" (click)="rxUpload()">Upload</button>
-</form>
+</form> -->
+
+
 <!-- <div class="box">
   <div class="patient-pres">
     <img src="../../assets/images/patient.jpg">
@@ -25,17 +29,50 @@
   <h3>Gautam</h3>
   <button class="rx-button">View</button>
 </div> -->
- <div class="ordersection">
-  <div class="orders">
-     <h2>Arriving Jun 23,2023</h2><span>Total: Rs-1450</span>
-     <div class="orderImgs">
-     <img src="../../assets/images/Ahaglow Face Wash3.jpg">
-     <img src="../../assets/images/Ahaglow Face Wash3.jpg">
-     <img src="../../assets/images/Ahaglow Face Wash3.jpg">
-     <img src="../../assets/images/Ahaglow Face Wash3.jpg">
+
+
+<div *ngFor="let item of orderDates">
+
+ <div class="ordersection" *ngIf="item.tomorrow>=currentDate">
+  <div class="grid-columns">
+  <div class="orders"  *ngFor="let pro of cartproducts">
+
+     <h2>Arriving on: {{item.tomorrow }}th</h2><span>Total: Rs-{{pro.originalAmount}}</span>
+     <div class="orderImgs" >
+     <img   src="../../assets/images/{{pro.description}}.jpg">
     </div>
-    <button>View Details</button>
-    <button>Cancel Order</button>
+    <button (click)="details()">View Details</button>
+    <button (click)="cancel()">Cancel Order</button>
   </div>
  </div>
+</div>
+</div>
+
+ <!-- view details dialog box -->
+
+ <dialog class="viewDetails">
+  <div class="viewbox">
+   <div class="details">
+    <a (click)="closeModal()">x</a>
+     <h2> Order Details</h2>
+     <h4>Oder Id: 75489621</h4>
+     <h4>Medicine Products  </h4>
+     <h4>Order Confirmed on, Jun 22</h4>
+     <h4>Delivery excepted by, {{orderDates.date}}</h4>
+     <p>Need help?</p>
+   </div>
+  </div>
+ </dialog>
+
+ <dialog class="refund">
+  <div class="viewbox">
+    <div class="details">
+         <a (click)="closeModal()">x</a>
+        <h2>Refund Status</h2>
+        <h4>Your Amount will refunded within 1-2 Hours</h4>
+    </div>
+  </div>
+ </dialog>
+
+
 </section>

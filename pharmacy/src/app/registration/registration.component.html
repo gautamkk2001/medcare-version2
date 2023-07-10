@@ -18,7 +18,7 @@
       <div class="user-details">
         <div class="input-box">
           <span class="details">Full Name</span>
-          <input type="text" name="username" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName" class="input"
+          <input type="text" name="username" pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$" placeholder="FirstName" class="input"
             formControlName="fullname1" />
         </div>
 
@@ -31,7 +31,9 @@
 
         <div class="input-box">
           <span class="details">Email</span>
-          <input type="text" name="emailid" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$" placeholder="Email-id"
+          <!-- ^(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\2)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ -->
+          <input type="text" name="emailid" pattern="^(?=[a-zA-Z0-9._%+-]{4,})(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\3)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          placeholder="Email-id"
             class="input" formControlName="email1" />
         </div>
         <div class="information-error" *ngIf="formRegister.controls['email1'].dirty">
