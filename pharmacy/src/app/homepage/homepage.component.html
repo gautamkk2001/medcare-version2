@@ -174,23 +174,51 @@
       </div>
 
       <div class="contact-form">
-         <form>
-             <div>
-                 <input type="text" class="form-control" placeholder="first name">
-                 <input type="text" class="form-control" placeholder="last name">
-             </div>
-             <div>
-                 <input type="text" class="form-control" placeholder="Email">
-                 <input type="text" class="form-control" placeholder="phone">
-             </div>
-             <textarea rows="5" placeholder="message" class="form-control"></textarea>
-             <input type="submit" class="send-btn" value="send">
-         </form>
+        <form  [formGroup]="contactForm" (submit)="submitContactForm()">
+          <div class="name">
+            <input
+            type="text" autocomplete="off" pattern="^[A-Z a-z]{3,15}$" name="uname" placeholder="FirstName"
+            class="input" formControlName="firstname1" class="form-control"/>
+
+            <div class="information-error" *ngIf="contactForm.controls['firstname1'].dirty">
+              <p class="error" *ngIf="contactForm.controls['firstname1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp; FirstName is not Empty</p>
+              <p class="error" *ngIf="contactForm.controls['firstname1'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>&numsp; Enter the correct FirstName</p>
+            </div>
+            <input type="text" autocomplete="off" pattern="^[A-Z a-z]{1,8}$" name="lname" placeholder="LastName"
+            class="input" formControlName="lastname1" class="form-control" />
+            <div class="information-error" *ngIf="contactForm.controls['lastname1'].dirty">
+              <p class="error" *ngIf="contactForm.controls['lastname1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp;lastName is not Empty</p>
+              <p class="error" *ngIf="contactForm.controls['lastname1'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>&numsp; Enter the correct LastName</p>
+            </div>
+          </div>
+          <div>
+            <input type="email" autocomplete="off" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$" name="email" placeholder="Email-id"
+            class="input"   formControlName="email1" class="form-control" />
+
+            <div class="information-error" *ngIf="contactForm.controls['email1'].dirty">
+              <p class="error" *ngIf="contactForm.controls['email1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp; Email-id is not Empty</p>
+              <p class="error" *ngIf="contactForm.controls['email1'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>&numsp; Enter the correct email-id</p>
+            </div>
+            <input type="tel" autocomplete="off" pattern="^[6-9]{1}[0-9]{9}$" name="mobile" placeholder="Mobileno"
+            class="input"   formControlName="mobile1" class="form-control"  />
+            <div class="information-error" *ngIf="contactForm.controls['mobile1'].dirty">
+              <p class="error" *ngIf="contactForm.controls['mobile1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp; Email-id is not Empty</p>
+              <p class="error" *ngIf="contactForm.controls['mobile1'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>&numsp; Enter the correct email-id</p>
+          </div>
+        </div>
+          <textarea rows="5"placeholder="message" class="form-control" formControlName="message1"></textarea>
+          <div class="information-error" *ngIf="contactForm.controls['message1'].dirty">
+            <p class="error1" *ngIf="contactForm.controls['message1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp; Messagebox is not Empty</p>
+          </div>
+            <br>
+          <button [disabled]="!contactForm.valid"  class="send-btn">Submit</button>
+        </form>
 
          <div>
              <img src="../../assets/images/call-doctor-289.webp" alt="">
          </div>
       </div>
+
   </div>
 
   <div class="map">

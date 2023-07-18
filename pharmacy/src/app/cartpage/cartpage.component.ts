@@ -37,23 +37,27 @@ export class CartpageComponent implements OnInit {
   }
 
   offer = this.data.offer;
-
+  subtotal:any=0;
 
   // quqntity changing
   increaseQuantity(item:any): void{
-    if(item.Quantity < 3){
-       item.Quantity++;
+    if(item.cartQuantity < 3){
+       item.cartQuantity++;
+       item.subtotal= item.cartQuantity*item.originalAmount;
+       this.subtotal= item.subtotal;
        this.data.updateCartItem(item).subscribe(()=>{
-
+       this.adding();
        });
     }
   }
 
   decreaseQuantity(item:any): void{
-    if(item.cartQuantity < 3){
+    if(item.cartQuantity <= 3){
        item.cartQuantity--;
+       item.subtotal= item.cartQuantity*item.originalAmount;
+       this.subtotal= item.subtotal;
        this.data.updateCartItem(item).subscribe(()=>{
-
+        this.adding();
        });
     }
   }
@@ -81,11 +85,15 @@ export class CartpageComponent implements OnInit {
   }
 
   logInUser: any = '';
-  cartproducts: any = '';
+  cartproducts:any=[];
+  status:any;
+
   url: any = 'http://localhost:3000/cart-data';
   totalPrice: any = '0';
   shipping: any = '50';
   lastprice: any;
+
+
 
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
@@ -94,17 +102,24 @@ export class CartpageComponent implements OnInit {
     }
     this.data.searchingCart(this.logInUser).subscribe((data) => {
       this.cartproducts = data;
-
+      this.status= this.cartproducts.length;
       // to add the price of products
-      for (let pro of this.cartproducts) {
-        this.totalPrice =
-          parseInt(this.totalPrice) + parseInt(pro.originalAmount);
-      }
-      this.lastprice = parseInt(this.totalPrice) + parseInt(this.shipping);
-      this.data.paymentTotal = this.lastprice;
+       this.adding();
     });
-
   }
+
+  adding(){
+    this.totalPrice = '0';
+    this.lastprice='0';
+    this.subtotal=0;
+    for (let pro of this.cartproducts) {
+      this.subtotal= pro.originalAmount*pro.cartQuantity;
+      this.totalPrice = parseInt(this.totalPrice) + (pro.originalAmount*pro.cartQuantity);
+    }
+    this.lastprice = parseInt(this.totalPrice) + parseInt(this.shipping);
+    this.data.paymentTotal = this.lastprice;
+  }
+
 
 }
 

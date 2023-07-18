@@ -54,72 +54,19 @@
 <div class="feedback">
   <div>
   <textarea [(ngModel)]="feedbackText" placeholder="About the Product..."></textarea></div>
-  <div> <button (click)="submitFeedback()">Post</button></div>
+  <div> <button (click)="submitFeedback(finaldescription.description)">Post</button></div>
 </div>
 </div>
-<!-- <div class=main-container>
-  <div class="ui">
-    <div class="details-form">
-      <form id="creditcard">
-        <div class="number-container">
-           <label >Card Number</label>
-           <input type="text" name="card-number" id="card-number" placeholder="1596 2578 7412" required>
+
+<div class="review-section">
+  <div>
+        <div *ngFor="let item of reviews">
+             <h1>{{item.username}}</h1>
+              <h3>{{item.product}}</h3>
+              <p>{{item.Feedback}}</p>
         </div>
-
-        <div class="name-container">
-         <label >Holder</label>
-         <input type="text" name="name-text" id="name-text" placeholder="Gautam" required>
-      </div>
-
-      <div class="info-container">
-       <div class="expiration">
-         <label>Valid thiru</label>
-         <input type="text" name="valid-txt" maxlength="5" placeholder="02/40" required>
-       </div>
-
-       <div class="cvv-container">
-          <label>CVV</label>
-          <input type="text" name="cvv-text" id="cvv-text" maxlength="3" required>
-       </div>
-     </div>
-        <button> Pay</button>
-      </form>
-    </div>
-
-    <div class="right-container">
-      <div class="card">
-        <div class="first">
-            <img src="../../assets/images/nfc.png">
-            <div class="card-digits">
-                <h2>1234 5678 9123</h2>
-            </div>
-
-            <div class="chip">
-              <img src="../../assets/images/creditcard-chip.png">
-            </div>
-
-            <div class="card-infos">
-                <div class="exp">
-                     <label>Valid thiru</label>
-                      <p> 02/40</p>
-                </div>
-
-                <div class="cvv">
-                  <label>CVV</label>
-                  <p>135</p>
-                </div>
-            </div>
-
-            <div class="card-holder">
-              <label>Holder</label>
-              <h4>Gautam</h4>
-            </div>
-
-        </div>
-      </div>
-    </div>
-
   </div>
-</div> -->
+</div>
+
 
 <app-footer></app-footer>

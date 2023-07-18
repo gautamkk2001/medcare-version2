@@ -34,7 +34,10 @@ export class ProductdataService {
   offer:boolean=true;
 
  constructor(private http:HttpClient) {
-
+  const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
+  if (sessionUser) {
+    this.logInUser = JSON.parse(sessionUser);
+  }
 }
 
 getproducts(){
@@ -98,6 +101,40 @@ deleteAllCart(){
   return this.http.delete(this.apiUrl);
 }
 
+deleteCartItem(id:number){
+  return this.http.delete('http://localhost:3000/cart-data/'+id).subscribe((result)=>{
+
+  })
+}
+
+orderConfirmed(body:any){
+  return this.http.post("http://localhost:3000/ordersAll",body)
+}
+
+getOrderDetails(){
+  let userStore = sessionStorage.getItem('userName');
+  let userData = userStore && JSON.parse(userStore);
+  return this.http.get<any>('http://localhost:3000/OrdersAll?Email_Id='+userData.email);
+}
+
+OrderList(){
+  let userStore = sessionStorage.getItem('userName');
+  let userData = userStore && JSON.parse(userStore);
+  return this.http.get<any>('http://localhost:3000/OrdersAll?Email_Id='+userData.email);
+}
+
+postOrderedProducts(body:any){
+
+  return this.http.post("http://localhost:3000/orderedProducts",body);
+}
+
+getMyOrderedProducts(){
+  return this.http.get("http://localhost:3000/orderedProducts");
+}
+getOrderedProducts(id:any){
+  return this.http.get<any>("http://localhost:3000/ordersAll/"+id);
+}
+
 blogData(){
   return this.http.get("http://localhost:3000/blog-data")
 }
@@ -108,6 +145,30 @@ addUserAddress(values:any){
 
 getUserAddress(){
   return this.http.get("http://localhost:3000/useraddress");
+}
+
+orderUrl:any="http://localhost:3000/orderedProducts";
+searchingOrders(info: any): Observable<any> {
+  return this.http.get<any>(this.orderUrl).pipe(
+    map((data) => {
+      return data.filter(
+        (item: any) =>
+          item.email === info.email
+      );
+    })
+  );
+}
+
+orderedUrl:any="http://localhost:3000/ordersAll";
+searchingOrderHistory(info: any): Observable<any> {
+  return this.http.get<any>(this.orderedUrl).pipe(
+    map((data) => {
+      return data.filter(
+        (item: any) =>
+          item.Email_Id === info.email
+      );
+    })
+  );
 }
 
 // filter the user's cart products
@@ -136,40 +197,22 @@ searchingWishlist(info: any): Observable<any> {
   );
 }
 
-ngOnInIt(){
-  const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
-  if (sessionUser) {
-    this.logInUser = JSON.parse(sessionUser);
-  }
+productReviewUrl:any="http://localhost:3000/reviewProducts";
+searchingProductReview(info:any): Observable<any> {
+  return this.http.get<any>(this.productReviewUrl).pipe(
+    map((data) => {
+      return data.filter(
+        (item: any) =>
+          item.description === info.description
+      );
+    })
+  );
 }
 
-// sendEmail(to: string, subject: string, message: string): void {
-//   // Create a transporter using the SMTP transport
-//   const transporter = nodemailer.createTransport({
-//     service: 'Productdata', // e.g., 'Gmail' or 'SMTP'
-//     auth: {
-//       user: 'krishnasamy0617@gmail.com', // Your email address
-//       pass: '06172883' // Your email password
-//     }
-//   });
+ngOnInIt(){
 
-  // Email options
-  // const mailOptions = {
-  //   from: 'krishnasamy0617@gmail.com', // Sender address
-  //   to, // Recipient address
-  //   subject, // Subject line
-  //   text:message// Plain text body
-  // };
+}
 
-  // Send email
-//   transporter.sendMail(mailOptions, (error:any, info:any) => {
-//     if (error) {
-//       console.log('Error occurred:', error);
-//     } else {
-//       console.log('Email sent:', info.response);
-//     }
-//   });
-// }
 
 orderPlaced(value:any){
   return this.http.post("http://localhost:3000/orderDate",value)
@@ -183,6 +226,14 @@ private carturl='http://localhost:3000/cart-data';
 updateCartItem(item:any)  {
  const updateUrl = `${this.carturl}/${item.id}`;
  return this.http.put<any>(updateUrl, item);
+}
+
+postProductsReview(review:any){
+  return this.http.post("http://localhost:3000/reviewProducts",review);
+}
+
+getProductsReview(){
+  return this.http.get("http://localhost:3000/reviewProducts");
 }
 
 }

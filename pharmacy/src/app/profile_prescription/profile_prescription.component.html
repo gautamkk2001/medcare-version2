@@ -11,42 +11,59 @@
 
 <section>
 
-  <!-- prescription -->
-<!-- <h2>Upload your <i class="fas fa-prescription    "></i></h2>
-<form action="#" method="post" enctype="multipart/form-data">
-  <label for="patient-name">Name</label>
-  <input type="text" name="patient-name">
-  <label for="file">Select a file:</label>
-  <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
-  <button type="submit" (click)="rxUpload()">Upload</button>
-</form> -->
 
+<!-- <table class="cart-details">
+  <thead>
+    <th>Order Id</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orderDetails">
+      <td>#{{ order.id }}</td>
+      <td>{{ order.Total_Amount | currency : "INR" }}</td>
+      <td>In Progress</td>
+      <td><a routerLink="/orders/{{order.id}}"><button>View Details</button></a></td>
+      <td><button (click)="cancel()">Cancel Order</button></td>
+    </tr>
+  </tbody>
+</table> -->
 
-<!-- <div class="box">
-  <div class="patient-pres">
-    <img src="../../assets/images/patient.jpg">
-  </div>
-  <h3>Gautam</h3>
-  <button class="rx-button">View</button>
-</div> -->
+<details>
+<summary><h1>Upcoming Orders</h1></summary>
 
-
-<div *ngFor="let item of orderDates">
-
- <div class="ordersection" *ngIf="item.tomorrow>=currentDate">
+ <div class="ordersection" >
   <div class="grid-columns">
-  <div class="orders"  *ngFor="let pro of cartproducts">
-
-     <h2>Arriving on: {{item.tomorrow }}th</h2><span>Total: Rs-{{pro.originalAmount}}</span>
+  <div class="orders"  *ngFor="let item of specificOrder">
+    <div  *ngIf="item.deliveryDate>=currentDate">
+     <h2>Arriving on: {{item.deliveryDate}}th</h2><span>Total: Rs-{{item.price}}</span>
      <div class="orderImgs" >
-     <img   src="../../assets/images/{{pro.description}}.jpg">
+     <img   src="../../assets/images/{{item.product}}.jpg">
     </div>
     <button (click)="details()">View Details</button>
     <button (click)="cancel()">Cancel Order</button>
   </div>
+  </div>
  </div>
 </div>
+</details>
+
+<details>
+<summary><h1>Previous Orders</h1></summary>
+
+<div class="ordersection"  >
+  <div class="grid-columns"  >
+  <div class="orders" *ngFor="let  item of menu; let i=index">
+     <h2 style="color:rgb(74, 124, 231)">{{item.description}}</h2><span>Total: Rs-{{item.originalAmount}}</span>
+     <div class="orderImgs" >
+     <img   src="../../assets/images/{{item.description}}.jpg">
+    </div>
+    <h2>Ordered on: {{date[i]}}</h2>
+  </div>
+ </div>
 </div>
+</details>
 
  <!-- view details dialog box -->
 

@@ -11,8 +11,15 @@
 
 <app-navbar></app-navbar>
 
-<section id="cart-container" class="cantainer">
-  <table width="100%">
+<section class="noOrder-section" *ngIf="status<=0">
+
+ <img src="../../assets/images/cartEmpty.jpg" style="width:50vw; height:70vh; margin-left: 350px;">
+ <h2 style="text-align: center;">Your cart is Empty</h2>
+</section>
+
+<section class="cart-section" *ngIf="status>0">
+<section id="cart-container" class="cantainer" >
+  <table width="100%" >
       <thead>
           <tr>
               <td>Remove</td>
@@ -36,10 +43,10 @@
                   <h5 *ngIf="offer==true">Rs: {{cart.originalAmount |Price}}</h5>
                   <h5 *ngIf="offer==false">Rs: {{cart.originalAmount }}</h5>
               </td>
-              <td><button class="minus" (click)="increaseQuantity(cart)">+</button>{{cart.cartQuantity}}<button class="plus" (click)="decreaseQuantity(cart)">+</button></td >
+              <td><button class="minus" (click)="increaseQuantity(cart)">+</button>{{cart.cartQuantity}}<button class="plus" (click)="decreaseQuantity(cart)">-</button></td >
               <td>
                <h5 *ngIf="offer==true">Rs:  {{cart.originalAmount | Price}}</h5>
-               <h5 *ngIf="offer==false">Rs:  {{cart.originalAmount }}</h5>
+               <h5 *ngIf="offer==false">Rs: {{subtotal}}</h5>
               </td>
           </tr>
       </tbody>
@@ -78,7 +85,7 @@
           </div>
   </div>
 </section>
-
+</section>
 
 <dialog class="popup">
     <div class="placed">

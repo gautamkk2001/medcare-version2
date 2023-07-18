@@ -134,3 +134,12 @@
     background-color:  rgb(3, 149, 169);
 }
 
+.cart-section .cantainer table td button{
+  color:rgb(53, 144, 218);
+  background-color: #252ede;
+  padding:2px;
+  border:none;
+  outline: none;
+  /* margin: 0px 2px 0px 2px; */
+
+}

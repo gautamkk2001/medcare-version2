@@ -32,10 +32,12 @@ import { BlogArticleComponent } from './blog-article/blog-article.component';
 import { PricePipe } from './Price.pipe';
 import { LoginMainComponent } from './login-main/login-main.component';
 import { AdminModuleComponent } from './adminModule/adminModule.component';
+import { AdminOrderDetailsComponent } from './adminOrderDetails/adminOrderDetails.component';
+import { AdminQueriesComponent } from './admin-queries/admin-queries.component';
 
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     HomepageComponent,
       ProductComponent,
@@ -61,7 +63,9 @@ import { AdminModuleComponent } from './adminModule/adminModule.component';
       BlogArticleComponent,
       PricePipe,
       LoginMainComponent,
-      AdminModuleComponent
+      AdminModuleComponent,
+      AdminOrderDetailsComponent,
+      AdminQueriesComponent
    ],
   imports: [
     BrowserModule,

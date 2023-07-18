@@ -25,4 +25,12 @@ order(orderData:any){
   return this.client.post(`${this.orderUrl}`, orderData)
 }
 
+addContactInformation(body:any){
+  return this.client.post("http://localhost:3000/contactForm",body);
+}
+
+getContactInformation(){
+  return this.client.get("http://localhost:3000/contactForm");
+}
+
 }

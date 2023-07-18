@@ -57,7 +57,7 @@ export class LoginMainComponent implements OnInit {
             //  sessionStorage.setItem('userMail', users.email);
              sessionStorage.setItem('userName', JSON.stringify(users));
             //  sessionStorage.setItem('userId', users.id);
-             this.router.navigate(['product'])
+             this.router.navigate(['/product'])
              // this.get();
              const loginpanel:any= document.querySelector(".Loginmodal");
              loginpanel.close();
@@ -75,9 +75,10 @@ export class LoginMainComponent implements OnInit {
        });
        if(admins){
          alert("Login Successfully");
+         this.router.navigate(['/admin' ])
            this.user.loggedInUser = admins;
            sessionStorage.setItem('loggedInUser', JSON.stringify(admins));
-           this.router.navigate(['admin' ])
+
        }
        else{
          this.errors=true

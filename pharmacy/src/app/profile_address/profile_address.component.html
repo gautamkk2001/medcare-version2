@@ -33,8 +33,7 @@
     <div class="user-details">
       <div class="input-box">
         <span class="details">Full Name</span>
-        <input type="text" name="username" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName" value="Gautam" class="input"
-          formControlName="fullname1" />
+        <input type="text" name="username" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName"  class="input"  formControlName="fullname1" />
       </div>
 
       <div class="information-error" *ngIf="formaddress.controls['fullname1'].dirty">
@@ -46,8 +45,7 @@
 
       <div class="input-box">
         <span class="details">Phone Number</span>
-        <input type="text" name="emailid" pattern="^[ 6-9]{1}[0-9]{9}$"  value="gautamkrishnasamy2001@gmail.com"
-          class="input" formControlName="mobile1" />
+        <input type="text" name="emailid" pattern="^[ 6-9]{1}[0-9]{9}$"  class="input" formControlName="mobile1" />
       </div>
 
       <div class="information-error" *ngIf="formaddress.controls['mobile1'].dirty">
@@ -59,8 +57,7 @@
 
       <div class="input-box">
         <span class="details">Address</span>
-        <input type="textbox" name="mobileno" pattern="^[A-Z a-z]{8,25}$" placeholder="Roadname , Area, Colony"
-          class="input" formControlName="address1" />
+        <input type="textbox" name="mobileno" pattern="^[A-Z a-z]{8,25}$" placeholder="Roadname , Area, Colony" class="input" formControlName="address1" />
       </div>
 
       <div class="information-error" *ngIf="formaddress.controls['address1'].dirty">
@@ -84,8 +81,7 @@
 
       <div class="input-box">
         <span class="details">State</span>
-        <input type="text" placeholder="TN" id="pass1" name="pass"
-          pattern="^[A-Za-z]{5,20}$" name="Password" class="input" required
+        <input type="text" placeholder="TN" id="pass1" name="pass" pattern="^[A-Za-z]{5,20}$" name="Password" class="input" required
           formControlName="state1" />
       </div>
 
@@ -98,8 +94,7 @@
 
       <div class="input-box">
         <span class="details">Pincode</span>
-        <input type="text" placeholder="postal Index Number" id="pass2" pattern="^[0-9]{6}$"
-          name="Password" class="input" required cpasswords formControlName="pincode1">
+        <input type="text" placeholder="postal Index Number" id="pass2" pattern="^[0-9]{6}$" name="Password" class="input" required cpasswords formControlName="pincode1">
       </div>
 
       <div class="information-error" *ngIf="formaddress.controls['pincode1'].dirty">
@@ -114,11 +109,11 @@
         <span class="gender-type">Type</span>
         <div class="types">
           <div class="gen">
-          <input type="radio" id="male" name="gender" value="Male"  formControlName="gender">
+          <input type="radio" id="male" name="gender" value="home"  formControlName="gender">
           <label for="male">Home</label><br>
         </div>
           <div class="gen">
-          <input type="radio" id="female" name="gender" value="Female"  formControlName="gender" >
+          <input type="radio" id="female" name="gender" value="Office"  formControlName="gender" >
           <label for="female">Office</label><br>
         </div>
           <div class="gen">

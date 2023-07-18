@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductdataService } from '../productdata.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { UserService } from '../user.service';
 
 interface Star {
   value: number;
@@ -15,7 +17,22 @@ interface Star {
 })
 export class HomepageComponent implements OnInit {
 
-constructor(){}
+constructor(private fb:FormBuilder, private contact:UserService){}
+contactForm=this.fb.group({
+  firstname1:[,Validators.required],
+  lastname1:[,Validators.required],
+  email1:[,Validators.required],
+  mobile1:[,Validators.required],
+  message1:[,Validators.required],
+},
+)
+
+submitContactForm(){
+  this.contact.addContactInformation (this.contactForm.value).subscribe(data=>{
+    alert("Form submitted");
+    this.contactForm.reset();
+  })
+}
 
   ngOnInit() {
   }

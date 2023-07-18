@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductdataService } from '../productdata.service';
 import { CartpageService } from '../cartpage.service';
 import { getLocaleDateFormat } from '@angular/common';
+import { observable } from 'rxjs';
 
 @Component({
   selector: 'app-profile_prescription',
@@ -10,13 +11,28 @@ import { getLocaleDateFormat } from '@angular/common';
 })
 export class Profile_prescriptionComponent implements OnInit {
 
+orderDetails:any;
+work:any;
+productsMy:any;
   constructor(private data:ProductdataService) {
     this.data.ordergetdate().subscribe((data)=>{
       this.orderDates=data;
     })
+
+    this.data.getOrderDetails().subscribe((values)=>{
+     this.orderDetails=values;
+    })
+
+   this.data.getOrderedProducts(1).subscribe((values)=>{
+    this.work = values;
+   })
+
+   this.data.getMyOrderedProducts().subscribe((all)=>{
+    this.productsMy=all;
+   })
   }
 
-
+loop:any;
   logInUser: any = '';
   cartproducts: any = '';
   orderPrice:any;
@@ -26,6 +42,13 @@ deliveryDate:any;
 orderDates:any;
 currentDate= new Date().getDate();
 final:any;
+
+menu:any=[];
+date:any=[];
+specificOrder:any;
+history:any;
+historyDate:any=[];
+
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
     if (sessionUser) {
@@ -37,6 +60,34 @@ final:any;
       this.data.paymentTotal=this.orderPrice;
     });
 
+    this.data.searchingOrders(this.logInUser).subscribe((data) => {
+        this.specificOrder=data;
+        // alert(this.specificOrder);
+        //  this.specificOrder.forEach((item:any)=>{
+        //    this.menu= item.Menu_Details;
+        //   alert(this.menu);
+        //  })
+    });
+
+
+   this.data.searchingOrderHistory(this.logInUser).subscribe((dt)=>{
+    this.history=dt;
+    this.len =  this.history.length;
+      var n=0;
+        for (let index = 0; index < this.len; index++) {
+          var menu_length=this.history[index].Menu_Details.length;
+          // this.historyDate[index]=this.history[index].OrderDate;
+          for (let ind = 0; ind < menu_length; ind++){
+            this.menu[n]= this.history[index].Menu_Details[ind];
+            this.date[n]=this.history[index].OrderDate;
+            n+=1;
+        }
+      }
+        console.log(this.menu);
+        console.log(this.historyDate)
+   })
+
+
     this.orderpaymentStatus=this.data.orderPayment;
 
     // this.orderDates=new Date();
@@ -44,8 +95,9 @@ final:any;
     this.deliveryDate.setDate(this.orderDates.getDate() + 3);
 
 
-  }
 
+  }
+len:any;
 
 rxUpload(){
   alert("uploaded");

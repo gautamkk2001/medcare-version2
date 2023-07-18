@@ -23,6 +23,8 @@ import { BlogArticleComponent } from './blog-article/blog-article.component';
 import { PricePipe } from './Price.pipe';
 import { LoginMainComponent } from './login-main/login-main.component';
 import { AdminModuleComponent } from './adminModule/adminModule.component';
+import { AdminOrderDetailsComponent } from './adminOrderDetails/adminOrderDetails.component';
+import { AdminQueriesComponent } from './admin-queries/admin-queries.component';
 
 const routes: Routes = [
   {
@@ -88,7 +90,7 @@ const routes: Routes = [
   {
     path:"cart",
     component:CartpageComponent,
-    canActivate:[GuardloginGuard]
+    // canActivate:[GuardloginGuard]
   },
   {
     path:"offer",
@@ -112,6 +114,14 @@ const routes: Routes = [
     component:AdminPageComponent
   },
   {
+    path:'admin/:order',
+    component:AdminOrderDetailsComponent
+  },
+  {
+    path:'adminQueries',
+    component:AdminQueriesComponent
+  },
+  {
    path:"payment",
    component:PaymentComponent
   },
@@ -126,11 +136,8 @@ const routes: Routes = [
   {
     path:'main',
     component:LoginMainComponent
-  },
-  {
-    path:'ad',
-    component:AdminModuleComponent
   }
+
 ];
 
 @NgModule({

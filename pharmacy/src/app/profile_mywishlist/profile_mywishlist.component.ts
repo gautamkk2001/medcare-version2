@@ -23,7 +23,7 @@ export class Profile_mywishlistComponent implements OnInit {
 
     this.data.searchingWishlist(this.logInUser).subscribe(value=>{
       this.wishlistdata=value
-      });
+    });
 
   }
 

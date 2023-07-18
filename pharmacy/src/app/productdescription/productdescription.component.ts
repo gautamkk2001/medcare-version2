@@ -20,6 +20,9 @@ searchdescription:any="";
 finaldescription:any="";
 detailsofproduct:any="";
 offer:boolean;
+
+reviews:any;
+
 constructor(private data:ProductdataService, private route:ActivatedRoute) {
   this.data.getproducts().subscribe(data=> {this.prodescription =data
     this.route.params.subscribe(paramdata=>
@@ -37,6 +40,9 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
       })
     });
     this.offer=this.data.offer;
+
+
+
 }
  logInUser:any="";
   ngOnInit() {
@@ -44,7 +50,13 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
     if (sessionUser) {
       this.logInUser = JSON.parse(sessionUser);
     }
+
+    this.data.searchingProductReview(this.finaldescription).subscribe((value)=>{
+      this.reviews=value;
+    });
+
   }
+
 cartdata:any=this.finaldescription;
 
   // Adding to Cart
@@ -55,8 +67,11 @@ cartdata:any=this.finaldescription;
     "Quantity": value.Quantity,
     "rating": value.rating,
     "originalAmount": value.originalAmount,
+    "cartQuantity": value.cartQuantity,
+    "subtotal":value.originalAmount,
     "email":this.logInUser.email,
-    "username":this.logInUser.username
+    "username":this.logInUser.username,
+    "status":"false"
     }
     this.data.addToCart(body).subscribe(data=>{
     })
@@ -95,10 +110,21 @@ rate(value: number): void {
   });
 }
 
-submitFeedback(): void {
+submitFeedback(product:any): void {
   // Perform your logic here, e.g., sending the rating and feedback to a server
+  var body={
+    "Rating" : this.getRating(),
+    "Feedback": this.feedbackText,
+    "description": product,
+    "username":this.logInUser.username,
+    "email": this.logInUser.email
+  }
+  this.data.postProductsReview(body).subscribe((value)=>{
+    alert("ReviewAdded");
+  })
   console.log('Rating:', this.getRating());
   console.log('Feedback:', this.feedbackText);
+
 }
 
 getRating(): number {

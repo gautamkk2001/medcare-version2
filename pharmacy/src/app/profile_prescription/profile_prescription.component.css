@@ -2,6 +2,16 @@ section{
   background: #fff;
 
 }
+
+h1{
+ padding:8px 0px 8px 2px;
+}
+
+details summary{
+ /* visibility: hidden; */
+ cursor: pointer;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -80,7 +90,7 @@ button[type="submit"] {
 .orders{
   width:300px;
   height:280px;
-  background-color: rgb(208, 211, 216);
+  background-color: #97b9e4;
   margin-left: 10px;
   /* display: grid; */
 
@@ -184,4 +194,51 @@ button[type="submit"] {
  padding: 1px 7px 1px 7px;
  border-radius: 50%;
  cursor: pointer;
+}
+
+/* table {
+  width: 800px;
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+th {
+  padding: 15px 25px;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-size: 16px;
+  font-weight: 900;
+  background-color: var(--black);
+  color: var(--yellow);
+  text-align: center;
+}
+
+td {
+  padding: 15px 25px;
+  font-size: 15px;
+  text-align: center;
+} */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 98%;
+  margin:10px;
+  background: #4da4da;
+
+}
+th{
+  background: #4da4da;
+  /* width:100%; */
+}
+td{
+  background: #9cc9e5;
+}
+td, th {
+  text-align: left;
+  padding:15px;
+  color: #1f1919;
+  border-bottom: 1px solid #81818140;
 }

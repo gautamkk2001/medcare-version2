@@ -1456,3 +1456,81 @@ button:hover {
 #header a{
   text-decoration: none;
 }
+
+.contact-form {
+  padding: 2rem 0;
+  border-top: 1px solid #c7c7c7;
+}
+
+.contact-form form {
+  padding-bottom: 1rem;
+}
+
+.form-control {
+  width: 90%;
+  border: 1.5px solid #54c7f0;
+  border-radius: 5px;
+  padding: 0.7rem;
+  margin: 0.6rem 0;
+  font-family: 'open sans, sans-serif';
+  font-size: 1rem;
+  outline: 0;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 10px 5px rgb(125, 181, 227);
+}
+
+.contact-form form div{
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.6rem;
+}
+
+.send-btn {
+  font-family: 'open sans, sans-serif';
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  background: crimson;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.send-btn:hover {
+  opacity: 0.8;
+}
+
+.contact-form {
+  display: flex;
+}
+.contact-form  div img {
+   width: 85%;
+}
+
+.contact-form  div {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form input{
+  margin-bottom: 20px;
+}
+/* .gap{
+  position: relative;
+} */
+.error{
+  color: red;
+  position: absolute;
+  margin-top: 55px;
+  margin-left: -230px;
+}
+
+.error p{
+  color:white;
+  position: absolute;
+   margin-left: 36px;
+}

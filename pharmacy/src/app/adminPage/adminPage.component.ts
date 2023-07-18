@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductdataService } from '../productdata.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-adminPage',
   templateUrl: './adminPage.component.html',
@@ -9,9 +10,19 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class AdminPageComponent implements OnInit {
 prouser:any=' ';
 products:any=' ';
-  constructor(private data:ProductdataService, private fb:FormBuilder) {
-    this.data.registereduser().subscribe((data)=>(this.prouser=data));
-    this.data.getproducts().subscribe((data)=>(this.products=data));
+userLen:any;
+productLen:any;
+loginstatus:any;
+
+  constructor(private data:ProductdataService, private fb:FormBuilder, private router:Router) {
+    this.data.registereduser().subscribe((data)=>{
+      this.prouser=data;
+      this.userLen=this.prouser.length;
+    });
+    this.data.getproducts().subscribe((data)=>{
+      this.products=data;
+      this.productLen=this.products.length;
+    });
    }
   // alert(this.prouser.length);
    addproducts=this.fb.group({
@@ -32,7 +43,21 @@ products:any=' ';
     category:[,Validators.required],
   });
 
+  logInUser:any;
+
+  logout(){
+    this.loginstatus=false;
+    sessionStorage.clear();
+    this.router.navigate(['home']);
+  }
+
+
   ngOnInit() {
+
+    const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.logInUser = JSON.parse(sessionUser);
+    }
   }
 
   title:any;

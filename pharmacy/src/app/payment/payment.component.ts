@@ -6,6 +6,7 @@ import { UserService } from '../user.service';
 import { ProductdataService } from '../productdata.service';
 import { CartpageService } from '../cartpage.service';
 import { JsonPipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment',
@@ -21,7 +22,16 @@ export class PaymentComponent implements OnInit {
   payment: FormGroup;
   paymentStatus: string = "Payment Done";
 
-  constructor(private cartService: UserService, private http: HttpClient, private formBuilder: FormBuilder, private pro:ProductdataService) {
+  logInUser:any="";
+  cartValues:any;
+
+  constructor(private cartService: UserService, private http: HttpClient, private formBuilder: FormBuilder, private pro:ProductdataService, private route:Router) {
+
+    const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.logInUser = JSON.parse(sessionUser);
+    }
+
     this.payment = this.formBuilder.group({
       accountNumber: [, [Validators.required, Validators.pattern("[0-9]{0,16}"), Validators.minLength(16), Validators.maxLength(16)]],
       cardType: [, Validators.required],
@@ -29,6 +39,13 @@ export class PaymentComponent implements OnInit {
       cvv: [, [Validators.required, Validators.pattern("[0-9]{0,16}"), Validators.minLength(3), Validators.maxLength(3)]]
     });
    this.paymentAmount=this.pro.paymentTotal;
+
+   this.pro.searchingCart(this.logInUser).subscribe((value)=>{
+    this.cartValues=value;
+    // alert(this.cartValues.id)
+
+   })
+
   }
   ngOnInit() {
   }
@@ -46,6 +63,7 @@ export class PaymentComponent implements OnInit {
   cvv="";
 
   orderDate = new Date();
+ordered= this.orderDate.getDate()
 
 value={
   'date':this.orderDate.toISOString().split('T')[0],
@@ -54,13 +72,47 @@ value={
 }
 
   update(){
+
+
+    let orderDetails = {
+      Username: this.logInUser.username,
+      Email_Id: this.logInUser.email,
+      Mobile_No: this.logInUser.mobile,
+      Total_Amount: this.paymentAmount,
+      Menu_Details: this.cartValues,
+      OrderDate: this.value.date
+    }
+
   if(this.payment.valid){
-    this.pro.deleteAllCart().subscribe(
-      ()=>{
-      alert("deleted");
-     });
+
+    this.cartValues.forEach((item:any)=>{
+      var body={
+        "price" :item.originalAmount,
+        "product"  :item.description,
+        "email"  :item.email,
+        "date":this.orderDate.toISOString().split('T')[0],
+        "orderDate":this.orderDate.getDate(),
+        "deliveryDate": this.ordered+2,
+        "delivery":this.orderDate.getFullYear()+'-'+this.orderDate.getUTCMonth()+'-'
+        }
+       this.pro.postOrderedProducts(body).subscribe((value)=>{
+
+      });
+    });
+
+    this.cartValues.forEach((item:any)=>{
+      this.pro.deleteCartItem(item.id);
+      // alert("Order Placed Successfully");
+    });
+    this.route.navigate(['/home']);
+    this.pro.orderConfirmed(orderDetails).subscribe((res)=>{
+      if(res){
+          this.route.navigate(['/home']);
+      }
+    })
+
      this.pro.orderPlaced(this.value).subscribe((data)=>{
-      alert("Order Placed");
+
      })
   }
   else{
