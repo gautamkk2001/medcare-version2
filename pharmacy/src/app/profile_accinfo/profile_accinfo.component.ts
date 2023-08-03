@@ -30,10 +30,7 @@ export class Profile_accinfoComponent implements OnInit {
 
 
   ngOnInit() {
-    // const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
-    // if (sessionUser) {
-    //   this.logInUser = JSON.parse(sessionUser);
-    // }
+
   }
 
 }

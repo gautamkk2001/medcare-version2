@@ -9,9 +9,10 @@
   Reviewed at  : 13/06/2023 -->
 
 <app-navbar></app-navbar>
-<body>
-<header>
 
+<body>
+  <!-- --------------------------------------------------------------common profile nav bar------------------------------------------- -->
+<header>
        <div class="user">
             <img src="../../assets/images/pngwing.png" alt="">
             <h3 class="name"> {{logInUser.username|json}}</h3>
@@ -29,44 +30,8 @@
          <li><a routerLink="">Logout</a></li>
         </ul>
        </nav>
-
 </header>
-
-<!-- <button class="button" (click)="address_popup()">Add address</button>
-
-<dialog class="addres">
-  <div class="gridAddress">
-<form>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="mobile">Phone :</label>
-  <input type="text" id="address" name="mobile" required>
-
-  <label for="address">Address:</label>
-  <input type="textbox" id="address" name="address" required>
-
-  <label for="city">District:</label>
-  <input type="text" id="city" name="city" required>
-
-  <label for="state">State:</label>
-  <input type="text" id="state" name="state" required>
-
-  <label for="zip">Pincode:</label>
-  <input type="text" id="zip" name="zip" required>
-
-  <button type="submit">Save</button>
-</form>
-</div>
-</dialog> -->
-
-<!-- <div id="menu" class="fas fa-bars"></div>
-<div class="msg"><h2>Welcome</h2>
-</div> -->
-<!--<div class="welcome-img">
-<img src="../../assets/images/order.webp"/>
-</div>  -->
+<!-- -----------------------------------------------------------profile menus------------------------------------------------------------- -->
 <router-outlet></router-outlet>
-
 
 </body>>

@@ -82,7 +82,6 @@ submitContactForm(){
   }
 
   submitFeedback(): void {
-    // Perform your logic here, e.g., sending the rating and feedback to a server
     console.log('Rating:', this.getRating());
     console.log('Feedback:', this.feedbackText);
   }

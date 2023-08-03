@@ -4,6 +4,7 @@ import { LoginService } from '../login.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ProductdataService } from '../productdata.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login-main',
@@ -41,7 +42,7 @@ export class LoginMainComponent implements OnInit {
 
    }
    users(){
-     this.http.get<any>("http://localhost:3000/registeredUser").subscribe(data=>{
+     this.http.get<any>(environment.getUser).subscribe(data=>{
        const users=data.find((b:any)=>{
            return b.email===this.loginForm.value.userId && b.cpassword1===this.loginForm.value.password
          });
@@ -69,7 +70,7 @@ export class LoginMainComponent implements OnInit {
 
    }
    admins(){
-     this.http.get<any>("http://localhost:3000/adminData").subscribe(res=>{
+     this.http.get<any>(environment.getAdminUser).subscribe(res=>{
        const admins=res.find((a:any)=>{
          return a.email===this.loginForm.value.userId && a.password1===this.loginForm.value.password
        });

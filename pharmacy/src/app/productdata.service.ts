@@ -11,8 +11,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
-// import * as nodemailer from 'nodemailer';
 
 @Injectable({
   providedIn: 'root'
@@ -41,74 +41,72 @@ export class ProductdataService {
 }
 
 getproducts(){
-  return this.http.get("http://localhost:3000/productdata")
+  return this.http.get(environment.getProducts)
 }
 postproducts(product:any){
-  return this.http.post("http://localhost:3000/productdata",product)
+  return this.http.post(environment.getProducts,product)
 }
 dropproducts(name:any){
-  return this.http.delete("http://localhost:3000/productdata"+"/"+name)
+  return this.http.delete(environment.getProducts+"/"+name)
 }
 updateproducts(id:any, data:any){
-  return this.http.put<any>("http://localhost:3000/productdata/"+id,data).pipe(map((res:any)=>{
+  return this.http.put<any>(environment.getProducts+"/"+id,data).pipe(map((res:any)=>{
     return res;
   }));
 }
 
 
 getfeatured(){
-  return this.http.get("http://localhost:3000/featured")
+  return this.http.get(environment.getFeaturedProducts)
 }
 getProductdescription(){
-  return this.http.get("http://localhost:3000/productdescription")
+  return this.http.get(environment.getProductdescription)
 }
 addUserInformation(body:any){
-  return  this.http.post("http://localhost:3000/registeredUser",body);
+  return  this.http.post(environment.getUser,body);
 }
 registereduser(){
-  return this.http.get("http://localhost:3000/registeredUser")
+  return this.http.get(environment.getUser)
 }
 
 deleteUsers(username:any){
-  return this.http.delete("http://localhost:3000/registeredUser"+"/"+username)
+  return this.http.delete(environment.getUser+"/"+username)
 }
 
 adminUser(){
-  return this.http.get("http://localhost:3000/adminData")
+  return this.http.get(environment.getAdminUser)
 }
-getdrugsname(){
-  return this.http.get("http://localhost:3000/druglist")
-}
+
 addToCart(body:any){
-  return  this.http.post("http://localhost:3000/cart-data",body);
+  return  this.http.post(environment.getCartProducts,body);
 }
 addtoWishlist(body:any){
-  return  this.http.post("http://localhost:3000/wishlistData",body);
+  return  this.http.post(environment.getWishlistProducts,body);
 }
 wishlistvalues(){
-  return this.http.get("http://localhost:3000/wishlistData")
+  return this.http.get(environment.getWishlistProducts)
 }
 cartDataValues(){
-  return this.http.get("http://localhost:3000/cart-data")
+  return this.http.get(environment.getCartProducts)
 }
 
 deleteCartValues(id:any){
-  return this.http.delete("http://localhost:3000/cart-data"+"/"+id);
+  return this.http.delete(environment.getCartProducts+"/"+id);
 }
 
-private apiUrl = 'http://localhost:3000/cart-data';
+
 deleteAllCart(){
-  return this.http.delete(this.apiUrl);
+  return this.http.delete(environment.getCartProducts);
 }
 
 deleteCartItem(id:number){
-  return this.http.delete('http://localhost:3000/cart-data/'+id).subscribe((result)=>{
+  return this.http.delete(environment.getCartProducts+id).subscribe((result)=>{
 
   })
 }
 
 orderConfirmed(body:any){
-  return this.http.post("http://localhost:3000/ordersAll",body)
+  return this.http.post(environment.getOrdersAll,body)
 }
 
 getOrderDetails(){
@@ -124,32 +122,31 @@ OrderList(){
 }
 
 postOrderedProducts(body:any){
-
-  return this.http.post("http://localhost:3000/orderedProducts",body);
+  return this.http.post(environment.getOrderedProducts,body);
 }
 
 getMyOrderedProducts(){
-  return this.http.get("http://localhost:3000/orderedProducts");
+  return this.http.get(environment.getOrderedProducts);
 }
 getOrderedProducts(id:any){
-  return this.http.get<any>("http://localhost:3000/ordersAll/"+id);
+  return this.http.get<any>(environment.getOrdersAll+"/"+id);
 }
 
 blogData(){
-  return this.http.get("http://localhost:3000/blog-data")
+  return this.http.get(environment.getBlogDetails)
 }
 
 addUserAddress(values:any){
-  return this.http.post("http://localhost:3000/useraddress",values);
+  return this.http.post(environment.getUserAddress,values);
 }
 
 getUserAddress(){
-  return this.http.get("http://localhost:3000/useraddress");
+  return this.http.get(environment.getUserAddress);
 }
 
-orderUrl:any="http://localhost:3000/orderedProducts";
+
 searchingOrders(info: any): Observable<any> {
-  return this.http.get<any>(this.orderUrl).pipe(
+  return this.http.get<any>(environment.getOrderedProducts).pipe(
     map((data) => {
       return data.filter(
         (item: any) =>
@@ -159,9 +156,9 @@ searchingOrders(info: any): Observable<any> {
   );
 }
 
-orderedUrl:any="http://localhost:3000/ordersAll";
+
 searchingOrderHistory(info: any): Observable<any> {
-  return this.http.get<any>(this.orderedUrl).pipe(
+  return this.http.get<any>(environment.getOrdersAll).pipe(
     map((data) => {
       return data.filter(
         (item: any) =>
@@ -172,9 +169,9 @@ searchingOrderHistory(info: any): Observable<any> {
 }
 
 // filter the user's cart products
-url:any="http://localhost:3000/cart-data";
+
 searchingCart(info: any): Observable<any> {
-  return this.http.get<any>(this.url).pipe(
+  return this.http.get<any>(environment.getCartProducts).pipe(
     map((data) => {
       return data.filter(
         (item: any) =>
@@ -185,9 +182,9 @@ searchingCart(info: any): Observable<any> {
 }
 
 // filter the user's wishlisted products
-wishUrl:any="http://localhost:3000/wishlistData";
+
 searchingWishlist(info: any): Observable<any> {
-  return this.http.get<any>(this.wishUrl).pipe(
+  return this.http.get<any>(environment.getWishlistProducts).pipe(
     map((data) => {
       return data.filter(
         (item: any) =>
@@ -197,9 +194,8 @@ searchingWishlist(info: any): Observable<any> {
   );
 }
 
-productReviewUrl:any="http://localhost:3000/reviewProducts";
 searchingProductReview(info:any): Observable<any> {
-  return this.http.get<any>(this.productReviewUrl).pipe(
+  return this.http.get<any>(environment.getReviewProducts).pipe(
     map((data) => {
       return data.filter(
         (item: any) =>
@@ -213,27 +209,26 @@ ngOnInIt(){
 
 }
 
-
 orderPlaced(value:any){
-  return this.http.post("http://localhost:3000/orderDate",value)
+  return this.http.post(environment.getOrderDate,value)
 }
 
 ordergetdate(){
-  return this.http.get("http://localhost:3000/orderDate");
+  return this.http.get(environment.getOrderDate);
 }
 
-private carturl='http://localhost:3000/cart-data';
+
 updateCartItem(item:any)  {
- const updateUrl = `${this.carturl}/${item.id}`;
+ const updateUrl = `${environment.getCartProducts}/${item.id}`;
  return this.http.put<any>(updateUrl, item);
 }
 
 postProductsReview(review:any){
-  return this.http.post("http://localhost:3000/reviewProducts",review);
+  return this.http.post(environment.getReviewProducts,review);
 }
 
 getProductsReview(){
-  return this.http.get("http://localhost:3000/reviewProducts");
+  return this.http.get(environment.getReviewProducts);
 }
 
 }

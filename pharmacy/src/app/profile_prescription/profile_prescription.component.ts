@@ -32,7 +32,7 @@ productsMy:any;
    })
   }
 
-loop:any;
+  loop:any;
   logInUser: any = '';
   cartproducts: any = '';
   orderPrice:any;
@@ -62,11 +62,7 @@ historyDate:any=[];
 
     this.data.searchingOrders(this.logInUser).subscribe((data) => {
         this.specificOrder=data;
-        // alert(this.specificOrder);
-        //  this.specificOrder.forEach((item:any)=>{
-        //    this.menu= item.Menu_Details;
-        //   alert(this.menu);
-        //  })
+
     });
 
 

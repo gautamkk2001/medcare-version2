@@ -111,7 +111,7 @@ rate(value: number): void {
 }
 
 submitFeedback(product:any): void {
-  // Perform your logic here, e.g., sending the rating and feedback to a server
+  
   var body={
     "Rating" : this.getRating(),
     "Feedback": this.feedbackText,

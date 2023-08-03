@@ -1,0 +1,63 @@
+<body>
+
+  <div id="main">
+    <div class="head">
+      <div class="header">
+        <span  style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)" class="nav">&#9776; Medcare Dashboard</span>
+        <span style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)" class="nav2" >&#9776; Dashboard</span>
+      </div>
+
+      <div class="header">
+        <div class="profile">
+          <img src="images/usr.png" class="pro-img" />
+          <p>Krishna <span> ADMIN</span></p>
+          <button (click)="logout()">Logout</button>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="clearfix"></div>
+    <br />
+    <div class="info-container">
+      <div class="box">
+        <p>{{userLen}}<br /><span>Customers</span></p>
+        <i class="fa fa-users box-icon"></i>
+      </div>
+    </div>
+    <div class="info-container">
+      <div class="box">
+        <p>{{productLen}}<br /><span>Products</span></p>
+        <i class="fa fa-list box-icon"></i>
+      </div>
+    </div>
+    <div class="info-container">
+      <div class="box">
+        <p>3<br /><span>Orders</span></p>
+        <i class="fa fa-shopping-bag box-icon"></i>
+      </div>
+    </div>
+    <div class="info-container">
+      <div class="box">
+        <p>8<br /><span>Reviews</span></p>
+        <i class="fa fa-tasks box-icon"></i>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <br /><br />
+
+    <div class="customer-container">
+      <div class="box-8">
+        <div class="content-box">
+          <p>Reviews from Customers</p>
+          <ul *ngFor="let comments of reviews">
+            <li>
+              <h5>{{comments.firstname1}}</h5>
+              <p>{{comments.message1}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>

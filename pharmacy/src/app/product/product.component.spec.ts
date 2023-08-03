@@ -2,6 +2,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { ProductComponent } from './product.component';
 
@@ -11,7 +12,8 @@ describe('ProductComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductComponent ]
+      declarations: [ ProductComponent ],
+      imports:[FormsModule]
     })
     .compileComponents();
   }));
@@ -25,4 +27,33 @@ describe('ProductComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should correctly calculate the bmi', () => {
+    component.height = 165;
+    component.weight = 65;
+
+    component.bmi();
+   fixture.detectChanges();
+
+    expect(component.result).toBe(23);
+
+  });
+
+  it('should correctly calculate the bmi', () => {
+    component.height = 0;
+    component.weight = 0;
+
+    component.bmi();
+   fixture.detectChanges();
+
+    expect(component.result).toBe(0);
+
+  });
+
 });
+
+function except(result: number) {
+  throw new Error('Function not implemented.');
+}
+
+

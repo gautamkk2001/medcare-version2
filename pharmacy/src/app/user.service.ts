@@ -10,6 +10,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -19,18 +20,18 @@ export class UserService {
 constructor(private client:HttpClient) { }
 orderUrl:any="";
 addUserInformation(body:any){
-  return this.client.post("http://localhost:3000/users",body);
+  return this.client.post(environment.getUsersOnly,body);
 }
 order(orderData:any){
   return this.client.post(`${this.orderUrl}`, orderData)
 }
 
 addContactInformation(body:any){
-  return this.client.post("http://localhost:3000/contactForm",body);
+  return this.client.post(environment.getContactForm,body);
 }
 
 getContactInformation(){
-  return this.client.get("http://localhost:3000/contactForm");
+  return this.client.get(environment.getContactForm);
 }
 
 }

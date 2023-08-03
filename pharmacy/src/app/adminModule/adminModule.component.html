@@ -1,0 +1,125 @@
+<!-- <div class="edit">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Catagory</th>
+        <th scope="col">Thumbnail</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr >
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>
+          <button class="btn btn-info"  type="button" (click)="callEdit()">Edit</button>
+          <button  class="btn btn-danger mx-3" (click)="callAdd()">Delete</button>
+        </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <dialog class="editDialog">
+  <div class="edit-products">
+    <div class="editing">
+      <div>Edit</div>
+      <div class="close">x</div>
+    </div>
+      <form>
+        <div class="user-details">
+             <div class="input-box">
+                <label>Title</label>
+                <input type="text" required>
+              </div>
+             <div class="input-box">
+                <label>Description</label>
+                <input type="text" required>
+              </div>
+             <div class="input-box">
+                <label>Details</label>
+                <input type="text" required>
+              </div>
+             <div class="input-box">
+                <label>Price</label>
+                <input type="text" required>
+                </div>
+             <div class="input-box">
+                <label>Rating</label>
+                <input type="text" required>
+             </div>
+             <div class="input-box">
+                <label> Category</label>
+                <input type="text" required>
+              </div>
+
+              <div class="button">
+                <button>Edit</button>
+              </div>
+        </div>
+      </form>
+  </div>
+</dialog>
+
+<dialog class="addDialog">
+  <div class="edit-products">
+    <div class="editing">
+      <div>Add Product</div>
+      <div class="close" (click)="closeAll()">x</div>
+    </div>
+      <form [formGroup]="addproducts" (ngSubmit)="productAdded()">
+        <div class="user-details">
+             <div class="input-box">
+                <label>Title</label>
+                <input type="text"  formControlName="title" >
+              </div>
+             <div class="input-box">
+                <label>Name</label>
+                <input type="text"  formControlName="description" >
+              </div>
+             <div class="input-box">
+                <label>Details</label>
+                <input type="text"  formControlName="details" >
+              </div>
+             <div class="input-box">
+                <label>Price</label>
+                <input type="text"  formControlName="price" >
+                </div>
+             <div class="input-box">
+                <label>Rating</label>
+                <input type="text"  formControlName="rating" >
+             </div>
+             <div class="input-box">
+                <label> Category</label>
+                <input type="text"   formControlName=" category" >
+              </div>
+
+              <div class="button">
+                <button>Add</button>
+              </div>
+        </div>
+      </form>
+  </div>
+</dialog> -->
+
+<div class="bmi">
+  <div class="banner-bmi"><img src="../../assets/images/body-mass-index-bmi2.avif"></div>
+   <div class="index">
+    <h2>BMI Calculator</h2>
+    <label for="height">Height</label>
+    <input type="number" name="height"  placeholder="Height in CM"><br>
+    <label for="weight">Weight</label>
+    <input type="number" name="weight"placeholder="Weight in KG"><br>
+    <button >Calculate</button>
+    <h2>result</h2>
+   </div>
+
+</div>

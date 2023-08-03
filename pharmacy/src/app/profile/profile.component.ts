@@ -13,11 +13,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
 
-  // address_popup(){
-  //   alert("its working");
-  //   const addressBox:any = document.getElementsByClassName(".addres");
-  //   addressBox.showModal();
-  // }
 
   // session storage
   const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage

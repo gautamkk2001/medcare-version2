@@ -45,13 +45,5 @@ export class RegistrationComponent implements OnInit {
   ngOnInit() {
   }
 
-  // sendEmail(): void {
-  //   const to = 'gautamkrishnasamy2001@example.com';
-  //   const subject = 'Test Email';
-  //   const message = 'Hello, this is a test email!';
-
-  //   this.data.sendEmail(to, subject, message);
-  // }
-
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductdataService } from '../productdata.service';
 import { HttpClient } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-product',
@@ -25,7 +26,7 @@ filtercategory:any;
 
   constructor(private data: ProductdataService, private http: HttpClient) {
     this.data.getfeatured().subscribe((data) =>(this.featureddata = data));
-    this.data.getdrugsname().subscribe((data) => (this.drugdata = data));
+    // this.data.getdrugsname().subscribe((data) => (this.drugdata = data));
     this.data.salePrice=true;
     this.loop=this.data.offer;
   }
@@ -38,7 +39,7 @@ filtercategory:any;
   logInUser:any=""
 
   ngOnInit() {
-    this.http.get<any>("http://localhost:3000/"+'/'+this.value).subscribe(data=>{
+    this.http.get<any>(environment.url+'/'+this.value).subscribe(data=>{
     this.finalData=data;
     });
     const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
@@ -64,13 +65,13 @@ filtercategory:any;
  demo:any;
  x= setInterval( () =>{
   var now = new Date().getTime();
-  var distance = this.countdown - now;
-  var days = Math.floor(distance/(1000*60*60*24));
-  var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-  var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-  var seconds = Math.floor((distance % (1000*60)) / 1000);
+  var offerTime = this.countdown - now;
+  var days = Math.floor(offerTime/(1000*60*60*24));
+  var hours = Math.floor((offerTime % (1000*60*60*24)) / (1000*60*60));
+  var minutes = Math.floor((offerTime % (1000*60*60)) / (1000*60));
+  var seconds = Math.floor((offerTime % (1000*60)) / 1000);
   this.demo = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-  if(distance<0){
+  if(offerTime<0){
     clearInterval(this.x);
     this.demo = "Expired";
     this.loop=false;
@@ -101,7 +102,7 @@ filtercategory:any;
  height:any;
  weight:any;
  heightM:any;
- result:any;
+ result:number =0;
  bmi(){
   this.heightM=this.height/100;
   this.result=Math.floor(this.weight/(this.heightM*this.heightM));
@@ -111,19 +112,15 @@ filtercategory:any;
   {
     image: '../../assets/images/slide-1.png',
     thumbImage: '../../assets/images/slide-1.png',
-
-
   },
 
   {
     image:  '../../assets/images/slide-3.png',
     thumbImage:  '../../assets/images/slide-3.png',
-
   },
   {
     image: '../../assets/images/slide-2.png',
     thumbImage:  '../../assets/images/slide-2.png',
-
   },
   {
     image: '../../assets/images/slide-5.png',

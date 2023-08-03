@@ -14,10 +14,7 @@
 
 
 <!-- .................................................................................................banner image............................................................................................ -->
-<!-- <section id="page-header">
-  <h2>#stay safe</h2> -->
-  <!-- <p>Save more with coupons & up to 70% off! </p>
-</section> -->
+
 
 <div class="img-slider">
   <ng-image-slider [images]="imgCollection" [imageSize]="{ width: '100%', height: '60%' }">
@@ -219,17 +216,17 @@
 </section>
 
 <!-- ----------------------------offer popup--------------------------- -->
- <dialog class="offer-popup">
+ <!-- <dialog class="offer-popup">
   <div class="gridOffer">
   <div class="flash">
-      <i class="fa-solid fa-xmark" (click)="closeOffer()">X</i>
+      <i class="fa-solid fa-xmark" (click)="closeOffer()"></i>
       <img src="../../assets/images/homepage-banner1.jpg">
       <h2>Big Saving days Ends in</h2>
       <h4> {{demo}} </h4>
       <button class="explore"> Explore</button>
   </div>
 </div>
-</dialog>
+</dialog> -->
 
 
 <!-- .....................................................................................................Slide banner.............................................................................................................. -->
@@ -259,6 +256,22 @@
   </div>
 </section>
 
+<!-- -----------------------------------------------------------BMI------------------------------------------------------------------ -->
+<div class="bmi">
+  <div class="banner-bmi"><img src="../../assets/images/body-mass-index-bmi2.avif"></div>
+   <div class="index">
+    <h2>BMI Calculator</h2>
+    <label for="height">Height</label>
+    <input type="number" name="height"  [(ngModel)]="height" placeholder="Height in CM"><br>
+    <label for="weight">Weight</label>
+    <input type="number" name="weight" [(ngModel)]="weight" placeholder="Weight in KG"><br>
+    <button (click)="bmi()">Calculate</button>
+    <h2>{{result}}</h2>
+   </div>
+
+</div>
+
+
 <!-- ----------------------------------------------------Category section------------------------------------------------------------>
 <div class="filter-box">
   <div class="fil-data">
@@ -276,21 +289,6 @@
   <div class="fil-data">
     <button (click)="filter('Skin&care')"><img src="../../assets/images/skin-care-template.jpg"></button>
   </div>
-</div>
-
-<!-- -----------------------------------------------------------BMI------------------------------------------------------------------ -->
-<div class="bmi">
-  <div class="banner-bmi"><img src="../../assets/images/body-mass-index-bmi2.avif"></div>
-   <div class="index">
-    <h2>BMI Calculator</h2>
-    <label for="height">Height</label>
-    <input type="number" name="height"  [(ngModel)]="height" placeholder="Height in CM"><br>
-    <label for="weight">Weight</label>
-    <input type="number" name="weight" [(ngModel)]="weight" placeholder="Weight in KG"><br>
-    <button (click)="bmi()">Calculate</button>
-    <h2>{{result}}</h2>
-   </div>
-
 </div>
 
 
@@ -322,47 +320,4 @@
 
 
 <!-- ...........................................................................................................footer............................................................................................................................... -->
-<footer class="sec-1">
-  <div class="col">
-    <h3> medcare</h3>
-    <h4>Contact</h4>
-    <P><strong>Address:</strong>45 Park Road, Erode </P>
-    <p> <strong>Phone: </strong>9865451374 9080555646</p>
-    <P><strong>Hours:</strong> 9:00 am - 7:00 pm, Mon to Sat</P>
-    <div class="follow">
-      <h4>Follow us</h4>
-      <div class="icon">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-youtube"></i>
-        <i class="fab fa-twitter"></i>
-      </div>
-    </div>
-  </div>
-
-   <div class="col">
-    <h3> About</h3>
-    <a href="/home">Home</a>
-    <a href="/product">Product</a>
-    <a href="/contact">Contact us</a>
-    <a href="#">Logout</a>
-  </div>
-
-  <div class="col">
-    <h3> My Account</h3>
-    <a routerLink="/accountdetail">Acc Info</a>
-    <a routerLink="/accountdetail"> View cart</a>
-    <a routerLink="/accountdetail">Address</a>
-    <a routerLink="/accountdetail">My Prescription</a>
-  </div>
-
-  <div class="col-payment">
-    <h3>Payment</h3>
-    <p>Secured payment gateways</p>
-    <img src="../../assets/images/pay1.jpeg" id="pay-logo" />
-  </div>
-
-  <div class="copy">
-    <p> &copy; 2022 | All rights received</p>
-  </div>
-</footer>
+<app-footer></app-footer>

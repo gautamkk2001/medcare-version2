@@ -196,31 +196,6 @@ button[type="submit"] {
  cursor: pointer;
 }
 
-/* table {
-  width: 800px;
-  border-collapse: collapse;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-th {
-  padding: 15px 25px;
-  text-transform: uppercase;
-  letter-spacing: 1.6px;
-  font-size: 16px;
-  font-weight: 900;
-  background-color: var(--black);
-  color: var(--yellow);
-  text-align: center;
-}
-
-td {
-  padding: 15px 25px;
-  font-size: 15px;
-  text-align: center;
-} */
-
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;

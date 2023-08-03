@@ -57,10 +57,11 @@ body{
 .head{
 	padding:20px;
 }
-.container-6{
+.header{
 	width: 50%;
 	float: left;
 }
+
 .profile{
 	display: inline-block;
 	float: right;
@@ -84,7 +85,7 @@ body{
     display: block;
     color: #1b203d;
 }
-.container-3{
+.info-container{
 	width: 25%;
 	float: left;
 }
@@ -116,7 +117,7 @@ body{
     color: #ce2929;
     padding-right: 10px;
 }
-.container-8{
+.customer-container{
 	width: 70%;
 	float: left;
   margin-bottom: 10px;
@@ -124,7 +125,7 @@ body{
 .container-products{
 	width: 100%;
 }
-.container-4{
+.brand-container{
 	width: 30%;
 	float: left;
 }
@@ -296,7 +297,7 @@ form .button button{
   place-items: center;
 }
 
-.addDialog {
+.add-Dialog {
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -306,7 +307,7 @@ form .button button{
   place-items: center;
 }
 
-.editDialog::backdrop, .addDialog::backdrop{
+.editDialog::backdrop, .add-Dialog::backdrop{
   background-color: black;
   opacity: 0.9;
 }
@@ -320,3 +321,12 @@ form .button button{
  padding:5px;
 }
 
+.adminButton a{
+  text-decoration: none;
+  border:none;
+ outline:none;
+ color:#6b9324;
+ margin:2px;
+ margin-left: 2px;
+ padding:5px;
+  }

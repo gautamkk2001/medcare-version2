@@ -10,36 +10,16 @@
 
 
 <body>
-  <!-- <div id="mySidenav" class="sidenav">
-    <p class="logo"><span>M</span>edcare</p>
-    <a href="#" class="icon-a"
-      ><i class="fa fa-dashboard icons"></i>Dashboard</a
-    >
-    <a href="#" class="icon-a"><i class="fa fa-users icons"></i> Customers</a>
-    <a href="#" class="icon-a"><i class="fa fa-list icons"></i> Products</a>
-    <a href="#" class="icon-a"
-      ><i class="fa fa-shopping-bag icons"></i> Orders</a
-    >
-    <a href="#" class="icon-a"><i class="fa fa-user icons"></i> Reviews</a>
-    <a href="#" class="icon-a"><i class="fa fa-list-alt icons"></i> Logout</a>
-  </div> -->
 
   <div id="main">
     <div class="head">
-      <div class="container-6">
-        <span
-          style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)"
-          class="nav"
-          >&#9776; Medcare Dashboard</span
-        >
-        <span
-          style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)"
-          class="nav2"
-          >&#9776; Dashboard</span
-        >
+
+      <div class="header">
+        <span style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)" class="nav">&#9776; Medcare Dashboard</span >
+        <span style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)" class="nav2" >&#9776; Dashboard</span>
       </div>
 
-      <div class="container-6">
+      <div class="header">
         <div class="profile">
           <img src="images/usr.png" class="pro-img" />
           <p>Krishna <span> ADMIN</span></p>
@@ -51,25 +31,26 @@
 
     <div class="clearfix"></div>
     <br />
-    <div class="container-3">
+
+    <div class="info-container">
       <div class="box">
         <p>{{userLen}}<br /><span>Customers</span></p>
         <i class="fa fa-users box-icon"></i>
       </div>
     </div>
-    <div class="container-3">
+    <div class="info-container">
       <div class="box">
         <p>{{productLen}}<br /><span>Products</span></p>
         <i class="fa fa-list box-icon"></i>
       </div>
     </div>
-    <div class="container-3">
+    <div class="info-container">
       <div class="box">
         <p>3<br /><span>Orders</span></p>
         <i class="fa fa-shopping-bag box-icon"></i>
       </div>
     </div>
-    <div class="container-3">
+    <div class="info-container">
       <div class="box" routerLink="/adminQueries">
         <p>8<br /><span>Reviews</span></p>
         <i class="fa fa-tasks box-icon"></i>
@@ -78,7 +59,7 @@
     <div class="clearfix"></div>
     <br /><br />
 
-    <div class="container-8">
+    <div class="customer-container">
       <div class="box-8">
         <div class="content-box">
 
@@ -97,7 +78,7 @@
               <td>{{user.username}}</td>
               <td>{{user.mobile}}</td>
               <td>{{user.email}}</td>
-              <td><a routerLink="/admin/{{user.email}}">View Order</a></td>
+              <td><button class="adminButton"><a routerLink="/admin/{{user.email}}">View Order</a></button></td>
               <td> <button (onclick)="truncateUser(user.username)">Delete</button></td>
             </tr>
 
@@ -107,7 +88,7 @@
       </div>
     </div>
 
-    <div class="container-4">
+    <div class="brand-container">
       <div class="box-4">
         <div class="content-box">
           <details>
@@ -209,12 +190,14 @@
     </div>
   </dialog>
 
-  <dialog class="addDialog">
+
+  <dialog class="add-Dialog">
     <div class="add-products">
       <div class="editing">
         <div>AddProduct</div>
         <div class="close" (click)="closeAdd()">x</div>
       </div>
+
         <form [formGroup]="addproducts" (ngSubmit)="productAdded()">
           <div class="user-details">
                <div class="input-box">
@@ -249,5 +232,6 @@
         </form>
     </div>
   </dialog>
+
 
 </body>

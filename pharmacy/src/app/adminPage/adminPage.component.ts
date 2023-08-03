@@ -81,7 +81,7 @@ loginstatus:any;
    }
 
    callAdd(){
-    const addModal:any = document.querySelector('.addDialog');
+    const addModal:any = document.querySelector('.add-Dialog');
     addModal.showModal();
    }
 
@@ -95,7 +95,7 @@ loginstatus:any;
    }
 
    closeAdd(){
-    const addModal:any = document.querySelector('.addDialog');
+    const addModal:any = document.querySelector('.add-Dialog');
     addModal.close();
    }
 
