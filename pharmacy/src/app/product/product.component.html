@@ -216,17 +216,17 @@
 </section>
 
 <!-- ----------------------------offer popup--------------------------- -->
- <!-- <dialog class="offer-popup">
+ <dialog class="offer-popup">
   <div class="gridOffer">
   <div class="flash">
       <i class="fa-solid fa-xmark" (click)="closeOffer()"></i>
-      <img src="../../assets/images/homepage-banner1.jpg">
+      <img [src]= "environment.imageOfferPopup">
       <h2>Big Saving days Ends in</h2>
       <h4> {{demo}} </h4>
       <button class="explore"> Explore</button>
   </div>
 </div>
-</dialog> -->
+</dialog>
 
 
 <!-- .....................................................................................................Slide banner.............................................................................................................. -->
@@ -234,22 +234,22 @@
   <div class="slide-container">
     <h2>Why medcare ?</h2>
     <div class="slide-box">
-      <img src="../../assets/images/big-family.webp">
+      <img [src] ="environment.imageSlideBanner1">
       <h1>3 Million +</h1>
       <p> Registered users as of Mar 31, 2022</p>
     </div>
     <div class="slide-box">
-      <img src="../../assets/images/characters-people.webp">
+      <img [src] ="environment.imageSlideBanner2">
       <h1>10 Million + </h1>
       <p> Orders on Pharmeasy till date and still counting</p>
     </div>
     <div class="slide-box">
-      <img src="../../assets/images/courier home-delivery.webp">
+      <img [src] = "environment.imageSlideBanner3">
       <h1> 99000+</h1>
       <p>Unique items sold in the last 6 months </p>
     </div>
     <div class="slide-box">
-      <img src="../../assets/images/call-doctor-289.webp">
+      <img [src] ="environment.imageSlideBanner4">
       <h1>19500+</h1>
       <p> Pin codes serviced last 3 months</p>
     </div>
@@ -258,7 +258,7 @@
 
 <!-- -----------------------------------------------------------BMI------------------------------------------------------------------ -->
 <div class="bmi">
-  <div class="banner-bmi"><img src="../../assets/images/body-mass-index-bmi2.avif"></div>
+  <div class="banner-bmi"><img [src] = "environment.imageBmi"></div>
    <div class="index">
     <h2>BMI Calculator</h2>
     <label for="height">Height</label>
@@ -275,19 +275,19 @@
 <!-- ----------------------------------------------------Category section------------------------------------------------------------>
 <div class="filter-box">
   <div class="fil-data">
-    <button (click)="filter('')"><img src="../../assets/images/caterogy-2.png"></button>
+    <button (click)="filter('')"><img [src] ="environment.imageCategoryAll"></button>
   </div>
   <div class="fil-data">
-    <button (click)="filter('diabetes')"><img src="../../assets/images/caterogy1.png"></button>
+    <button (click)="filter('diabetes')"><img [src] ="environment.imageCategoryDiabetics"></button>
   </div>
   <div class="fil-data">
-    <button (click)="filter('bone')"><img src="../../assets/images/Bone-filter.png"></button>
+    <button (click)="filter('bone')"><img [src] ="environment.imageCategoryBone"></button>
   </div>
   <div class="fil-data">
-    <button (click)="filter('gastro')"><img src="../../assets/images/stomach-pain.jpg"></button>
+    <button (click)="filter('gastro')"><img [src] ="environment.imageCategoryGastro"></button>
   </div>
   <div class="fil-data">
-    <button (click)="filter('Skin&care')"><img src="../../assets/images/skin-care-template.jpg"></button>
+    <button (click)="filter('Skin&care')"><img [src] ="environment.imageCategorySkincare"></button>
   </div>
 </div>
 

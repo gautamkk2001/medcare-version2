@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { cpasswordvalid } from '../cpasswordvalid';
 import { UserService } from '../user.service';
 import { ProductdataService } from '../productdata.service';
+import { environment } from 'src/environments/environment';
+import { NGXLogger } from 'ngx-logger';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @Component({
@@ -13,8 +16,9 @@ import { ProductdataService } from '../productdata.service';
 })
 export class RegistrationComponent implements OnInit {
 
+  environment = environment;
   constructor(
-    private fb:FormBuilder,private user:UserService,private route:Router,private data:ProductdataService
+    private fb:FormBuilder,private user:UserService,private route:Router,private data:ProductdataService, private logger : NGXLogger, private http : HttpClient
   ) { }
   formRegister=this.fb.group({
     fullname1:[,Validators.required],
@@ -38,8 +42,19 @@ export class RegistrationComponent implements OnInit {
     else if((this.formRegister.valid)){
       this.user.addUserInformation(this.formRegister.value).subscribe(data=>{
         alert("Form submitted");
-        // this.route.navigate(['/login']);
+
+        // ----> Store the registration details in log data
+        const logData = {
+          message : `Registered Successfully : ${this.formRegister.value.email1}`,
+          level : 'INFO',
+          timestamp : new Date().toLocaleString()
+        }
+        this.logger.error(logData.message);
+        this.http.post(environment.logUrl, logData).subscribe({
+
+        });
       })
+      this.route.navigate(['/main']);
      }
 }
   ngOnInit() {

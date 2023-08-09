@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductdataService } from '../productdata.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-adminOrderDetails',
@@ -8,6 +9,8 @@ import { ProductdataService } from '../productdata.service';
   styleUrls: ['./adminOrderDetails.component.css']
 })
 export class AdminOrderDetailsComponent implements OnInit {
+
+ environment = environment;
  orderData:any;
  history:any;
  menu:any=[];

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ProductdataService } from '../productdata.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UserService } from '../user.service';
+import { environment } from 'src/environments/environment';
 
 interface Star {
   value: number;
@@ -17,6 +18,7 @@ interface Star {
 })
 export class HomepageComponent implements OnInit {
 
+  environment= environment;
 constructor(private fb:FormBuilder, private contact:UserService){}
 contactForm=this.fb.group({
   firstname1:[,Validators.required],

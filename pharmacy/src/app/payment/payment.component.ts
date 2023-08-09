@@ -7,6 +7,7 @@ import { ProductdataService } from '../productdata.service';
 import { CartpageService } from '../cartpage.service';
 import { JsonPipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-payment',
@@ -15,6 +16,7 @@ import { Router } from '@angular/router';
 })
 export class PaymentComponent implements OnInit {
 
+  environment = environment;
   expiryDate: string|undefined;
 
   paymentAmount:any;
@@ -38,24 +40,20 @@ export class PaymentComponent implements OnInit {
       expiry: [, Validators.required],
       cvv: [, [Validators.required, Validators.pattern("[0-9]{0,16}"), Validators.minLength(3), Validators.maxLength(3)]]
     });
+
    this.paymentAmount=this.pro.paymentTotal;
-
    this.pro.searchingCart(this.logInUser).subscribe((value)=>{
-    this.cartValues=value;
-    // alert(this.cartValues.id)
-
+   this.cartValues=value;
    })
 
   }
+
   ngOnInit() {
   }
+
   show(){
-
-    this.pro.orderPayment=true;
-
     let paymentModal: any = document.querySelector(".paymentModal");
     paymentModal.showModal();
-
   }
 
   cardNumber="";
@@ -96,14 +94,14 @@ value={
         "delivery":this.orderDate.getFullYear()+'-'+this.orderDate.getUTCMonth()+'-'
         }
        this.pro.postOrderedProducts(body).subscribe((value)=>{
-
-      });
+        });
     });
 
+    // ---> To delete the cart items after payment
     this.cartValues.forEach((item:any)=>{
       this.pro.deleteCartItem(item.id);
-      // alert("Order Placed Successfully");
     });
+
     this.route.navigate(['/home']);
     this.pro.orderConfirmed(orderDetails).subscribe((res)=>{
       if(res){

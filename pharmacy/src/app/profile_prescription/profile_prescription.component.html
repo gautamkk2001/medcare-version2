@@ -16,10 +16,10 @@
 <details>
 <summary><h1>Upcoming Orders</h1></summary>
 
- <div class="ordersection" >
-  <div class="grid-columns">
+ <div class="ordersection" *ngFor="let i of specificOrder">
+  <div class="grid-columns" *ngIf="i.orderDate <= currentDate">
   <div class="orders"  *ngFor="let item of specificOrder">
-    <div  *ngIf="item.deliveryDate>=currentDate">
+    <div  *ngIf="item.deliveryDate>=currentDate && item.orderDate <= currentDate">
      <h2>Arriving on: {{item.deliveryDate}}th</h2><span>Total: Rs-{{item.price}}</span>
      <div class="orderImgs" >
      <img   src="../../assets/images/{{item.product}}.jpg">

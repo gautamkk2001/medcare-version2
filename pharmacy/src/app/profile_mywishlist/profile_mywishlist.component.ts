@@ -20,7 +20,7 @@ export class Profile_mywishlistComponent implements OnInit {
     if (sessionUser) {
       this.logInUser = JSON.parse(sessionUser);
     }
-
+    // ----> get the user wishlist product
     this.data.searchingWishlist(this.logInUser).subscribe(value=>{
       this.wishlistdata=value
     });

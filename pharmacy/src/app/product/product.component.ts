@@ -12,13 +12,13 @@ import { environment } from 'src/environments/environment';
 export class ProductComponent implements OnInit {
   // ************************************************************* Fetching all product *************************************
 
+ environment=environment;
   prodata: any = '';
   featureddata:any="";
   drugdata: any = '';
   modal:any;
 
   // loop varable for offer popup
-
   loop:boolean;
 
 // filtering
@@ -26,6 +26,11 @@ filtercategory:any;
 
   constructor(private data: ProductdataService, private http: HttpClient) {
     this.data.getfeatured().subscribe((data) =>(this.featureddata = data));
+    this.data.getproducts().subscribe((data) =>{
+      this.filtercategory=data
+      this.prodata = data
+    });
+   
     // this.data.getdrugsname().subscribe((data) => (this.drugdata = data));
     this.data.salePrice=true;
     this.loop=this.data.offer;
@@ -88,7 +93,7 @@ filtercategory:any;
   offer_modal.close();
  }
 
-
+// ---> Filteration based on Category
  filter(fil_category:String){
   this.filtercategory = this.prodata.filter((a:any)=>{
     if(a.category == fil_category || fil_category == '')
@@ -98,7 +103,7 @@ filtercategory:any;
   });
  }
 
-//  bmi
+//------>  bmi
  height:any;
  weight:any;
  heightM:any;
@@ -108,43 +113,32 @@ filtercategory:any;
   this.result=Math.floor(this.weight/(this.heightM*this.heightM));
  }
 
+
  imgCollection: Array<object> =[
   {
-    image: '../../assets/images/slide-1.png',
-    thumbImage: '../../assets/images/slide-1.png',
-  },
-
-  {
-    image:  '../../assets/images/slide-3.png',
-    thumbImage:  '../../assets/images/slide-3.png',
+    thumbImage: environment.imageProductSlider1,
   },
   {
-    image: '../../assets/images/slide-2.png',
-    thumbImage:  '../../assets/images/slide-2.png',
+    thumbImage: environment.imageProductSlider2,
   },
   {
-    image: '../../assets/images/slide-5.png',
-    thumbImage:  '../../assets/images/slide-5.png',
+    thumbImage:  environment.imageProductSlider3,
   },
   {
-    image: '../../assets/images/slide-7.png',
-    thumbImage:  '../../assets/images/slide-7.png',
+    thumbImage:  environment.imageProductSlider4,
   },
   {
-    image: '../../assets/images/slide-8.jpg',
-    thumbImage:  '../../assets/images/slide-8.jpg',
+    thumbImage:  environment.imageProductSlider5,
   },
   {
-    image: '../../assets/images/slide-10.png',
-    thumbImage:  '../../assets/images/slide-10.png',
+    thumbImage: environment.imageProductSlider6,
   },
-
   {
-    image:  '../../assets/images/slide-4.png',
-    thumbImage:  '../../assets/images/slider-6.png',
-
+    thumbImage:  environment.imageProductSlider7,
+  },
+  {
+    thumbImage:  environment.imageProductSlider8,
   }
-
 ];
 
 }

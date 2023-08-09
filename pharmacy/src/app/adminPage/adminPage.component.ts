@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ProductdataService } from '../productdata.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-adminPage',
   templateUrl: './adminPage.component.html',
   styleUrls: ['./adminPage.component.css']
 })
 export class AdminPageComponent implements OnInit {
+environment = environment;
 prouser:any=' ';
 products:any=' ';
 userLen:any;
@@ -62,7 +64,11 @@ loginstatus:any;
 
   title:any;
   id:any;
+
   callEdit(pro:any){
+    const addModal:any = document.querySelector('.add-Dialog');
+    addModal.close();
+    
     const editModal:any = document.querySelector('.editDialog');
     editModal.showModal();
 
@@ -81,6 +87,8 @@ loginstatus:any;
    }
 
    callAdd(){
+    const editModal:any = document.querySelector('.editDialog');
+    editModal.close();
     const addModal:any = document.querySelector('.add-Dialog');
     addModal.showModal();
    }

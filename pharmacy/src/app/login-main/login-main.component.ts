@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ProductdataService } from '../productdata.service';
 import { environment } from 'src/environments/environment';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-login-main',
@@ -13,7 +14,8 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginMainComponent implements OnInit {
 
-  constructor(private fb:FormBuilder, private service:LoginService, private route:ActivatedRoute, private router:Router, private http:HttpClient, private user:ProductdataService) { }
+environment=environment;
+  constructor(private fb:FormBuilder, private service:LoginService, private route:ActivatedRoute, private router:Router, private http:HttpClient, private user:ProductdataService, private logger: NGXLogger) { }
 
   // login form validation
   loginForm=this.fb.group({
@@ -21,26 +23,36 @@ export class LoginMainComponent implements OnInit {
     password:[,[Validators.required]]
   })
 
-  // login form validation
-  loginMail:any="";
-  loginPassword:any="";
-  usersdata:any="";
-  adminData:any="";
+
+// variable used in login()
   isLoggedIn:boolean=false;
-  displayname:any="";
+  errors:any=false;
 
 
-   errors:any=false;
-
+  // common login Function
    login(){
     this.admins();
     this.users();
+
+    // --->If any error in users() & admins() if clause activated
     if(this.errors){
      alert("Invalid");
-      this.refresh();
-    }
 
+    // --->to store it in logData
+     const logData = {
+      message : "Invalid Login Attempt",
+      level : 'ERROR',
+      timestamp : new Date().toLocaleString()
+    }
+    this.logger.error(logData.message);
+    this.http.post(environment.logUrl, logData).subscribe({
+
+    });
+    this.refresh();
+    }
    }
+
+
    users(){
      this.http.get<any>(environment.getUser).subscribe(data=>{
        const users=data.find((b:any)=>{
@@ -50,25 +62,29 @@ export class LoginMainComponent implements OnInit {
          if(users){
            alert("Login Successfully");
 
+          // --->to store it in logData
+          const logData = {
+            message : `User Logged In : ${users.email}`,
+            level : 'INFO',
+            timestamp : new Date().toLocaleString()
+          }
+          this.logger.info(logData.message);
+          this.http.post(environment.logUrl, logData).subscribe({
+          });
            this.isLoggedIn=true;
            this.service.islogged=true;
-           // this.loginForm.reset();
-             this.user.loggedInUser = users;
-            //  sessionStorage.setItem('loggedInUser', JSON.stringify(users));
-            //  sessionStorage.setItem('userMail', users.email);
-             sessionStorage.setItem('userName', JSON.stringify(users));
-            //  sessionStorage.setItem('userId', users.id);
-             this.router.navigate(['/product'])
-             // this.get();
-             const loginpanel:any= document.querySelector(".Loginmodal");
-             loginpanel.close();
+           this.user.loggedInUser = users;
+          //  ---> Storing the user details in SessionStorage
+           sessionStorage.setItem('userName', JSON.stringify(users));
+           this.router.navigate(['/product'])
+
          }
          else{
            this.errors=true
          }
        })
-
    }
+
    admins(){
      this.http.get<any>(environment.getAdminUser).subscribe(res=>{
        const admins=res.find((a:any)=>{
@@ -76,8 +92,20 @@ export class LoginMainComponent implements OnInit {
        });
        if(admins){
          alert("Login Successfully");
+
+         // --->to store it in logData
+         const logData = {
+          message : `User Logged In : ${admins.email}`,
+          level : 'INFO',
+          timestamp : new Date().toLocaleString()
+        }
+        this.logger.info(logData.message);
+        this.http.post(environment.logUrl, logData).subscribe({
+        });
+
          this.router.navigate(['/admin' ])
            this.user.loggedInUser = admins;
+           //  ---> Storing the user details in SessionStorage
            sessionStorage.setItem('loggedInUser', JSON.stringify(admins));
 
        }
@@ -90,14 +118,10 @@ export class LoginMainComponent implements OnInit {
    refresh():void{
        window.location.reload();
    }
-   logout(){
-      this.isLoggedIn=false;
-      window.location.reload();
-   }
 
 
   ngOnInit() {
-    // to retrieve the URL to navigate when login is completed
+
 
   }
 

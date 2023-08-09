@@ -111,9 +111,9 @@ body{
 	color: #f0ecec;
 }
 .box-icon{
-	font-size: 40px!important;
+	font-size: 40px;
     float: right;
-    margin-top: 35px!important;
+    margin-top: 35px;
     color: #ce2929;
     padding-right: 10px;
 }
@@ -287,16 +287,6 @@ form .button button{
    border-color: #34d77b;
 }
 
-.editDialog {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  background:none;
-  border: none;
-  display: grid;
-  place-items: center;
-}
-
 .add-Dialog {
   width: 100vw;
   height: 100vh;
@@ -307,7 +297,24 @@ form .button button{
   place-items: center;
 }
 
-.editDialog::backdrop, .add-Dialog::backdrop{
+.editDialog {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background:none;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+
+
+.editDialog::backdrop{
+  background-color: black;
+  opacity: 0.9;
+}
+
+.add-Dialog::backdrop{
   background-color: black;
   opacity: 0.9;
 }

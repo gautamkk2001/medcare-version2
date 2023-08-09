@@ -3,6 +3,7 @@ import { ProductdataService } from '../productdata.service';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-admin-queries',
@@ -11,6 +12,7 @@ import { UserService } from '../user.service';
 })
 export class AdminQueriesComponent {
 
+environment = environment;
 prouser:any=' ';
 products:any=' ';
 userLen:any;

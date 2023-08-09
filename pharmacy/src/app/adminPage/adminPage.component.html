@@ -21,9 +21,9 @@
 
       <div class="header">
         <div class="profile">
-          <img src="images/usr.png" class="pro-img" />
+          <img [src] ="environment.imageAdmin" class="pro-img" />
           <p>Krishna <span> ADMIN</span></p>
-          <button (click)="logout()">Logout</button>
+          <button class=adminButton (click)="logout()">Logout</button>
         </div>
       </div>
       <div class="clearfix"></div>
@@ -232,6 +232,7 @@
         </form>
     </div>
   </dialog>
+
 
 
 </body>

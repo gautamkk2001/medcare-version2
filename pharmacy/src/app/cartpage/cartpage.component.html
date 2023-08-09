@@ -13,7 +13,7 @@
 
 <section class="noOrder-section" *ngIf="status<=0">
 
- <img src="../../assets/images/cartEmpty.jpg" style="width:50vw; height:70vh; margin-left: 350px;">
+ <img [src] ="environment.imageCartEmpty" style="width:50vw; height:70vh; margin-left: 350px;">
  <h2 style="text-align: center;">Your cart is Empty</h2>
 </section>
 
@@ -59,7 +59,7 @@
               <h5>COUPON</h5>
               <p>Ener your coupon here</p>
               <input type="text" placeholder="coupon code">
-              <button (click)="apply()"> APPLY COUPON</button>
+              <button> APPLY COUPON</button>
           </div>
       </div>
 

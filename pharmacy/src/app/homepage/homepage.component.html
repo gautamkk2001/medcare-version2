@@ -13,7 +13,7 @@
 <section class="home">
 
   <div class="home_img">
-    <img src="../../assets/images/istockphoto-3.jpg">
+    <img [src] ="environment.imageHomeMain">
   </div>
 
   <div class="home_content">
@@ -23,10 +23,10 @@
   </div>
 </section>
 
-
+<!-- Banner images -->
 <section class="banner-container">
   <div class="banner">
-    <img src="../../assets/images/homepage-banner1.jpg">
+    <img [src] ="environment.imageHomeBanner1">
     <div class="content">
       <h3>Special Offer</h3>
       <p>Upto 45% off</p>
@@ -35,7 +35,7 @@
   </div>
 
   <div class="banner">
-    <img src="../../assets/images/home-banner3.jpg">
+    <img [src] ="environment.imageHomeBanner2">
     <div class="content">
       <h3>Special Offer</h3>
       <p>Upto 45% off</p>
@@ -55,7 +55,7 @@
     <div class="row-review">
       <div class="col-review">
         <div class="reviews">
-          <img src="../../assets/images/5500661.jpg">
+          <img [src] ="environment.imageHomeReviwer1">
           <div class="reviewer-name">Gautam</div>
           <div class="stars-review">
             <i class="fas fa-star"></i>
@@ -70,7 +70,7 @@
 
       <div class="col-review">
         <div class="reviews">
-          <img src="../../assets/images/5500661.jpg">
+          <img [src] ="environment.imageHomeReviwer2">
           <div class="reviewer-name">Manikandan</div>
           <div class="stars-review">
             <i class="fas fa-star"></i>
@@ -85,7 +85,7 @@
 
       <div class="col-review">
         <div class="reviews">
-          <img src="../../assets/images/5500661.jpg">
+          <img [src] ="environment.imageHomeReviwer3">
           <div class="reviewer-name">Vigneshwaran</div>
           <div class="stars-review">
             <i class="fas fa-star"></i>
@@ -101,40 +101,19 @@
   </div>
 </div>
 
-<!-- rating -->
 
-
-<!-- <div class="slider_img">
-  <ng-image-slider [images]="imgcollection" ></ng-image-slider>
-</div> -->
 <section class="about-container">
 <h3> Effortless Online Medicine Orders at Medcare  Pharmacy</h3>
-<p>Medcare Pharmacy we ensure that. All you need to do is: Browse through our wide variety of products Add products to your cart and
-  complete the payment. Wow! Your order will be on its way to you. Medcare Pharmacy is your go-to online pharmacy store for all your
-  medicine needs. We also have a range of products in the personal care, baby care, health and nutrition, wellness, and lifestyle categories.
-   Come explore everything related to healthcare.</p>
+<p>{{environment.textHomeAbout1}}</p>
 
 <h3>Reasons To Buy Medicine From Medcare Pharmacy</h3>
-<p>Medcare Pharmacy has been providing you with genuine medicines round-the-clock, through 24-hour pharmacies. And now
-  through Medcare Pharmacy, we intend to make your lives easier – by getting your medicines delivered to you. Yes, no more stepping
-  out to get your medicines, no more standing in long queues, no more worrying about the genuineness of medicines, no more sweat!
-  Here are more reasons why you should buy your medicines from Medcare Pharmacy: Super-fast deliveries. In select cities, deliveries are
-  done in as less as 1 day Largest pharmacy chain in India with over 4,500 stores Attractive deals on medicines and other health related
-   products.</p>
+<p>{{environment.textHomeAbout2}}</p>
 
 <h3>Most Trusted Online Medical Store Of India</h3>
-<p>We ensure that every product sold through our online are checked for their authenticity, quality, and compliance with the Central
-  Drugs Standard Control Organization, the national regulatory body for Indian pharmaceuticals and medical devices it is 100% Genuine
-  Medicine We believe that when it comes to medicines, quality and authenticity should never be compromised.
- Are we missing something here? Yes, the time we take to deliver your order. We understand that you may sometimes require medicines
-  in urgency and that is why we assure you the fastest home delivery of your medicines. Also, depending on the city you reside in,
-  medicines can be delivered in as less as 1 hour.</p>
+<p>{{environment.textHomeAbout3}}</p>
 
 <h3>Extra Benefits Of Online Medicine Orders</h3>
-<p>When you order medicines at Medcare Pharmacy, not only do you get your medicines delivered on time and at your doorstep, but
-  you also get additional benefits. You can earn Medcare Health Credits whenever you order medicine online and also when you purchase
-  other non-pharma products You can use these Health Credits to make more purchases on our platform. And not to forget the discounts
-  and exclusive offers we bring out from time to time.</p>
+<p>{{environment.textHomeAbout4}}</p>
 
 </section>
 

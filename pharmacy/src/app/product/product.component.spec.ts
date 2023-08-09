@@ -52,8 +52,6 @@ describe('ProductComponent', () => {
 
 });
 
-function except(result: number) {
-  throw new Error('Function not implemented.');
-}
+
 
 

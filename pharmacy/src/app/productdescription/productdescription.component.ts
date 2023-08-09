@@ -4,17 +4,12 @@ import { ProductdataService } from '../productdata.service';
 import { GalleryDirective } from '../gallery.directive';
 
 
-interface Star {
-  value: number;
-  isActive: boolean;
-}
-
 @Component({
   selector: 'app-productdescription',
   templateUrl: './productdescription.component.html',
   styleUrls: ['./productdescription.component.css']
 })
-export class ProductdescriptionComponent implements OnInit {
+ export class ProductdescriptionComponent implements OnInit {
 prodescription:any;
 searchdescription:any="";
 finaldescription:any="";
@@ -27,13 +22,12 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
   this.data.getproducts().subscribe(data=> {this.prodescription =data
     this.route.params.subscribe(paramdata=>
       {
-        this.searchdescription=paramdata['check'];
+        this.searchdescription=paramdata['pro'];
+        // ----> to find the product that clicked
         for(let pro of this.prodescription){
-
           if(pro.description==this.searchdescription){
             this.finaldescription=pro;
             this.detailsofproduct=pro;
-
             break;
           }
         }
@@ -41,9 +35,9 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
     });
     this.offer=this.data.offer;
 
-
-
 }
+
+
  logInUser:any="";
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
@@ -59,7 +53,7 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
 
 cartdata:any=this.finaldescription;
 
-  // Adding to Cart
+  //----->  Adding to Cart
   addedCart(value:any){
     var body={
     "title":value.title,
@@ -77,7 +71,7 @@ cartdata:any=this.finaldescription;
     })
   }
 
-  // Adding to Wishlist
+  //------->  Adding to Wishlist
   wishlist(wish:any){
     var body={
       "title":wish.title,
@@ -93,7 +87,8 @@ cartdata:any=this.finaldescription;
     alert("added");
   }
 
-// review
+//---------->  review
+
 stars: Star[] = [
   { value: 1, isActive: false },
   { value: 2, isActive: false },
@@ -111,7 +106,7 @@ rate(value: number): void {
 }
 
 submitFeedback(product:any): void {
-  
+
   var body={
     "Rating" : this.getRating(),
     "Feedback": this.feedbackText,
@@ -131,4 +126,8 @@ getRating(): number {
   return this.stars.filter(star => star.isActive).length;
 }
 
+}
+interface Star {
+  value: number;
+  isActive: boolean;
 }

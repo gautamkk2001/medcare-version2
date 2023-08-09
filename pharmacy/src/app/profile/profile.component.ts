@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductdataService } from '../productdata.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-profile',
@@ -7,14 +8,14 @@ import { ProductdataService } from '../productdata.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  environment = environment;
   logInUser:any=""
   dat:any=sessionStorage.getItem('userId');
   constructor(private data:ProductdataService) { }
 
   ngOnInit() {
 
-
-  // session storage
+  //------> session storage
   const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
   if (sessionUser) {
     this.logInUser = JSON.parse(sessionUser);

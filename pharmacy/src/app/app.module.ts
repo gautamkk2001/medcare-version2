@@ -7,10 +7,7 @@ import { AppComponent } from './app.component';
 // import { HomepageComponent } from '.c:/Users/gauta/Desktop/project v2/pharacy/src/homepage/homepage.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductComponent } from './product/product.component';
-import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-
-import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CartpageComponent } from './cartpage/cartpage.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
@@ -19,7 +16,6 @@ import { ProductdescriptionComponent } from './productdescription/productdescrip
 import { ProfileComponent } from './profile/profile.component';
 import { Profile_accinfoComponent } from './profile_accinfo/profile_accinfo.component';
 import { Profile_mywishlistComponent } from './profile_mywishlist/profile_mywishlist.component';
-import { Profile_offersComponent } from './profile_offers/profile_offers.component';
 import { Profile_prescriptionComponent } from './profile_prescription/profile_prescription.component';
 import { Profile_addressComponent } from './profile_address/profile_address.component';
 import { FooterComponent } from './footer/footer.component';
@@ -31,20 +27,18 @@ import { BlogComponent } from './blog/blog.component';
 import { BlogArticleComponent } from './blog-article/blog-article.component';
 import { PricePipe } from './Price.pipe';
 import { LoginMainComponent } from './login-main/login-main.component';
-import { AdminModuleComponent } from './adminModule/adminModule.component';
 import { AdminOrderDetailsComponent } from './adminOrderDetails/adminOrderDetails.component';
 import { AdminQueriesComponent } from './admin-queries/admin-queries.component';
-
+import { LoggerModule, NgxLoggerLevel } from "ngx-logger";
+import { ProductdataService } from './productdata.service';
 
 @NgModule({
-  declarations: [		
+  declarations: [
     AppComponent,
     HomepageComponent,
       ProductComponent,
-      LoginComponent,
       RegistrationComponent,
       CartpageComponent,
-      ContactComponent,
       NavbarComponent,
       CartpageComponent,
       ForgotpasswordComponent,
@@ -52,7 +46,6 @@ import { AdminQueriesComponent } from './admin-queries/admin-queries.component';
       ProfileComponent,
       Profile_accinfoComponent,
       Profile_mywishlistComponent,
-      Profile_offersComponent,
       Profile_prescriptionComponent,
       Profile_addressComponent,
       FooterComponent,
@@ -63,13 +56,18 @@ import { AdminQueriesComponent } from './admin-queries/admin-queries.component';
       BlogArticleComponent,
       PricePipe,
       LoginMainComponent,
-      AdminModuleComponent,
       AdminOrderDetailsComponent,
       AdminQueriesComponent
    ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,HttpClientModule,ReactiveFormsModule,NgImageSliderModule
+    AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule, NgImageSliderModule,
+    LoggerModule.forRoot({
+      serverLoggingUrl: '',
+      level: NgxLoggerLevel.DEBUG,
+      serverLogLevel: NgxLoggerLevel.ERROR
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

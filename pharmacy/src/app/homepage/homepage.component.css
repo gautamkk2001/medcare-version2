@@ -12,7 +12,6 @@
   align-items:center;
   justify-content: center;
   flex-wrap: wrap;
-  /* background-repeat: repeat; */
 }
 
 
@@ -449,7 +448,7 @@ button:hover {
 }
 
 .send-btn {
-  font-family: 'open sans, sans-serif';
+
   font-size: 1rem;
   text-transform: uppercase;
   color: #fff;

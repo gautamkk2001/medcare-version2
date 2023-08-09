@@ -22,15 +22,9 @@ export class ProductdataService {
   strotedData:any="";
   loggedInUser:any;
   paymentTotal:any;
-
   fullStory:any=""
   salePrice:boolean=false;
-
-  // to use in myorders page
-  orderPayment:boolean=false;
-
   logInUser:any=""
-
   offer:boolean=true;
 
  constructor(private http:HttpClient) {
@@ -40,9 +34,12 @@ export class ProductdataService {
   }
 }
 
+// -----> get the products in user side - Used in product
 getproducts(){
   return this.http.get(environment.getProducts)
 }
+
+// -----> Update, post, delete the products - Used in adminside
 postproducts(product:any){
   return this.http.post(environment.getProducts,product)
 }
@@ -55,13 +52,12 @@ updateproducts(id:any, data:any){
   }));
 }
 
-
+// -----> get the featured products - Used in Productpage
 getfeatured(){
   return this.http.get(environment.getFeaturedProducts)
 }
-getProductdescription(){
-  return this.http.get(environment.getProductdescription)
-}
+
+// -----> post the new users value - Used in registration
 addUserInformation(body:any){
   return  this.http.post(environment.getUser,body);
 }
@@ -90,15 +86,12 @@ cartDataValues(){
   return this.http.get(environment.getCartProducts)
 }
 
+// ----> used to delete the user cart products -cartpage
 deleteCartValues(id:any){
   return this.http.delete(environment.getCartProducts+"/"+id);
 }
 
-
-deleteAllCart(){
-  return this.http.delete(environment.getCartProducts);
-}
-
+// ---> used to delete the user cart products - Payment
 deleteCartItem(id:number){
   return this.http.delete(environment.getCartProducts+id).subscribe((result)=>{
 
@@ -136,14 +129,16 @@ blogData(){
   return this.http.get(environment.getBlogDetails)
 }
 
+// ------> post and fetch the user address - used in profile_address
+
 addUserAddress(values:any){
   return this.http.post(environment.getUserAddress,values);
 }
-
 getUserAddress(){
   return this.http.get(environment.getUserAddress);
 }
 
+// ----> return the user ordered products - Used in Profile_prescription
 
 searchingOrders(info: any): Observable<any> {
   return this.http.get<any>(environment.getOrderedProducts).pipe(
@@ -156,6 +151,7 @@ searchingOrders(info: any): Observable<any> {
   );
 }
 
+// ----> return the user ordered products - Used in Profile_prescription
 
 searchingOrderHistory(info: any): Observable<any> {
   return this.http.get<any>(environment.getOrdersAll).pipe(
@@ -168,7 +164,7 @@ searchingOrderHistory(info: any): Observable<any> {
   );
 }
 
-// filter the user's cart products
+//----> filter the user's cart products - Used in Cartpage
 
 searchingCart(info: any): Observable<any> {
   return this.http.get<any>(environment.getCartProducts).pipe(
@@ -181,7 +177,7 @@ searchingCart(info: any): Observable<any> {
   );
 }
 
-// filter the user's wishlisted products
+// filter the user's wishlisted products - Used in Profile_mywishlist
 
 searchingWishlist(info: any): Observable<any> {
   return this.http.get<any>(environment.getWishlistProducts).pipe(

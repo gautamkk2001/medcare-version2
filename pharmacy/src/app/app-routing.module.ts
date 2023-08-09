@@ -1,10 +1,8 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartpageComponent } from './cartpage/cartpage.component';
-import { ContactComponent } from './contact/contact.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { ProductdescriptionComponent } from './productdescription/productdescription.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -15,14 +13,13 @@ import { Profile_mywishlistComponent } from './profile_mywishlist/profile_mywish
 import { Profile_prescriptionComponent } from './profile_prescription/profile_prescription.component';
 import { Profile_addressComponent } from './profile_address/profile_address.component';
 import { AdminPageComponent } from './adminPage/adminPage.component';
-import { Profile_offersComponent } from './profile_offers/profile_offers.component';
 import { GuardloginGuard } from './guardlogin.guard';
 import { PaymentComponent } from './payment/payment.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogArticleComponent } from './blog-article/blog-article.component';
 import { PricePipe } from './Price.pipe';
 import { LoginMainComponent } from './login-main/login-main.component';
-import { AdminModuleComponent } from './adminModule/adminModule.component';
+
 import { AdminOrderDetailsComponent } from './adminOrderDetails/adminOrderDetails.component';
 import { AdminQueriesComponent } from './admin-queries/admin-queries.component';
 
@@ -30,19 +27,12 @@ const routes: Routes = [
   {
    path:'', redirectTo:'/home',pathMatch:'full'
   },
-
-  {
-    path:"contact",
-    component:ContactComponent
-  },
+  
   {
     path:"product",
     component:ProductComponent
   },
-  {
-    path:"log",
-    component:LoginComponent
-  },
+
   {
     path:"registration",
     component:RegistrationComponent
@@ -62,7 +52,7 @@ const routes: Routes = [
     ]
   },
   {
-    path:'product/:check',
+    path:'product/:pro',
     component:ProductdescriptionComponent
   },
   {
@@ -92,10 +82,7 @@ const routes: Routes = [
     component:CartpageComponent,
     // canActivate:[GuardloginGuard]
   },
-  {
-    path:"offer",
-    component:Profile_offersComponent
-  },
+
   {
    path:"description",
    component:ProductdescriptionComponent
@@ -105,10 +92,6 @@ const routes: Routes = [
     component:HomepageComponent
   },
 
-  {
-    path:"b",
-    component:ProductComponent
-  },
   {
     path:"admin",
     component:AdminPageComponent

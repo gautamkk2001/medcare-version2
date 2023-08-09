@@ -6,14 +6,102 @@
       "author": "typicode"
     }
   ],
-  "comments": [
+  "logs": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "message": "User Logged In : \"gautamkrishnasamy2001@gmail.com\"",
+      "level": "WARN",
+      "timestamp": "8/4/2023, 1:08:04 PM",
+      "id": 1
+    },
+    {
+      "message": "Invalid Login Attempt",
+      "level": "ERROR",
+      "timestamp": "8/4/2023, 8:30:22 PM",
+      "id": 2
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/4/2023, 8:31:55 PM",
+      "id": 3
+    },
+    {
+      "message": "Registered Successfully : vicky2512@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/5/2023, 8:11:27 PM",
+      "id": 4
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/6/2023, 2:37:21 PM",
+      "id": 5
+    },
+    {
+      "message": "User Logout : null",
+      "level": "INFO",
+      "timestamp": "8/6/2023, 2:38:45 PM",
+      "id": 6
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/6/2023, 2:38:59 PM",
+      "id": 7
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/8/2023, 12:13:09 PM",
+      "id": 8
     }
   ],
-  "users": [],
+  "imgCollection": [
+    {
+      "image": "../../assets/images/slide-1.png",
+      "thumbImage": "../../assets/images/slide-1.png"
+    },
+    {
+      "image": "../../assets/images/slide-3.png",
+      "thumbImage": "../../assets/images/slide-3.png"
+    },
+    {
+      "image": "../../assets/images/slide-2.png",
+      "thumbImage": "../../assets/images/slide-2.png"
+    },
+    {
+      "image": "../../assets/images/slide-5.png",
+      "thumbImage": "../../assets/images/slide-5.png"
+    },
+    {
+      "image": "../../assets/images/slide-7.png",
+      "thumbImage": "../../assets/images/slide-7.png"
+    },
+    {
+      "image": "../../assets/images/slide-8.jpg",
+      "thumbImage": "../../assets/images/slide-8.jpg"
+    },
+    {
+      "image": "../../assets/images/slide-10.png",
+      "thumbImage": "../../assets/images/slide-10.png"
+    },
+    {
+      "image": "../../assets/images/slide-4.png",
+      "thumbImage": "../../assets/images/slider-6.png"
+    }
+  ],
+  "users": [
+    {
+      "fullname1": "Vicky",
+      "email1": "vicky2512@gmail.com",
+      "mobile1": "9788626295",
+      "date": "2001-08-20",
+      "password1": "Vicky@1",
+      "cpassword1": "Vicky@1",
+      "gender": "Male",
+      "id": 1
+    }
+  ],
   "registeredUser": [
     {
       "username": "Gautam",
@@ -1443,7 +1531,21 @@
       "id": 2
     }
   ],
-  "cart-data": [],
+  "cart-data": [
+    {
+      "title": "bandage",
+      "description": "Flamingo Bandage",
+      "Quantity": "1 piece (Approx)",
+      "rating": "4.3",
+      "originalAmount": "159",
+      "cartQuantity": 1,
+      "subtotal": "159",
+      "email": "gautamkrishnasamy2001@gmail.com",
+      "username": "Gautam",
+      "status": "false",
+      "id": 1
+    }
+  ],
   "imgcollection": [
     {
       "image": "../../assets/images/product-slider1",
@@ -1567,7 +1669,7 @@
       "email": "gautamkrishnasamy2001@gmail.com",
       "date": "2023-07-13",
       "orderDate": 13,
-      "deliveryDate": 1689241369741,
+      "deliveryDate": 15,
       "id": 1
     },
     {
@@ -1576,7 +1678,7 @@
       "email": "gautamkrishnasamy2001@gmail.com",
       "date": "2023-07-13",
       "orderDate": 13,
-      "deliveryDate": 1689241369741,
+      "deliveryDate": 15,
       "id": 2
     },
     {
@@ -1585,7 +1687,7 @@
       "email": "gautamkrishnasamy2001@gmail.com",
       "date": "2023-07-13",
       "orderDate": 13,
-      "deliveryDate": 1689241369741,
+      "deliveryDate": 15,
       "id": 3
     },
     {

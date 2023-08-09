@@ -6,10 +6,7 @@ body{
   width:100vw;
   justify-content: flex-end;
   align-items: center;
-  /* background: linear-gradient(135deg, #74b162, #86a53d); */
   background: #fff;
-  /* background: url(../../assets/images/homepage-banner1.jpg); */
-  /* background-repeat: no-repeat; */
 }
 
 .reg-img img{
