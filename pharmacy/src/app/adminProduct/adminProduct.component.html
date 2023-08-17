@@ -1,0 +1,44 @@
+<app-sidebar></app-sidebar>
+
+<div id="main">
+
+  <div class="product-container">
+    <div class="box-8">
+      <div class="content-box"  >
+
+        <p>Products</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+              <th scope="col">Rating</th>
+              <th scope="col">Images</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let pro of products">
+              <td>{{pro.title}}</td>
+              <td>{{pro.description}}</td>
+              <td>{{pro.originalAmount}}</td>
+              <td>{{pro.rating}}</td>
+              <td><img src="../../assets/images/{{pro.description}}.jpg" style="width: 40px; height: 45px;"></td>
+              <td>
+                <button  type="button"  class="adminButton" >Edit</button>
+                <!-- (click)="callEdit(pro)" -->
+                <button  type="button"  class="adminButton" >Delete</button>
+                <!-- (click)="callDelete(pro.id)" -->
+              </td>
+          </tr>
+          </tbody>
+        </table>
+
+</div>
+</div>
+  </div>
+
+</div>

@@ -1,0 +1,52 @@
+.customer-container{
+	position:relative;
+	width: 1000px;
+  left: 400px;
+  margin-top: 25px;
+}
+.content-box p{
+	margin: 0px;
+  font-size: 20px;
+  color: #f7403b;
+}
+
+.content-box{
+	padding: 20px;
+}
+
+.box-8 {
+	width: 95%;
+	background-color: #272c4a;
+	height: 100%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  text-align: left;
+  padding:15px;
+  color: #ddd;
+  border-bottom: 1px solid #81818140;
+}
+
+.adminButton{
+  border:none;
+  outline:none;
+  color:#6b9324;
+  margin:2px;
+  margin-left: 8px;
+  padding:5px;
+ }
+
+ .adminButton a{
+  text-decoration: none;
+  border:none;
+ outline:none;
+ color:#6b9324;
+ margin:2px;
+ margin-left: 2px;
+ padding:5px;
+  }

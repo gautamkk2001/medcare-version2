@@ -1,0 +1,66 @@
+
+<div class="sidebar">
+  <div class="logo_content">
+    <div class="logo">
+      <div class="logo_name">Medcare</div>
+    </div>
+    <i class="bx bx-menu" id="btn" (click)="openSideBar()" ></i>
+  </div>
+
+  <!-- <div class="admin-img">
+    <img src="../../assets/images/boy.png">
+</div> -->
+
+  <ul class="nav_list">
+
+    <li>
+      <a routerLink="/admin" routerLinkActive="activebtn">
+        <i class="bx bx-grid-alt"></i>
+        <span class="links_name"> Dashboard </span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/adminprofile" routerLinkActive="activebtn">
+        <i class="bx bx-user"></i>
+        <span class="links_name">Profile</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/notification" routerLinkActive="activebtn">
+        <i class="bx bxs-bell-ring"></i>
+        <span class="links_name">Notifiactions</span>
+      </a>
+    </li>
+    <!-- <li> <a routerLink="/Fees" routerLinkActive="activebtn"><i class="bx bx-credit-card"></i><span class="links_name">Orders</span></a></li> -->
+    <li>
+      <a routerLink="/admincustomer" routerLinkActive="activebtn">
+        <i class="bx bxs-user-detail"></i>
+        <span class="links_name">Customers</span>
+      </a>
+    </li>
+
+
+    <li>
+      <a routerLink="/adminproducts" routerLinkActive="activebtn">
+        <i class='bx bx-capsule'></i>
+        <span class="links_name">Products</span>
+      </a>
+    </li>
+
+
+    <li>
+      <a routerLink="/adminoffer" routerLinkActive="activebtn">
+        <i class="bx bxs-megaphone"></i>
+        <span class="links_name">Offer</span>
+      </a>
+    </li>
+
+    <li>
+      <a >
+        <i class="bx bx-log-out-circle" (click)="logout()"></i>
+        <span class="links_name"  (click)="logout()">Logout</span>
+      </a>
+    </li>
+  </ul>
+</div>
+

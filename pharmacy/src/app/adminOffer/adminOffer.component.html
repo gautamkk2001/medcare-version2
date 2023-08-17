@@ -1,0 +1,43 @@
+<app-sidebar></app-sidebar>
+
+
+<div class="limited-offer">
+  <div class="offer-img">
+   <img src="../../assets/images/limited offer banner (1).PNG">
+  </div>
+  <div class="offer-set">
+   <div class="offer-header">
+     <h2>Announce New Offer</h2>
+   </div>
+
+     <div class="main">
+       <form name="form"    [formGroup]="formOffer"  (ngSubmit)="submitForm()">
+         <span>
+           <h4>Offer name</h4>
+           <input id="user_email" type="text" name="usernamillogin" formControlName="userId"    formControlName="offerName"/>
+         </span><br>
+
+         <span>
+           <h4>Starts From</h4>
+           <input id="user_email" type="date" name="usernamillogin" formControlName="userId"    formControlName="start"/>
+         </span><br>
+
+         <span>
+           <h4>Ends In</h4>
+           <input id="password" type="date" name="userloginpass"   formControlName="end"/>
+         </span><br>
+
+         <span>
+           <h4>Discount %</h4>
+           <input id="discount" type="number"  name="userloginpass"   formControlName="discount"/>
+         </span><br>
+
+         <button type="submit">Set Offer</button>
+
+       </form>
+
+  </div>
+</div>
+
+</div>
+

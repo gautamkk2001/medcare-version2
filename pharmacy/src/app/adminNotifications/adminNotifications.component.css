@@ -1,0 +1,68 @@
+section
+{
+  position: relative;
+  left: 350px;
+  width: 70vw;
+}
+
+ul{
+  display:flex;
+
+}
+
+.notifications{
+ width: 1200px;
+}
+
+ul li {
+  position: relative;
+  height: 50px;
+  padding: 5px 100px 5px 5px;
+  margin: 5px 0;
+  list-style: none;
+  line-height: 50px;
+  width:150px;
+}
+
+ul li img{
+ width: 75px;
+ height: 60px;
+}
+
+.cancel-products{
+  display:flex;
+
+}
+
+.notification-order{
+  background: #b0d8df;
+  padding: 5px;
+  width: 1000px;
+  margin: 10px;
+}
+
+.notification-stock{
+  background: #b0d8df;
+  padding: 5px;
+  width: 1000px;
+  margin: 10px;
+}
+
+.notification-stock h2{
+  color: #f4e150;
+ }
+.notification-order h2{
+ color: #f7403b;
+}
+
+button{
+  height: 35px;
+  width: auto;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #34d77b;
+}
+

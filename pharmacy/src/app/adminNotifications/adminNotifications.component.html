@@ -1,0 +1,35 @@
+<app-sidebar></app-sidebar>
+
+<section>
+
+  <div class="notifiactions">
+    <div class="notification-order">
+       <h2>Order Cancel</h2>
+        <span> By Gautam</span>
+        <div class="cancel-products">
+        <ul>
+          <li>Dettol</li>
+          <li>Price :169</li>
+          <li>Ordered on: 12 Aug</li>
+          <li><img src ="../../assets/images/Calicum 500mg Tablets.jpg" ></li>
+        </ul>
+        <button>Refund</button>
+      </div>
+    </div>
+
+    <div class="notification-stock" *ngFor="let low of lowStock">
+      <h2>Limited Stock </h2>
+       <div class="cancel-products">
+       <ul>
+         <li>{{low.description}}</li>
+         <li>Price :{{low.originalAmount}}</li>
+         <li>Stock Available: {{low.stock}}</li>
+         <li><img src ="../../assets/images/{{low.description}}.jpg" ></li>
+       </ul>
+       <button (click)="refillStock(low.id)">Refill</button>
+     </div>
+   </div>
+
+  </div>
+
+</section>

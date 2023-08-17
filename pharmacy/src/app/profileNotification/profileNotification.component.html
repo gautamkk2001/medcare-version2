@@ -1,0 +1,166 @@
+
+<!--
+  Title : MedCare - Pharmacy
+  Author: Gautam
+  Created at : Febrary 2023
+  Updated at : 13/06/2023
+  Comments  :  -
+  Reviewed by : Gautam
+  Reviewed at  : 13/06/2023 -->
+
+
+<section>
+
+<!-- notification -->
+<div class="newNotification" *ngFor="let sale of offers">
+  <div class="notificationDiv" >
+     <div class="notificationImg">
+      <img src="../../assets/images/limited offer banner (1).PNG">
+     </div>
+     <div class="Details">
+      <h2>New Offer</h2>
+      <h4>{{sale.offerName}}</h4>
+      <h5>Starts - {{sale.start}} End in -{{sale.end}}</h5>
+       <h5>Flat - {{sale.discount}}% Discount</h5>
+     </div>
+     <!-- <div class="reButton">
+      <button [disabled]="test(item.checkDate)"> {{item.checkDate}} Return</button></div> -->
+  </div>
+</div>
+
+<!-- message -->
+<div class="newMessage" *ngFor="let item of specificOrder |reverse">
+  <div class="messageDiv" >
+     <div class="messageImg">
+      <img src="../../assets/images/message-icon.png">
+     </div>
+     <div class="Details">
+      <h2>Message</h2>
+      <h4>your complia</h4>
+      <h5>Is resolved Soon</h5>
+     </div>
+     <!-- <div class="reButton">
+      <button [disabled]="test(item.checkDate)"> {{item.checkDate}} Return</button></div> -->
+  </div>
+</div>
+</section>
+
+
+
+
+<!-- unused -->
+<!-- <div class="saved" >
+  <div class="saved-address" *ngFor="let savedAdd of savedAddress">
+    <div  *ngIf="savedAdd.fullname1==logInUser.username">
+    <small>Default</small>
+    <h3>{{savedAdd.fullname1}}</h3><small>Home</small>
+    <h4>{{savedAdd.mobile1}}</h4>
+    <p>{{savedAdd.address1}}&nbsp;&nbsp;{{savedAdd.district1}}&nbsp;&nbsp;{{savedAdd.state1}}&nbsp;&nbsp;{{savedAdd.pincode1}}</p>
+  </div>
+  </div>
+</div> -->
+
+
+<!-- <div class="container">
+  <div class="title"> Add address </div>
+  <form id="form" [formGroup]="formaddress"   (ngSubmit)="submitForm()">
+    <div class="user-details">
+      <div class="input-box">
+        <span class="details">Full Name</span>
+        <input type="text" name="username" pattern="^[A-Z a-z]{3,15}$" placeholder="FirstName"  class="input"  formControlName="fullname1" />
+      </div>
+
+      <div class="information-error" *ngIf="formaddress.controls['fullname1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['fullname1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Full Name should is not Empty</p>
+        <p class="error" *ngIf="formaddress.controls['fullname1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct Full name</p>
+      </div>
+
+      <div class="input-box">
+        <span class="details">Phone Number</span>
+        <input type="text" name="emailid" pattern="^[ 6-9]{1}[0-9]{9}$"  class="input" formControlName="mobile1" />
+      </div>
+
+      <div class="information-error" *ngIf="formaddress.controls['mobile1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['mobile1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Mobile no should not be  Empty</p>
+        <p class="error" *ngIf="formaddress.controls['mobile1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct Mobile no</p>
+      </div>
+
+      <div class="input-box">
+        <span class="details">Address</span>
+        <input type="textbox" name="mobileno" pattern="^[A-Z a-z]{8,25}$" placeholder="Roadname , Area, Colony" class="input" formControlName="address1" />
+      </div>
+
+      <div class="information-error" *ngIf="formaddress.controls['address1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['address1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Address Should not Empty</p>
+        <p class="error" *ngIf="formaddress.controls['address1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct Address</p>
+      </div>
+
+      <div class="input-box">
+        <span class="details">District</span>
+        <input type="text" placeholder=" Ex:Chennai"  formControlName="district1" >
+      </div>
+
+      <div class="information-error" *ngIf="formaddress.controls['district1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['district1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; District should not be Empty</p>
+        <p class="error" *ngIf="formaddress.controls['district1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct District</p>
+      </div>
+
+      <div class="input-box">
+        <span class="details">State</span>
+        <input type="text" placeholder="TN" id="pass1" name="pass" pattern="^[A-Za-z]{5,20}$" name="Password" class="input" required
+          formControlName="state1" />
+      </div>
+
+       <div class="information-error" *ngIf="formaddress.controls['state1'].dirty">
+          <p class="error" *ngIf="formaddress.controls['state1'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; State should not Empty</p>
+          <p class="error" *ngIf="formaddress.controls['state1'].errors?.['pattern']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Enter the correct State</p>
+        </div>
+
+      <div class="input-box">
+        <span class="details">Pincode</span>
+        <input type="text" placeholder="postal Index Number" id="pass2" pattern="^[0-9]{6}$" name="Password" class="input" required cpasswords formControlName="pincode1">
+      </div>
+
+      <div class="information-error" *ngIf="formaddress.controls['pincode1'].dirty">
+        <p class="error" *ngIf="formaddress.controls['pincode1'].errors?.['required']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Pincode should not be Empty</p>
+        <p class="error" *ngIf="formaddress.controls['pincode1'].errors?.['pattern']"><i
+            class="fas fa-exclamation-circle"></i>&numsp; Enter the correct PIN code</p>
+      </div>
+
+
+      <div class="gender-box">
+        <span class="gender-type">Type</span>
+        <div class="types">
+          <div class="gen">
+          <input type="radio" id="male" name="gender" value="home"  formControlName="gender">
+          <label for="male">Home</label><br>
+        </div>
+          <div class="gen">
+          <input type="radio" id="female" name="gender" value="Office"  formControlName="gender" >
+          <label for="female">Office</label><br>
+        </div>
+          <div class="gen">
+          <input type="radio" id="others" name="gender" value="others"  formControlName="gender" >
+          <label for="others">Others</label>
+        </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="add-button">
+      <button>Add</button>
+    </div>
+  </form>
+</div> -->

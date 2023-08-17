@@ -1,0 +1,192 @@
+
+section{
+  background: #fff;
+}
+
+.saved{
+  display: flex;
+
+}
+
+
+.saved-address{
+  background-color: rgb(135, 207, 151);
+  margin:10px;
+  padding: 10px;
+}
+
+.saved-address h3{
+ font-size: 1.5rem;
+}
+
+.button
+{
+  height: 100%;
+  width: 25%;
+  outline: none;
+  font-weight: 500;
+  outline: none;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  background: #ad13d7;
+  border-color: #fff;
+   margin-left: 380px;
+}
+
+
+
+
+.container{
+  max-width: 100%;
+  width:100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  margin-right: 25px;
+}
+.container .title{
+  font-size: 30px;
+  font-weight: 500;
+}
+.container form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: 450px;
+}
+.user-details .input-box input{
+   height: 45px;
+   width: 90%;
+   outline: none;
+   margin-bottom: 5px;
+   border-radius: 5px;
+  border: 1px solid #5b7396;
+   padding-left: 15px;
+   font-size: 18px;
+   border-bottom-width: 2px;
+   transition: all 0.3s ease-in-out;
+
+}
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.gender-box .types{
+  display: flex;
+  width:100%;
+   justify-content: space-evenly;
+  padding: 10px;
+}
+.gender-box .types .gen{
+ padding:10px;
+}
+
+.gender-box .types .gen label{
+  padding-left: 10px;
+ }
+
+.types label:hover{
+  background-color: #1e91de;
+  padding: 5px 20px;
+  border-radius: 2px;
+}
+form .button{
+  height:45px;
+  margin: 30px 0;
+}
+form .add-button button{
+   height: 100%;
+   width: 25%;
+   outline: none;
+   font-weight: 500;
+   outline: none;
+   font-size: 20px;
+   letter-spacing: 1px;
+   border-radius: 8px;
+   background: #15d92f;
+   border-color: #fff;
+   padding: 10px;
+    margin-left: 380px
+}
+
+.gap{
+  position: relative;
+}
+.error{
+  color: red;
+  position: absolute;
+  margin-top: 75px;
+  margin-left: -450px;
+}
+
+.error p{
+  color:white;
+  position: absolute;
+  margin-left: 36px;
+  margin-bottom: 10px;
+}
+
+input.ng-invalid{border:3px solid red;}
+
+    input.ng-valid{border:3px solid green; }
+
+
+    /* notification */
+    .newNotification, .newMessage{
+      width: 800px;
+      height: 120px;
+      background-color: #4c89bb;
+      margin: 20px 0px 20px 20px;
+    }
+
+    .notificationDiv, .messageDiv{
+      display: flex;
+      padding: 5px;
+    }
+
+     .notificationImg img{
+      width:120px;
+      height: 100px;
+    }
+
+    .messageImg img{
+      width:120px;
+      height: 80px;
+    }
+
+    .Details{
+      margin-left: 60px;
+      width: 350px;
+    }
+
+    .Details h2{
+      font-size: 20px;
+    }
+
+    .Details h4{
+      font-size: 18px;
+    }
+
+    .Details h5{
+     margin-top: 10px;
+     font-size: 17px;
+    }
+
+    .reButton button{
+      width:55px;
+      height: 30px;
+      margin-top: 25px;
+      margin-left: 40px;
+      background-color: #4da4da;
+      outline: none;
+      border-color: none;
+      padding: 5px;
+    }
+

@@ -1,0 +1,28 @@
+<app-sidebar></app-sidebar>
+
+<div class="customer-container">
+  <div class="box-8">
+    <div class="content-box">
+
+      <p>Customers </p>
+      <br />
+      <table>
+
+        <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Email</th>
+        </tr>
+        <tr *ngFor="let user of prouser">
+          <td>{{user.username}}</td>
+          <td>{{user.mobile}}</td>
+          <td>{{user.email}}</td>
+          <td><button class="adminButton"><a routerLink="/admin/{{user.email}}">View Order</a></button></td>
+          <td> <button>Delete</button></td>
+        </tr>
+
+      </table>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,203 @@
+<app-navbar></app-navbar>
+
+<body>
+  <div class="payment-box">
+    <div class="title"><h4>Choose payment method below</h4></div>
+    <div class="tab">
+    <button class="tablinks btn-clicked">
+            <span><i class="fa-solid fa-credit-card"></i></span><br><p>Credit Card</p></button>
+    <!-- <button class="tablinks" onclick="return openDebitCardContent()">
+            <span><i class="fa-regular fa-credit-card"></i></span><br><p>Debit Card</p></button> -->
+    <button class="tablinks" >
+            <span><i class="fa-solid fa-money-check"></i></span><br><p>Net Banking</p></button>
+    <button class="tablinks" >
+            <span><i class="fa-solid fa-money-bill-wave"></i></span><br><p>Cash On Delivery</p></button>
+  </div>
+
+
+  <form  [formGroup]="formShipping" (ngSubmit)=" toggleCard()">
+    <div class="shippingSection" *ngIf="(shipping==true)">
+
+      <div class="shipping">
+        <img src="../../assets/images/istockphoto-4.jpeg">
+      </div>
+
+    <div class="payment-info" >
+        <div class="billing" >
+            <div class="title-flex">
+                <div class="num"></div>
+                <h4>Billing Info</h4>
+            </div>
+            <div class="field full">
+                <label for="name">Full Name</label>
+                <input id="name" type="text" placeholder="Full Name" formControlName="fullname">
+                <p id="name_error"></p>
+            </div>
+            <div class="field full">
+                <label for="address">Billing Address</label>
+                <input id="address" type="text" placeholder="Billing Address" formControlName="address">
+                <p id="address_error"></p>
+            </div>
+            <div class="field full">
+                <label for="phone">Phone</label>
+                <input id="phone" type="text" placeholder="Phone" formControlName="phone">
+                <p id="mobile_error"></p>
+            </div>
+            <div class="half-field">
+                <div class="field half">
+                    <label for="city">City</label>
+                    <input id="city" type="text" placeholder="City" formControlName="city">
+                    <p id="city_error"></p>
+                </div>
+                <div class="field half">
+                    <label for="state">State</label>
+                    <input id="state" type="text" placeholder="State" formControlName="state">
+                    <p id="state_error"></p>
+                </div>
+            </div>
+            <div class="field full">
+              <label for="pincode">Pincode</label>
+              <input id="phone" type="text" placeholder="600028" formControlName="pincode">
+              <p id="mobile_error"></p>
+          </div>
+          <div  class="button-pay" style="margin-left: 120px;">
+          <button type="submit"  id="back" class="btn" >Procced <span id="pay-amount" ></span></button>
+        </div>
+        </div>
+          </div>
+      </div>
+
+      </form>
+
+
+<div class="paymentByCard" *ngIf="(paymentSection==true)">
+  <div class="payments">
+    <div class="paymentBox">
+        <div class="paymentHeader">
+            <h2> Payment </h2>
+        </div>
+        <div>
+            <form [formGroup]="payment"  class="cardInfo" (ngSubmit)="toggleStatus()">
+                <div class="payment-two-columns">
+                    <div class="form_fields">
+                        <label for="accountNumber"> Card Number </label>
+                        <input type="tel"  name="accountNumber" formControlName="accountNumber" minlength="16"
+                            maxlength="16" placeholder="XXXX XXXX XXXX XXXX" [(ngModel)]="cardNumber" required>
+
+                        <div class="errorMessage"
+                            *ngIf="payment.controls['accountNumber'].invalid && (payment.controls['accountNumber'].touched||payment.controls['accountNumber'].dirty)">
+                            <p *ngIf="payment.controls['accountNumber'].errors?.['required']">This is a required
+                                field</p>
+                            <p *ngIf="payment.controls['accountNumber'].errors?.['pattern']">Enter Only Digits</p>
+                            <p *ngIf="payment.controls['accountNumber'].errors?.['minlength']">Please
+                                Enter 16 Digits Number</p>
+                        </div>
+                    </div>
+                    <div class="form_fields">
+                        <label for="cardholderName"> Card Holder</label>
+                        <input type="text" maxlength="16" name="cardholderName" formControlName="cardHolder"  [(ngModel)]="cardholderName" required>
+                      
+                    </div>
+                    <div class="form_fields">
+                        <label for="expiry"> Expiry Date </label>
+                        <input type="month" name="expiry"  formControlName="expiry" placeholder="MM/YYYY" required [(ngModel)]="expDate" required>
+                        <div class="errorMessage"
+                            *ngIf="payment.controls['expiry'].invalid && (payment.controls['expiry'].touched || payment.controls['expiry'].dirty)">
+                            <p *ngIf="payment.controls['expiry'].errors?.['required']">This is a required
+                                field</p>
+                        </div>
+                    </div>
+                    <div class="form_fields">
+                        <label for="cvv"> CVV </label>
+                        <input type="tel" name="cvv" formControlName="cvv" placeholder="XXX" minlength="3"
+                            maxlength="3" required [(ngModel)]="cvv">
+
+                        <div class="errorMessage"
+                            *ngIf="payment.controls['cvv'].invalid && (payment.controls['cvv'].touched||payment.controls['cvv'].dirty)">
+                            <p *ngIf="payment.controls['cvv'].errors?.['required']">This is a required
+                                field</p>
+                            <p *ngIf="payment.controls['cvv'].errors?.['pattern']">Enter Only Digits</p>
+                            <p *ngIf="payment.controls['cvv'].errors?.['minlength']">Please
+                                Enter 3 Digits Number</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="errorMessageDiv">
+                    <p id="errorMessage"></p>
+                </div>
+
+                <div class="paymentButton-two-columns">
+                    <div class="button-back">
+                        <button routerLink="/cart" id="proceedPayment" class="btn"><i
+                                class="fa-solid fa-arrow-left"></i>
+                            Back</button>
+                    </div>
+
+                    <div class="button-pay">
+                        <button  id="payNowBtn" class="btn" > {{paymentAmount|currency:'INR'}}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="right-container">
+      <div class="card">
+        <div class="first">
+          <div class="card-head">
+            <div><img [src] ="environment.imagePaymentNfc"></div>
+            <div>
+            <h2>Visa</h2></div>
+        </div>
+            <div class="card-digits">
+                <h2>{{cardNumber}}</h2>
+            </div>
+
+            <div class="chip">
+              <img [src] ="environment.imagePaymentChip">
+            </div>
+
+            <div class="card-infos">
+                <div class="exp">
+                     <label>Valid thiru</label>
+                      <p> {{expDate}}</p>
+                </div>
+
+                <div class="cvv">
+                  <label>CVV</label>
+                  <p>{{cvv}}</p>
+                </div>
+            </div>
+
+            <div class="card-holder">
+              <label>Holder</label>
+              <h4>{{cardholderName|uppercase}}</h4>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="paymentModal"  *ngIf="(paymentSuccess==true)">
+    <div class="successMessage">
+        <div class="modalBox">
+            <i class="fa-solid fa-circle-check fa-4x" style="color: green;"></i>
+            <h2>Payment Successful</h2>
+            <h5>Order Placed Successfully</h5>
+            <div class="button">
+                <button id="donePayment" class="btn" routerLink="/product"> Okay </button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="card-actions">
+        <div class="flex-start">
+            <button class="button-1" routerLink="/product">Return to Store</button>
+        </div>
+    </div>
+  </div>
+  </body>

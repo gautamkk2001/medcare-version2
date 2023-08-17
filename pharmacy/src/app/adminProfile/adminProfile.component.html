@@ -1,0 +1,127 @@
+
+<app-sidebar></app-sidebar>
+
+<div class="profile" *ngIf="(profile==true)">
+  <div class="div1">
+    <h4 style="color: #f7403b; font-size: 18px"><i class="bx bx-user"></i>Personal Details</h4>
+    <p>
+      Name: <span>{{logInUser.username}}</span>
+    </p>
+    <p>
+      Gender: <span>{{logInUser.gender}}</span>
+    </p>
+    <p>
+      D.O.B: <span>{{logInUser.date}}</span>
+    </p>
+    <p>
+      Email Id: <span>{{logInUser.email}}</span>
+    </p>
+    <p>
+      Phone no: <span>{{logInUser.mobile}}</span>
+    </p>
+
+  </div>
+  <div class="div2">
+    <img  src="../../assets/images/boy.png" alt="" />
+    <p style="color: #818c98; font-size: 16px; font-weight: bold"> <span style="color: #071468; font-weight: bold">ADMIN</span></p>
+    <div>
+      <pre class="change">Change Password</pre>
+    </div>
+    <div ><pre class="change" (click)="toggleEdit()">Edit Profile </pre></div>
+  </div>
+
+</div>
+
+
+     <!-- dialog box for Edit Profile -->
+     <div class="editProfile" *ngIf="(edit==true)">
+       <h3>Edit</h3>
+      <form id="form" [formGroup]="formEditProfile"   (ngSubmit)="submitForm()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="username" pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$" placeholder="FirstName" class="input"
+              formControlName="fullname1" />
+          </div>
+
+          <div class="information-error" *ngIf="formEditProfile.controls['fullname1'].dirty">
+            <p class="error" *ngIf="formEditProfile.controls['fullname1'].errors?.['required']"><i
+                class="fas fa-exclamation-circle"></i>&numsp; FirstName is not Empty</p>
+            <p class="error" *ngIf="formEditProfile.controls['fullname1'].errors?.['pattern']"><i
+                class="fas fa-exclamation-circle"></i>&numsp; Enter the correct FirstName</p>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <!-- ^(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\2)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ -->
+            <input type="text" name="emailid" pattern="^(?=[a-zA-Z0-9._%+-]{4,})(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\3)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            placeholder="Email-id"
+              class="input" formControlName="email1" />
+          </div>
+          <div class="information-error" *ngIf="formEditProfile.controls['email1'].dirty">
+            <p class="error" *ngIf="formEditProfile.controls['email1'].errors?.['required']"><i
+                class="fas fa-exclamation-circle"></i>&numsp; Email-id is not Empty</p>
+            <p class="error" *ngIf="formEditProfile.controls['email1'].errors?.['pattern']"><i
+                class="fas fa-exclamation-circle"></i>&numsp; Enter the correct email-id</p>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Phone number</span>
+            <input type="tel" name="mobileno" pattern="^[ 6-9]{1}[0-9]{9}$" placeholder="Mobileno"
+              class="input" formControlName="mobile1" />
+          </div>
+          <div class="information-error" *ngIf="formEditProfile.controls['mobile1'].dirty">
+            <p class="error" *ngIf="formEditProfile.controls['mobile1'].errors?.['required']"><i
+                class="fas fa-exclamation-circle"></i>&numsp; Phone number is not empty</p>
+            <p class="error" *ngIf="formEditProfile.controls['mobile1'].errors?.['pattern']"><i
+                class="fas fa-exclamation-circle"></i>&numsp; Enter the correct number</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Dateof birth</span>
+            <input type="date" placeholder="Enter your DOB"  formControlName="date" >
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" id="pass1" name="pass"
+              pattern="^[A-Z][a-z]{5,15}$" name="Password" class="input" required
+              formControlName="password1" />
+          </div>
+          <div class="information-error1" *ngIf="formEditProfile.controls['password1'].dirty">
+            <p class="error" *ngIf="formEditProfile.controls['password1'].errors?.['required']"><i
+                class="fas fa-exclamation-circle"></i>&numsp;Password is not Empty</p>
+            <p class="error" *ngIf="formEditProfile.controls['password1'].errors?.['pattern']"><i
+                title="password have min 7 digits, uppercase, lowercase, number and special character"
+                class="fas fa-exclamation-circle"></i>&numsp; Follow password Constraints</p>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Retype your password" id="pass2" pattern="^[A-Z][a-z]{5,15}$"
+              name="Password" class="input" required cpasswords formControlName="cpassword1">
+          </div>
+          <div class="information-error1" *ngIf="formEditProfile.controls['cpassword1'].dirty">
+            <p class="error" *ngIf="formEditProfile.controls['cpassword1'].errors?.['required']"><i
+                class="fas fa-exclamation-circle"></i>&numsp; conform Password is not Empty</p>
+            <p class="error" *ngIf="formEditProfile.controls['cpassword1'].errors?.['cpasswordvalid']"><i
+                title="password have min 7 digits, uppercase, lowercase, number and special character"
+                class="fas fa-exclamation-circle"></i>&numsp; Follow Conform password Constraints</p>
+          </div>
+
+          <div class="gender-box">
+            <span class="gender-type">Gender</span>
+            <div class="types">
+              <input type="radio" id="male" name="gender" value="Male"  formControlName="gender">
+              <label for="male">Male</label><br>
+              <input type="radio" id="female" name="gender" value="Female"  formControlName="gender" >
+              <label for="female">Female</label><br>
+              <input type="radio" id="others" name="gender" value="others"  formControlName="gender" >
+              <label for="others">Others</label>
+            </div>
+          </div>
+          <div class="button">
+            <button>Update</button>
+          </div>
+        </div>
+      </form>
+
+     </div>

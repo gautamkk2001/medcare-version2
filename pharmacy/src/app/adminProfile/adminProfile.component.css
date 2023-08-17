@@ -1,0 +1,187 @@
+
+.profile{
+  position:relative;
+  left:400px;
+  margin-top: 40px;
+  width: 1000px;
+  height: 600px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto 1fr;
+  background-color: #ffff;
+}
+
+.div1{
+  margin-left: 15px;
+  padding: 10px 0px 0px 25px;
+  background-color: #272c4a;
+  width: 450px;
+  height: 380px;
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+
+.div1 h4{
+ padding-bottom: 30px;
+}
+
+.div1 p{
+  padding-bottom: 20px;
+}
+
+
+.div2{
+  display: grid;
+  place-items: center;
+  background-color: #7c84ec;
+  padding-left: 35px;
+  padding-top: 25px;
+  height: 365px;
+  width: 450px;
+}
+
+.div2 img{
+  border-radius: 20px;
+  width:130px;
+  height: 130px;
+}
+.div1 p span{
+  color: #169055;
+  font-weight: bold;
+  padding:auto;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #233863;
+  background: linear-gradient(to bottom, #ebd3d3,#faf0f0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #233863;
+}
+
+.change{
+
+  background: linear-gradient(to bottom, #f1efef,#fff);
+  margin: 5px 5px;
+  color: #233863;
+  padding:10px;
+  font-family: sans-serif;
+  font-size: 15px;
+  width: 130px;
+  height: 18px;
+  border: 2px solid #f5f2f2;
+  margin-left:0;
+  text-align: justify;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+/* editProfile */
+.editProfile{
+  max-width: 700px;
+  width:700px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  margin-left: 450px;
+}
+
+form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.user-details .input-box input{
+   height: 45px;
+   width: 100%;
+   outline: none;
+   border-radius: 5px;
+  border: 1px solid #5b7396;
+   padding-left: 15px;
+   margin-bottom: 5px;
+   font-size: 18px;
+   border-bottom-width: 2px;
+   transition: all 0.3s ease-in-out;
+}
+
+.user-details .gender-box {
+  height: auto;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  /* border: 1px solid #5b7396; */
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 18px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease-in-out;
+}
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.types{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+
+}
+
+form .button{
+  height:45px;
+  width:100%;
+  margin: 10px 0;
+}
+form .button button{
+   height: 100%;
+   width: 100%;
+   outline: none;
+   font-weight: 500;
+   outline: none;
+   font-size: 20px;
+   letter-spacing: 1px;
+   border-radius: 8px;
+   background: #34d77b;
+   border-color: #34d77b;
+}
+
+
+#uname-error, #num-error, #pass1-error, #pass2-error {
+  color:red;
+  font-size: 16px;
+}
+
+.gap{
+  position: relative;
+}
+.error{
+  color: red;
+  position: absolute;
+  margin-top: 75px;
+  margin-left: -450px;
+}
+
+.error p{
+  color:white;
+  position: absolute;
+   margin-left: 36px;
+}
+
+input.ng-invalid{border:3px solid red;}
+input.ng-valid{border:3px solid green; }
