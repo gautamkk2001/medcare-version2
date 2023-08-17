@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductdataService } from '../productdata.service';
 import { JsonPipe } from '@angular/common';
+import { FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { cpasswordvalid } from '../cpasswordvalid';
 
 @Component({
   selector: 'app-profile_accinfo',
@@ -13,24 +17,48 @@ export class Profile_accinfoComponent implements OnInit {
   updateUser:any=[];
    userValues:any=[];
   logInUser:any;
+  showEdit:boolean=false;
+  environment=environment;
 
-  constructor(private data:ProductdataService) {
+  constructor(private data:ProductdataService, private fb:FormBuilder, private http:HttpClient) {
+
     this.data.registereduser().subscribe((value)=>{
      this.updateUser=value;
 
     });
-
-    const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
-    if (sessionUser) {
-      this.logInUser = JSON.parse(sessionUser);
-    }
-
-
   }
 
 
+  formRegister=this.fb.group({
+    username:[,Validators.required],
+    email:[,Validators.required],
+    mobile:[,Validators.required],
+    date:[,Validators.required],
+    password1:[,Validators.required],
+    gender:[,Validators.required],
+  });
+
+submitEdit(){
+alert(this.logInUser.id);
+ this.http.patch<any>(environment.editProfile+this.logInUser.id, this.formRegister.value).subscribe(()=>{
+  alert("Updated Successfully");
+ })
+
+
+}
   ngOnInit() {
-
+    const session = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
+    if (session) {
+      this.logInUser = JSON.parse(session);
+      alert(this.logInUser.email);
+    }
+    this.formRegister.controls['username'].setValue(this.logInUser.username)
+    this.formRegister.controls['mobile'].setValue(this.logInUser.mobile)
+    this.formRegister.controls['email'].setValue(this.logInUser.email)
+    this.formRegister.controls['date'].setValue(this.logInUser.date)
+    this.formRegister.controls['password1'].setValue(this.logInUser.password1)
   }
+
+
 
 }

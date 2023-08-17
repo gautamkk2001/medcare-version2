@@ -74,6 +74,7 @@ environment=environment;
            this.isLoggedIn=true;
            this.service.islogged=true;
            this.user.loggedInUser = users;
+           this.user.loginBoolean = true;
           //  ---> Storing the user details in SessionStorage
            sessionStorage.setItem('userName', JSON.stringify(users));
            this.router.navigate(['/product'])

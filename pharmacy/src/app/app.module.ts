@@ -17,7 +17,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { Profile_accinfoComponent } from './profile_accinfo/profile_accinfo.component';
 import { Profile_mywishlistComponent } from './profile_mywishlist/profile_mywishlist.component';
 import { Profile_prescriptionComponent } from './profile_prescription/profile_prescription.component';
-import { Profile_addressComponent } from './profile_address/profile_address.component';
+import { Profile_addressComponent } from './profileNotification/profile_address.component';
 import { FooterComponent } from './footer/footer.component';
 import { GalleryDirective } from './gallery.directive';
 import { NgImageSliderModule } from 'ng-image-slider';
@@ -31,6 +31,14 @@ import { AdminOrderDetailsComponent } from './adminOrderDetails/adminOrderDetail
 import { AdminQueriesComponent } from './admin-queries/admin-queries.component';
 import { LoggerModule, NgxLoggerLevel } from "ngx-logger";
 import { ProductdataService } from './productdata.service';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { AdminNotificationsComponent } from './adminNotifications/adminNotifications.component';
+import { AdminProfileComponent } from './adminProfile/adminProfile.component';
+import { AdminCustomerComponent } from './adminCustomer/adminCustomer.component';
+import { AdminProductComponent } from './adminProduct/adminProduct.component';
+import { AdminOfferComponent } from './adminOffer/adminOffer.component';
+import { CheckoutPageComponent } from './checkoutPage/checkoutPage.component';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -55,9 +63,17 @@ import { ProductdataService } from './productdata.service';
       BlogComponent,
       BlogArticleComponent,
       PricePipe,
+      ReversePipe,
       LoginMainComponent,
       AdminOrderDetailsComponent,
-      AdminQueriesComponent
+      AdminQueriesComponent,
+      SidebarComponent,
+      AdminNotificationsComponent,
+      AdminProfileComponent,
+      AdminCustomerComponent,
+      AdminProductComponent,
+      AdminOfferComponent,
+      CheckoutPageComponent
    ],
 
   imports: [

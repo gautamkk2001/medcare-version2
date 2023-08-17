@@ -8,231 +8,37 @@
   Reviewed by : Gautam
   Reviewed at  : 13/06/2023 -->
 
+<app-sidebar></app-sidebar>
 
-<body>
 
-  <div id="main">
-    <div class="head">
-
-      <div class="header">
-        <span style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)" class="nav">&#9776; Medcare Dashboard</span >
-        <span style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)" class="nav2" >&#9776; Dashboard</span>
-      </div>
-
-      <div class="header">
-        <div class="profile">
-          <img [src] ="environment.imageAdmin" class="pro-img" />
-          <p>Krishna <span> ADMIN</span></p>
-          <button class=adminButton (click)="logout()">Logout</button>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    </div>
-
-    <div class="clearfix"></div>
-    <br />
-
-    <div class="info-container">
-      <div class="box">
-        <p>{{userLen}}<br /><span>Customers</span></p>
-        <i class="fa fa-users box-icon"></i>
-      </div>
-    </div>
-    <div class="info-container">
-      <div class="box">
-        <p>{{productLen}}<br /><span>Products</span></p>
-        <i class="fa fa-list box-icon"></i>
-      </div>
-    </div>
-    <div class="info-container">
-      <div class="box">
-        <p>3<br /><span>Orders</span></p>
-        <i class="fa fa-shopping-bag box-icon"></i>
-      </div>
-    </div>
-    <div class="info-container">
-      <div class="box" routerLink="/adminQueries">
-        <p>8<br /><span>Reviews</span></p>
-        <i class="fa fa-tasks box-icon"></i>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <br /><br />
-
-    <div class="customer-container">
-      <div class="box-8">
-        <div class="content-box">
-
-          <details>
-          <summary>
-          <p>Customers </p></summary>
-          <br />
-          <table>
-
-            <tr>
-              <th>Name</th>
-              <th>Contact</th>
-              <th>Email</th>
-            </tr>
-            <tr *ngFor="let user of prouser">
-              <td>{{user.username}}</td>
-              <td>{{user.mobile}}</td>
-              <td>{{user.email}}</td>
-              <td><button class="adminButton"><a routerLink="/admin/{{user.email}}">View Order</a></button></td>
-              <td> <button (onclick)="truncateUser(user.username)">Delete</button></td>
-            </tr>
-
-          </table>
-        </details>
-        </div>
-      </div>
-    </div>
-
-    <div class="brand-container">
-      <div class="box-4">
-        <div class="content-box">
-          <details>
-          <summary><p>Top Selling Brands</p></summary>
-          <ul>
-            <li>Himalaya</li>
-            <li>Cetaphil</li>
-            <li>Dabur</li>
-            <li>MSK</li>
-          </ul>
-          <p>New Product</p>
-          <button class="adminButton"  (click)="callAdd()">ADD Products</button>
-        </details>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="clearfix"></div>
-
-    <div class="container-products">
-      <div class="box-8">
-        <div class="content-box"  >
-          <details>
-          <summary><p>Products</p></summary>
-
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">Rating</th>
-                <th scope="col">Images</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr *ngFor="let pro of products">
-                <td>{{pro.title}}</td>
-                <td>{{pro.description}}</td>
-                <td>{{pro.originalAmount}}</td>
-                <td>{{pro.rating}}</td>
-                <td><img src="../../assets/images/{{pro.description}}.jpg" style="width: 40px; height: 45px;"></td>
-                <td>
-                  <button  type="button"  class="adminButton"  (click)="callEdit(pro)">Edit</button>
-                  <button  type="button"  class="adminButton" (click)="callDelete(pro.id)">Delete</button>
-                </td>
-            </tr>
-            </tbody>
-          </table>
-        </details>
+<div class="heading">
+  <span>&#9776; Dashboard</span>
 </div>
-</div>
-    </div>
-    <div class="clearfix"></div>
 
+<div class="admin-img">
+  <img src="../../assets/images/20944961.jpg">
+</div>
+<div class="main">
+
+  <div class="info-container">
+    <div class="box">
+      <p>{{userLen}}<br /><span>Customers</span></p>
+      <i class="fa fa-users box-icon"></i>
+    </div>
+  </div>
+  <div class="info-container">
+    <div class="box">
+      <p>{{productLen}}<br /><span>Products</span></p>
+      <i class="fa fa-list box-icon"></i>
+    </div>
+  </div>
+  <div class="info-container">
+    <div class="box">
+      <p>3<br /><span>Orders</span></p>
+      <i class="fa fa-shopping-bag box-icon"></i>
+    </div>
   </div>
 
-  <dialog class="editDialog">
-    <div class="edit-products">
-      <div class="editing">
-        <div>Edit</div>
-        <div class="close" (click)="closeEdit()">x</div>
-      </div>
-        <form [formGroup]="editproducts" (ngSubmit)="  updateProduct()">
-          <div class="user-details">
-               <div class="input-box">
-                  <label>Title</label>
-                  <input type="text" required formControlName="title">
-                </div>
-               <div class="input-box">
-                  <label>Description</label>
-                  <input type="text" required formControlName="description">
-                </div>
-               <div class="input-box">
-                  <label>Details</label>
-                  <input type="text" required formControlName="details">
-                </div>
-               <div class="input-box">
-                  <label>Price</label>
-                  <input type="text" required formControlName="price">
-                  </div>
-               <div class="input-box">
-                  <label>Rating</label>
-                  <input type="text" required formControlName="rating">
-               </div>
-               <div class="input-box">
-                  <label> Category</label>
-                  <input type="text" required formControlName=" category">
-                </div>
-
-                <div class="button">
-                  <button (click)="updateProduct()">Edit</button>
-                </div>
-          </div>
-        </form>
-    </div>
-  </dialog>
+  <br /><br />
 
 
-  <dialog class="add-Dialog">
-    <div class="add-products">
-      <div class="editing">
-        <div>AddProduct</div>
-        <div class="close" (click)="closeAdd()">x</div>
-      </div>
-
-        <form [formGroup]="addproducts" (ngSubmit)="productAdded()">
-          <div class="user-details">
-               <div class="input-box">
-                  <label>Title</label>
-                  <input type="text"  formControlName="title" >
-                </div>
-               <div class="input-box">
-                  <label>Name</label>
-                  <input type="text"  formControlName="description" >
-                </div>
-               <div class="input-box">
-                  <label>Details</label>
-                  <input type="text"  formControlName="details" >
-                </div>
-               <div class="input-box">
-                  <label>Price</label>
-                  <input type="text"  formControlName="price" >
-                  </div>
-               <div class="input-box">
-                  <label>Rating</label>
-                  <input type="text"  formControlName="rating" >
-               </div>
-               <div class="input-box">
-                  <label> Category</label>
-                  <input type="text"   formControlName=" category" >
-                </div>
-
-                <div class="button">
-                  <button>Add</button>
-                </div>
-          </div>
-        </form>
-    </div>
-  </dialog>
-
-
-
-</body>

@@ -9,8 +9,13 @@ import { environment } from 'src/environments/environment';
 export class ForgotpasswordComponent implements OnInit {
 
   environment = environment;
+
+  email:any="";
   constructor() { }
 
+  send(){
+    alert("Link Sent to the Email");
+  }
   ngOnInit() {
   }
 

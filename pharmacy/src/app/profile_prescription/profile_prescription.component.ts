@@ -16,17 +16,45 @@ export class Profile_prescriptionComponent implements OnInit {
       this.orderDates=data;
     })
 
+    const tday = new Date("Aug 30, 2023");
+   const twoDaysLater = new Date(tday);
+twoDaysLater.setDate(tday.getDate() + 2);
+
+console.log(`Today's date: ${tday.toDateString()}`);
+console.log(`Date two days later: ${twoDaysLater.toDateString()}`);
+
   }
 
   logInUser: any = '';
   orderDates:any;
-  currentDate= new Date().getDate();
+  currentDate= new Date();
+
 
 menu:any=[];
 date:any=[];
 specificOrder:any;
 history:any;
 len:any;
+
+// testing dates
+ test(delivery:any){
+ const dateDb = new Date(delivery);
+ var status:Boolean=false;
+ var date = dateDb.getDate();
+ var month = dateDb.getMonth();
+ var currentDay = this.currentDate.getDate();
+ var currentMonth = this.currentDate.getMonth()+1;
+ if(date >= currentDay && month == currentMonth){
+  console.log(date);
+  console.log(month);
+  console.log(currentDay);
+  console.log(currentMonth);
+  return true;
+ }
+ else{
+  return false;
+ }
+ }
 
   ngOnInit() {
 
@@ -56,6 +84,8 @@ len:any;
       }
         console.log(this.menu);
    })
+
+
   }
 
 
@@ -81,6 +111,7 @@ closeModal(){
   const refund:any= document.querySelector(".refund");
   refund.close();
 }
+
 
 
 }

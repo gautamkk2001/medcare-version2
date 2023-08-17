@@ -83,6 +83,12 @@ value={
 
   if(this.payment.valid){
 
+    const tday = new Date();
+   const twoDaysLater = new Date(tday);
+   twoDaysLater.setDate(tday.getDate() + 2);
+   alert(twoDaysLater);
+    const orderId = Math.floor(Math.random()*900000)+100000;
+
     this.cartValues.forEach((item:any)=>{
       var body={
         "price" :item.originalAmount,
@@ -90,8 +96,10 @@ value={
         "email"  :item.email,
         "date":this.orderDate.toISOString().split('T')[0],
         "orderDate":this.orderDate.getDate(),
-        "deliveryDate": this.ordered+2,
-        "delivery":this.orderDate.getFullYear()+'-'+this.orderDate.getUTCMonth()+'-'
+        "deliveryDate": twoDaysLater.getDate(),
+        "deliveryMonth": twoDaysLater.getUTCMonth(),
+        "orderId": orderId,
+        "delivered":twoDaysLater.getDate()+'-'+ twoDaysLater.getMonth()+'-'+this.orderDate.getFullYear()
         }
        this.pro.postOrderedProducts(body).subscribe((value)=>{
         });
@@ -102,7 +110,7 @@ value={
       this.pro.deleteCartItem(item.id);
     });
 
-    this.route.navigate(['/home']);
+    // this.route.navigate(['/home']);
     this.pro.orderConfirmed(orderDetails).subscribe((res)=>{
       if(res){
           this.route.navigate(['/home']);

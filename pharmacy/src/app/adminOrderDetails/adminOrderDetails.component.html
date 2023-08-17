@@ -1,78 +1,36 @@
+
+<app-sidebar></app-sidebar>
 <body>
   <div id="main">
-    <div class="head">
-      <div class="header">
-        <span  style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)"  class="nav" >&#9776; Medcare Dashboard</span>
-        <span style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)" class="nav2" >&#9776; Dashboard</span>
-      </div>
 
-      <div class="header">
-        <div class="profile">
-          <img [src] ="environment.imageAdmin" class="pro-img" />
-          <p>Krishna <span> ADMIN</span></p>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    </div>
+    <div class="container-products">
+  <div class="box-8">
+    <div class="content-box">
 
-    <div class="clearfix"></div>
-    <br />
+      <p>Order History </p>
+      <br />
+      <table>
 
-    <div class="info-container">
-      <div class="box">
-        <p>17<br /><span>Customers</span></p>
-        <i class="fa fa-users box-icon"></i>
-      </div>
-    </div>
-    <div class="info-container">
-      <div class="box">
-        <p>83<br /><span>Products</span></p>
-        <i class="fa fa-list box-icon"></i>
-      </div>
-    </div>
-    <div class="info-container">
-      <div class="box">
-        <p>3<br /><span>Orders</span></p>
-        <i class="fa fa-shopping-bag box-icon"></i>
-      </div>
-    </div>
-    <div class="info-container">
-      <div class="box">
-        <p>8<br /><span>Reviews</span></p>
-        <i class="fa fa-tasks box-icon"></i>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <br /><br />
-    <div class="customer-container">
-      <div class="box-8">
-        <div class="content-box">
+        <tr>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Ordered On</th>
+        </tr>
+        <tr *ngFor="let  item of menu; let i=index">
+          <td>{{item.description}}</td>
+          <td> <img   src="../../assets/images/{{item.description}}.jpg" style="width: 70px; height: 75px;"></td>
+          <td>{{item.originalAmount}}</td>
+          <td> {{date[i]}}</td>
+        </tr>
 
-          <details>
-          <summary>
-          <p>Order History </p></summary>
-          <br />
-          <table>
+      </table>
 
-            <tr>
-              <th>Name</th>
-              <th>Image</th>
-              <th>Price</th>
-              <th>Ordered On</th>
-            </tr>
-            <tr *ngFor="let  item of menu; let i=index">
-              <td>{{item.description}}</td>
-              <td> <img   src="../../assets/images/{{item.description}}.jpg" style="width: 70px; height: 75px;"></td>
-              <td>{{item.originalAmount}}</td>
-              <td> {{date[i]}}</td>
-            </tr>
+    </div>
+  </div>
+</div>
 
-          </table>
-        </details>
-        </div>
-      </div>
-    </div>
-    </div>
+  </div>
 </body>
 
 

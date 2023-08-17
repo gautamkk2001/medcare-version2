@@ -18,7 +18,15 @@ export class AdminOrderDetailsComponent implements OnInit {
  logInUser:any;
  len:any;
  loginstatus:any;
-  constructor(private data: ProductdataService, private route: ActivatedRoute, private router:Router) { }
+ products:any=' ';
+
+
+  constructor(private data: ProductdataService, private route: ActivatedRoute, private router:Router) {
+    this.data.getproducts().subscribe((data)=>{
+      this.products=data;
+
+    });
+   }
 
   logout(){
     this.loginstatus=false;
@@ -29,11 +37,13 @@ export class AdminOrderDetailsComponent implements OnInit {
 
   ngOnInit() {
     let EmailId = this.route.snapshot.paramMap.get('order');
+
     this.logInUser={
       "email":EmailId
     };
-    EmailId && this.data.searchingOrderHistory(EmailId).subscribe((res)=>{
+     this.data.searchingOrderHistory(EmailId).subscribe((res)=>{
       this.orderData = res;
+      console.log(this.orderData)
     })
 
 
@@ -50,6 +60,7 @@ export class AdminOrderDetailsComponent implements OnInit {
             n+=1;
         }
       }
+      console.log(this.menu);
    })
 
   }

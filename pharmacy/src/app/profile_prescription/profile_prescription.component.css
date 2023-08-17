@@ -217,3 +217,51 @@ td, th {
   color: #1f1919;
   border-bottom: 1px solid #81818140;
 }
+
+.newOrder{
+  width: 800px;
+  height: 150px;
+  background-color: #a7dae9;
+  margin: 15px 0px 10px 50px;
+
+}
+
+.orderDiv{
+  display: flex;
+  padding: 15px;
+}
+
+.orderImg img{
+  width:150px;
+  height: 120px;
+}
+
+.orderDetails{
+  margin-left: 60px;
+  width: 350px;
+}
+
+.orderDetails h2{
+  font-size: 25px;
+}
+
+.orderDetails h4{
+  font-size: 22px;
+}
+
+.orderDetails h5{
+ margin-top: 10px;
+ font-size: 20px;
+}
+
+.reButton button{
+  width:55px;
+  height: 30px;
+  margin-top: 25px;
+  margin-left: 40px;
+  background-color: #4da4da;
+  outline: none;
+  border-color: none;
+  padding: 5px;
+}
+

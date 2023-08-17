@@ -1,339 +1,59 @@
-body{
-	margin:0px;
-	padding: 0px;
-	background-color:#e0dada9f;
-	overflow: hidden;
-	font-family: system-ui;
-}
-.clearfix{
-	clear: both;
-}
-.logo{
-	margin: 0px;
-	margin-left: 28px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 30px;
-}
-.logo span{
-	color: #f7403b;
-}
-.sidenav {
-  height: 100vh;
-  width: 300px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #272c4a;
-  overflow: hidden;
-  transition: 0.5s;
-  padding-top: 30px;
-}
-.sidenav a {
-  padding: 35px 8px 35px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #d7cdcd;
-  display: block;
-  transition: 0.3s;
-}
-.sidenav a:hover {
-  color: #f1f1f1;
-  background-color:#1b203d;
-}
-.sidenav{
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-}
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
+
+
+  /* dash */
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    margin-left: 460px;
+  }
+  .heading{
+    margin: 30px 0px 30px 450px;
+
+  }
+
+  .heading span{
+    font-size: 30px;
+     cursor: pointer;
+     color: rgb(20, 19, 80)
+  }
+
+  .info-container{
+    width: 350px;
+    margin-bottom: 10px;
+  }
+  .box{
+    width: 85%;
+    height: 100px;
+    background-color: #272c4a;
+    margin-left: 10px;
+    padding:10px;
+  }
+  .box p{
+     font-size: 35px;
+      color: white;
+      font-weight: bold;
+      line-height: 30px;
+      padding-left: 10px;
+      margin-top: 20px;
+      display: inline-block;
+  }
+
+  .box-icon{
+    font-size: 40px!important;
+      float: right;
+      margin-top: 35px!important;
+      color: #ce2929;
+      padding-right: 10px;
+  }
+
+  /* dash */
+  .admin-img {
+   margin-left: 400px;
+  }
+.admin-img img{
+  width:550px;
+  height: 480px;
   margin-left: 120px;
 }
-.head{
-	padding:20px;
-}
-.header{
-	width: 50%;
-	float: left;
-}
-
-.profile{
-	display: inline-block;
-	float: right;
-	width: 160px;
-}
-.pro-img{
-	float: left;
-	width: 40px;
-	margin-top: 5px;
-}
-.profile p{
-	color: #1b203d;
-	font-weight: 500;
-	margin-left: 55px;
-	margin-top: 10px;
-	font-size: 13.5px;
-}
-.profile p span{
-	font-weight: 400;
-    font-size: 12px;
-    display: block;
-    color: #1b203d;
-}
-.info-container{
-	width: 25%;
-	float: left;
-}
-.box{
-	width: 85%;
-	height: 100px;
-	background-color: #272c4a;
-	margin-left: 10px;
-	padding:10px;
-}
-.box p{
-	 font-size: 35px;
-    color: white;
-    font-weight: bold;
-    line-height: 30px;
-    padding-left: 10px;
-    margin-top: 20px;
-    display: inline-block;
-}
-.box p span{
-	font-size: 20px;
-	font-weight: 400;
-	color: #f0ecec;
-}
-.box-icon{
-	font-size: 40px;
-    float: right;
-    margin-top: 35px;
-    color: #ce2929;
-    padding-right: 10px;
-}
-.customer-container{
-	width: 70%;
-	float: left;
-  margin-bottom: 10px;
-}
-.container-products{
-	width: 100%;
-}
-.brand-container{
-	width: 30%;
-	float: left;
-}
-.content-box{
-	padding: 20px;
-}
-.content-box p{
-	margin: 0px;
-  font-size: 20px;
-  color: #f7403b;
-}
-
-.content-box ul{
-  color:#fff;
-  list-style-type: none;
-  font-size: 22px;
-}
-
-.content-box ul li{
- padding: 7px;
- margin: 0%;
-}
-.content-box p span{
-	float: right;
-    background-color: #ddd;
-    padding: 3px 10px;
-    font-size: 15px;
-}
-.box-8, .box-4{
-	width: 95%;
-	background-color: #272c4a;
-	height: 100%;
-}
-.nav2{
-	display: none;
-}
-
-.box-8{
-	margin-left: 10px;
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-td, th {
-  text-align: left;
-  padding:15px;
-  color: #ddd;
-  border-bottom: 1px solid #81818140;
-}
-
-.edit-products, .add-products{
-  max-width: 1000px;
-  width:900px;
-  background: #f2f7fa;
-  padding: 25px;
-  border-radius: 8px;
-  margin-right: 0px;
-  justify-content: center;
-}
-
-.add-products{
-  max-width: 1000px;
-  width:900px;
-  background: #f2f7fa;
-  padding: 25px;
-  border-radius: 8px;
-  justify-content: center;
-}
-
-.edit-products .editing{
-  font-size: 30px;
-  font-weight: 500;
-  display:flex;
-}
-
-.add-products .editing{
-  font-size: 30px;
-  font-weight: 500;
-  display:flex;
-}
-
-.edit-products .editing .close{
-  margin-left: 92%;
-}
-
-.add-products .editing .close{
-  margin-left: 80%;
-}
-
-.edit-products .editing .close:hover{
-  background-color: rgb(67, 235, 174);
-  padding:0px 7px 0px 7px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.add-products .editing .close:hover{
-  background-color: rgb(67, 235, 174);
-  padding:0px 7px 0px 7px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.edit-products form .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
-}
-
-.add-products form .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
-}
-
-form .user-details .input-box{
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
-}
-.user-details .input-box input{
-   height: 45px;
-   width: 100%;
-   outline: none;
-   border-radius: 5px;
-  border: 1px solid #5b7396;
-   padding-left: 15px;
-   margin-bottom: 5px;
-   font-size: 18px;
-   border-bottom-width: 2px;
-   transition: all 0.3s ease-in-out;
-}
-
-.user-details .input-box .details{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-
-form .button{
-  height:45px;
-  width:100%;
-  margin: 10px 0;
-}
-
-form .button button{
-   height: 100%;
-   width: 100%;
-   outline: none;
-   font-weight: 500;
-   outline: none;
-   font-size: 20px;
-   letter-spacing: 1px;
-   border-radius: 8px;
-   background: #34d77b;
-   border-color: #34d77b;
-}
-
-.add-Dialog {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  background:none;
-  border: none;
-  display: grid;
-  place-items: center;
-}
-
-.editDialog {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  background:none;
-  border: none;
-  display: grid;
-  place-items: center;
-}
-
-
-
-.editDialog::backdrop{
-  background-color: black;
-  opacity: 0.9;
-}
-
-.add-Dialog::backdrop{
-  background-color: black;
-  opacity: 0.9;
-}
-
-.adminButton{
- border:none;
- outline:none;
- color:#6b9324;
- margin:2px;
- margin-left: 8px;
- padding:5px;
-}
-
-.adminButton a{
-  text-decoration: none;
-  border:none;
- outline:none;
- color:#6b9324;
- margin:2px;
- margin-left: 2px;
- padding:5px;
-  }

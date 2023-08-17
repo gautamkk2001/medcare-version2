@@ -130,7 +130,7 @@ body {
 }
 
 #prodetails .details-pro .wishlist{
-  background-color: yellow;
+  background-color: rgb(241, 26, 26);
   color: black;
   height: 45px;
   margin-left: 20px;
@@ -283,3 +283,35 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+.delivery{
+  margin-top: 10px;
+  width: 400px;
+  height:150px;
+  background-color: #bee3e3;
+  padding:8px;
+}
+
+.delivery h3{
+ font-size: 18px;
+margin-left: 5px;
+font-weight: 600;
+color:#c5410d;
+border-color: none;
+}
+
+.delivery p {
+ font-size: 32px;
+ margin-left: 5px;
+ font-weight: 600;
+ color:#2231d6;
+ border-color: none;
+ }
+
+ .delivery h4 {
+  font-size: 22px;
+  margin-left: 5px;
+  font-weight: 600;
+  color:#0ac81d;
+  border-color: none;
+  }

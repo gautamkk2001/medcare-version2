@@ -30,7 +30,13 @@
       <img src="../../assets/images/{{finaldescription.description}}.jpg" width="100%" id="small4" alt="" appGallery/>
     </div>
   </div>
+  <div class="delivery">
+  <h3>If Ordered within</h3>
+   <p>{{remainingHours}} Hours {{remainingMinutes}} Min {{seconds}}s</p>
+   <h4>Delivered Tomorrow</h4>
 </div>
+</div>
+
 
 <!-- .....................................................................................................product details.................................................................................................... -->
 <div class="details-pro">
@@ -42,23 +48,14 @@
   <h3>Unit</h3>
   <input type="number" value="1">
   <a routerLink="/cart"><button (click)="addedCart(finaldescription)">Add to cart</button></a>
-   <button class="wishlist" (click)="wishlist(finaldescription)">Wishlist</button>
+   <button class="wishlist" (click)="wishlist(finaldescription)"><i class='bx bxs-heart bx-border-circle' ></i></button>
    <h3 style="color:green">Stock Available  : {{finaldescription.stock}}</h3>
+   <h3 style="color:rgb(28, 125, 211); margin-top:5px">Best Before  : {{finaldescription.expiryDate}}</h3>
   <h4>Product details</h4>
   <span><p>{{finaldescription.details|json}}</p></span>
 </div>
 </div>
 
-<div class="product-review">
-<div class="star-rating">
-  <span class="star" *ngFor="let star of stars" [class.active]="star.isActive" (click)="rate(star.value)">&#9733;</span>
-</div>
-<div class="feedback">
-  <div>
-  <textarea [(ngModel)]="feedbackText" placeholder="About the Product..."></textarea></div>
-  <div> <button (click)="submitFeedback(finaldescription.description)">Post</button></div>
-</div>
-</div>
 
 <div class="review-section">
   <div>

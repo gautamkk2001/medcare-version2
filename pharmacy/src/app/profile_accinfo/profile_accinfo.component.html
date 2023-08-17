@@ -13,7 +13,7 @@
 <section>
   <div class="container">
     <div class="title"> Details </div>
-    <form id="form">
+    <form id="form" form>
       <div class="user-details">
         <div class="input-box">
           <span class="details">Full Name</span>
@@ -60,5 +60,95 @@
     </form>
   </div>
 
+   <div class="editProfile" >
+    <div class="title"> Edit</div>
+    <form id="form" [formGroup]="formRegister"   >
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" name="username" pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$" placeholder="FirstName" class="input"
+            formControlName="username" />
+        </div>
+
+        <div class="information-error" *ngIf="formRegister.controls['username'].dirty">
+          <p class="error" *ngIf="formRegister.controls['username'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; FirstName is not Empty</p>
+          <p class="error" *ngIf="formRegister.controls['username'].errors?.['pattern']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Enter the correct FirstName</p>
+        </div>
+
+        <div class="input-box">
+          <span class="details">Email</span>
+          <!-- ^(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\2)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ -->
+          <input type="text" name="emailid" pattern="^(?=[a-zA-Z0-9._%+-]{4,})(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\3)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          placeholder="Email-id"
+            class="input" formControlName="email" />
+        </div>
+        <div class="information-error" *ngIf="formRegister.controls['email'].dirty">
+          <p class="error" *ngIf="formRegister.controls['email'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Email-id is not Empty</p>
+          <p class="error" *ngIf="formRegister.controls['email'].errors?.['pattern']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Enter the correct email-id</p>
+        </div>
+
+        <div class="input-box">
+          <span class="details">Phone number</span>
+          <input type="tel" name="mobileno" pattern="^[ 6-9]{1}[0-9]{9}$" placeholder="Mobileno"
+            class="input" formControlName="mobile" />
+        </div>
+        <div class="information-error" *ngIf="formRegister.controls['mobile'].dirty">
+          <p class="error" *ngIf="formRegister.controls['mobile'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Phone number is not empty</p>
+          <p class="error" *ngIf="formRegister.controls['mobile'].errors?.['pattern']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; Enter the correct number</p>
+        </div>
+        <div class="input-box">
+          <span class="details">Dateof birth</span>
+          <input type="date" placeholder="Enter your DOB"  formControlName="date" >
+        </div>
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input type="password" placeholder="Enter your password" id="pass1" name="pass"
+            pattern="^[A-Z]{1}[a-z]+[@][1-9]{1,7}$" name="Password" class="input" required
+            formControlName="password1" />
+        </div>
+        <div class="information-error1" *ngIf="formRegister.controls['password1'].dirty">
+          <p class="error" *ngIf="formRegister.controls['password1'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp;Password is not Empty</p>
+          <p class="error" *ngIf="formRegister.controls['password1'].errors?.['pattern']"><i
+              title="password have min 7 digits, uppercase, lowercase, number and special character"
+              class="fas fa-exclamation-circle"></i>&numsp; Follow password Constraints</p>
+        </div>
+<!--
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input type="password" placeholder="Retype your password" id="pass2" pattern="^[A-Z]{1}[a-z]+[@][1-9]{3,7}$"
+            name="Password" class="input" required cpasswords formControlName="cpassword1">
+        </div>
+        <div class="information-error1" *ngIf="formRegister.controls['cpassword1'].dirty">
+          <p class="error" *ngIf="formRegister.controls['cpassword1'].errors?.['required']"><i
+              class="fas fa-exclamation-circle"></i>&numsp; conform Password is not Empty</p>
+          <p class="error" *ngIf="formRegister.controls['cpassword1'].errors?.['cpasswordvalid']"><i
+              title="password have min 7 digits, uppercase, lowercase, number and special character"
+              class="fas fa-exclamation-circle"></i>&numsp; Follow Conform password Constraints</p>
+        </div> -->
+
+        <div class="gender-box">
+          <span class="gender-type">Gender</span>
+          <div class="types">
+            <input type="radio" id="male" name="gender" value="Male"  formControlName="gender">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female"  formControlName="gender" >
+            <label for="female">Female</label><br>
+            <input type="radio" id="others" name="gender" value="others"  formControlName="gender" >
+            <label for="others">Others</label>
+          </div>
+        </div>
+        <div class="button">
+          <button (click)="submitEdit()">Update</button>
+        </div>
+      </div>
+    </form>
+   </div>
 
 </section>

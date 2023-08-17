@@ -5,6 +5,7 @@
   padding: 15px;
   background: #272c4a;
   position: sticky;
+
 }
 
 .logo {
@@ -22,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .mar{

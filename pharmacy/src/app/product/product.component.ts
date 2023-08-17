@@ -24,16 +24,22 @@ export class ProductComponent implements OnInit {
 // filtering
 filtercategory:any;
 
+// offer from db
+offerDb:any;
+calOfferDate:any;
+
+
   constructor(private data: ProductdataService, private http: HttpClient) {
     this.data.getfeatured().subscribe((data) =>(this.featureddata = data));
     this.data.getproducts().subscribe((data) =>{
       this.filtercategory=data
       this.prodata = data
     });
-   
+
     // this.data.getdrugsname().subscribe((data) => (this.drugdata = data));
     this.data.salePrice=true;
     this.loop=this.data.offer;
+
   }
 
   pro_title: any = '';
@@ -43,10 +49,15 @@ filtercategory:any;
   finalData:any=""
   logInUser:any=""
 
+
+
   ngOnInit() {
+    
+
     this.http.get<any>(environment.url+'/'+this.value).subscribe(data=>{
     this.finalData=data;
     });
+
     const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
     if (sessionUser) {
       this.logInUser = JSON.parse(sessionUser);
@@ -55,18 +66,47 @@ filtercategory:any;
     } else {
       alert('You are Loggedout. Login to continue');
     }
-
-    const offer_modal:any = document.querySelector(".offer-popup");
-    offer_modal.showModal();
-
     this.data.getproducts().subscribe((data) => {this.prodata = data
      this.filtercategory=data;
     });
 
+
+
+    // if(this.data.loginBoolean != true){
+    //   const offer_modal:any = document.querySelector(".offer-popup");
+    //   offer_modal.showModal();
+    //   }
+
+   this.data.getOfferDetails().subscribe((offer)=>(this.offerDb=offer));
+
+  this.calOfferDate = new Date(this.offerDb.start).getDate();
+   alert(this.calOfferDate);
+  // calculateDate2 = new Date("2023-08-18").getDate();
+
+
   }
 
 // flash offer popup
+
+
+
+calculateDate = new Date("2023-08-16").getDate();
+calculateMonth = new Date("2023-08-15").getMonth();
+
+calculateDate2 = new Date("2023-08-18").getDate();
+today = new Date().getDate();
+todayMonth = new Date().getMonth();
+
+
+// 14 15
+// date(){
+// if(this.calculateDate==this.today && this.calculateMonth==this.todayMonth){
+//  alert("offer work");
+// }
+// }
+
  countdown = new Date("Jul 12, 2023 17:28:00").getTime();
+
  demo:any;
  x= setInterval( () =>{
   var now = new Date().getTime();
@@ -88,6 +128,7 @@ filtercategory:any;
   const offer_modal:any = document.querySelector(".offer-popup");
   offer_modal.showModal();
  }
+
  closeOffer(){
   const offer_modal:any = document.querySelector(".offer-popup");
   offer_modal.close();

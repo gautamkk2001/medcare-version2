@@ -18,6 +18,10 @@ offer:boolean;
 
 reviews:any;
 
+remainingHours:any;
+remainingMinutes:any;
+seconds:any;
+
 constructor(private data:ProductdataService, private route:ActivatedRoute) {
   this.data.getproducts().subscribe(data=> {this.prodescription =data
     this.route.params.subscribe(paramdata=>
@@ -35,7 +39,26 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
     });
     this.offer=this.data.offer;
 
+    const now = new Date();
+   const endOfDay = new Date();
+   endOfDay.setHours(23, 59, 59, 999);
+   const timeRemaining = endOfDay.getTime() - now.getTime();
+   this.remainingHours = Math.floor(timeRemaining / (1000 * 60 * 60));
+   this.remainingMinutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+   console.log(`Remaining hours: ${this.remainingHours}, Remaining minutes: ${this.remainingMinutes}`);
+
 }
+
+x= setInterval( () =>{
+  const now = new Date();
+   const endOfDay = new Date();
+   endOfDay.setHours(23, 59, 59, 999);
+   const timeRemaining = endOfDay.getTime() - now.getTime();
+   this.remainingHours = Math.floor(timeRemaining / (1000 * 60 * 60));
+   this.remainingMinutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  this.seconds = Math.floor((timeRemaining % (1000*60)) / 1000);
+   console.log(`Remaining hours: ${this.remainingHours}, Remaining minutes: ${this.remainingMinutes}`);
+},1000)
 
 
  logInUser:any="";
@@ -52,6 +75,9 @@ constructor(private data:ProductdataService, private route:ActivatedRoute) {
   }
 
 cartdata:any=this.finaldescription;
+
+// ---->
+
 
   //----->  Adding to Cart
   addedCart(value:any){
@@ -87,47 +113,4 @@ cartdata:any=this.finaldescription;
     alert("added");
   }
 
-//---------->  review
-
-stars: Star[] = [
-  { value: 1, isActive: false },
-  { value: 2, isActive: false },
-  { value: 3, isActive: false },
-  { value: 4, isActive: false },
-  { value: 5, isActive: false }
-];
-
-feedbackText: string = '';
-
-rate(value: number): void {
-  this.stars.forEach(star => {
-    star.isActive = star.value <= value;
-  });
-}
-
-submitFeedback(product:any): void {
-
-  var body={
-    "Rating" : this.getRating(),
-    "Feedback": this.feedbackText,
-    "description": product,
-    "username":this.logInUser.username,
-    "email": this.logInUser.email
-  }
-  this.data.postProductsReview(body).subscribe((value)=>{
-    alert("ReviewAdded");
-  })
-  console.log('Rating:', this.getRating());
-  console.log('Feedback:', this.feedbackText);
-
-}
-
-getRating(): number {
-  return this.stars.filter(star => star.isActive).length;
-}
-
-}
-interface Star {
-  value: number;
-  isActive: boolean;
-}
+ }

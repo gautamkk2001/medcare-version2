@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { LoginService } from '../login.service';
 import { environment } from 'src/environments/environment';
 import { NGXLogger } from 'ngx-logger';
+import { Observable, map } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -21,6 +22,9 @@ export class NavbarComponent implements OnInit {
   usersdata:any="";
   adminData:any="";
 
+  // search:any ="Himalaya Anti Wrinkle";
+  // redir:any="";
+
   constructor(  private fb:FormBuilder,private user:ProductdataService,private route:Router, private http:HttpClient, private log:LoginService, private logger: NGXLogger)
    {
     this.user.registereduser().subscribe( (user) =>{
@@ -30,7 +34,23 @@ export class NavbarComponent implements OnInit {
      this.adminData=user;
     })
     this.loginstatus=Boolean(sessionStorage.getItem('userName'))
+
+    // alert(this.search);
+    // this.user.searchingBar(this.search).subscribe(value=>{
+    // this.redir=value;
+    // });
+
    }
+
+  //  searchHere(){
+  //   alert(this.search);
+  //   this.user.searchingBar(this.search).subscribe(value=>{
+  //   this.redir=value;
+
+  //   });
+  //   this.route.navigate([`/${this.redir}`]);
+
+  //  }
 
    logout(){
     this.loginstatus=false;

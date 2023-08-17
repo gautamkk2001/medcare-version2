@@ -1,63 +1,49 @@
+<app-sidebar></app-sidebar>
 <body>
 
-  <div id="main">
-    <div class="head">
-      <div class="header">
-        <span  style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)" class="nav">&#9776; Medcare Dashboard</span>
-        <span style="font-size: 30px; cursor: pointer; color: rgb(20, 19, 80)" class="nav2" >&#9776; Dashboard</span>
+  <div class="heading">
+    <span>&#9776; Dashboard</span>
+  </div>
+
+ <div id="main">
+
+   <div class="limited-offer">
+     <div class="offer-img">
+      <img src="../../assets/images/limited offer banner (1).PNG">
+     </div>
+     <div class="offer-set">
+      <div class="offer-header">
+        <h2>Announce New Offer</h2>
       </div>
 
-      <div class="header">
-        <div class="profile">
-          <img [src] ="environment.imageAdmin" class="pro-img" />
-          <p>Krishna <span> ADMIN</span></p>
-          <button (click)="logout()">Logout</button>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    </div>
+        <div class="main">
+          <form name="form" >
+            <span>
+              <h4>Offer name</h4>
+              <input id="user_email" type="text" name="usernamillogin" formControlName="userId"  />
+            </span><br>
 
-    <div class="clearfix"></div>
-    <br />
-    <div class="info-container">
-      <div class="box">
-        <p>{{userLen}}<br /><span>Customers</span></p>
-        <i class="fa fa-users box-icon"></i>
-      </div>
-    </div>
-    <div class="info-container">
-      <div class="box">
-        <p>{{productLen}}<br /><span>Products</span></p>
-        <i class="fa fa-list box-icon"></i>
-      </div>
-    </div>
-    <div class="info-container">
-      <div class="box">
-        <p>3<br /><span>Orders</span></p>
-        <i class="fa fa-shopping-bag box-icon"></i>
-      </div>
-    </div>
-    <div class="info-container">
-      <div class="box">
-        <p>8<br /><span>Reviews</span></p>
-        <i class="fa fa-tasks box-icon"></i>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <br /><br />
+            <span>
+              <h4>Starts From</h4>
+              <input id="user_email" type="date" name="usernamillogin" formControlName="userId"  />
+            </span><br>
 
-    <div class="customer-container">
-      <div class="box-8">
-        <div class="content-box">
-          <p>Reviews from Customers</p>
-          <ul *ngFor="let comments of reviews">
-            <li>
-              <h5>{{comments.firstname1}}</h5>
-              <p>{{comments.message1}}</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+            <span>
+              <h4>Ends In</h4>
+              <input id="password" type="date" name="userloginpass"/>
+            </span><br>
 
+            <span>
+              <h4>Discount %</h4>
+              <input id="discount" type="number"  name="userloginpass"/>
+            </span><br>
+
+            <button type="submit">Set Offer</button>
+
+          </form>
+
+     </div>
+   </div>
+
+</div>
     <div class="clearfix"></div>

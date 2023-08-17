@@ -11,42 +11,21 @@
 
 <section>
 
-
-
-<details>
-<summary><h1>Upcoming Orders</h1></summary>
-
- <div class="ordersection" *ngFor="let i of specificOrder">
-  <div class="grid-columns" *ngIf="i.orderDate <= currentDate">
-  <div class="orders"  *ngFor="let item of specificOrder">
-    <div  *ngIf="item.deliveryDate>=currentDate && item.orderDate <= currentDate">
-     <h2>Arriving on: {{item.deliveryDate}}th</h2><span>Total: Rs-{{item.price}}</span>
-     <div class="orderImgs" >
-     <img   src="../../assets/images/{{item.product}}.jpg">
-    </div>
-    <button (click)="details()">View Details</button>
-    <button (click)="cancel()">Cancel Order</button>
+<div class="newOrder" *ngFor="let item of specificOrder |reverse">
+  <div class="orderDiv" >
+     <div class="orderImg">
+      <img src="../../assets/images/{{item.product}}.jpg">
+     </div>
+     <div class="orderDetails">
+      <h2>Delivery : {{item.delivered}}</h2>
+      <h4>{{item.product}}</h4>
+      <h5>Total : Rs-{{item.price}}</h5>
+      <h5>OrderId: {{item.orderId}}</h5>
+     </div>
+     <!-- <div class="reButton">
+      <button [disabled]="test(item.checkDate)"> {{item.checkDate}} Return</button></div> -->
   </div>
-  </div>
- </div>
 </div>
-</details>
-
-<details>
-<summary><h1>Previous Orders</h1></summary>
-
-<div class="ordersection"  >
-  <div class="grid-columns"  >
-  <div class="orders" *ngFor="let  item of menu; let i=index">
-     <h2 style="color:rgb(74, 124, 231)">{{item.description}}</h2><span>Total: Rs-{{item.originalAmount}}</span>
-     <div class="orderImgs" >
-     <img   src="../../assets/images/{{item.description}}.jpg">
-    </div>
-    <h2>Ordered on: {{date[i]}}</h2>
-  </div>
- </div>
-</div>
-</details>
 
  <!-- view details dialog box -->
 
@@ -74,5 +53,42 @@
   </div>
  </dialog>
 
-
 </section>
+
+
+<!-- unused -->
+<!--
+<details>
+  <summary><h1>Upcoming Orders</h1></summary>
+
+   <div class="ordersection" *ngFor="let i of specificOrder">
+    <div class="grid-columns" *ngIf="i.orderDate <= currentDate">
+    <div class="orders"  *ngFor="let item of specificOrder">
+      <div  *ngIf="item.deliveryDate>=currentDate && item.orderDate <= currentDate">
+       <h2>Arriving on: {{item.deliveryDate}}th</h2><span>Total: Rs-{{item.price}}</span>
+       <div class="orderImgs" >
+       <img   src="../../assets/images/{{item.product}}.jpg">
+      </div>
+      <button (click)="details()">View Details</button>
+      <button (click)="cancel()">Cancel Order</button>
+    </div>
+    </div>
+   </div>
+  </div>
+  </details> -->
+
+  <!-- <details>
+  <summary><h1>Previous Orders</h1></summary>
+
+  <div class="ordersection"  >
+    <div class="grid-columns"  >
+    <div class="orders" *ngFor="let  item of menu; let i=index">
+       <h2 style="color:rgb(74, 124, 231)">{{item.description}}</h2><span>Total: Rs-{{item.originalAmount}}</span>
+       <div class="orderImgs" >
+       <img   src="../../assets/images/{{item.description}}.jpg">
+      </div>
+      <h2>Ordered on: {{date[i]}}</h2>
+    </div>
+   </div>
+  </div>
+  </details> -->

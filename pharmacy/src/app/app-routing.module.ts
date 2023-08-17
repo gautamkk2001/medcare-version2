@@ -11,7 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { Profile_accinfoComponent } from './profile_accinfo/profile_accinfo.component';
 import { Profile_mywishlistComponent } from './profile_mywishlist/profile_mywishlist.component';
 import { Profile_prescriptionComponent } from './profile_prescription/profile_prescription.component';
-import { Profile_addressComponent } from './profile_address/profile_address.component';
+import { Profile_addressComponent } from './profileNotification/profile_address.component';
 import { AdminPageComponent } from './adminPage/adminPage.component';
 import { GuardloginGuard } from './guardlogin.guard';
 import { PaymentComponent } from './payment/payment.component';
@@ -22,12 +22,22 @@ import { LoginMainComponent } from './login-main/login-main.component';
 
 import { AdminOrderDetailsComponent } from './adminOrderDetails/adminOrderDetails.component';
 import { AdminQueriesComponent } from './admin-queries/admin-queries.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { Notification } from 'rxjs';
+import { AdminNotificationsComponent } from './adminNotifications/adminNotifications.component';
+import { AdminProfileComponent } from './adminProfile/adminProfile.component';
+import { AdminCustomerComponent } from './adminCustomer/adminCustomer.component';
+import { AdminProductComponent } from './adminProduct/adminProduct.component';
+import { AdminOfferComponent } from './adminOffer/adminOffer.component';
+import { CheckoutPageComponent } from './checkoutPage/checkoutPage.component';
+import { ReversePipe } from './reverse.pipe';
+import { DeactiveGuard } from './deactive.guard';
 
 const routes: Routes = [
   {
    path:'', redirectTo:'/home',pathMatch:'full'
   },
-  
+
   {
     path:"product",
     component:ProductComponent
@@ -35,7 +45,8 @@ const routes: Routes = [
 
   {
     path:"registration",
-    component:RegistrationComponent
+    component:RegistrationComponent,
+    canDeactivate:[DeactiveGuard]
   },
   {
     path:"forgot",
@@ -93,18 +104,6 @@ const routes: Routes = [
   },
 
   {
-    path:"admin",
-    component:AdminPageComponent
-  },
-  {
-    path:'admin/:order',
-    component:AdminOrderDetailsComponent
-  },
-  {
-    path:'adminQueries',
-    component:AdminQueriesComponent
-  },
-  {
    path:"payment",
    component:PaymentComponent
   },
@@ -119,15 +118,57 @@ const routes: Routes = [
   {
     path:'main',
     component:LoginMainComponent
-  }
+  },
+  {
+    path:'side',
+    component:SidebarComponent
+  },
+  {
+    path: 'notification',
+    component: AdminNotificationsComponent
+  },
+  {
+    path: 'adminprofile',
+    component: AdminProfileComponent
+  },
+  {
+    path: 'admincustomer',
+    component: AdminCustomerComponent
+  },
+  {
+    path: 'adminproducts',
+    component: AdminProductComponent
+  },
+  {
+    path: 'adminoffer',
+    component: AdminOfferComponent
+  },
 
+  {
+    path:"admin",
+    component:AdminPageComponent
+  },
+  {
+    path:'admin/:order',
+    component:AdminOrderDetailsComponent
+  },
+  {
+    path:'adminQueries',
+    component:AdminQueriesComponent
+  },
+
+  {
+    path:'checkout',
+    component:CheckoutPageComponent
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+   declarations: [
 
-
-
+  ],
 })
+
 export class AppRoutingModule { }

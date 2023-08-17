@@ -165,4 +165,32 @@ form .button button{
   outline: none;
 }
 
+/* editProfile */
+.editProfile{
+  max-width: 500px;
+  width:900px;
+  background: #c82d2d;
+  padding: 25px;
+  border-radius: 8px;
+  margin-left: 250px;
+}
+form .user-details{
+  display: inline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
 
+form .user-details .input-box{
+ margin-left: 28px;
+}
+
+.editProfile form .button button{
+   margin-left:200px;
+}
+
+.editProfile .title{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}

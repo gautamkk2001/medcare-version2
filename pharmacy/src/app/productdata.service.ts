@@ -26,7 +26,7 @@ export class ProductdataService {
   salePrice:boolean=false;
   logInUser:any=""
   offer:boolean=true;
-
+  loginBoolean!:boolean;
  constructor(private http:HttpClient) {
   const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
   if (sessionUser) {
@@ -93,7 +93,7 @@ deleteCartValues(id:any){
 
 // ---> used to delete the user cart products - Payment
 deleteCartItem(id:number){
-  return this.http.delete(environment.getCartProducts+id).subscribe((result)=>{
+  return this.http.delete(environment.getCartProducts+"/"+id).subscribe((result)=>{
 
   })
 }
@@ -190,12 +190,48 @@ searchingWishlist(info: any): Observable<any> {
   );
 }
 
+
+searchingStock(): Observable<any> {
+  return this.http.get<any>(environment.getProducts).pipe(
+    map((data) => {
+      return data.filter(
+        (item: any) =>
+          item.stock <=20
+      );
+    })
+  );
+}
+
+refillStockProduct(name:any){
+
+}
+
+postOfferDetails(details:any){
+  return this.http.post("http://localhost:3000/offer", details)
+}
+
+getOfferDetails(){
+  return this.http.get("http://localhost:3000/offer");
+}
+
 searchingProductReview(info:any): Observable<any> {
   return this.http.get<any>(environment.getReviewProducts).pipe(
     map((data) => {
       return data.filter(
         (item: any) =>
           item.description === info.description
+      );
+    })
+  );
+}
+
+// getting User Details
+searchingAdminUser(info:any): Observable<any> {
+  return this.http.get<any>(environment.getCartProducts).pipe(
+    map((data) => {
+      return data.filter(
+        (item: any) =>
+          item.username === info.username && item.email === info.email
       );
     })
   );

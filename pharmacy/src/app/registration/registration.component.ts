@@ -7,6 +7,7 @@ import { ProductdataService } from '../productdata.service';
 import { environment } from 'src/environments/environment';
 import { NGXLogger } from 'ngx-logger';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DeactivateComponent } from '../deactive.guard';
 
 
 @Component({
@@ -14,11 +15,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
-export class RegistrationComponent implements OnInit {
+export class RegistrationComponent implements OnInit, DeactivateComponent {
 
   environment = environment;
   constructor(
-    private fb:FormBuilder,private user:UserService,private route:Router,private data:ProductdataService, private logger : NGXLogger, private http : HttpClient
+    private logger : NGXLogger, private fb:FormBuilder,private user:UserService,private route:Router,private data:ProductdataService,  private http : HttpClient
   ) { }
   formRegister=this.fb.group({
     fullname1:[,Validators.required],
@@ -39,8 +40,20 @@ export class RegistrationComponent implements OnInit {
     if(!this.formRegister.valid){
        alert("Enter all fields")
      }
+
+
     else if((this.formRegister.valid)){
-      this.user.addUserInformation(this.formRegister.value).subscribe(data=>{
+
+      this.http.get<any>(environment.getUser).subscribe(data=>{
+        const users=data.find((b:any)=>{
+            return b.email===this.formRegister.value.email1
+          });
+
+        if(users){
+         alert("Already Registered");
+        }
+        else{
+         this.user.addUserInformation(this.formRegister.value).subscribe(data=>{
         alert("Form submitted");
 
         // ----> Store the registration details in log data
@@ -51,14 +64,24 @@ export class RegistrationComponent implements OnInit {
         }
         this.logger.error(logData.message);
         this.http.post(environment.logUrl, logData).subscribe({
-
         });
-      })
+      });
       this.route.navigate(['/main']);
      }
+    });
+   }
 }
+
   ngOnInit() {
   }
-
+  canExit(){
+    if(this.formRegister.invalid)
+      {
+      return confirm("Your content was not saved");
+    }
+    else{
+      return true;
+    }
+  }
 
 }
