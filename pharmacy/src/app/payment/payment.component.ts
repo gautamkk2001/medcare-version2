@@ -26,6 +26,7 @@ export class PaymentComponent implements OnInit {
 
   logInUser:any="";
   cartValues:any;
+  products:any=' ';
 
   constructor(private cartService: UserService, private http: HttpClient, private formBuilder: FormBuilder, private pro:ProductdataService, private route:Router) {
 
@@ -46,6 +47,9 @@ export class PaymentComponent implements OnInit {
    this.cartValues=value;
    })
 
+   this.pro.getproducts().subscribe((value)=>{
+    this.products=value;
+   })
   }
 
   ngOnInit() {

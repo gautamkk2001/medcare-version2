@@ -17,6 +17,14 @@ export class AdminCustomerComponent implements OnInit {
     });
   }
 
+  truncateUser(name:any){
+
+     this.data.deleteUsers(name.id).subscribe((value)=>{
+       alert(name.username + " is Deleted");
+     })
+
+ }
+
   ngOnInit() {
   }
 

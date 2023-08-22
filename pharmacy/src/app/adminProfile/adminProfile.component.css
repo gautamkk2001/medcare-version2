@@ -54,7 +54,7 @@
 
 button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 20px;
   margin-right: 10px;
   font-size: 14px;
   font-weight: bold;
@@ -87,10 +87,10 @@ button {
 
 /* editProfile */
 .editProfile{
-  max-width: 700px;
-  width:700px;
+  max-width: 600px;
+  width:600px;
   background: #fff;
-  padding: 25px;
+  padding: 25px 25px 10px 25px;
   border-radius: 8px;
   margin-left: 450px;
 }
@@ -157,8 +157,9 @@ form .button button{
    font-size: 20px;
    letter-spacing: 1px;
    border-radius: 8px;
-   background: #34d77b;
-   border-color: #34d77b;
+   color:#fff;
+   background: #272c4a;
+
 }
 
 
@@ -185,3 +186,40 @@ form .button button{
 
 input.ng-invalid{border:3px solid red;}
 input.ng-valid{border:3px solid green; }
+
+/* edit profile */
+.editProfile{
+  background: #16834f;
+  margin: 40px 0 0 550px;
+  width: 500px
+
+}
+.editProfile .heading{
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.heading {
+  display:flex;
+  }
+
+  .heading p{
+    margin-left: 420px;
+    cursor: pointer;
+  }
+
+  form .user-details{
+    display: inline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+
+  form .user-details .input-box{
+  margin-left: 50px;
+   width:350px;
+  }
+  form .user-details .input-box input{
+    width:350px;
+  }
+  /*  */

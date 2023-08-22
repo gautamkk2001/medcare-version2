@@ -69,6 +69,7 @@ len:any;
         this.specificOrder=data;
     });
 
+
   //  --------> Function for Previous orders
    this.data.searchingOrderHistory(this.logInUser).subscribe((dt)=>{
     this.history=dt;
@@ -88,13 +89,33 @@ len:any;
 
   }
 
+showOrder:boolean=true;
+showInvoice:boolean=false;
+printing:boolean=false;
+
+  proId:any;
+  orderIdTotal:any=0;
+  clicking(item:any) {
+    this.showOrder=false;
+    this.showInvoice=true;
+    this.data.searchingOrderId(item).subscribe((data) => {
+      this.proId=data;
+      this.proId.forEach((item:any)=>{
+          this.orderIdTotal = this.orderIdTotal + parseInt(item.price);
+      })
+  });
+    // this.generate(item);
+  }
 
 
-details(){
-  const detailBox:any = document.querySelector(".viewDetails");
-  detailBox.showModal();
-}
-
+  printForm(){
+    window.print();
+  }
+  back(){
+    this.printing=false;
+    this.showInvoice=false;
+    this.showOrder=true;
+  }
 
 cancel()
 {

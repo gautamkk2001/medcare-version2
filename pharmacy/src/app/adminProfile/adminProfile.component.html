@@ -35,19 +35,22 @@
 
      <!-- dialog box for Edit Profile -->
      <div class="editProfile" *ngIf="(edit==true)">
+      <div class="heading">
        <h3>Edit</h3>
-      <form id="form" [formGroup]="formEditProfile"   (ngSubmit)="submitForm()">
+       <p (click)="toggleProfile()">x</p>
+      </div>
+      <form id="form" [formGroup]="formEditProfile">
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
             <input type="text" name="username" pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$" placeholder="FirstName" class="input"
-              formControlName="fullname1" />
+              formControlName="username" />
           </div>
 
-          <div class="information-error" *ngIf="formEditProfile.controls['fullname1'].dirty">
-            <p class="error" *ngIf="formEditProfile.controls['fullname1'].errors?.['required']"><i
+          <div class="information-error" *ngIf="formEditProfile.controls['username'].dirty">
+            <p class="error" *ngIf="formEditProfile.controls['username'].errors?.['required']"><i
                 class="fas fa-exclamation-circle"></i>&numsp; FirstName is not Empty</p>
-            <p class="error" *ngIf="formEditProfile.controls['fullname1'].errors?.['pattern']"><i
+            <p class="error" *ngIf="formEditProfile.controls['username'].errors?.['pattern']"><i
                 class="fas fa-exclamation-circle"></i>&numsp; Enter the correct FirstName</p>
           </div>
 
@@ -56,24 +59,24 @@
             <!-- ^(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\2)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ -->
             <input type="text" name="emailid" pattern="^(?=[a-zA-Z0-9._%+-]{4,})(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\3)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             placeholder="Email-id"
-              class="input" formControlName="email1" />
+              class="input" formControlName="email" />
           </div>
-          <div class="information-error" *ngIf="formEditProfile.controls['email1'].dirty">
-            <p class="error" *ngIf="formEditProfile.controls['email1'].errors?.['required']"><i
+          <div class="information-error" *ngIf="formEditProfile.controls['email'].dirty">
+            <p class="error" *ngIf="formEditProfile.controls['email'].errors?.['required']"><i
                 class="fas fa-exclamation-circle"></i>&numsp; Email-id is not Empty</p>
-            <p class="error" *ngIf="formEditProfile.controls['email1'].errors?.['pattern']"><i
+            <p class="error" *ngIf="formEditProfile.controls['email'].errors?.['pattern']"><i
                 class="fas fa-exclamation-circle"></i>&numsp; Enter the correct email-id</p>
           </div>
 
           <div class="input-box">
             <span class="details">Phone number</span>
             <input type="tel" name="mobileno" pattern="^[ 6-9]{1}[0-9]{9}$" placeholder="Mobileno"
-              class="input" formControlName="mobile1" />
+              class="input" formControlName="mobile" />
           </div>
-          <div class="information-error" *ngIf="formEditProfile.controls['mobile1'].dirty">
-            <p class="error" *ngIf="formEditProfile.controls['mobile1'].errors?.['required']"><i
+          <div class="information-error" *ngIf="formEditProfile.controls['mobile'].dirty">
+            <p class="error" *ngIf="formEditProfile.controls['mobile'].errors?.['required']"><i
                 class="fas fa-exclamation-circle"></i>&numsp; Phone number is not empty</p>
-            <p class="error" *ngIf="formEditProfile.controls['mobile1'].errors?.['pattern']"><i
+            <p class="error" *ngIf="formEditProfile.controls['mobile'].errors?.['pattern']"><i
                 class="fas fa-exclamation-circle"></i>&numsp; Enter the correct number</p>
           </div>
           <div class="input-box">
@@ -94,7 +97,7 @@
                 class="fas fa-exclamation-circle"></i>&numsp; Follow password Constraints</p>
           </div>
 
-          <div class="input-box">
+          <!-- <div class="input-box">
             <span class="details">Confirm Password</span>
             <input type="password" placeholder="Retype your password" id="pass2" pattern="^[A-Z][a-z]{5,15}$"
               name="Password" class="input" required cpasswords formControlName="cpassword1">
@@ -105,7 +108,7 @@
             <p class="error" *ngIf="formEditProfile.controls['cpassword1'].errors?.['cpasswordvalid']"><i
                 title="password have min 7 digits, uppercase, lowercase, number and special character"
                 class="fas fa-exclamation-circle"></i>&numsp; Follow Conform password Constraints</p>
-          </div>
+          </div> -->
 
           <div class="gender-box">
             <span class="gender-type">Gender</span>
@@ -119,7 +122,7 @@
             </div>
           </div>
           <div class="button">
-            <button>Update</button>
+            <button (click)="submitForm()">Update</button>
           </div>
         </div>
       </form>

@@ -60,7 +60,7 @@
         </div>
         <div class="input-box">
           <span class="details">Password</span>
-          <input type="password" placeholder="Enter your password" id="pass1" name="pass"
+          <input type="{{ show ? 'text' : 'password' }}" placeholder="Enter your password" id="pass1" name="pass"
             pattern="^[A-Z]{1}[a-z]+[@][1-9]{1,7}$" name="Password" class="input" required
             formControlName="password1" />
         </div>
@@ -69,12 +69,12 @@
               class="fas fa-exclamation-circle"></i>&numsp;Password is not Empty</p>
           <p class="error" *ngIf="formRegister.controls['password1'].errors?.['pattern']"><i
               title="password have min 7 digits, uppercase, lowercase, number and special character"
-              class="fas fa-exclamation-circle"></i>&numsp; Follow password Constraints</p>
+              class="fas fa-exclamation-circle"></i>&numsp; Min 7 length -One digits, uppercase, lowercase, number and special character</p>
         </div>
 
         <div class="input-box">
           <span class="details">Confirm Password</span>
-          <input type="password" placeholder="Retype your password" id="pass2" pattern="^[A-Z]{1}[a-z]+[@][1-9]{3,7}$"
+          <input type="{{ show ? 'text' : 'password' }}" placeholder="Retype your password" id="pass2" pattern="^[A-Z]{1}[a-z]+[@][1-9]{3,7}$"
             name="Password" class="input" required cpasswords formControlName="cpassword1">
         </div>
         <div class="information-error1" *ngIf="formRegister.controls['cpassword1'].dirty">
@@ -84,7 +84,11 @@
               title="password have min 7 digits, uppercase, lowercase, number and special character"
               class="fas fa-exclamation-circle"></i>&numsp; Follow Conform password Constraints</p>
         </div>
-
+        <!-- showpassword -->
+        <div class="showPassword">
+          <input type="checkbox" (change)="visiblePassword()" >
+          <label style="color: #233863;"> Show Password</label>
+        </div>
         <div class="gender-box">
           <span class="gender-type">Gender</span>
           <div class="types">

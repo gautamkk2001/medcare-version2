@@ -375,6 +375,96 @@
       "level": "INFO",
       "timestamp": "8/17/2023, 11:41:14 AM",
       "id": 60
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/17/2023, 12:40:53 PM",
+      "id": 61
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/17/2023, 2:39:17 PM",
+      "id": 62
+    },
+    {
+      "message": "User Logged In : adminkrishna@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/17/2023, 2:41:01 PM",
+      "id": 63
+    },
+    {
+      "message": "User Logout : null",
+      "level": "INFO",
+      "timestamp": "8/18/2023, 2:34:44 PM",
+      "id": 64
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/18/2023, 2:53:41 PM",
+      "id": 65
+    },
+    {
+      "message": "User Logout : null",
+      "level": "INFO",
+      "timestamp": "8/18/2023, 2:55:05 PM",
+      "id": 66
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/18/2023, 2:55:25 PM",
+      "id": 67
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/20/2023, 12:37:56 PM",
+      "id": 68
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/20/2023, 8:03:16 PM",
+      "id": 69
+    },
+    {
+      "message": "User Logout : null",
+      "level": "INFO",
+      "timestamp": "8/20/2023, 11:03:53 PM",
+      "id": 70
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/20/2023, 11:04:07 PM",
+      "id": 71
+    },
+    {
+      "message": "User Logout : null",
+      "level": "INFO",
+      "timestamp": "8/20/2023, 11:07:42 PM",
+      "id": 72
+    },
+    {
+      "message": "User Logged In : skgdhanushkumar17@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/20/2023, 11:07:53 PM",
+      "id": 73
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/21/2023, 9:50:21 AM",
+      "id": 74
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/21/2023, 12:49:02 PM",
+      "id": 75
     }
   ],
   "imgCollection": [
@@ -623,7 +713,8 @@
       "date": "1996-04-10",
       "password1": "Krishna@admin1",
       "cpassword1": "Krishna@admin1",
-      "gender": "Male"
+      "gender": "Male",
+      "id": 1
     }
   ],
   "useraddress": [
@@ -699,7 +790,7 @@
     {
       "id": 1,
       "cartQuantity": 1,
-      "stock": 60,
+      "stock": 59,
       "title": "Dettol",
       "description": "Dettol antiseptic Liquid",
       "Quantity": "500(ml)  (Approx)",
@@ -1280,7 +1371,7 @@
       "description": "Sugar Free Green",
       "Quantity": "400g",
       "expiryDate": "Oct 2026",
-      "stock": 60,
+      "stock": 59,
       "cartQuantity": 1,
       "rating": "4.5",
       "category": "diabetes",
@@ -1895,13 +1986,13 @@
       "description": "Goodcare Til Oil",
       "Quantity": "100 ml",
       "expiryDate": "Oct 2026",
-      "stock": 10,
+      "stock": 12,
       "cartQuantity": 1,
       "rating": "3.2",
       "category": "Skin&care",
       "reviewCount": "(229)",
       "originalAmount": "101",
-      "offerPercentage": "19% OFF",
+      "offerPercentage": "22% OFF",
       "details": "Pack Of - 1 Quantity - 100 ml Container Type – Bottle Product Type - Sesame Oil Flavour - Original Ideal For - Adults Food Preference - Vegetarian Mfg. Lic. No. - AL-104M Product Information - Sesame or Til is one of the most used Ayurvedic medications in India. Sesame oil is easy to administer for all ages. It is even used in cooking, dressing & garnishing. It is very good for improving dental hygiene. Key Benefits - Numerous nutrients are present in the oil, such as Vitamin B, Vitamin E, antioxidants & Calcium. Ideal oil for cooking as it does not contain saturated fats. It can be applied externally on the skin for a variety of skin ailments. Ingredients - Sesamum Indicum. How to use - As directed by a physician. Storage Instruction - Store in a cool, dry & hygienic place."
     }
   ],
@@ -1973,60 +2064,7 @@
       "id": 4
     }
   ],
-  "cart-data": [
-    {
-      "title": "bandage",
-      "description": "Flamingo Bandage",
-      "Quantity": "1 piece (Approx)",
-      "rating": "4.3",
-      "originalAmount": "159",
-      "cartQuantity": 1,
-      "subtotal": 159,
-      "email": "gautamkrishnasamy2001@gmail.com",
-      "username": "Gautam",
-      "status": "false",
-      "id": 1
-    },
-    {
-      "title": "Tablets",
-      "description": "Amrutanjan pain balm",
-      "Quantity": "500g - 700g (Approx)",
-      "rating": "4.3",
-      "originalAmount": "169",
-      "cartQuantity": 1,
-      "subtotal": "169",
-      "email": "gautamkrishnasamy2001@gmail.com",
-      "username": "Gautam",
-      "status": "false",
-      "id": 2
-    },
-    {
-      "title": "Tablets",
-      "description": "Crocin 650 mg",
-      "Quantity": "15 Tablets (Approx)",
-      "rating": "4.3",
-      "originalAmount": "29",
-      "cartQuantity": 2,
-      "subtotal": 58,
-      "email": "gautamkrishnasamy2001@gmail.com",
-      "username": "Gautam",
-      "status": "false",
-      "id": 3
-    },
-    {
-      "title": "Supplements",
-      "description": "Ensure Diabetes",
-      "Quantity": "400g",
-      "rating": "4.6",
-      "originalAmount": "750",
-      "cartQuantity": 1,
-      "subtotal": "750",
-      "email": "skgdhanushkumar17@gmail.com",
-      "username": "Dhanush Kumar",
-      "status": "false",
-      "id": 4
-    }
-  ],
+  "cart-data": [],
   "imgcollection": [
     {
       "image": "../../assets/images/product-slider1",
@@ -2637,6 +2675,162 @@
       "delivered": "17-8-2023",
       "checkDate": "2023-8-17",
       "id": 49
+    },
+    {
+      "price": "159",
+      "product": "Flamingo Bandage",
+      "email": "gautamkrishnasamy2001@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 568612,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 50
+    },
+    {
+      "price": "169",
+      "product": "Amrutanjan pain balm",
+      "email": "gautamkrishnasamy2001@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 568612,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 51
+    },
+    {
+      "price": "29",
+      "product": "Crocin 650 mg",
+      "email": "gautamkrishnasamy2001@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 568612,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 52
+    },
+    {
+      "price": "750",
+      "product": "Ensure Diabetes",
+      "email": "skgdhanushkumar17@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 578058,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 53
+    },
+    {
+      "price": "95",
+      "product": "Dabur Amla Hairoil",
+      "email": "skgdhanushkumar17@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 140464,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 54
+    },
+    {
+      "price": "385",
+      "product": "Jointace C2+ Tablet",
+      "email": "skgdhanushkumar17@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 570663,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 55
+    },
+    {
+      "price": "29",
+      "product": "Crocin 650 mg",
+      "email": "skgdhanushkumar17@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 570663,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 56
+    },
+    {
+      "price": "182",
+      "product": "Chicco Disinfectant gel",
+      "email": "skgdhanushkumar17@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 100503,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 57
+    },
+    {
+      "price": "16",
+      "product": "Roll Bandage",
+      "email": "skgdhanushkumar17@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 518003,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 58
+    },
+    {
+      "price": "16",
+      "product": "Roll Bandage",
+      "email": "skgdhanushkumar17@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 423023,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 59
+    },
+    {
+      "price": "159",
+      "product": "Flamingo Bandage",
+      "email": "skgdhanushkumar17@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 523234,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 60
+    },
+    {
+      "price": "280",
+      "product": "Sugar Free Green",
+      "email": "skgdhanushkumar17@gmail.com",
+      "date": "2023-08-20",
+      "orderDate": 20,
+      "deliveryDate": 22,
+      "deliveryMonth": 8,
+      "orderId": 957154,
+      "delivered": "22-8-2023",
+      "checkDate": "2023-8-22",
+      "id": 61
     }
   ],
   "ordersAll": [
@@ -4324,6 +4518,259 @@
       ],
       "OrderDate": "2023-08-15",
       "id": 60
+    },
+    {
+      "Username": "Gautam",
+      "Email_Id": "gautamkrishnasamy2001@gmail.com",
+      "Mobile_No": "7373960295",
+      "Total_Amount": 436,
+      "Menu_Details": [
+        {
+          "title": "bandage",
+          "description": "Flamingo Bandage",
+          "Quantity": "1 piece (Approx)",
+          "rating": "4.3",
+          "originalAmount": "159",
+          "cartQuantity": 1,
+          "subtotal": 159,
+          "email": "gautamkrishnasamy2001@gmail.com",
+          "username": "Gautam",
+          "status": "false",
+          "id": 1
+        },
+        {
+          "title": "Tablets",
+          "description": "Amrutanjan pain balm",
+          "Quantity": "500g - 700g (Approx)",
+          "rating": "4.3",
+          "originalAmount": "169",
+          "cartQuantity": 1,
+          "subtotal": "169",
+          "email": "gautamkrishnasamy2001@gmail.com",
+          "username": "Gautam",
+          "status": "false",
+          "id": 2
+        },
+        {
+          "title": "Tablets",
+          "description": "Crocin 650 mg",
+          "Quantity": "15 Tablets (Approx)",
+          "rating": "4.3",
+          "originalAmount": "29",
+          "cartQuantity": 2,
+          "subtotal": 58,
+          "email": "gautamkrishnasamy2001@gmail.com",
+          "username": "Gautam",
+          "status": "false",
+          "id": 3
+        }
+      ],
+      "OrderDate": "2023-08-20",
+      "id": 61
+    },
+    {
+      "Username": "Dhanush Kumar",
+      "Email_Id": "skgdhanushkumar17@gmail.com",
+      "Mobile_No": "6382757488",
+      "Total_Amount": 800,
+      "Menu_Details": [
+        {
+          "title": "Supplements",
+          "description": "Ensure Diabetes",
+          "Quantity": "400g",
+          "rating": "4.6",
+          "originalAmount": "750",
+          "cartQuantity": 1,
+          "subtotal": "750",
+          "email": "skgdhanushkumar17@gmail.com",
+          "username": "Dhanush Kumar",
+          "status": "false",
+          "id": 4
+        }
+      ],
+      "OrderDate": "2023-08-20",
+      "id": 62
+    },
+    {
+      "Username": "Dhanush Kumar",
+      "Email_Id": "skgdhanushkumar17@gmail.com",
+      "Mobile_No": "6382757488",
+      "Total_Amount": 145,
+      "Menu_Details": [
+        {
+          "title": "Oil",
+          "description": "Dabur Amla Hairoil",
+          "Quantity": "180ml",
+          "rating": "3.7",
+          "originalAmount": "95",
+          "cartQuantity": 1,
+          "subtotal": "95",
+          "email": "skgdhanushkumar17@gmail.com",
+          "username": "Dhanush Kumar",
+          "status": "false",
+          "id": 1
+        }
+      ],
+      "OrderDate": "2023-08-20",
+      "id": 63
+    },
+    {
+      "Username": "Dhanush Kumar",
+      "Email_Id": "skgdhanushkumar17@gmail.com",
+      "Mobile_No": "6382757488",
+      "Total_Amount": 464,
+      "Menu_Details": [
+        {
+          "title": "Tablets",
+          "description": "Jointace C2+ Tablet",
+          "Quantity": "10 Tablets",
+          "rating": "3.5",
+          "originalAmount": "385",
+          "cartQuantity": 1,
+          "subtotal": "385",
+          "email": "skgdhanushkumar17@gmail.com",
+          "username": "Dhanush Kumar",
+          "status": "false",
+          "id": 1
+        },
+        {
+          "title": "Tablets",
+          "description": "Crocin 650 mg",
+          "Quantity": "15 Tablets (Approx)",
+          "rating": "4.3",
+          "originalAmount": "29",
+          "cartQuantity": 1,
+          "stock": 60,
+          "subtotal": "29",
+          "email": "skgdhanushkumar17@gmail.com",
+          "username": "Dhanush Kumar",
+          "status": "false",
+          "id": 2
+        }
+      ],
+      "OrderDate": "2023-08-20",
+      "id": 64
+    },
+    {
+      "Username": "Dhanush Kumar",
+      "Email_Id": "skgdhanushkumar17@gmail.com",
+      "Mobile_No": "6382757488",
+      "Total_Amount": 232,
+      "Menu_Details": [
+        {
+          "title": "Gel",
+          "description": "Chicco Disinfectant gel",
+          "Quantity": "500ml (Approx)",
+          "rating": "4.3",
+          "originalAmount": "182",
+          "cartQuantity": 1,
+          "stock": 60,
+          "subtotal": "182",
+          "email": "skgdhanushkumar17@gmail.com",
+          "username": "Dhanush Kumar",
+          "status": "false",
+          "id": 1
+        }
+      ],
+      "OrderDate": "2023-08-20",
+      "id": 65
+    },
+    {
+      "Username": "Dhanush Kumar",
+      "Email_Id": "skgdhanushkumar17@gmail.com",
+      "Mobile_No": "6382757488",
+      "Total_Amount": 66,
+      "Menu_Details": [
+        {
+          "title": "bandage",
+          "description": "Roll Bandage",
+          "Quantity": "500g - 700g (Approx)",
+          "rating": "4.3",
+          "originalAmount": "16",
+          "cartQuantity": 1,
+          "stock": 60,
+          "subtotal": "16",
+          "email": "skgdhanushkumar17@gmail.com",
+          "username": "Dhanush Kumar",
+          "status": "false",
+          "id": 1
+        }
+      ],
+      "OrderDate": "2023-08-20",
+      "id": 66
+    },
+    {
+      "Username": "Dhanush Kumar",
+      "Email_Id": "skgdhanushkumar17@gmail.com",
+      "Mobile_No": "6382757488",
+      "Total_Amount": 66,
+      "Menu_Details": [
+        {
+          "title": "bandage",
+          "description": "Roll Bandage",
+          "Quantity": "500g - 700g (Approx)",
+          "rating": "4.3",
+          "originalAmount": "16",
+          "cartQuantity": 1,
+          "stock": 60,
+          "subtotal": "16",
+          "email": "skgdhanushkumar17@gmail.com",
+          "username": "Dhanush Kumar",
+          "status": "false",
+          "id": 1
+        }
+      ],
+      "OrderDate": "2023-08-20",
+      "id": 67
+    },
+    {
+      "Username": "Dhanush Kumar",
+      "Email_Id": "skgdhanushkumar17@gmail.com",
+      "Mobile_No": "6382757488",
+      "Total_Amount": 209,
+      "Menu_Details": [
+        {
+          "title": "bandage",
+          "description": "Flamingo Bandage",
+          "Quantity": "1 piece (Approx)",
+          "rating": "4.3",
+          "originalAmount": "159",
+          "cartQuantity": 1,
+          "stock": 60,
+          "subtotal": "159",
+          "email": "skgdhanushkumar17@gmail.com",
+          "username": "Dhanush Kumar",
+          "status": "false",
+          "id": 1
+        }
+      ],
+      "OrderDate": "2023-08-20",
+      "id": 68
+    },
+    {
+      "Username": "Dhanush Kumar",
+      "Email_Id": "skgdhanushkumar17@gmail.com",
+      "Mobile_No": "6382757488",
+      "Total_Amount": 330,
+      "Menu_Details": [
+        {
+          "originalId": 47,
+          "title": "Powder",
+          "description": "Sugar Free Green",
+          "Quantity": "400g",
+          "rating": "4.5",
+          "originalAmount": "280",
+          "cartQuantity": 1,
+          "stock": 60,
+          "subtotal": "280",
+          "email": "skgdhanushkumar17@gmail.com",
+          "username": "Dhanush Kumar",
+          "status": "false",
+          "id": 1
+        }
+      ],
+      "OrderDate": "2023-08-20",
+      "id": 69
     }
   ],
   "orderDate": [
@@ -4719,6 +5166,51 @@
       "date": "2023-08-15",
       "tomorrow": 17,
       "id": 82
+    },
+    {
+      "date": "2023-08-20",
+      "tomorrow": 22,
+      "id": 83
+    },
+    {
+      "date": "2023-08-20",
+      "tomorrow": 22,
+      "id": 84
+    },
+    {
+      "date": "2023-08-20",
+      "tomorrow": 22,
+      "id": 85
+    },
+    {
+      "date": "2023-08-20",
+      "tomorrow": 22,
+      "id": 86
+    },
+    {
+      "date": "2023-08-20",
+      "tomorrow": 22,
+      "id": 87
+    },
+    {
+      "date": "2023-08-20",
+      "tomorrow": 22,
+      "id": 88
+    },
+    {
+      "date": "2023-08-20",
+      "tomorrow": 22,
+      "id": 89
+    },
+    {
+      "date": "2023-08-20",
+      "tomorrow": 22,
+      "id": 90
+    },
+    {
+      "date": "2023-08-20",
+      "tomorrow": 22,
+      "id": 91
     }
   ],
   "reviewProducts": [

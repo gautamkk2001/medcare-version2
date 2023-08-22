@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { ProductdataService } from '../productdata.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-checkoutPage',
@@ -30,7 +31,7 @@ export class CheckoutPageComponent implements OnInit {
 
 
 
-  constructor(private formBuilder: FormBuilder, private data:ProductdataService, private route:Router) {
+  constructor(private formBuilder: FormBuilder, private data:ProductdataService, private route:Router, private http:HttpClient) {
 
     const sessionUser = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
     if (sessionUser) {
@@ -42,14 +43,10 @@ export class CheckoutPageComponent implements OnInit {
       })
 
     this.paymentAmount=this.data.paymentTotal;
-
-
-
-
-
    }
 
-   
+
+
    formShipping =this.formBuilder.group({
     fullname:[,Validators.required],
     address:[,Validators.required],
@@ -129,6 +126,19 @@ value={
         }
        this.data.postOrderedProducts(body).subscribe((value)=>{
         });
+    });
+
+    //  ----> To reduce the stock quantity
+
+    this.cartValues.forEach((item:any)=>{
+      var stock:number = item.stock-1;
+      alert(item.id);
+      var body={
+        "stock":stock
+      }
+      this.http.patch(environment.getProducts+'/'+item.originalId, body).subscribe({
+
+      })
     });
 
     // ---> To delete the cart items after payment

@@ -120,7 +120,12 @@ environment=environment;
        window.location.reload();
    }
 
+   show: boolean = false;
 
+  visiblePassword() {
+    this.show = !this.show;
+  }
+  
   ngOnInit() {
 
 

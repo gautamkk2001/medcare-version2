@@ -72,6 +72,12 @@ export class RegistrationComponent implements OnInit, DeactivateComponent {
    }
 }
 
+show: boolean = false;
+
+visiblePassword() {
+  this.show = !this.show;
+}
+
   ngOnInit() {
   }
   canExit(){

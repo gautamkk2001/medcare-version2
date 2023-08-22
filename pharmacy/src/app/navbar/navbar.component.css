@@ -51,6 +51,9 @@
   transition: 0.3s ease;
 }
 
+#navbar li a i{
+  margin-right: 8px;
+}
 /* #navbar li a:hover {
     color:rgb(92, 230, 103);
 } */

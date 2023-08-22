@@ -1,9 +1,10 @@
 export const environment = {
   url: "http://localhost:3000/",
-  getUser: "http://localhost:3000/registeredUser",
+  getUser: "http://localhost:3000/registeredUser/",
   editProfile:"http://localhost:3000/registeredUser/",
   getUsersOnly: "http://localhost:3000/users",
   getAdminUser: "http://localhost:3000/adminData",
+  editAdminProfile: "http://localhost:3000/adminData/",
   getFeaturedProducts: "http://localhost:3000/featured",
   getProducts: "http://localhost:3000/productdata",
   getProductdescription: "http://localhost:3000/productdescription",

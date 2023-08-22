@@ -11,7 +11,7 @@
 
  <!-- -----------------------------------------------------------------User Details ------------------------------------------- -->
 <section>
-  <div class="container">
+  <div class="container" *ngIf="(showDetails==true)">
     <div class="title"> Details </div>
     <form id="form" form>
       <div class="user-details">
@@ -55,13 +55,16 @@
 
       </div>
       <div class="button">
-        <!-- <button>Modify</button> -->
+        <button (click)="toggleEdit()">Modify</button>
       </div>
     </form>
   </div>
 
-   <div class="editProfile" >
-    <div class="title"> Edit</div>
+   <div class="editProfile" *ngIf="(showEdit==true)">
+    <div class="title">
+      <h4>Edit</h4>
+      <p (click)="return()">x</p>
+    </div>
     <form id="form" [formGroup]="formRegister"   >
       <div class="user-details">
         <div class="input-box">
@@ -108,9 +111,13 @@
         </div>
         <div class="input-box">
           <span class="details">Password</span>
-          <input type="password" placeholder="Enter your password" id="pass1" name="pass"
+          <input type= "{{ show ? 'text' : 'password' }}" placeholder="Enter your password" id="pass1" name="pass"
             pattern="^[A-Z]{1}[a-z]+[@][1-9]{1,7}$" name="Password" class="input" required
             formControlName="password1" />
+        </div>
+        <div class="showPassword">
+          <input type="checkbox" (change)="visiblePassword()" >
+          <label style="color: #233863;"> Show Password</label>
         </div>
         <div class="information-error1" *ngIf="formRegister.controls['password1'].dirty">
           <p class="error" *ngIf="formRegister.controls['password1'].errors?.['required']"><i

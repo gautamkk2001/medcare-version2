@@ -220,3 +220,34 @@ form option{
  height: 30px;
  margin:15px 15px 0 220px;
 }
+
+
+/* trying print */
+.content-box p{
+	margin: 0px;
+  font-size: 20px;
+  color: #f7403b;
+}
+
+.content-box{
+	padding: 20px;
+}
+
+.box-8 {
+	width: 70%;
+  margin-left: 200px;
+	background-color: #272c4a;
+	height: 100%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  text-align: left;
+  padding:15px;
+  color: #ddd;
+  border-bottom: 1px solid #81818140;
+}

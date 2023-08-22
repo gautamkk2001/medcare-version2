@@ -10,7 +10,7 @@
 
 
 <section>
-
+<div *ngIf="(showOrder==true)">
 <div class="newOrder" *ngFor="let item of specificOrder |reverse">
   <div class="orderDiv" >
      <div class="orderImg">
@@ -22,14 +22,93 @@
       <h5>Total : Rs-{{item.price}}</h5>
       <h5>OrderId: {{item.orderId}}</h5>
      </div>
-     <!-- <div class="reButton">
-      <button [disabled]="test(item.checkDate)"> {{item.checkDate}} Return</button></div> -->
+     <div class="reButton">
+      <button class="reButton" (click)="clicking(item)">View</button></div>
   </div>
 </div>
+</div>
 
- <!-- view details dialog box -->
+<!-- <div *ngIf="(showInvoice==true)">
+<div class="newOrder" *ngFor="let item of proId |reverse">
+  <div class="orderDiv" >
+     <div class="orderImg">
+      <img src="../../assets/images/{{item.product}}.jpg">
+     </div>
+     <div class="orderDetails">
+      <h2>Delivery : {{item.delivered}}</h2>
+      <h4>{{item.product}}</h4>
+      <h5>Total : Rs-{{item.price}}</h5>
+      <h5>OrderId: {{item.orderId}}</h5>
+     </div>
+    <button ></button>
+      <div class="reButton">
+      <button [disabled]="test(item.checkDate)"> {{item.checkDate}} Return</button></div>
+  </div>
+</div>
+</div> -->
 
- <dialog class="viewDetails">
+<div class="box-8" *ngIf="(showInvoice==true)">
+  <div class="reButton">  <button (click)="back()">Back</button></div>
+
+  <div class="content-box"  >
+
+    <table class="table">
+      <thead>
+        <tr><th colspan="6">Invoice</th></tr>
+        <tr>
+          <th>Order Id</th>
+          <th scope="col">Description</th>
+          <th scope="col">Images</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let pro of proId">
+          <td>{{pro.orderId}}</td>
+          <td>{{pro.product}}</td>
+          <td><img src="../../assets/images/{{pro.product}}.jpg" style="width: 40px; height: 45px;"></td>
+          <td>{{pro.price}}</td>
+      </tr>
+       <tr>
+        <td></td>
+        <td></td>
+        <td>Total :</td>
+        <td>{{orderIdTotal}}</td>
+       </tr>
+      </tbody>
+    </table>
+
+</div>
+</div>
+
+<!-- <dialog class="printDialog" [open]="printing">
+  <h2 style="text-align: center;">Payment Successfully</h2>
+  <div class="content">
+    <p><span>Patient Name:</span> {{printName}}</p>
+    <p><span>Doctor Name:</span> {{printDoctorName}}</p>
+    <p><span>Doctor Field:</span> {{printDoctorField}}</p>
+    <p><span>Appointed Date:</span> {{printAppointmentDate}}</p>
+    <p><span>Consulting Fee:</span> {{printConFee}}</p>
+    <p><span>Other Fee:</span> {{printOthFee}}</p>
+    <p><span>Total Fee:</span> {{printTotFee}}</p>
+    <p style="color: green"><span>Payment Status:</span> {{printStatus}}</p>
+  </div>
+  <br>
+  <div style="margin-left: 400px;">
+  <button (click)="printForm()">Print</button>
+  <button (click)="back()" id="back">Back</button>
+</div>
+</dialog> -->
+
+
+
+</section>
+
+
+<!-- unused -->
+<!--
+<dialog class="viewDetails">
   <div class="viewbox">
    <div class="details">
     <a (click)="closeModal()">x</a>
@@ -51,12 +130,8 @@
         <h4>Your Amount will refunded within 1-2 Hours</h4>
     </div>
   </div>
- </dialog>
+ </dialog> -->
 
-</section>
-
-
-<!-- unused -->
 <!--
 <details>
   <summary><h1>Upcoming Orders</h1></summary>

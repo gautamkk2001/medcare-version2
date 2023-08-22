@@ -82,12 +82,14 @@ cartdata:any=this.finaldescription;
   //----->  Adding to Cart
   addedCart(value:any){
     var body={
+    "originalId":value.id,
     "title":value.title,
     "description": value.description,
     "Quantity": value.Quantity,
     "rating": value.rating,
     "originalAmount": value.originalAmount,
     "cartQuantity": value.cartQuantity,
+    "stock": value.stock,
     "subtotal":value.originalAmount,
     "email":this.logInUser.email,
     "username":this.logInUser.username,

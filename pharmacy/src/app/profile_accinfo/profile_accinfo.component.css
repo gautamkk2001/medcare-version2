@@ -65,7 +65,7 @@ form .user-details .input-box{
 } */
 form .button{
   height:45px;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 form .button button{
    height: 100%;
@@ -167,13 +167,23 @@ form .button button{
 
 /* editProfile */
 .editProfile{
-  max-width: 500px;
-  width:900px;
-  background: #c82d2d;
-  padding: 25px;
+  width:500px;
+  background: #1e98d6;
+  margin-top: 10px;
+  padding: 15px;
   border-radius: 8px;
   margin-left: 250px;
 }
+
+.title {
+display:flex;
+}
+
+.title p{
+  margin-left: 400px;
+  cursor: pointer;
+}
+
 form .user-details{
   display: inline;
   flex-wrap: wrap;
@@ -193,4 +203,10 @@ form .user-details .input-box{
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 15px;
+}
+
+.showPassword input{
+  width:15px;
+  height:15px;
+  margin: 5px 0px 5px 30px;
 }

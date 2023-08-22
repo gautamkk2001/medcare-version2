@@ -126,7 +126,46 @@
       </div>
   </div>
 
+<!-- trying print -->
+<div class="box-8">
+  <div class="content-box"  >
 
+    <p>Invoice</p>
+
+    <table class="table">
+      <thead>
+        <tr><th colspan="6">Medcare</th></tr>
+        <tr>
+          <th>Order Id</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Images</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let pro of products">
+          <td>56563</td>
+          <td>{{pro.title}}</td>
+          <td>{{pro.description}}</td>
+          <td><img src="../../assets/images/{{pro.description}}.jpg" style="width: 40px; height: 45px;"></td>
+          <td>{{pro.originalAmount}}</td>
+
+
+      </tr>
+       <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Total :</td>
+        <td>4500</td>
+       </tr>
+      </tbody>
+    </table>
+
+</div>
+</div>
 
 </div>
 

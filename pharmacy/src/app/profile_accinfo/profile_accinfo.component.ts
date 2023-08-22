@@ -18,13 +18,12 @@ export class Profile_accinfoComponent implements OnInit {
    userValues:any=[];
   logInUser:any;
   showEdit:boolean=false;
+  showDetails:boolean=true;
   environment=environment;
 
   constructor(private data:ProductdataService, private fb:FormBuilder, private http:HttpClient) {
-
     this.data.registereduser().subscribe((value)=>{
      this.updateUser=value;
-
     });
   }
 
@@ -39,18 +38,34 @@ export class Profile_accinfoComponent implements OnInit {
   });
 
 submitEdit(){
-alert(this.logInUser.id);
+
  this.http.patch<any>(environment.editProfile+this.logInUser.id, this.formRegister.value).subscribe(()=>{
   alert("Updated Successfully");
  })
-
-
+ this.showDetails=true;
+ this.showEdit=false;
 }
+
+toggleEdit(){
+  this.showDetails=false;
+  this.showEdit=true;
+  this.ngOnInit();
+}
+
+return(){
+  this.showDetails=true;
+  this.showEdit=false;
+}
+
+show: boolean = false;
+visiblePassword() {
+  this.show = !this.show;
+}
+
   ngOnInit() {
     const session = sessionStorage.getItem('userName'); // <-- retrieve user details from session storage
     if (session) {
       this.logInUser = JSON.parse(session);
-      alert(this.logInUser.email);
     }
     this.formRegister.controls['username'].setValue(this.logInUser.username)
     this.formRegister.controls['mobile'].setValue(this.logInUser.mobile)

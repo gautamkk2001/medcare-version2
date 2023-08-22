@@ -66,7 +66,7 @@ registereduser(){
 }
 
 deleteUsers(username:any){
-  return this.http.delete(environment.getUser+"/"+username)
+  return this.http.delete(environment.getUser+username)
 }
 
 adminUser(){
@@ -146,6 +146,18 @@ searchingOrders(info: any): Observable<any> {
       return data.filter(
         (item: any) =>
           item.email === info.email
+      );
+    })
+  );
+}
+
+// try
+searchingOrderId(info: any): Observable<any> {
+  return this.http.get<any>(environment.getOrderedProducts).pipe(
+    map((data) => {
+      return data.filter(
+        (item: any) =>
+          item.orderId === info.orderId
       );
     })
   );

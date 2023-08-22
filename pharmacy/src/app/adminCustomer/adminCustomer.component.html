@@ -18,7 +18,7 @@
           <td>{{user.mobile}}</td>
           <td>{{user.email}}</td>
           <td><button class="adminButton"><a routerLink="/admin/{{user.email}}">View Order</a></button></td>
-          <td> <button>Delete</button></td>
+          <td> <button (click)="truncateUser(user)">Delete</button></td>
         </tr>
 
       </table>
