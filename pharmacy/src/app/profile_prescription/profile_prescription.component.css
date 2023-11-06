@@ -268,6 +268,18 @@ td, th {
 }
 
 /* pprint */
+.print button{
+  width:55px;
+  height: 40px;
+  margin-top: 25px;
+  margin-left: 500px;
+  background-color: #12e88b;
+  outline: none;
+  border:none;
+  border-color: none;
+  padding: 5px;
+}
+
 .printDialog{
   /* margin-left: 300px; */
   width: 100%;

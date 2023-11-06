@@ -479,9 +479,7 @@ button:hover {
 .contact-form input{
   margin-bottom: 20px;
 }
-/* .gap{
-  position: relative;
-} */
+
 .error{
   color: red;
   position: absolute;

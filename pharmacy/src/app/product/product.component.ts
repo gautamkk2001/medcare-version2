@@ -52,7 +52,7 @@ calOfferDate:any;
 
 
   ngOnInit() {
-    
+
 
     this.http.get<any>(environment.url+'/'+this.value).subscribe(data=>{
     this.finalData=data;
@@ -170,6 +170,7 @@ todayMonth = new Date().getMonth();
   },
   {
     thumbImage:  environment.imageProductSlider5,
+    
   },
   {
     thumbImage: environment.imageProductSlider6,
