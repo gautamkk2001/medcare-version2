@@ -495,6 +495,12 @@
       "level": "INFO",
       "timestamp": "10/5/2023, 12:53:53 PM",
       "id": 80
+    },
+    {
+      "message": "User Logged In : gautamkrishnasamy2001@gmail.com",
+      "level": "INFO",
+      "timestamp": "12/5/2023, 12:23:22 PM",
+      "id": 81
     }
   ],
   "imgCollection": [
@@ -2094,7 +2100,38 @@
       "id": 4
     }
   ],
-  "cart-data": [],
+  "cart-data": [
+    {
+      "originalId": 2,
+      "title": "Cetaphil",
+      "description": "Cetaphil Gentle Skin Cleanser",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.1",
+      "originalAmount": "169",
+      "cartQuantity": 1,
+      "stock": 59,
+      "subtotal": "169",
+      "email": "gautamkrishnasamy2001@gmail.com",
+      "username": "Gautam",
+      "status": "false",
+      "id": 1
+    },
+    {
+      "originalId": 19,
+      "title": "Tablets",
+      "description": "Amrutanjan pain balm",
+      "Quantity": "500g - 700g (Approx)",
+      "rating": "4.3",
+      "originalAmount": "169",
+      "cartQuantity": 1,
+      "stock": 60,
+      "subtotal": "169",
+      "email": "gautamkrishnasamy2001@gmail.com",
+      "username": "Gautam",
+      "status": "false",
+      "id": 2
+    }
+  ],
   "imgcollection": [
     {
       "image": "../../assets/images/product-slider1",

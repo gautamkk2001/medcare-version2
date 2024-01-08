@@ -492,3 +492,71 @@ button:hover {
   position: absolute;
    margin-left: 36px;
 }
+
+
+@media (max-width: 480px) {
+
+  .reviews{
+    width:300px;
+    background: #fff;
+    padding:30px;
+  }
+
+    .row-review{
+      display:block;
+      justify-content: center;
+      padding: 5px;
+     }
+    .col-review{
+      width:200px;
+      box-sizing: border-box;
+      padding:15px;
+    }
+
+    textarea {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #ccc;
+      padding: 2px;
+      font-size: 16px;
+    }
+
+    .row-review{
+      display:block;
+      justify-content: center;
+     }
+
+     .contact-info {
+      text-align: center;
+      padding: 2rem 0;
+      display: block;
+      justify-content: space-between;
+    }
+
+    .contact-form {
+      border-top: 1px solid #c7c7c7;
+      display: block;
+    }
+
+    .send-btn {
+      font-family: 'open sans, sans-serif';
+      font-size: 1rem;
+      margin-left: 40%;
+      text-transform: uppercase;
+      color: #fff;
+      background: crimson;
+      border: none;
+      border-radius: 5px;
+      padding: 0.7rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    .about-container h3{
+      font-size: 1.5rem;
+      margin: 5px;
+      padding: 3px;
+      color: #090;
+    }
+
+    }

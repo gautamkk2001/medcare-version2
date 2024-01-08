@@ -143,3 +143,22 @@
   /* margin: 0px 2px 0px 2px; */
 
 }
+
+@media (max-width: 480px) {
+  .row{
+    display: block;
+  }
+
+  .total-container{
+    /* background-color: rgb(219, 233, 228); */
+    padding: 15px;
+   }
+
+   #cart-container table {
+    border-collapse: collapse;
+    width: 460px;
+    table-layout: fixed;
+    margin-top: 10px;
+  }
+
+}
